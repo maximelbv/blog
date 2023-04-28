@@ -1,0 +1,34 @@
+@import '@/styles/variables.module';
+
+.header {
+  height: 84px;
+  width: 100%;
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+.logoAndMenus {
+  @include flexCenter;
+}
+
+.logo {
+  width: 36px;
+  position: relative;
+}
+
+.logoLink {
+  @include flexCenter;
+}
+
+.verticalDivider {
+  background: var(--secondaryTxtColor);
+  height: 18px;
+  width: 3px;
+  margin: 0 25px;
+}
+
+.menuLink {
+  margin-right: 25px;
+  font-weight: $fontWeightMedium;
+  color: var(--secondaryTxtColor);
+}

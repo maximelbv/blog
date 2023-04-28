@@ -1,5 +1,6 @@
-import '@/css/tailwind.css'
-import '@/css/prism.css'
+// import '@/css/tailwind.css'
+// import '@/css/prism.css'
+import '../styles/globals.scss'
 import 'katex/dist/katex.css'
 
 import '@fontsource/inter/variable-full.css'
@@ -17,7 +18,7 @@ const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+    <ThemeProvider attribute="class">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>

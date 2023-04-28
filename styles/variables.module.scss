@@ -1,0 +1,48 @@
+// BREAKPOINTS
+
+$breakpointXS: 480px;
+$breakpointSM: 768px;
+$breakpointMD: 1024px;
+$breakpointLG: 1280px;
+
+// FONT SIZES
+
+$fontSizeXS: 14px;
+$fontSizeS: 16px;
+$fontSizeS-M: 18px;
+$fontSizeM: 20px;
+$fontSizeL: 24px;
+$fontSizeXL: 28px;
+
+
+// COLORS
+
+// BORDERS 
+
+$greyThinBorder : .5px solid rgb(48, 48, 48);
+
+// FONT WEIGHT
+
+$fontWeightThin: 100;
+$fontWeightExtraLight: 200;
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightExtraBold: 800;
+$fontWeightBlack: 900;
+
+// MIXINS
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fullWidthLayout {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1rem;
+}
