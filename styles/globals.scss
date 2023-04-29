@@ -75,11 +75,13 @@ button {
   border-radius: 8px;
   height: fit-content;
   font-family: none;
+  & svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 svg {
-  height: 24px;
-  width: 24px;
   fill: var(--primaryTxtColor);
 }
 

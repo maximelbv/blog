@@ -24,11 +24,22 @@
   background: var(--secondaryTxtColor);
   height: 18px;
   width: 3px;
-  margin: 0 25px;
+  margin: 0 15px 0 25px;
 }
 
 .menuLink {
-  margin-right: 25px;
+  @include flexCenter;
+  margin-right: 10px;
   font-weight: $fontWeightMedium;
   color: var(--secondaryTxtColor);
+  padding: 10px;
+  border-radius: 10px;
+  & svg {
+    margin-right: 10px;
+  }
+  &:hover {
+    color: var(--primaryTxtColor);
+    transition: 0.2s ease-in-out;
+    background: var(--foreground);
+  }
 }

@@ -19,6 +19,7 @@ const LayoutWrapper = ({ children }) => (
 
         {headerNavLinks.map((link) => (
           <Link className={styles.menuLink} key={link.title} href={link.href}>
+            {link.icon}
             {link.title}
           </Link>
         ))}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9b5fd6"/>
+      <stop offset="1" stop-color="#7779c9"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_662" data-name="Rectangle 662" width="19" height="19" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_498" data-name="Group 498" clip-path="url(#clip-path)">
+    <path id="Path_162" data-name="Path 162" d="M11.718,19C9.5,19,9.5,13.677,7.282,13.677,4.73,13.677,0,14.269,0,11.717,0,9.5,5.322,9.5,5.322,7.282,5.322,4.73,4.73,0,7.282,0,9.5,0,9.5,5.323,11.718,5.323,14.27,5.323,19,4.73,19,7.282,19,9.5,13.677,9.5,13.677,11.717,13.677,14.269,14.27,19,11.718,19Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

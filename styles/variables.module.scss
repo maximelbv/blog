@@ -14,12 +14,11 @@ $fontSizeM: 20px;
 $fontSizeL: 24px;
 $fontSizeXL: 28px;
 
-
 // COLORS
 
-// BORDERS 
+// BORDERS
 
-$greyThinBorder : .5px solid rgb(48, 48, 48);
+$greyThinBorder: 0.5px solid rgb(48, 48, 48);
 
 // FONT WEIGHT
 
@@ -42,6 +41,8 @@ $fontWeightBlack: 900;
 }
 
 @mixin fullWidthLayout {
+  border: 2px solid red;
+  background: blue;
   width: 100%;
   max-width: 120rem;
   padding: 0 1rem;
