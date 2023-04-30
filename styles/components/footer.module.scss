@@ -20,6 +20,9 @@
 }
 
 .copyright {
+  font-size: $fontSizeXS;
+  font-weight: $fontWeightRegular;
+  color: var(--secondaryTxtColor);
   @include flexCenter;
   position: absolute;
   top: 50%;
@@ -27,5 +30,18 @@
   transform: translate(-50%, -50%);
   & .year {
     margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ctn {
+    flex-direction: column;
+    & > * {
+      margin-bottom: 40px;
+    }
+  }
+  .copyright {
+    position: relative;
+    margin-top: 10px;
   }
 }

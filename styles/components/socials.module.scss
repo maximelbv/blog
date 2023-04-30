@@ -8,9 +8,14 @@
     padding: 8px;
     border-radius: 50px;
     margin-right: 10px;
+    & svg {
+      fill: var(--secondaryTxtColor);
+    }
     &:hover {
-      border: 2px solid var(--primarytxtColor);
-      transition: 0.2s ease-in-out;
+      & svg {
+        fill: var(--primaryTxtColor);
+        transition: 0.2s ease-in-out;
+      }
     }
   }
 }

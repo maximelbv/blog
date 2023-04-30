@@ -3,7 +3,7 @@ import Instagram from '@/media/icons/instagram.svg'
 import Twitter from '@/media/icons/twitter.svg'
 import Github from '@/media/icons/github.svg'
 import Behance from '@/media/icons/behance.svg'
-import styles from '@/styles/components/Socials.module.scss'
+import styles from '@/styles/components/socials.module.scss'
 
 export default function Socials() {
   return (
