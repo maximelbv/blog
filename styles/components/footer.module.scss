@@ -1,0 +1,48 @@
+@import '@/styles/variables.module';
+
+.footer {
+  position: relative;
+  padding: 40px 0;
+  margin-top: 40px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    border-top: 2px dashed var(--secondaryTxtColorLighter);
+  }
+}
+
+.ctn {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: $fontSizeXS;
+  font-weight: $fontWeightRegular;
+  color: var(--secondaryTxtColor);
+  @include flexCenter;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  & .year {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ctn {
+    flex-direction: column;
+    & > * {
+      margin-bottom: 40px;
+    }
+  }
+  .copyright {
+    position: relative;
+    margin-top: 10px;
+  }
+}
