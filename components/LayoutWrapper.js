@@ -7,13 +7,14 @@ import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import styles from '@/styles/layouts/layoutWrapper.module.scss'
+import BlueLogo from '@/media/icons/logoBlue.svg'
 
 const LayoutWrapper = ({ children }) => (
   <SectionContainer>
     <header className={styles.header}>
       <div className={styles.logoAndMenus}>
         <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
-          <Logo className={styles.logo} />
+          <BlueLogo width={40} />
         </Link>
         <div className={styles.verticalDivider}></div>
 

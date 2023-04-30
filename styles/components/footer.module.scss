@@ -1,0 +1,31 @@
+@import '@/styles/variables.module';
+
+.footer {
+  position: relative;
+  padding: 40px 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    border-top: 2px dashed var(--secondaryTxtColorLighter);
+  }
+}
+
+.ctn {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+.copyright {
+  @include flexCenter;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  & .year {
+    margin-right: 8px;
+  }
+}
