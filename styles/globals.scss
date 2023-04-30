@@ -3,8 +3,6 @@
 @import '@/styles/variables.module';
 
 :root {
-  --font-mono: 'Poppins';
-
   --background: rgb(20, 23, 24);
   --foreground: rgb(27, 30, 31);
   --foregroundLighter: rgb(39, 44, 45);
@@ -40,7 +38,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: var(--font-mono);
+  font-family: 'Poppins', sans-serif;
 }
 
 html,
