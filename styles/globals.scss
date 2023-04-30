@@ -3,9 +3,7 @@
 @import '@/styles/variables.module';
 
 :root {
-  --font-mono: 'Poppins', ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono',
-    'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: 'Poppins';
 
   --background: rgb(20, 23, 24);
   --foreground: rgb(27, 30, 31);
