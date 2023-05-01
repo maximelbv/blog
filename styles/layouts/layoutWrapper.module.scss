@@ -43,3 +43,17 @@
     background: var(--foreground);
   }
 }
+
+.buttons {
+  @include flexCenter;
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 50px;
+  }
+  .verticalDivider,
+  .menuLink {
+    display: none;
+  }
+}

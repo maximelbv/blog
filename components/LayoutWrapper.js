@@ -1,13 +1,13 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-import MobileNav from './MobileNav'
+import MobileNav from './Dropdown'
 import ThemeSwitch from './ThemeSwitch'
 import styles from '@/styles/layouts/layoutWrapper.module.scss'
 import BlueLogo from '@/media/icons/logoBlue.svg'
+import Dropdown from './Dropdown'
 
 const LayoutWrapper = ({ children }) => (
   <SectionContainer>
@@ -28,7 +28,7 @@ const LayoutWrapper = ({ children }) => (
 
       <div className={styles.buttons}>
         <ThemeSwitch />
-        {/* <MobileNav /> */}
+        <Dropdown />
       </div>
     </header>
     <main>{children}</main>
