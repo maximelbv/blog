@@ -2,13 +2,16 @@ import siteMetadata from '@/data/siteMetadata'
 import Logo from '@/media/icons/logo.svg'
 import styles from '@/styles/components/footer.module.scss'
 import Socials from './Socials'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.ctn}>
         <Socials />
-        <Logo width={56} />
+        <Link href="/" passHref>
+          <Logo width={56} />
+        </Link>
       </div>
 
       <div className={styles.copyright}>

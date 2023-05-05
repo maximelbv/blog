@@ -59,7 +59,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                   <div>
                     <div>
                       <h3>
-                        <Link href={`/blog/${slug}`}>{title}</Link>
+                        <Link href={`/posts/${slug}`}>{title}</Link>
                       </h3>
                       <div>
                         {tags.map((tag) => (

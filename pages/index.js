@@ -10,7 +10,7 @@ import NewsletterForm from '@/components/NewsletterForm'
 const MAX_DISPLAY = 5
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('posts')
 
   return { props: { posts } }
 }
@@ -42,7 +42,7 @@ export default function Home({ posts }) {
                       <div>
                         <div>
                           <h2>
-                            <Link href={`/blog/${slug}`}>{title}</Link>
+                            <Link href={`/posts/${slug}`}>{title}</Link>
                           </h2>
                           <div>
                             {tags.map((tag) => (
@@ -53,7 +53,7 @@ export default function Home({ posts }) {
                         <div>{summary}</div>
                       </div>
                       <div>
-                        <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
+                        <Link href={`/posts/${slug}`} aria-label={`Read "${title}"`}>
                           Read more &rarr;
                         </Link>
                       </div>
@@ -67,7 +67,7 @@ export default function Home({ posts }) {
       </div>
       {posts.length > MAX_DISPLAY && (
         <div>
-          <Link href="/blog" aria-label="all posts">
+          <Link href="/posts" aria-label="all posts">
             All Posts &rarr;
           </Link>
         </div>
