@@ -20,51 +20,42 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div>
-        <div>
-          <h1>Latest</h1>
-          <p>{siteMetadata.description}</p>
-        </div>
-        <ul>
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <li key={slug}>
-                <article>
+        <h1>Posts</h1>
+      </div>
+      <ul>
+        {!posts.length && 'No posts found.'}
+        {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
+          const { slug, date, title, summary, tags } = frontMatter
+          return (
+            <li key={slug}>
+              <article>
+                <div>
                   <div>
-                    <dl>
-                      <dt>Published on</dt>
-                      <dd>
-                        <time dateTime={date}>{formatDate(date)}</time>
-                      </dd>
-                    </dl>
                     <div>
                       <div>
+                        <h2>
+                          <Link href={`/posts/${slug}`}>{title}</Link>
+                        </h2>
                         <div>
-                          <h2>
-                            <Link href={`/posts/${slug}`}>{title}</Link>
-                          </h2>
-                          <div>
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
+                          {tags.map((tag) => (
+                            <Tag key={tag} text={tag} />
+                          ))}
                         </div>
-                        <div>{summary}</div>
                       </div>
-                      <div>
-                        <Link href={`/posts/${slug}`} aria-label={`Read "${title}"`}>
-                          Read more &rarr;
-                        </Link>
-                      </div>
+                      <div>{summary}</div>
+                    </div>
+                    <div>
+                      <Link href={`/posts/${slug}`} aria-label={`Read "${title}"`}>
+                        Read more &rarr;
+                      </Link>
                     </div>
                   </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
+                </div>
+              </article>
+            </li>
+          )
+        })}
+      </ul>
       {posts.length > MAX_DISPLAY && (
         <div>
           <Link href="/posts" aria-label="all posts">
