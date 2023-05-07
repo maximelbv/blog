@@ -10,29 +10,37 @@ import BlueLogo from '@/media/icons/logoBlue.svg'
 import Dropdown from './Dropdown'
 
 const LayoutWrapper = ({ children }) => (
-  <SectionContainer>
-    <header className={styles.header}>
-      <div className={styles.logoAndMenus}>
-        <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
-          <BlueLogo width={40} />
-        </Link>
-        <div className={styles.verticalDivider}></div>
-
-        {headerNavLinks.map((link) => (
-          <Link className={styles.menuLink} key={link.title} href={link.href}>
-            {link.title}
+  <div className={styles.ctn}>
+    <SectionContainer>
+      <header className={styles.header}>
+        <div className={styles.logoAndMenus}>
+          <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
+            <BlueLogo width={40} />
           </Link>
-        ))}
-      </div>
+          <div className={styles.verticalDivider}></div>
 
-      <div className={styles.buttons}>
-        <ThemeSwitch />
-        <Dropdown />
-      </div>
-    </header>
-    <main>{children}</main>
-    <Footer />
-  </SectionContainer>
+          {headerNavLinks.map((link) => (
+            <Link className={styles.menuLink} key={link.title} href={link.href}>
+              {link.title}
+            </Link>
+          ))}
+        </div>
+
+        <div className={styles.buttons}>
+          <ThemeSwitch />
+          <Dropdown />
+        </div>
+      </header>
+    </SectionContainer>
+
+    <div className={styles.contentCtn}>
+      <SectionContainer className={styles.content}>{children}</SectionContainer>
+    </div>
+
+    <SectionContainer>
+      <Footer />
+    </SectionContainer>
+  </div>
 )
 
 export default LayoutWrapper

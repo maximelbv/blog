@@ -32,18 +32,21 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
       <ul className={styles.list}>
         {!filteredBlogPosts.length && <p className={styles.noPostsFound}>'No posts found.'</p>}
         {displayPosts.map((frontMatter) => {
-          const { slug, title, tags } = frontMatter
+          const { slug, title, tags, banner } = frontMatter
           return (
             <li key={slug}>
               <article className={styles.item}>
-                <div className={styles.itemBanner}>
-                  {/* <Image
+                <Link href={`/posts/${slug}`} className={styles.itemBanner}>
+                  <Image
                     className={styles.itemBannerPic}
-                    src={'/static/images/iopette.png'}
+                    src={banner ? banner : '/static/images/iopette.png'}
                     alt="banner"
-                    layout="fill"
-                  /> */}
-                </div>
+                    width="100vw"
+                    height="75%"
+                    layout="responsive"
+                    objectFit="cover"
+                  />
+                </Link>
 
                 <div className={styles.itemTags}>
                   {tags.map((tag) => (

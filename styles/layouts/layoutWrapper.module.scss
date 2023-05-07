@@ -1,5 +1,16 @@
 @import '@/styles/variables.module';
 
+.ctn {
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.contentCtn {
+  @include flexCenter;
+  width: 100vw;
+  background: var(--foreground);
+}
+
 .header {
   height: 84px;
   width: 100%;
