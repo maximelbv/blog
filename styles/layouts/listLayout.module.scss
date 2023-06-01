@@ -26,7 +26,7 @@
 .item {
   margin-bottom: 1rem;
   &Banner {
-    background: var(--foregroundLighter);
+    background: var(--elementColor);
     display: block;
     border-radius: 16px;
     margin-bottom: 0.5rem;
@@ -34,10 +34,10 @@
     width: 100%;
     height: auto;
     border: 6px solid var(--foreground);
-    &:hover {
-      transition: 0.2s ease-in-out;
-      border: 6px solid var(--mainColor);
-    }
+    // &:hover {
+    //   transition: 0.2s ease-in-out;
+    //   border: 3px solid var(--mainColor);
+    // }
     &Pic {
       border-radius: 10px;
     }

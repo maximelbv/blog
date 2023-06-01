@@ -5,9 +5,9 @@
 @import '@/styles/variables.module';
 
 :root {
-  --background: rgb(20, 23, 24);
-  --foreground: rgb(27, 30, 31);
-  --foregroundLighter: rgb(39, 44, 45);
+  --background: rgb(8, 8, 9);
+  --foreground: rgb(14, 14, 17);
+  --elementColor: rgb(29, 28, 32);
 
   --scrollbarTrack: rgb(20, 23, 24);
   --scrollbarThumb: rgb(57, 63, 65);
@@ -18,6 +18,9 @@
   --primaryTxtColor: white;
   --secondaryTxtColor: rgb(167, 167, 167);
   --secondaryTxtColorLighter: rgba(167, 167, 167, 0.27);
+
+  --border: rgba(255, 255, 255, 0.08);
+  --borderHovered: rgba(255, 255, 255, 0.25);
 }
 
 [data-theme='light'] {
@@ -34,6 +37,9 @@
   --primaryTxtColor: rgb(34, 34, 34);
   --secondaryTxtColor: rgb(109, 113, 115);
   --secondaryTxtColorLighter: rgba(109, 113, 115, 0.27);
+
+  --border: rgba(255, 255, 255, 0.08);
+  --borderHovered: rgba(255, 255, 255, 0.25);
 }
 
 * {
@@ -66,23 +72,12 @@ a {
 }
 
 button {
-  @include flexCenter;
-  cursor: pointer;
-  background-color: var(--foreground) !important;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  height: fit-content;
-  font-family: none;
-  & svg {
-    width: 24px;
-    height: 24px;
-  }
+  @include button;
 }
 
-svg {
-  fill: var(--primaryTxtColor);
-}
+// svg {
+//   fill: var(--primaryTxtColor);
+// }
 
 input {
   &:focus {
@@ -105,20 +100,20 @@ input {
   background: var(--mainColor);
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 18px;
-}
+// /* width */
+// ::-webkit-scrollbar {
+//   width: 18px;
+// }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--scrollbarTrack);
-}
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   background: var(--scrollbarTrack);
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbarThumb);
-  border: 3px solid transparent;
-  border-radius: 6px;
-  background-clip: content-box;
-}
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background-color: var(--scrollbarThumb);
+//   border: 3px solid transparent;
+//   border-radius: 6px;
+//   background-clip: content-box;
+// }
