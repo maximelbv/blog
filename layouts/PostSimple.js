@@ -4,8 +4,6 @@ import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
-import Comments from '@/components/comments'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title } = frontMatter
@@ -13,7 +11,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   return (
     <SectionContainer>
       <BlogSEO url={`${siteMetadata.siteUrl}/posts/${frontMatter.slug}`} {...frontMatter} />
-      <ScrollTopAndComment />
       <article>
         <div>
           <header>
@@ -35,7 +32,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             <div>
               <div>{children}</div>
             </div>
-            <Comments frontMatter={frontMatter} />
             <footer>
               <div>
                 {prev && (

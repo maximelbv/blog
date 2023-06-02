@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import { useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/layouts/listLayout.module.scss'
+import SearchIcon from '@/media/icons/search.svg'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
   const [searchValue, setSearchValue] = useState('')
@@ -20,12 +21,15 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
       <div className={styles.header}>
         <h1 className={styles.headerTitle}>{title}</h1>
         <div className={styles.headerActions}>
-          <input
-            aria-label="Search posts"
-            type="text"
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Search posts"
-          />
+          <div className={styles.searchBar}>
+            <SearchIcon width={16} />
+            <input
+              aria-label="Search posts"
+              type="text"
+              onChange={(e) => setSearchValue(e.target.value)}
+              placeholder="Search posts"
+            />
+          </div>
         </div>
       </div>
       <div className={styles.divider}></div>

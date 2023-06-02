@@ -1,0 +1,10 @@
+@import '../variables.module';
+
+.ctn {
+  @include flexCenter;
+  justify-content: flex-start;
+  color: var(--linkColor);
+  & > * {
+    margin-right: $spacingXXS;
+  }
+}

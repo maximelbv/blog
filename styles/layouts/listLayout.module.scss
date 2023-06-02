@@ -7,7 +7,15 @@
     font-weight: $fontWeightSemiBold;
   }
   &Actions {
+    width: 100%;
+    height: 50px;
   }
+}
+.searchBar {
+  background: var(--elementColor);
+  height: 50px;
+  width: 60%;
+  border-radius: 50px;
 }
 
 .divider {
