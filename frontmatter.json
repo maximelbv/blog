@@ -62,5 +62,21 @@
     }
   ],
   "frontMatter.taxonomy.tags": [],
-  "frontMatter.taxonomy.categories": ["CGI", "PROGRAMMING"]
+  "frontMatter.taxonomy.categories": ["CGI", "PROGRAMMING"],
+  "frontMatter.content.snippets": {
+    "Spacer": {
+      "description": "",
+      "body": "<Spacer space={[[space]]} />",
+      "fields": [
+        {
+          "name": "space",
+          "title": "space",
+          "type": "choice",
+          "single": true,
+          "default": "24",
+          "choices": ["24", "48", "72"]
+        }
+      ]
+    }
+  }
 }

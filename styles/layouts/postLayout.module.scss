@@ -5,7 +5,10 @@
 }
 
 .content {
-  margin-bottom: $spacingXXXL;
+  margin: $spacingM 0 $spacingXXXL 0;
+  & > * {
+    margin-bottom: $spacingXS;
+  }
 }
 
 .catAndDate {
@@ -57,7 +60,8 @@
   @include flexCenter;
   justify-content: flex-start;
   margin-bottom: $spacingXS;
-  gap: 10px;
+  font-size: $fontSizeXS;
+  gap: 6px;
   & > * {
     display: block;
     padding: 2px 12px;
@@ -82,11 +86,13 @@
   background: var(--cgiColor);
 }
 
+@media screen and (max-width: 1366px) {
+  .title {
+    font-size: $fontSizeXXL;
+  }
+}
 @media screen and (max-width: 1023px) {
   .ctn {
     margin: $spacingXS 0;
-  }
-  .title {
-    font-size: $fontSizeXXL;
   }
 }
