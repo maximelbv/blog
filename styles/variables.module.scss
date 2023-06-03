@@ -25,6 +25,7 @@ $spacingM: 48px;
 $spacingL: 72px;
 $spacingXL: 84px;
 $spacingXXL: 96px;
+$spacingXXXL: 126px;
 
 // FONT WEIGHT
 
@@ -68,6 +69,7 @@ $fontWeightBlack: 900;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 @mixin fullWidthLayout {

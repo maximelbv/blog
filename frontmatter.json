@@ -62,5 +62,5 @@
     }
   ],
   "frontMatter.taxonomy.tags": [],
-  "frontMatter.taxonomy.categories": ["PROGRAMMING"]
+  "frontMatter.taxonomy.categories": ["CGI", "PROGRAMMING"]
 }

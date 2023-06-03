@@ -1,10 +1,7 @@
 import Breadcrumb from '@/components/Breadcrumb'
-import DisplayCategory from '@/components/DisplayCategory'
-import PageTitle from '@/components/PageTitle'
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import styles from '@/styles/layouts/postLayout.module.scss'
-import categories from '@/data/categories'
 import Divider from '@/components/postsComponents/Divider'
 
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -21,10 +18,6 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
       name: 'Posts',
       link: '/posts',
     },
-    // {
-    //   name: `${categories}`,
-    //   link: `/posts/${slug}`,
-    // },
   ]
 
   return (
@@ -39,13 +32,18 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
           <Breadcrumb crumbs={breadcrumbs} />
           <div className={styles.catAndDate}>
             <div
-              className={styles.catAndDateDot}
-              style={{ background: `${color} !important` }}
+              className={
+                categories[0] === 'PROGRAMMING'
+                  ? `${styles.dot} ${styles.PROGRAMMING}`
+                  : categories[0] === 'CGI'
+                  ? `${styles.dot} ${styles.CGI}`
+                  : styles.dot
+              }
             ></div>
             <p>{categories[0]}</p>
             <div className={styles.catAndDateDivider}></div>
             <p className={styles.catAndDateDate}>
-              Last updated:{' '}
+              Last updated :{' '}
               {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
             </p>
           </div>
@@ -59,7 +57,31 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
           <Divider />
         </header>
         <main className={styles.content}>{children}</main>
-        <footer className={styles.footer}></footer>
+        <footer className={styles.footer}>
+          <div className={styles.postedInShare}>
+            <div>
+              <span>POSTED IN:</span>
+              <div className={styles.postedIn}>
+                <div
+                  className={
+                    categories[0] === 'PROGRAMMING'
+                      ? `${styles.dot} ${styles.PROGRAMMING}`
+                      : categories[0] === 'CGI'
+                      ? `${styles.dot} ${styles.CGI}`
+                      : styles.dot
+                  }
+                ></div>
+                <p>{categories[0]}</p>
+                <div className={styles.catAndDateDivider}></div>
+                <div className={styles.tags}>
+                  {tags.map((t) => (
+                    <p key={t}>{t}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </article>
     </>
   )

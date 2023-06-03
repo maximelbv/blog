@@ -4,6 +4,10 @@
   margin: $spacingL 0;
 }
 
+.content {
+  margin-bottom: $spacingXXXL;
+}
+
 .catAndDate {
   @include flexCenter;
   justify-content: flex-start;
@@ -12,12 +16,6 @@
   color: var((--secondaryTxtColor));
   & > * {
     margin-right: $spacingXXS;
-  }
-  &Dot {
-    height: 11px;
-    width: 11px;
-    border-radius: 50%;
-    margin-right: 10px;
   }
   &Divider {
     height: 13px;
@@ -33,7 +31,6 @@
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  // margin-right: $spacingXXS;
   margin-right: 10px;
 }
 
@@ -42,16 +39,45 @@
   margin-bottom: $spacingXS;
 }
 
+.postedInShare {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+.postedIn {
+  @include flexCenter;
+  justify-content: flex-start;
+  margin-top: $spacingXXS;
+  & > * {
+    margin: 10px $spacingXXS 0 0 !important;
+  }
+}
+
 .tags {
   @include flexCenter;
   justify-content: flex-start;
   margin-bottom: $spacingXS;
+  gap: 10px;
   & > * {
-    margin-right: 8px;
     display: block;
-    padding: 3px 12px;
+    padding: 2px 12px;
     border-radius: 10px;
     background: var(--elementColor);
     border: 1px solid var(--border);
   }
+}
+
+.dot {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.PROGRAMMING {
+  background: var(--programmingColor);
+}
+
+.CGI {
+  background: var(--cgiColor);
 }
