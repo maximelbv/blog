@@ -15,7 +15,7 @@ const LayoutWrapper = ({ children }) => (
       <header className={styles.header}>
         <div className={styles.logoAndMenus}>
           <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
-            <BlueLogo width={40} />
+            <BlueLogo width={50} />
           </Link>
           <div className={styles.verticalDivider}></div>
 
