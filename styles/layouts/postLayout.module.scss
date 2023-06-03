@@ -81,3 +81,12 @@
 .CGI {
   background: var(--cgiColor);
 }
+
+@media screen and (max-width: 1023px) {
+  .ctn {
+    margin: $spacingXS 0;
+  }
+  .title {
+    font-size: $fontSizeXXL;
+  }
+}
