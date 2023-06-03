@@ -6,6 +6,10 @@
 
 .content {
   margin: $spacingM 0 $spacingXXXL 0;
+  font-size: $fontSizeS-M;
+  line-height: 32px;
+  font-weight: $fontWeightMedium;
+  letter-spacing: 0.3px;
   & > * {
     margin-bottom: $spacingXS;
   }

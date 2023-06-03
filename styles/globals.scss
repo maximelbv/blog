@@ -2,6 +2,14 @@
   font-family: 'Poppins';
   src: url('../media/fonts/Poppins/Poppins-Regular.ttf');
 }
+@font-face {
+  font-family: 'Averta';
+  src: url('../media/fonts/Averta/avertaRegular.otf');
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../media/fonts/Satoshi/Satoshi-Medium.otf');
+}
 @import '@/styles/variables.module';
 
 :root {
@@ -52,7 +60,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Averta', 'Poppins', 'Satoshi', sans-serif;
 }
 
 html,
