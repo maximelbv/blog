@@ -1,13 +1,16 @@
 import Breadcrumb from '@/components/Breadcrumb'
+import DisplayCategory from '@/components/DisplayCategory'
 import PageTitle from '@/components/PageTitle'
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import styles from '@/styles/layouts/postLayout.module.scss'
+import categories from '@/data/categories'
+import Divider from '@/components/postsComponents/Divider'
 
-const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
-export default function PostLayout({ frontMatter, authorDetails }) {
-  const { slug, fileName, date, title, images, tags, categories } = frontMatter
+export default function PostLayout({ frontMatter, authorDetails, children }) {
+  const { slug, fileName, date, title, images, tags, categories, color } = frontMatter
 
   const breadcrumbs = [
     {
@@ -34,12 +37,28 @@ export default function PostLayout({ frontMatter, authorDetails }) {
       <article className={styles.ctn}>
         <header className={styles.header}>
           <Breadcrumb crumbs={breadcrumbs} />
-          {/* <time dateTime={date}>
-            {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-          </time> */}
-          <h1>{title}</h1>
+          <div className={styles.catAndDate}>
+            <div
+              className={styles.catAndDateDot}
+              style={{ background: `${color} !important` }}
+            ></div>
+            <p>{categories[0]}</p>
+            <div className={styles.catAndDateDivider}></div>
+            <p className={styles.catAndDateDate}>
+              Last updated:{' '}
+              {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+            </p>
+          </div>
+
+          <h1 className={styles.title}>{title}</h1>
+          <div className={styles.tags}>
+            {tags.map((t) => (
+              <p key={t}>{t}</p>
+            ))}
+          </div>
+          <Divider />
         </header>
-        <main className={styles.content}></main>
+        <main className={styles.content}>{children}</main>
         <footer className={styles.footer}></footer>
       </article>
     </>

@@ -1,12 +1,5 @@
-import categories from '@/data/categories'
+// import styles from '@/styles/components/postsComponents/testBtn.module.scss'
 
-export default function TestBtn({ label }) {
-  let color
-  categories.map((c) => {
-    if (c.name === label) {
-      color = c.gradientColor
-    }
-  })
-  console.log(color)
-  return <button style={{ background: `${color} !important`, border: 'none' }}> {label} </button>
+export default function TestBtn({ type }) {
+  return <button>okay</button>
 }
