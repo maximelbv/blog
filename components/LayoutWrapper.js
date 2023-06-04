@@ -16,6 +16,7 @@ const LayoutWrapper = ({ children }) => (
         <div className={styles.logoAndMenus}>
           <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
             <BlueLogo width={50} />
+            <p style={{ marginLeft: '10px', fontSize: '20px', fontWeight: 'bolder' }}>Maxime Lbv</p>
           </Link>
           <div className={styles.verticalDivider}></div>
 

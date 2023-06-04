@@ -7,9 +7,9 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://maximelbv.com',
   siteRepo: 'https://github.com/maximelbv/blog',
-  siteLogo: '/static/images/logo.svg',
+  siteLogo: '@/media/icons/logoBlue.svg',
   image: '/static/images/avatar.jpg',
-  socialBanner: '/static/images/logo.svg',
+  socialBanner: '@/media/icons/logoBlue.svg',
   email: 'lefebvremaxime00@gmail.com',
   github: 'https://github.com/maximelbv',
   instagram: 'https://www.instagram.com/maximelbv',
