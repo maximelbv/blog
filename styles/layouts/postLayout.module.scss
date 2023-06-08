@@ -60,6 +60,13 @@
   }
 }
 
+.banner {
+  border-radius: 20px;
+  &Ctn {
+    margin-bottom: $spacingXS;
+  }
+}
+
 .tags {
   @include flexCenter;
   justify-content: flex-start;

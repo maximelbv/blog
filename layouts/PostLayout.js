@@ -3,11 +3,12 @@ import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import styles from '@/styles/layouts/postLayout.module.scss'
 import Divider from '@/components/postsComponents/Divider'
+import Image from 'next/image'
 
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, children }) {
-  const { slug, fileName, date, title, images, tags, categories, color } = frontMatter
+  const { slug, fileName, date, title, images, tags, categories, banner } = frontMatter
 
   const breadcrumbs = [
     {
@@ -47,7 +48,17 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
               {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
             </p>
           </div>
-
+          <div className={styles.bannerCtn}>
+            <Image
+              className={styles.banner}
+              src={banner}
+              alt="banner"
+              width="100%"
+              height="30px"
+              layout="responsive"
+              objectFit="cover"
+            />
+          </div>
           <h1 className={styles.title}>{title}</h1>
           <div className={styles.tags}>
             {tags.map((t) => (

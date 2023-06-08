@@ -9,6 +9,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
+    console.log(frontMatter.categories)
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
@@ -29,6 +30,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search posts"
             />
+            <div className={styles.categorySearchCtn}></div>
           </div>
         </div>
       </div>
@@ -36,15 +38,15 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
       <ul className={styles.list}>
         {!filteredBlogPosts.length && <p className={styles.noPostsFound}>'No posts found.'</p>}
         {displayPosts.map((frontMatter) => {
-          const { slug, title, tags, banner } = frontMatter
+          const { slug, title, tags, preview } = frontMatter
           return (
             <li key={slug}>
               <article className={styles.item}>
                 <Link href={`/posts/${slug}`} className={styles.itemBanner}>
                   <Image
                     className={styles.itemBannerPic}
-                    src={banner ? banner : '/static/images/iopette.png'}
-                    alt="banner"
+                    src={preview ? preview : '/static/images/thumbnails/placeholder.png'}
+                    alt="preview image"
                     width="100vw"
                     height="75%"
                     layout="responsive"
