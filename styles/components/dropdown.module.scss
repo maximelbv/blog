@@ -1,15 +1,21 @@
 @import '../variables.module';
 
-@media screen and (min-width: 480px) {
+.button,
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: $breakpointSM) {
   .button,
   .menu {
-    display: none;
+    display: block;
   }
 }
 
 .button {
   z-index: 999;
   margin-left: 10px;
+  border: none;
 }
 
 .menuIcon {
@@ -28,13 +34,13 @@
 }
 
 .open {
-  background-color: red;
+  background-color: var(--background);
   height: 100%;
 }
 
 .close {
-  background-color: blue;
-  height: 10px;
+  height: 0px;
+  background-color: var(--background);
 }
 
 .navTrigger {

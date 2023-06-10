@@ -48,7 +48,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
                     src={preview ? preview : '/static/images/thumbnails/placeholder.png'}
                     alt="preview image"
                     width="100vw"
-                    height="75%"
+                    height="100%"
                     layout="responsive"
                     objectFit="cover"
                   />

@@ -32,16 +32,20 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
         <header className={styles.header}>
           <Breadcrumb crumbs={breadcrumbs} />
           <div className={styles.catAndDate}>
-            <div
-              className={
-                categories[0] === 'PROGRAMMING'
-                  ? `${styles.dot} ${styles.PROGRAMMING}`
-                  : categories[0] === 'CGI'
-                  ? `${styles.dot} ${styles.CGI}`
-                  : styles.dot
-              }
-            ></div>
-            <p>{categories[0]}</p>
+            <div className={styles.cat}>
+              <div
+                className={
+                  categories[0] === 'PROGRAMMING'
+                    ? `${styles.dot} ${styles.PROGRAMMING}`
+                    : categories[0] === 'CGI'
+                    ? `${styles.dot} ${styles.CGI}`
+                    : categories[0] === 'GRAPHIC_DESIGN'
+                    ? `${styles.dot} ${styles.GRAPHIC_DESIGN}`
+                    : styles.dot
+                }
+              ></div>
+              <p>{categories[0]}</p>
+            </div>
             <div className={styles.catAndDateDivider}></div>
             <p className={styles.catAndDateDate}>
               Last updated :{' '}
@@ -54,7 +58,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
               src={banner}
               alt="banner"
               width="100%"
-              height="30px"
+              height="40px"
               layout="responsive"
               objectFit="cover"
             />

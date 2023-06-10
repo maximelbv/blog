@@ -1,7 +1,7 @@
 @import '@/styles/variables.module';
 
 .ctn {
-  margin: $spacingL 0;
+  margin: $spacingXS 0;
 }
 
 .content {
@@ -34,6 +34,10 @@
   }
 }
 
+.cat {
+  @include flexCenter;
+}
+
 .category {
   width: 11px;
   height: 11px;
@@ -62,7 +66,12 @@
 
 .banner {
   border-radius: 20px;
+  height: 300px !important;
+  position: relative !important;
   &Ctn {
+    & span {
+      padding: 0 !important;
+    }
     margin-bottom: $spacingXS;
   }
 }
@@ -97,13 +106,26 @@
   background: var(--CGIColor);
 }
 
-@media screen and (max-width: 1366px) {
+.GRAPHIC_DESIGN {
+  background: var(--GRAPHIC_DESIGNColor);
+}
+
+@media screen and (max-width: $breakpointLG) {
   .title {
     font-size: $fontSizeXXL;
   }
 }
-@media screen and (max-width: 1023px) {
-  .ctn {
-    margin: $spacingXS 0;
+
+@media screen and (max-width: $breakpointXS) {
+  .catAndDate {
+    // flex-direction: column;
+    // align-items: flex-start;
+    margin: $spacingXXS 0 $spacingXS 0;
+  }
+  // .cat {
+  //   margin-bottom: $spacingXXXS;
+  // }
+  .catAndDateDivider {
+    display: none;
   }
 }
