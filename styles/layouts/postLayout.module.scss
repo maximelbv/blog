@@ -1,7 +1,7 @@
 @import '@/styles/variables.module';
 
 .ctn {
-  margin: $spacingXS 0;
+  margin: $spacingS 0;
 }
 
 .content {
@@ -122,9 +122,9 @@
     // align-items: flex-start;
     margin: $spacingXXS 0 $spacingXS 0;
   }
-  // .cat {
-  //   margin-bottom: $spacingXXXS;
-  // }
+  .bannerCtn {
+    margin-bottom: $spacingXXS;
+  }
   .catAndDateDivider {
     display: none;
   }
