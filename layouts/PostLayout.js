@@ -53,15 +53,19 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
             </p>
           </div>
           <div className={styles.bannerCtn}>
-            <Image
-              className={styles.banner}
-              src={banner}
-              alt="banner"
-              width="100%"
-              height="40px"
-              layout="responsive"
-              objectFit="cover"
-            />
+            {banner ? (
+              <Image
+                className={styles.banner}
+                src={banner}
+                alt="banner"
+                width="100%"
+                height="40px"
+                layout="responsive"
+                objectFit="cover"
+              />
+            ) : (
+              ''
+            )}
           </div>
           <h1 className={styles.title}>{title}</h1>
           <div className={styles.tags}>
@@ -83,6 +87,8 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
                       ? `${styles.dot} ${styles.PROGRAMMING}`
                       : categories[0] === 'CGI'
                       ? `${styles.dot} ${styles.CGI}`
+                      : categories[0] === 'GRAPHIC_DESIGN'
+                      ? `${styles.dot} ${styles.GRAPHIC_DESIGN}`
                       : styles.dot
                   }
                 ></div>

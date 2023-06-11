@@ -48,11 +48,6 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
-        },
-        {
-          "title": "Color",
-          "name": "color",
-          "type": "string"
         }
       ]
     }
@@ -80,6 +75,26 @@
           "single": true,
           "default": "24",
           "choices": ["24", "48", "72"]
+        }
+      ]
+    },
+    "Step title": {
+      "description": "",
+      "body": "<StepTitle cat={frontmatter.categories[0]} step={[[step]]}>[[title]]</StepTitle>",
+      "fields": [
+        {
+          "name": "step",
+          "title": "step",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "title",
+          "title": "title",
+          "type": "string",
+          "single": true,
+          "default": ""
         }
       ]
     }

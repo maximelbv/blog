@@ -1,17 +1,14 @@
-// import * as styles from '../..//styles/components/postsComponents/stepTitle.module.scss'
-
 export default function StepTitle({ cat, step, children }) {
   return (
     <div
       style={{
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
       }}
     >
       <div
-        // className={styles.step}
         style={{
-          width: '50px',
+          width: '50px !important',
           height: `50px`,
           display: 'flex',
           alignItems: 'center',
@@ -25,7 +22,16 @@ export default function StepTitle({ cat, step, children }) {
       >
         {step}
       </div>
-      <h2 style={{ fontSize: '34px' }}>{children}</h2>
+      <h2
+        style={{
+          fontSize: '34px',
+          lineHeight: '40px',
+          width: 'calc(100% - 50px)',
+          marginTop: '5px',
+        }}
+      >
+        {children}
+      </h2>
     </div>
   )
 }
