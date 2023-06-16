@@ -13,7 +13,7 @@ export default function StepTitle({ cat, step, children }) {
           position: 'absolute',
           top: 0,
           left: 0,
-          width: '50px !important',
+          width: `50px`,
           height: `50px`,
           display: 'flex',
           alignItems: 'center',
@@ -22,7 +22,6 @@ export default function StepTitle({ cat, step, children }) {
           fontSize: '36px',
           fontWeight: 'bolder',
           background: `var(--${cat}Gradient)`,
-          marginRight: '18px',
         }}
       >
         {step}
