@@ -27,6 +27,12 @@
   position: relative;
 }
 
+.logoTxt {
+  margin-left: 10px;
+  font-size: $fontSizeM;
+  font-weight: bolder;
+}
+
 .logoLink {
   @include flexCenter;
 }
@@ -65,6 +71,12 @@
   }
   .verticalDivider,
   .menuLink {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $breakpointXXS) {
+  .logoTxt {
     display: none;
   }
 }
