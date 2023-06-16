@@ -18,7 +18,7 @@ const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider>
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>

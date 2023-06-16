@@ -13,23 +13,6 @@
 @import '@/styles/variables.module';
 
 :root {
-  --background: rgb(8, 8, 9);
-  --foreground: rgb(14, 14, 17);
-  --elementColor: rgb(29, 28, 32);
-
-  --scrollbarTrack: rgb(20, 23, 24);
-  --scrollbarThumb: rgb(57, 63, 65);
-
-  --mainColor: rgb(139, 210, 254);
-  --linkColor: rgb(94, 180, 255);
-
-  --primaryTxtColor: white;
-  --secondaryTxtColor: rgb(167, 167, 167);
-  --secondaryTxtColorLighter: rgba(167, 167, 167, 0.27);
-
-  --border: rgba(255, 255, 255, 0.08);
-  --borderHovered: rgba(255, 255, 255, 0.25);
-
   --PROGRAMMINGColor: rgba(81, 177, 82, 1);
   --PROGRAMMINGGradient: linear-gradient(45deg, rgb(146, 198, 90) 0%, rgb(14, 155, 74) 100%);
 
@@ -38,9 +21,7 @@
 
   --GRAPHIC_DESIGNColor: rgb(189, 64, 64);
   --GRAPHIC_DESIGNGradient: linear-gradient(45deg, rgb(198, 90, 90) 0%, rgb(181, 40, 40) 100%);
-}
 
-[data-theme='light'] {
   --background: rgb(235, 235, 235);
   --foreground: rgb(224, 224, 224);
   --foregroundLighter: rgb(255, 255, 255);
@@ -57,15 +38,25 @@
 
   --border: rgba(255, 255, 255, 0.08);
   --borderHovered: rgba(255, 255, 255, 0.25);
+}
 
-  --PROGRAMMINGColor: rgba(81, 177, 82, 1);
-  --PROGRAMMINGGradient: linear-gradient(45deg, rgb(146, 198, 90) 0%, rgb(14, 155, 74) 100%);
+[data-theme='dark'] {
+  --background: rgb(8, 8, 9);
+  --foreground: rgb(14, 14, 17);
+  --elementColor: rgb(29, 28, 32);
 
-  --CGIColor: rgb(68, 144, 226);
-  --CGIGradient: linear-gradient(45deg, rgb(78, 204, 245) 0%, rgb(57, 78, 206) 100%);
+  --scrollbarTrack: rgb(20, 23, 24);
+  --scrollbarThumb: rgb(57, 63, 65);
 
-  --GRAPHIC_DESIGNColor: rgb(189, 64, 64);
-  --GRAPHIC_DESIGNGradient: linear-gradient(45deg, rgb(198, 90, 90) 0%, rgb(181, 40, 40) 100%);
+  --mainColor: rgb(139, 210, 254);
+  --linkColor: rgb(94, 180, 255);
+
+  --primaryTxtColor: white;
+  --secondaryTxtColor: rgb(167, 167, 167);
+  --secondaryTxtColorLighter: rgba(167, 167, 167, 0.27);
+
+  --border: rgba(255, 255, 255, 0.08);
+  --borderHovered: rgba(255, 255, 255, 0.25);
 }
 
 * {
