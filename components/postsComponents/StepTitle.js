@@ -1,13 +1,18 @@
+import InlineContainer from './InlineContainer'
+
 export default function StepTitle({ cat, step, children }) {
   return (
     <div
       style={{
         display: 'flex',
-        alignItems: 'flex-start',
+        position: 'relative',
       }}
     >
       <div
         style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
           width: '50px !important',
           height: `50px`,
           display: 'flex',
@@ -25,9 +30,8 @@ export default function StepTitle({ cat, step, children }) {
       <h2
         style={{
           fontSize: '34px',
-          lineHeight: '40px',
-          width: 'calc(100% - 50px)',
-          marginTop: '5px',
+          lineHeight: '50px',
+          textIndent: '65px',
         }}
       >
         {children}

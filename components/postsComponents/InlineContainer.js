@@ -1,4 +1,4 @@
-import styles from '@/styles/components/postsComponents/inlineContainer.module.css'
+import styles from '@/styles/components/postsComponents/inlineContainer.module.scss'
 
 export default function InlineContainer({ children }) {
   return (
