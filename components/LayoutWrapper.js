@@ -6,7 +6,7 @@ import Footer from './Footer'
 import MobileNav from './Dropdown'
 import ThemeSwitch from './ThemeSwitch'
 import styles from '@/styles/layouts/layoutWrapper.module.scss'
-import BlueLogo from '@/media/icons/logoBlue.svg'
+import Logo from '@/media/icons/logo.svg'
 import Dropdown from './Dropdown'
 
 const LayoutWrapper = ({ children }) => (
@@ -15,7 +15,7 @@ const LayoutWrapper = ({ children }) => (
       <header className={styles.header}>
         <div className={styles.logoAndMenus}>
           <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
-            <BlueLogo width={50} />
+            <Logo width={50} className={styles.logoSvg} />
             <p className={styles.logoTxt}>Maxime Lbv</p>
           </Link>
           <div className={styles.verticalDivider}></div>

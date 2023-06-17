@@ -20,6 +20,9 @@
 
 .logoAndMenus {
   @include flexCenter;
+  & path {
+    fill: var(--mainColor) !important;
+  }
 }
 
 .logo {
@@ -38,7 +41,7 @@
 }
 
 .verticalDivider {
-  background: var(--secondaryTxtColor);
+  background: var(--primaryTxtColor);
   height: 18px;
   width: 3px;
   margin: 0 15px 0 25px;
@@ -48,7 +51,7 @@
   @include flexCenter;
   margin-right: 10px;
   font-weight: $fontWeightMedium;
-  color: var(--secondaryTxtColor);
+  color: var(--primaryTxtColor);
   padding: 10px;
   border-radius: 10px;
   & svg {
@@ -63,6 +66,9 @@
 
 .buttons {
   @include flexCenter;
+  & button {
+    background: none !important;
+  }
 }
 
 @media screen and (max-width: $breakpointSM) {

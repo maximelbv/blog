@@ -22,6 +22,7 @@ export default function StepTitle({ cat, step, children }) {
           fontSize: '36px',
           fontWeight: 'bolder',
           background: `var(--${cat}Gradient)`,
+          color: 'var(--foreground)',
         }}
       >
         {step}

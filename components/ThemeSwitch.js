@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 
-import '@theme-toggles/react/css/Classic.css'
-import { Classic } from '@theme-toggles/react'
+import '@theme-toggles/react/css/Expand.css'
+import { Expand } from '@theme-toggles/react'
 
 const ThemeButton = () => {
   const [mounted, setMounted] = useState(false)
@@ -37,7 +37,7 @@ const ThemeButton = () => {
   }
 
   return (
-    <Classic
+    <Expand
       value={theme}
       toggled={isToggled}
       duration={750}

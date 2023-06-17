@@ -20,6 +20,12 @@
   justify-content: space-between;
 }
 
+.logo {
+  & path {
+    fill: var(--secondaryTxtColor);
+  }
+}
+
 .copyright {
   font-size: $fontSizeXS;
   font-weight: $fontWeightRegular;

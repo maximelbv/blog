@@ -51,7 +51,7 @@
   height: 24px;
   margin: auto;
   i {
-    background-color: #fff;
+    background-color: var(--primaryTxtColor);
     border-radius: 2px;
     content: '';
     display: block;
@@ -59,36 +59,36 @@
     height: 4px;
   }
   i:nth-child(1) {
-    -webkit-animation: outT 0.8s backwards;
-    animation: outT 0.8s backwards;
+    -webkit-animation: outT 0.5s backwards;
+    animation: outT 0.5s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
   }
   i:nth-child(2) {
     margin: 5px 0;
-    -webkit-animation: outM 0.8s backwards;
-    animation: outM 0.8s backwards;
+    -webkit-animation: outM 0.5s backwards;
+    animation: outM 0.5s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
   }
   i:nth-child(3) {
-    -webkit-animation: outBtm 0.8s backwards;
-    animation: outBtm 0.8s backwards;
+    -webkit-animation: outBtm 0.5s backwards;
+    animation: outBtm 0.5s backwards;
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
   }
   &.active {
     i:nth-child(1) {
-      -webkit-animation: inT 0.8s forwards;
-      animation: inT 0.8s forwards;
+      -webkit-animation: inT 0.5s forwards;
+      animation: inT 0.5s forwards;
     }
     i:nth-child(2) {
-      -webkit-animation: inM 0.8s forwards;
-      animation: inM 0.8s forwards;
+      -webkit-animation: inM 0.5s forwards;
+      animation: inM 0.5s forwards;
     }
     i:nth-child(3) {
-      -webkit-animation: inBtm 0.8s forwards;
-      animation: inBtm 0.8s forwards;
+      -webkit-animation: inBtm 0.5s forwards;
+      animation: inBtm 0.5s forwards;
     }
   }
 }

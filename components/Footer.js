@@ -10,7 +10,7 @@ export default function Footer() {
       <div className={styles.ctn}>
         <Socials />
         <Link href="/" passHref>
-          <Logo width={56} />
+          <Logo width={56} className={styles.logo} />
         </Link>
       </div>
 
