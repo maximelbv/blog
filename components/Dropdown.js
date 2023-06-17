@@ -1,5 +1,6 @@
 import headerNavLinks from '@/data/headerNavLinks'
 import styles from '@/styles/components/dropdown.module.scss'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Dropdown() {
@@ -14,7 +15,18 @@ export default function Dropdown() {
           <i></i>
         </div>
       </button>
-      <div className={`${styles.menu} ${isActive ? styles.open : styles.close}`}></div>
+      <div
+        className={`${styles.menu} ${isActive ? styles.open : styles.close}`}
+        onClick={() => {
+          setIsActive(!isActive)
+        }}
+      >
+        {headerNavLinks.map((link) => (
+          <Link className={styles.menuLink} key={link.title} href={link.href}>
+            {link.title}
+          </Link>
+        ))}
+      </div>
     </>
   )
 }

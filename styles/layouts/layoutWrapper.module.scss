@@ -12,7 +12,7 @@
 }
 
 .header {
-  height: 84px;
+  height: var(--headerHeight);
   width: 100%;
   @include flexCenter;
   justify-content: space-between;
