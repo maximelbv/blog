@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/layouts/listLayout.module.scss'
 import SearchIcon from '@/media/icons/search.svg'
+import Placeholder from '../public/static/images/thumbnails/placeholder.svg'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
   const [searchValue, setSearchValue] = useState('')
@@ -43,15 +44,19 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [] }) {
             <li key={slug}>
               <article className={styles.item}>
                 <Link href={`/posts/${slug}`} className={styles.itemBanner}>
-                  <Image
-                    className={styles.itemBannerPic}
-                    src={preview ? preview : '/static/images/thumbnails/placeholder.png'}
-                    alt="preview image"
-                    width="100vw"
-                    height="100%"
-                    layout="responsive"
-                    objectFit="cover"
-                  />
+                  {preview ? (
+                    <Image
+                      className={styles.itemBannerPic}
+                      src={preview}
+                      alt="preview image"
+                      width="100vw"
+                      height="100%"
+                      layout="responsive"
+                      objectFit="cover"
+                    />
+                  ) : (
+                    <Placeholder />
+                  )}
                 </Link>
 
                 <div className={styles.itemTags}>
