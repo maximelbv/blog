@@ -46,6 +46,9 @@
     //   transition: 0.2s ease-in-out;
     //   border: 3px solid var(--mainColor);
     // }
+    & svg {
+      border-radius: 10px;
+    }
     & path {
       fill: var(--secondaryTxtColor);
     }
@@ -66,6 +69,33 @@
     font-weight: $fontWeightSemiBold;
   }
 }
+
+.tagSelector {
+  color: var(--primaryTxtColor);
+  & svg {
+    fill: var(--secondaryTxtColor);
+  }
+}
+
+.tagsCtn {
+  @include flexCenter;
+  margin-top: $spacingXS;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.tag {
+  @include flexCenter;
+  cursor: pointer;
+  background: var(--elementColor);
+  border-radius: 10px;
+  margin-right: $spacingXXXS;
+  padding: $spacingXXXS $spacingXXS;
+  &Selected {
+    background: red;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .list {
     grid-template-columns: repeat(2, 1fr);

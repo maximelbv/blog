@@ -25,7 +25,6 @@
   --background: rgb(241, 241, 241);
   --foreground: rgb(249, 250, 251);
   --elementColor: rgb(238, 235, 235);
-  --elementColor: rgb(255, 255, 255);
 
   --scrollbarTrack: rgb(235, 235, 235);
   --scrollbarThumb: rgb(129, 139, 153);
@@ -95,6 +94,7 @@ a {
 
 button {
   @include button;
+  font-family: 'Averta', 'Poppins', 'Satoshi', sans-serif;
 }
 
 input {
