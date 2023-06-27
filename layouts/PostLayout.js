@@ -4,6 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import styles from '@/styles/layouts/postLayout.module.scss'
 import Divider from '@/components/postsComponents/Divider'
 import Image from 'next/image'
+import Tag from '@/components/Tag'
 
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
@@ -70,7 +71,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
           <h1 className={styles.title}>{title}</h1>
           <div className={styles.tags}>
             {tags.map((t) => (
-              <p key={t}>{t}</p>
+              <Tag key={t} text={t} />
             ))}
           </div>
           <Divider />
@@ -96,7 +97,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
                 <div className={styles.catAndDateDivider}></div>
                 <div className={styles.tags}>
                   {tags.map((t) => (
-                    <p key={t}>{t}</p>
+                    <Tag key={t} text={t} />
                   ))}
                 </div>
               </div>

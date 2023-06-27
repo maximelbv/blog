@@ -51,8 +51,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
 
   const handleSelected = (tag, i) => {
     isTagSelected[i].isSelected = !isTagSelected[i].isSelected
-    // setIsTagSelected([...isTagSelected, !isTagSelected[i].isSelected])
-    console.log('isTagSelected[tag]', isTagSelected)
     if (isTagSelected[i].isSelected) {
       setTagValue(tagValue + tag.value + ' ')
     } else if (!isTagSelected[i].isSelected) {
