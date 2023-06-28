@@ -19,9 +19,16 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
   }, [searchInputValue, tagValue])
 
   const tags = []
+
+  function alreadyExists(tag) {
+    return tags.some((t) => {
+      return t.value === tag
+    })
+  }
+
   posts.forEach((p) => {
     p.tags.forEach((t) => {
-      !tags.includes(t) && tags.push({ value: t, isSelected: false })
+      !alreadyExists(t) && tags.push({ value: t, isSelected: false })
       // !tags.some(`${t.value}`) && tags.push({ value: t, isSelected: false })
     })
   })
