@@ -109,7 +109,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
                       src={preview}
                       alt="preview image"
                       width="100vw"
-                      height="100%"
+                      height="60px"
                       layout="responsive"
                       objectFit="cover"
                     />

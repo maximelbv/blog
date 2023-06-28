@@ -69,6 +69,8 @@
   height: 300px !important;
   position: relative !important;
   &Ctn {
+    border-radius: 20px;
+    background: var(--elementColor);
     & span {
       padding: 0 !important;
     }

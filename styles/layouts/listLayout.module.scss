@@ -28,7 +28,7 @@
 .list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5vw;
+  gap: 1rem;
 }
 
 .item {
@@ -36,18 +36,14 @@
   &Banner {
     background: var(--elementColor);
     display: block;
-    border-radius: 16px;
+    border-radius: 10px;
     margin-bottom: 0.5rem;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     width: 100%;
     height: auto;
-    border: 6px solid var(--foreground);
-    // &:hover {
-    //   transition: 0.2s ease-in-out;
-    //   border: 3px solid var(--mainColor);
-    // }
     & svg {
       border-radius: 10px;
+      height: 200px
     }
     & path {
       fill: var(--secondaryTxtColor);
@@ -57,6 +53,7 @@
     }
   }
   &Tags {
+    margin-top: $spacingXXS ;
     & > * {
       color: var(--secondaryTxtColor);
       font-size: $fontSizeXS;
@@ -91,18 +88,19 @@
   border-radius: 10px;
   margin-right: $spacingXXXS;
   padding: $spacingXXXS $spacingXXS;
+  border: 1px solid rgba(255, 255, 255, .08);
   &Selected {
     background: red;
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: $breakpointMD) {
   .list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $breakpointSM) {
   .list {
     grid-template-columns: 1fr;
   }
