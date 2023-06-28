@@ -11,7 +11,13 @@
     height: 50px;
   }
 }
+
 .searchBar {
+  & svg {
+    fill: var(--primaryTxtColor);
+    stroke: var(--primaryTxtColor);
+
+  }
   @include flexCenter;
   justify-content: flex-start;
   background: var(--elementColor);
@@ -21,10 +27,12 @@
   max-width: 600px;
   border-radius: 50px;
   &TextInput {
-    background: var(--elementColor);
+    width: calc(100% - 40px);
+    background:var(--elementColor);
+    padding: $spacingXXS;
     border: none;
     font-size: $fontSizeS;
-    margin: 0 $spacingXXS 2px $spacingXXS;
+    margin: 0 $spacingXXS 2px 0;
   }
 }
 
@@ -84,11 +92,22 @@
   }
 }
 
+$finalHeight: 35px;
+$finalWidth: 100 * $finalHeight;
+$scrollBarHeight: 1px;
+
+
+
 .tagsCtn {
   @include flexCenter;
   margin-top: $spacingXS;
   width: 100%;
   justify-content: flex-start;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
 }
 
 .tag {

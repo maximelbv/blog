@@ -6,19 +6,20 @@ import styles from '@/styles/layouts/listLayout.module.scss'
 import SearchIcon from '@/media/icons/search.svg'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], isTagPage }) {
+  const [tags, setTags] = useState([])
   const [tagValue, setTagValue] = useState('')
   const [searchInputValue, setSearchInputValue] = useState('')
   const [searchValue, setSearchValue] = useState('')
 
   useEffect(() => {
     setSearchValue(tagValue + searchInputValue)
-    console.log('--------------------------')
-    console.log('tagValue : ', tagValue)
-    console.log('searchInputValue : ', searchInputValue)
-    console.log('searchValue : ', searchValue)
+    // console.log('--------------------------')
+    // console.log('tagValue : ', tagValue)
+    // console.log('searchInputValue : ', searchInputValue)
+    // console.log('searchValue : ', searchValue)
   }, [searchInputValue, tagValue])
 
-  const tags = []
+  // const tags = []
 
   function alreadyExists(tag) {
     return tags.some((t) => {
@@ -29,38 +30,36 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
   posts.forEach((p) => {
     p.tags.forEach((t) => {
       !alreadyExists(t) && tags.push({ value: t, isSelected: false })
-      // !tags.some(`${t.value}`) && tags.push({ value: t, isSelected: false })
     })
   })
-
-  const [isTagSelected, setIsTagSelected] = useState(tags)
+  function contains(text_one, text_two) {
+    if (text_one.indexOf(text_two) != -1) {
+      return true
+    }
+  }
 
   const filteredBlogPosts = posts.filter((p) => {
     const searchContent = p.tags.join(' ') + ' ' + p.title + ' '
     const keywords = searchContent.toLowerCase().split(' ')
-
-    let bool
-    if (
-      searchValue
-        .toLowerCase()
-        .split(' ')
-        .every((w) => keywords.includes(w.toLowerCase()))
-    ) {
-      bool = true
-    }
-    return bool
+    return searchValue
+      .toLowerCase()
+      .split(' ')
+      .every((w) => keywords.includes(w.toLowerCase()))
     // return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
+
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
 
   const handleSelected = (tag, i) => {
-    isTagSelected[i].isSelected = !isTagSelected[i].isSelected
-    if (isTagSelected[i].isSelected) {
+    tags[i].isSelected = !tags[i].isSelected
+    if (tags[i].isSelected) {
       setTagValue(tagValue + tag.value + ' ')
-    } else if (!isTagSelected[i].isSelected) {
+      return true
+    } else if (!tags[i].isSelected) {
       setTagValue(tagValue.replace(`${tag.value} `, ''))
       setSearchValue(searchValue.replace(`${tag.value} `, ''))
+      return false
     }
   }
 
@@ -91,6 +90,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
               onClick={() => {
                 handleSelected(t, i)
               }}
+              // className={handleSelected ? `${styles.tag} ${styles.tagSelected}` : `${styles.tag}`}
               className={styles.tag}
               key={t.value}
             >
