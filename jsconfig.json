@@ -8,7 +8,8 @@
       "@/lib/*": ["lib/*"],
       "@/css/*": ["css/*"],
       "@/styles/*": ["styles/*"],
-      "@/media/*": ["media/*"]
+      "@/media/*": ["media/*"],
+      "@/public/*": ["public/*"]
     }
   }
 }

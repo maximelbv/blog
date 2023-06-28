@@ -12,14 +12,23 @@
   }
 }
 .searchBar {
+  @include flexCenter;
+  justify-content: flex-start;
   background: var(--elementColor);
+  padding: 0 $spacingXS;
   height: 50px;
-  width: 60%;
+  max-width: 600px;
   border-radius: 50px;
+  &TextInput {
+    background: var(--elementColor);
+    border: none;
+    font-size: $fontSizeS;
+    margin: 0 $spacingXXS 2px $spacingXXS;
+  }
 }
 
 .divider {
-  margin: 24px 0;
+  margin: $spacingXXS 0 $spacingXS 0;
   width: 100%;
   height: 1px;
   background: var(--secondaryTxtColorLighter);
@@ -87,6 +96,7 @@
   background: var(--elementColor);
   border-radius: 10px;
   margin-right: $spacingXXXS;
+  margin-bottom: $spacingXXXS;
   padding: $spacingXXXS $spacingXXS;
   border: 1px solid rgba(255, 255, 255, .08);
   &Selected {
@@ -101,6 +111,10 @@
 }
 
 @media screen and (max-width: $breakpointSM) {
+  .header {
+    padding-top: 0;
+  }
+
   .list {
     grid-template-columns: 1fr;
   }

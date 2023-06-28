@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/layouts/listLayout.module.scss'
 import SearchIcon from '@/media/icons/search.svg'
-import Placeholder from '../public/static/images/thumbnails/placeholder.svg'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], isTagPage }) {
   const [tagValue, setTagValue] = useState('')
@@ -45,7 +44,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
     return bool
     // return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
-  // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
 
@@ -67,6 +65,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
           <div className={styles.searchBar}>
             <SearchIcon width={16} />
             <input
+              className={styles.searchBarTextInput}
               aria-label="Search posts"
               type="text"
               onChange={(e) => setSearchInputValue(e.target.value)}
@@ -93,7 +92,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
           ))}
         </div>
       )}
-      {/* <Select isMulti name="tags" options={tagsList} className={styles.tagSelector} /> */}
       <div className={styles.divider}></div>
       <ul className={styles.list}>
         {!displayPosts.length && <p className={styles.noPostsFound}>'No posts found.'</p>}
@@ -114,7 +112,15 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
                       objectFit="cover"
                     />
                   ) : (
-                    <Placeholder />
+                    <Image
+                      className={styles.itemBannerPic}
+                      src="/../public/static/images/thumbnails/placeholder.png"
+                      alt="preview image"
+                      width="100vw"
+                      height="60px"
+                      layout="responsive"
+                      objectFit="cover"
+                    />
                   )}
                 </Link>
 
