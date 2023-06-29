@@ -14,10 +14,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
 
   useEffect(() => {
     setSearchValue(tagValue + searchInputValue)
-    console.log('--------------------------')
-    console.log('tagValue : ', tagValue)
-    console.log('searchInputValue : ', searchInputValue)
-    console.log('searchValue : ', searchValue)
+    // console.log('--------------------------')
+    // console.log('tagValue : ', tagValue)
+    // console.log('searchInputValue : ', searchInputValue)
+    // console.log('searchValue : ', searchValue)
   }, [searchInputValue, tagValue])
 
   function alreadyExists(tag) {

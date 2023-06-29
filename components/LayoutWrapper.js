@@ -29,7 +29,7 @@ const LayoutWrapper = ({ children }) => (
 
         <div className={styles.buttons}>
           <ThemeSwitch />
-          {/* <Dropdown /> */}
+          <Dropdown />
         </div>
       </header>
     </SectionContainer>
