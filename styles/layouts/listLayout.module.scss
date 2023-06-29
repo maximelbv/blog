@@ -16,7 +16,6 @@
   & svg {
     fill: var(--primaryTxtColor);
     stroke: var(--primaryTxtColor);
-
   }
   @include flexCenter;
   justify-content: flex-start;
@@ -28,7 +27,7 @@
   border-radius: 50px;
   &TextInput {
     width: calc(100% - 40px);
-    background:var(--elementColor);
+    background: var(--elementColor);
     padding: $spacingXXS;
     border: none;
     font-size: $fontSizeS;
@@ -61,7 +60,7 @@
     height: auto;
     & svg {
       border-radius: 10px;
-      height: 200px
+      height: 200px;
     }
     & path {
       fill: var(--secondaryTxtColor);
@@ -71,7 +70,7 @@
     }
   }
   &Tags {
-    margin-top: $spacingXXS ;
+    margin-top: $spacingXXS;
     & > * {
       color: var(--secondaryTxtColor);
       font-size: $fontSizeXS;
@@ -96,8 +95,6 @@ $finalHeight: 35px;
 $finalWidth: 100 * $finalHeight;
 $scrollBarHeight: 1px;
 
-
-
 .tagsCtn {
   @include flexCenter;
   margin-top: $spacingXS;
@@ -107,20 +104,13 @@ $scrollBarHeight: 1px;
   &::-webkit-scrollbar {
     display: none;
   }
-
 }
 
 .tag {
-  @include flexCenter;
-  cursor: pointer;
-  background: var(--elementColor);
-  border-radius: 10px;
-  margin-right: $spacingXXXS;
-  margin-bottom: $spacingXXXS;
-  padding: $spacingXXXS $spacingXXS;
-  border: 1px solid rgba(255, 255, 255, .08);
-  &Selected {
-    background: red;
+  &Ctn {
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border-radius: 50px;
   }
 }
 

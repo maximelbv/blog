@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import styles from '@/styles/layouts/listLayout.module.scss'
 import SearchIcon from '@/media/icons/search.svg'
+import SelectTag from '@/components/SelectTag'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], isTagPage }) {
   const [tags, setTags] = useState([])
@@ -13,13 +14,11 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
 
   useEffect(() => {
     setSearchValue(tagValue + searchInputValue)
-    // console.log('--------------------------')
-    // console.log('tagValue : ', tagValue)
-    // console.log('searchInputValue : ', searchInputValue)
-    // console.log('searchValue : ', searchValue)
+    console.log('--------------------------')
+    console.log('tagValue : ', tagValue)
+    console.log('searchInputValue : ', searchInputValue)
+    console.log('searchValue : ', searchValue)
   }, [searchInputValue, tagValue])
-
-  // const tags = []
 
   function alreadyExists(tag) {
     return tags.some((t) => {
@@ -55,11 +54,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
     tags[i].isSelected = !tags[i].isSelected
     if (tags[i].isSelected) {
       setTagValue(tagValue + tag.value + ' ')
-      return true
     } else if (!tags[i].isSelected) {
       setTagValue(tagValue.replace(`${tag.value} `, ''))
       setSearchValue(searchValue.replace(`${tag.value} `, ''))
-      return false
     }
   }
 
@@ -85,18 +82,19 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
         ''
       ) : (
         <div className={styles.tagsCtn}>
-          {tags.map((t, i) => (
-            <span
-              onClick={() => {
-                handleSelected(t, i)
-              }}
-              // className={handleSelected ? `${styles.tag} ${styles.tagSelected}` : `${styles.tag}`}
-              className={styles.tag}
-              key={t.value}
-            >
-              {t.value}
-            </span>
-          ))}
+          {tags.map((t, i) => {
+            return (
+              <span
+                className={styles.tagCtn}
+                key={t.value}
+                onClick={() => {
+                  handleSelected(t, i)
+                }}
+              >
+                <SelectTag name={t.value} key={t.value} />
+              </span>
+            )
+          })}
         </div>
       )}
       <div className={styles.divider}></div>
