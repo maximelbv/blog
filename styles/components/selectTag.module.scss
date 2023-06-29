@@ -6,7 +6,9 @@
   background: var(--elementColor);
   border-radius: 50px;
   transition: 0.2s ease-in-out;
-  padding: $spacingXXXS $spacingXXS;
+  padding: 10px 12px;
+  // padding: $spacingXXXS $spacingXXS;
+  // padding: $spacingXXS $spacingXS;
   border: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   &:after {
