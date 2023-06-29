@@ -67,3 +67,17 @@ $fontWeightBlack: 900;
   justify-content: center;
   flex-wrap: wrap;
 }
+
+// ANIMATIONS
+
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

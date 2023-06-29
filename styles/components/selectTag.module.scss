@@ -10,6 +10,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   &:after {
+    animation: pop 0.25s;
     content: '';
     position: absolute;
     width: calc(100% + 10px);
