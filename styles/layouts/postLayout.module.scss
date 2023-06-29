@@ -18,7 +18,7 @@
 .catAndDate {
   @include flexCenter;
   justify-content: flex-start;
-  margin: $spacingXS 0;
+  margin: 0 0 $spacingXS 0;
   font-size: $fontSizeXS;
   color: var((--secondaryTxtColor));
   & > * {
@@ -121,9 +121,6 @@
 @media screen and (max-width: $breakpointXS) {
   .ctn {
     margin: $spacingXS 0;
-  }
-  .catAndDate {
-    margin: $spacingXXS 0 $spacingXS 0;
   }
   .bannerCtn {
     margin-bottom: $spacingXXS;

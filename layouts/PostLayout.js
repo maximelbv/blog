@@ -5,22 +5,23 @@ import styles from '@/styles/layouts/postLayout.module.scss'
 import Divider from '@/components/postsComponents/Divider'
 import Image from 'next/image'
 import Tag from '@/components/Tag'
+import ReturnButton from '@/components/GoBackBtn'
 
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, children }) {
   const { slug, fileName, date, title, images, tags, categories, banner } = frontMatter
 
-  const breadcrumbs = [
-    {
-      name: 'Maximelbv.com',
-      link: '/',
-    },
-    {
-      name: 'Posts',
-      link: '/posts',
-    },
-  ]
+  // const breadcrumbs = [
+  //   {
+  //     name: 'Maximelbv.com',
+  //     link: '/',
+  //   },
+  //   {
+  //     name: 'Posts',
+  //     link: '/posts',
+  //   },
+  // ]
 
   return (
     <>
@@ -31,7 +32,8 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
       />
       <article className={styles.ctn}>
         <header className={styles.header}>
-          <Breadcrumb crumbs={breadcrumbs} />
+          <ReturnButton />
+          {/* <Breadcrumb crumbs={breadcrumbs} /> */}
           <div className={styles.catAndDate}>
             <div className={styles.cat}>
               <div
