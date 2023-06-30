@@ -9,6 +9,7 @@
   @include flexCenter;
   width: 100vw;
   background: var(--foreground);
+  margin-top: var(--headerHeight);
 }
 
 .header {
@@ -16,6 +17,15 @@
   width: 100%;
   @include flexCenter;
   justify-content: space-between;
+  position: fixed;
+  left: 0;
+  background: var(--backgroundBlured);
+  inset: 0;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  padding: 0 $spacingXS;
+  z-index: 99999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .logoAndMenus {
