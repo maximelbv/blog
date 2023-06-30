@@ -31,11 +31,13 @@
   top: var(--headerHeight);
   width: 100vw;
   transition: 0.5s cubic-bezier(1, -0.03, 0.08, 0.94);
-  background-color: var(--background);
+
   @include flexCenter;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: var(--foreground);
+  backdrop-filter: blur(10px);
   & > * {
     display: none;
     padding: 1rem 0 1rem 1.5rem;
