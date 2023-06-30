@@ -13,8 +13,10 @@
 }
 
 html:not([data-scroll='0']) .header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   height: var(--condensedHeaderHeight);
+  background: var(--backgroundBlured);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -23,14 +25,15 @@ html:not([data-scroll='0']) .header {
   width: 100%;
   position: fixed;
   left: 0;
-  background: var(--backgroundBlured);
+  // background: var(--backgroundBlured);
+  background: var(--foreground);
   inset: 0;
   margin: 0 auto;
   backdrop-filter: blur(10px);
   z-index: 99999;
   width: 100vw;
   @include flexCenter;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   &Ctn {
     @include flexCenter;
     padding: 0 $spacingXS;
