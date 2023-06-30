@@ -37,26 +37,29 @@
   justify-content: flex-start;
   align-items: flex-start;
   & > * {
-    width: 0;
+    display: none;
     // width: 100%;
     padding: 1rem 0 1rem 1.5rem;
     // font-weight: bolder;
-    opacity: 0;
     font-size: $fontSizeXXL;
     margin-top: $spacingXXS;
   }
 }
 
 .open {
-  height: calc(100vh - var(--headerHeight));
-  // border-top: var(--border) 1px solid;
+  height: calc(100vh - 84px);
   &:nth-child(1) {
     animation-delay: 0.5s;
   }
   & > * {
-    opacity: 1;
-    transition: 1.2s cubic-bezier(1, -0.03, 0.08, 0.94);
+    animation: popFromNothing 0.8s cubic-bezier(1, -0.03, 0.08, 0.94);
+    display: inline;
     width: 100%;
+  }
+}
+@for $i from 1 through 10 {
+  .open > *:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.1}s;
   }
 }
 

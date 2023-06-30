@@ -81,3 +81,17 @@ $fontWeightBlack: 900;
     opacity: 1;
   }
 }
+
+@keyframes popFromNothing {
+  from {
+    display: none;
+    transform: translateX(75px);
+    opacity: 0;
+  }
+
+  to {
+    display: inline;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

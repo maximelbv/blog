@@ -43,5 +43,4 @@ const LayoutWrapper = ({ children }) => (
     </SectionContainer>
   </div>
 )
-
 export default LayoutWrapper

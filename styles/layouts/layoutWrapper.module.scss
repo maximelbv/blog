@@ -26,6 +26,9 @@
   padding: 0 $spacingXS;
   z-index: 99999;
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  width: 100vw;
+  // max-width: 72rem;
+  padding: 0 auto;
 }
 
 .logoAndMenus {
