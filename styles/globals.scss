@@ -41,13 +41,13 @@
   --borderHovered: rgba(255, 255, 255, 0.25);
   --divider: rgba(0, 0, 0, 0.15);
 
-  --headerHeight: 120px;
+  --headerHeight: 84px;
   --condensedHeaderHeight: 84px;
 }
 
 [data-theme='dark'] {
   --background: rgb(8, 8, 9);
-  --backgroundBlured: rgba(8, 8, 9, 0.5);
+  --backgroundBlured: rgba(8, 8, 9, 0.6);
   --foreground: rgb(14, 14, 17);
   --elementColor: rgb(29, 28, 32);
   --elementColorDarker: rgb(20, 19, 22);

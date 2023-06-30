@@ -13,19 +13,20 @@
 }
 
 html:not([data-scroll='0']) .header {
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  height: var(--condensedHeaderHeight);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  // height: var(--condensedHeaderHeight);
   background: var(--backgroundBlured);
+
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
 }
 
 .header {
   height: var(--headerHeight);
-  transition: 0.2s ease-in-out;
+  transition: 0.02s ease-in-out;
   width: 100%;
   position: fixed;
   left: 0;
-  // background: var(--backgroundBlured);
+  background: var(--backgroundBlured);
   background: var(--foreground);
   inset: 0;
   margin: 0 auto;
