@@ -48,7 +48,7 @@
 .open {
   height: calc(100vh - 84px);
   & > * {
-    animation: popFromNothing 0.8s cubic-bezier(1, -0.03, 0.08, 0.94) forwards;
+    animation: popFromNothing 0.8s cubic-bezier(0.45, 0.01, 0.1, 1.02) forwards;
     display: inline;
     width: 100%;
   }
