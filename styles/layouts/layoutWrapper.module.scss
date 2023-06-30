@@ -12,22 +12,33 @@
   margin-top: var(--headerHeight);
 }
 
+html:not([data-scroll='0']) .header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  height: var(--condensedHeaderHeight);
+}
+
 .header {
   height: var(--headerHeight);
+  transition: 0.2s ease-in-out;
   width: 100%;
-  @include flexCenter;
-  justify-content: space-between;
   position: fixed;
   left: 0;
   background: var(--backgroundBlured);
   inset: 0;
   margin: 0 auto;
   backdrop-filter: blur(10px);
-  padding: 0 $spacingXS;
   z-index: 99999;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   width: 100vw;
-  // max-width: 72rem;
+  @include flexCenter;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  &Ctn {
+    @include flexCenter;
+    padding: 0 $spacingXS;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    max-width: 72rem;
+  }
 }
 
 .logoAndMenus {

@@ -9,27 +9,56 @@ import styles from '@/styles/layouts/layoutWrapper.module.scss'
 import Logo from '@/media/icons/logo.svg'
 import Dropdown from './Dropdown'
 
+const debounce = (fn) => {
+  let frame
+
+  return (...params) => {
+    if (frame) {
+      cancelAnimationFrame(frame)
+    }
+    frame = requestAnimationFrame(() => {
+      fn(...params)
+    })
+  }
+}
+
+const storeScroll = () => {
+  if (process.browser) {
+    document.documentElement.dataset.scroll = window.scrollY
+  }
+}
+
+// Listen for new scroll events, here we debounce our `storeScroll` function
+if (process.browser) {
+  document.addEventListener('scroll', debounce(storeScroll), { passive: true })
+}
+
+// Update scroll position for first time
+storeScroll()
+
 const LayoutWrapper = ({ children }) => (
   <div className={styles.ctn}>
     <SectionContainer>
       <header className={styles.header}>
-        <div className={styles.logoAndMenus}>
-          <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
-            <Logo width={50} className={styles.logoSvg} />
-            <p className={styles.logoTxt}>Maxime Lbv</p>
-          </Link>
-          <div className={styles.verticalDivider}></div>
-
-          {headerNavLinks.map((link) => (
-            <Link className={styles.menuLink} key={link.title} href={link.href}>
-              {link.title}
+        <div className={styles.headerCtn}>
+          <div className={styles.logoAndMenus}>
+            <Link href="/" aria-label={siteMetadata.headerTitle} className={styles.logoLink}>
+              <Logo width={50} className={styles.logoSvg} />
+              <p className={styles.logoTxt}>Maxime Lbv</p>
             </Link>
-          ))}
-        </div>
+            <div className={styles.verticalDivider}></div>
 
-        <div className={styles.buttons}>
-          <ThemeSwitch />
-          <Dropdown />
+            {headerNavLinks.map((link) => (
+              <Link className={styles.menuLink} key={link.title} href={link.href}>
+                {link.title}
+              </Link>
+            ))}
+          </div>
+
+          <div className={styles.buttons}>
+            <ThemeSwitch />
+            <Dropdown />
+          </div>
         </div>
       </header>
     </SectionContainer>
