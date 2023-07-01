@@ -8,6 +8,7 @@ import ThemeSwitch from './ThemeSwitch'
 import styles from '@/styles/layouts/layoutWrapper.module.scss'
 import Logo from '@/media/icons/logo.svg'
 import Dropdown from './Dropdown'
+import Divider from './postsComponents/Divider'
 
 const debounce = (fn) => {
   let frame
@@ -46,13 +47,13 @@ const LayoutWrapper = ({ children }) => (
               <Logo width={50} className={styles.logoSvg} />
               <p className={styles.logoTxt}>Maxime Lbv</p>
             </Link>
-            <div className={styles.verticalDivider}></div>
-            {/* <h2 className={styles.headerPostTitle}>
-              {children.props.post ? children.props.post.frontMatter.title : 'test'}
-            </h2> */}
+            {!children.props.post && <div className={styles.verticalDivider}></div>}
 
             {children.props.post ? (
-              <h2 className={styles.headerPostTitle}>{children.props.post.frontMatter.title}</h2>
+              <>
+                <div className={styles.vDividerPost}></div>
+                <h2 className={styles.headerPostTitle}>{children.props.post.frontMatter.title}</h2>
+              </>
             ) : (
               headerNavLinks.map((link) => (
                 <Link className={styles.menuLinkScroll} key={link.title} href={link.href}>

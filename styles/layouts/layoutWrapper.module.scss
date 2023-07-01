@@ -34,9 +34,10 @@ html:not([data-scroll='0']) .menuLinkScroll {
   display: inline;
 }
 
-html:not([data-scroll='0']) .verticalDivider {
-  display: flex;
-}
+// html:not([data-scroll='0']) .verticalDivider {
+//   display: none;
+// }
+
 .header {
   height: var(--headerHeight);
   transition: 0.2s ease-in;
@@ -115,6 +116,14 @@ html:not([data-scroll='0']) .verticalDivider {
   margin: 0 15px 0 25px;
 }
 
+.vDividerPost {
+  // display: none;
+  background: var(--primaryTxtColor);
+  height: 18px;
+  width: 3px;
+  margin: 0 15px 0 15px;
+}
+
 .menuLink {
   @include flexCenter;
   margin-right: 10px;
@@ -140,17 +149,17 @@ html:not([data-scroll='0']) .verticalDivider {
 }
 
 @media screen and (max-width: $breakpointSM) {
-  // .header {
-  //   height: var(--condensedHeaderHeight);
-  // }
-  // .contentCtn {
-  //   margin-top: var(--condensedHeaderHeight);
-  // }
+  html:not([data-scroll='0']) .vDividerPost {
+    display: flex;
+  }
   .logo {
     width: 50px;
   }
   .verticalDivider,
   .menuLink,
+  .vDividerPost {
+    display: none;
+  }
   .menuLinkScroll {
     display: none !important;
   }
