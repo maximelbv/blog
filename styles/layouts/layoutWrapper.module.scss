@@ -14,9 +14,12 @@
 
 html:not([data-scroll='0']) .header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  // height: var(--condensedHeaderHeight);
+  height: var(--condensedHeaderHeight);
   background: var(--backgroundBlured);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+html:not([data-scroll='0']) .contentCtn {
+  margin-top: var(--condensedHeaderHeight);
 }
 
 .header {
@@ -98,6 +101,12 @@ html:not([data-scroll='0']) .header {
 }
 
 @media screen and (max-width: $breakpointSM) {
+  // .header {
+  //   height: var(--condensedHeaderHeight);
+  // }
+  // .contentCtn {
+  //   margin-top: var(--condensedHeaderHeight);
+  // }
   .logo {
     width: 50px;
   }

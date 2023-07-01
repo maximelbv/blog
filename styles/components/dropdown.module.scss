@@ -24,6 +24,10 @@
   flex-direction: column;
 }
 
+html:not([data-scroll='0']) .menu {
+  top: var(--condensedHeaderHeight);
+}
+
 .menu {
   z-index: 998;
   position: absolute;
@@ -48,7 +52,7 @@
 }
 
 .open {
-  height: calc(100vh - 84px);
+  height: 100vh;
   & > * {
     animation: popFromNothing 0.8s cubic-bezier(0.45, 0.01, 0.1, 1.02) forwards;
     display: inline;

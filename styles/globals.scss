@@ -22,7 +22,7 @@
   --GRAPHIC_DESIGNColor: rgb(189, 64, 64);
   --GRAPHIC_DESIGNGradient: linear-gradient(45deg, rgb(198, 90, 90) 0%, rgb(181, 40, 40) 100%);
 
-  --background: #edf1fa;
+  --background: #f1f1f1;
   --foreground: rgba(255, 255, 255);
   --elementColor: #f3f8ff;
   --elementColorDarker: #e6ebf1;
@@ -43,12 +43,12 @@
   --boxShadow: 0px 4px 5px rgba(22, 22, 22, 0.1);
 
   --headerHeight: 84px;
-  --condensedHeaderHeight: 84px;
+  --condensedHeaderHeight: 60px;
 }
 
 [data-theme='dark'] {
   --background: rgb(8, 8, 9);
-  --backgroundBlured: rgba(8, 8, 9, 0.55);
+  --backgroundBlured: rgba(8, 8, 9, 0.6);
   --foreground: rgb(14, 14, 17);
   --elementColor: rgb(29, 28, 32);
   --elementColorDarker: rgb(20, 19, 22);
