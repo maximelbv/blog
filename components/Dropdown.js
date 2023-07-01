@@ -22,8 +22,11 @@ export default function Dropdown() {
         }}
       >
         {headerNavLinks.map((link) => (
-          <Link className={styles.menuLink} key={link.title} href={link.href}>
-            {link.title}
+          <Link key={link.title} href={link.href} passHref>
+            <div className={styles.menuLink}>
+              {link.icon}
+              <span>{link.title}</span>
+            </div>
           </Link>
         ))}
       </div>

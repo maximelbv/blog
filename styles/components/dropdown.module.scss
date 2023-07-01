@@ -29,34 +29,54 @@ html:not([data-scroll='0']) .menu {
 }
 
 .menu {
-  z-index: 998;
   position: absolute;
   left: 0;
   top: var(--headerHeight);
   width: 100vw;
-  transition: 0.5s cubic-bezier(1, -0.03, 0.08, 0.94);
-
+  // transition: 0.5s cubic-bezier(1, -0.03, 0.08, 0.94);
   @include flexCenter;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: var(--foreground);
-  backdrop-filter: blur(10px);
-  & > * {
+  background: var(--backgroundBlured);
+  backdrop-filter: blur(5px);
+  @include flexCenter;
+  align-items: flex-end;
+  justify-content: flex-start;
+  &Link {
+    background: var(--elementColor);
+    border-radius: 20px;
+    & svg {
+      margin-right: $spacingXS;
+    }
+    @include flexCenter;
     display: none;
-    padding: 1rem 0 1rem 1.5rem;
-    font-size: $fontSizeXXL;
-    margin-top: $spacingXXS;
+    padding: 1rem 1.5rem;
+    margin: $spacingXXS;
+    font-size: $fontSizeXL;
     opacity: 0;
   }
 }
 
 .open {
   height: 100vh;
+  &:before {
+    content: '';
+    height: 100px;
+    width: 100px;
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(20px);
+    z-index: -1;
+  }
   & > * {
     animation: popFromNothing 0.8s cubic-bezier(0.45, 0.01, 0.1, 1.02) forwards;
     display: inline;
-    width: 100%;
+    width: auto;
   }
 }
 @for $i from 1 through 10 {
