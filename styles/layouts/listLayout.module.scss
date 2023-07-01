@@ -25,6 +25,7 @@
   height: 50px;
   max-width: 600px;
   border-radius: 50px;
+  box-shadow: var(--boxShadow);
   &TextInput {
     width: calc(100% - 40px);
     background: var(--elementColor);
