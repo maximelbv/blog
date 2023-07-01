@@ -47,6 +47,19 @@ const LayoutWrapper = ({ children }) => (
               <p className={styles.logoTxt}>Maxime Lbv</p>
             </Link>
             <div className={styles.verticalDivider}></div>
+            {/* <h2 className={styles.headerPostTitle}>
+              {children.props.post ? children.props.post.frontMatter.title : 'test'}
+            </h2> */}
+
+            {children.props.post ? (
+              <h2 className={styles.headerPostTitle}>{children.props.post.frontMatter.title}</h2>
+            ) : (
+              headerNavLinks.map((link) => (
+                <Link className={styles.menuLinkScroll} key={link.title} href={link.href}>
+                  {link.title}
+                </Link>
+              ))
+            )}
 
             {headerNavLinks.map((link) => (
               <Link className={styles.menuLink} key={link.title} href={link.href}>
@@ -62,11 +75,9 @@ const LayoutWrapper = ({ children }) => (
         </div>
       </header>
     </SectionContainer>
-
     <div className={styles.contentCtn}>
       <SectionContainer className={styles.content}>{children}</SectionContainer>
     </div>
-
     <SectionContainer>
       <Footer />
     </SectionContainer>

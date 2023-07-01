@@ -17,9 +17,21 @@ html:not([data-scroll='0']) .header {
   height: var(--condensedHeaderHeight);
   background: var(--backgroundBlured);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  & .logoTxt,
+  .menuLink {
+    display: none;
+  }
 }
 html:not([data-scroll='0']) .contentCtn {
   margin-top: var(--condensedHeaderHeight);
+}
+
+html:not([data-scroll='0']) .headerPostTitle {
+  display: inline;
+}
+
+html:not([data-scroll='0']) .menuLinkScroll {
+  display: inline;
 }
 
 .header {
@@ -45,6 +57,30 @@ html:not([data-scroll='0']) .contentCtn {
     width: 100%;
     max-width: 72rem;
   }
+}
+
+.headerPostTitle {
+  font-size: $fontSizeM;
+  display: none;
+  animation: comesFromBelow 1s cubic-bezier(0.28, -0.01, 0, 1);
+}
+
+.menuLinkScroll {
+  @include flexCenter;
+  margin-right: 10px;
+  font-weight: $fontWeightMedium;
+  color: var(--primaryTxtColor);
+  padding: 10px;
+  border-radius: 10px;
+  & svg {
+    margin-right: 10px;
+  }
+  &:hover {
+    color: var(--primaryTxtColor);
+    transition: 0.2s ease-in-out;
+    background: var(--foreground);
+  }
+  display: none;
 }
 
 .logoAndMenus {

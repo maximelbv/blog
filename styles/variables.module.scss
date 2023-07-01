@@ -95,3 +95,17 @@ $fontWeightBlack: 900;
     opacity: 1;
   }
 }
+
+@keyframes comesFromBelow {
+  from {
+    display: none;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    display: inline;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
