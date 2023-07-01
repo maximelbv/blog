@@ -21,6 +21,9 @@ html:not([data-scroll='0']) .header {
   .menuLink {
     display: none;
   }
+  // &Ctn {
+  //   padding: 0 18px;
+  // }
 }
 html:not([data-scroll='0']) .contentCtn {
   margin-top: var(--condensedHeaderHeight);
@@ -33,10 +36,6 @@ html:not([data-scroll='0']) .hdPostTitle {
 html:not([data-scroll='0']) .menuLinkScroll {
   display: inline;
 }
-
-// html:not([data-scroll='0']) .verticalDivider {
-//   display: none;
-// }
 
 .header {
   height: var(--headerHeight);
@@ -56,7 +55,7 @@ html:not([data-scroll='0']) .menuLinkScroll {
   &Ctn {
     @include flexCenter;
     flex-wrap: nowrap;
-    padding: 0 $spacingXS;
+    padding: 0 1.1rem;
     justify-content: space-between;
     height: 100%;
     width: 100%;
