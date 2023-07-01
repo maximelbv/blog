@@ -10,6 +10,7 @@
   // padding: $spacingXXXS $spacingXXS;
   // padding: $spacingXXS $spacingXS;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--boxShadow);
   position: relative;
   &:after {
     animation: pop 0.25s;

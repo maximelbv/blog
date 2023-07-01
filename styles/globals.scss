@@ -24,8 +24,8 @@
 
   --background: #f1f1f1;
   --foreground: rgba(255, 255, 255);
-  --elementColor: #e8f1fd;
-  --elementColorDarker: #d2d6db;
+  --elementColor: #f3f8ff;
+  --elementColorDarker: #e6ebf1;
 
   --scrollbarTrack: rgb(235, 235, 235);
   --scrollbarThumb: rgb(129, 139, 153);
@@ -40,6 +40,7 @@
   --border: rgba(0, 0, 0, 0.12);
   --borderHovered: rgba(255, 255, 255, 0.25);
   --divider: rgba(0, 0, 0, 0.15);
+  --boxShadow: 0px 8px 15px rgba(22, 22, 22, 0.1);
 
   --headerHeight: 84px;
   --condensedHeaderHeight: 84px;
