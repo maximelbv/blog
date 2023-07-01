@@ -52,7 +52,7 @@ const LayoutWrapper = ({ children }) => (
             {children.props.post ? (
               <>
                 <div className={styles.vDividerPost}></div>
-                <h2 className={styles.headerPostTitle}>{children.props.post.frontMatter.title}</h2>
+                <h2 className={styles.hdPostTitle}>{children.props.post.frontMatter.title}</h2>
               </>
             ) : (
               headerNavLinks.map((link) => (

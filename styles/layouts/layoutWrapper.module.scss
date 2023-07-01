@@ -26,8 +26,8 @@ html:not([data-scroll='0']) .contentCtn {
   margin-top: var(--condensedHeaderHeight);
 }
 
-html:not([data-scroll='0']) .headerPostTitle {
-  display: inline;
+html:not([data-scroll='0']) .hdPostTitle {
+  display: block;
 }
 
 html:not([data-scroll='0']) .menuLinkScroll {
@@ -45,16 +45,17 @@ html:not([data-scroll='0']) .menuLinkScroll {
   position: fixed;
   left: 0;
   background: var(--foreground);
-  // background: var(--backgroundBlured);
-
   inset: 0;
   margin: 0 auto;
   backdrop-filter: blur(10px);
   z-index: 99999;
   width: 100vw;
   @include flexCenter;
+  flex-wrap: nowrap;
+
   &Ctn {
     @include flexCenter;
+    flex-wrap: nowrap;
     padding: 0 $spacingXS;
     justify-content: space-between;
     height: 100%;
@@ -63,10 +64,13 @@ html:not([data-scroll='0']) .menuLinkScroll {
   }
 }
 
-.headerPostTitle {
+.hdPostTitle {
   font-size: $fontSizeM;
   display: none;
   animation: comesFromBelow 1s cubic-bezier(0.28, -0.01, 0, 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menuLinkScroll {
@@ -89,6 +93,12 @@ html:not([data-scroll='0']) .menuLinkScroll {
 
 .logoAndMenus {
   @include flexCenter;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   & path {
     fill: var(--mainColor) !important;
   }
@@ -117,7 +127,6 @@ html:not([data-scroll='0']) .menuLinkScroll {
 }
 
 .vDividerPost {
-  // display: none;
   background: var(--primaryTxtColor);
   height: 18px;
   width: 3px;
@@ -143,6 +152,8 @@ html:not([data-scroll='0']) .menuLinkScroll {
 
 .buttons {
   @include flexCenter;
+  flex-wrap: nowrap;
+
   & button {
     background: none !important;
   }
@@ -161,6 +172,13 @@ html:not([data-scroll='0']) .menuLinkScroll {
     display: none;
   }
   .menuLinkScroll {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: $breakpointXS) {
+  .hdPostTitle,
+  .vDividerPost {
     display: none !important;
   }
 }
