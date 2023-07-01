@@ -34,6 +34,9 @@ html:not([data-scroll='0']) .menuLinkScroll {
   display: inline;
 }
 
+html:not([data-scroll='0']) .verticalDivider {
+  display: flex;
+}
 .header {
   height: var(--headerHeight);
   transition: 0.2s ease-in;
@@ -147,8 +150,9 @@ html:not([data-scroll='0']) .menuLinkScroll {
     width: 50px;
   }
   .verticalDivider,
-  .menuLink {
-    display: none;
+  .menuLink,
+  .menuLinkScroll {
+    display: none !important;
   }
 }
 
