@@ -9,9 +9,8 @@
   font-size: $fontSizeS-M;
   line-height: 32px;
   font-weight: $fontWeightMedium;
-  letter-spacing: 0.3px;
-  font-weight: lighter;
-  max-width: 800px;
+  letter-spacing: 0.1px;
+  max-width: 740px;
   & > * {
     margin-bottom: $spacingXS;
   }
@@ -112,6 +111,10 @@
 
 .GRAPHIC_DESIGN {
   background: var(--GRAPHIC_DESIGNColor);
+}
+
+.CRAFT {
+  background: var(--CRAFTColor);
 }
 
 @media screen and (max-width: $breakpointLG) {

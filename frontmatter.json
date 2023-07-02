@@ -62,7 +62,7 @@
     }
   ],
   "frontMatter.taxonomy.tags": [],
-  "frontMatter.taxonomy.categories": ["CGI", "PROGRAMMING"],
+  "frontMatter.taxonomy.categories": ["CGI", "PROGRAMMING", "GRAPHIC_DESIGN", "CRAFT"],
   "frontMatter.content.snippets": {
     "Spacer": {
       "description": "",
