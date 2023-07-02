@@ -94,6 +94,8 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
                       ? `${styles.dot} ${styles.CGI}`
                       : categories[0] === 'GRAPHIC_DESIGN'
                       ? `${styles.dot} ${styles.GRAPHIC_DESIGN}`
+                      : categories[0] === 'CRAFT'
+                      ? `${styles.dot} ${styles.CRAFT}`
                       : styles.dot
                   }
                 ></div>
