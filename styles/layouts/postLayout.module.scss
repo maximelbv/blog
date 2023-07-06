@@ -48,6 +48,8 @@
 
 .title {
   font-size: $fontSizeXXXL;
+  font-size: 80px;
+  font-family: 'Pprader';
   margin-bottom: $spacingXS;
 }
 
@@ -117,9 +119,9 @@
   background: var(--CRAFTColor);
 }
 
-@media screen and (max-width: $breakpointLG) {
+@media screen and (max-width: $breakpointMD) {
   .title {
-    font-size: $fontSizeXXL;
+    font-size: $fontSizeXXXL;
   }
 }
 

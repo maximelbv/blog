@@ -13,6 +13,7 @@
 }
 
 .searchBar {
+  border: 1px solid var(--border);
   & svg {
     fill: var(--primaryTxtColor);
     stroke: var(--primaryTxtColor);
