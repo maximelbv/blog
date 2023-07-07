@@ -5,6 +5,7 @@ import Image from 'next/image'
 import styles from '@/styles/layouts/listLayout.module.scss'
 import SearchIcon from '@/media/icons/search.svg'
 import SelectTag from '@/components/SelectTag'
+import CategorySelector from '@/components/CategorySelector'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], isTagPage }) {
   const [tags, setTags] = useState([])
@@ -14,10 +15,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
 
   useEffect(() => {
     setSearchValue(tagValue + searchInputValue)
-    // console.log('--------------------------')
-    // console.log('tagValue : ', tagValue)
-    // console.log('searchInputValue : ', searchInputValue)
-    // console.log('searchValue : ', searchValue)
   }, [searchInputValue, tagValue])
 
   function alreadyExists(tag) {
@@ -64,7 +61,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
     <>
       <div className={styles.header}>
         <h1 className={styles.headerTitle}>{title}</h1>
-        <div className={styles.headerActions}>
+        {/* <div className={styles.headerActions}>
           <div className={styles.searchBar}>
             <SearchIcon width={16} />
             <input
@@ -76,7 +73,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
             />
             <div className={styles.categorySearchCtn}></div>
           </div>
-        </div>
+        </div> */}
+        <CategorySelector />
       </div>
       {isTagPage ? (
         ''

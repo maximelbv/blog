@@ -1,0 +1,51 @@
+@import '../variables.module';
+
+.catSelector {
+  @include flexCenter;
+  justify-content: flex-start;
+  margin-left: calc($spacingXXXS - 2px);
+  &In {
+    color: var(--secondaryTxtColor);
+  }
+  &VDivider {
+    height: 12px;
+    width: 1px;
+    background: var(--secondaryTxtColor);
+    margin: 0 $spacingXXS;
+  }
+  &Select {
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: var(--primaryTxtColor);
+    width: 150px;
+
+    &:focus-visible {
+      outline: none !important;
+    }
+  }
+}
+
+.dot {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: grey;
+}
+
+.PROGRAMMING {
+  background: var(--PROGRAMMINGColor);
+}
+
+.CGI {
+  background: var(--CGIColor);
+}
+
+.GRAPHIC_DESIGN {
+  background: var(--GRAPHIC_DESIGNColor);
+}
+
+.CRAFT {
+  background: var(--CRAFTColor);
+}

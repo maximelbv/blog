@@ -16,7 +16,7 @@ export default function StepTitle({ cat, step, children }) {
           width: `35px`,
           height: `35px`,
           display: 'flex',
-          // alignItems: 'center',
+          alignItems: 'center',
           justifyContent: 'center',
           borderRadius: '5px',
           fontSize: '26px',

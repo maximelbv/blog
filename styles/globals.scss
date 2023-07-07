@@ -22,8 +22,18 @@
 }
 
 @font-face {
+  font-family: 'Magnat_Text';
+  src: url('../media/fonts/Magnat/magnat-text-medium.otf');
+}
+
+@font-face {
   font-family: 'Zackerman';
   src: url('../media/fonts/Zackerman/Zackerman.otf');
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('../media/fonts/Larsseit/Larsseit-Light.otf');
 }
 
 @font-face {
@@ -114,6 +124,10 @@ body {
   align-items: center;
   background: var(--background) !important;
   color: var(--primaryTxtColor) !important;
+}
+
+h1 {
+  font-family: 'Magnat_Text';
 }
 
 li {
