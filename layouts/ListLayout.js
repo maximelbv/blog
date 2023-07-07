@@ -6,6 +6,7 @@ import styles from '@/styles/layouts/listLayout.module.scss'
 import SearchIcon from '@/media/icons/search.svg'
 import SelectTag from '@/components/SelectTag'
 import CategorySelector from '@/components/CategorySelector'
+import Spacer from '@/components/postsComponents/Spacer'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], isTagPage }) {
   const [tags, setTags] = useState([])
@@ -74,7 +75,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], isT
             <div className={styles.categorySearchCtn}></div>
           </div>
         </div> */}
-        <CategorySelector />
+        {!isTagPage && <CategorySelector />}
+        <Spacer space={24} />
       </div>
       {isTagPage ? (
         ''
