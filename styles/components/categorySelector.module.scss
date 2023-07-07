@@ -14,11 +14,13 @@
     margin: 0 $spacingXXS;
   }
   &Select {
+    // @include flexCenter;
     text-transform: uppercase;
     background: none;
     border: none;
     color: var(--primaryTxtColor);
-    width: 150px;
+    width: 170px;
+    font-size: $fontSizeS;
 
     &:focus-visible {
       outline: none !important;
