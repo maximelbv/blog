@@ -49,7 +49,8 @@
 .title {
   font-size: $fontSizeXXXL;
   font-size: 80px;
-  font-family: 'Pprader';
+  font-family: 'Zackerman';
+  // letter-spacing: 2px;
   margin-bottom: $spacingXS;
 }
 
@@ -73,7 +74,7 @@
   position: relative !important;
   &Ctn {
     border-radius: 20px;
-    background: var(--elementColor);
+    background: var(--elementBg);
     & span {
       padding: 0 !important;
     }

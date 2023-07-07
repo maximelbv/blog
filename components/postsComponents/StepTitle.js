@@ -13,13 +13,13 @@ export default function StepTitle({ cat, step, children }) {
           position: 'absolute',
           top: 0,
           left: 0,
-          width: `50px`,
-          height: `50px`,
+          width: `35px`,
+          height: `35px`,
           display: 'flex',
-          alignItems: 'center',
+          // alignItems: 'center',
           justifyContent: 'center',
           borderRadius: '5px',
-          fontSize: '36px',
+          fontSize: '26px',
           fontWeight: 'bolder',
           background: `var(--${cat}Gradient)`,
           color: 'rgb(249, 250, 251)',
@@ -30,8 +30,8 @@ export default function StepTitle({ cat, step, children }) {
       <h2
         style={{
           fontSize: '34px',
-          lineHeight: '50px',
-          textIndent: '65px',
+          lineHeight: '35px',
+          textIndent: '45px',
         }}
       >
         {children}

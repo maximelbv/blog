@@ -16,6 +16,21 @@
   src: url('../media/fonts/Pprader/PPRader-Regular.otf');
 }
 
+@font-face {
+  font-family: 'Magnat';
+  src: url('../media/fonts/Magnat/NeueMagnatDisplayTest-Bold-BF63e99fb3c3c62.woff');
+}
+
+@font-face {
+  font-family: 'Zackerman';
+  src: url('../media/fonts/Zackerman/Zackerman.otf');
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url('../media/fonts/Neue_Montreal/PPNeueMontreal-Thin.otf');
+}
+
 @import '@/styles/variables.module';
 
 :root {
@@ -36,6 +51,7 @@
   --backgroundBluredDarker: rgba(255, 255, 255, 0.7);
   --foreground: #e9e9e9;
   --elementColor: rgb(237, 237, 237);
+  --elementBg: rgb(220, 220, 220);
   --elementColorDarker: rgb(232, 232, 232);
 
   --scrollbarTrack: rgb(235, 235, 235);
@@ -63,6 +79,8 @@
 
   --foreground: rgb(14, 14, 17);
   --elementColor: rgb(29, 28, 32);
+  --elementBg: rgb(29, 28, 32);
+
   --elementColorDarker: rgb(20, 19, 22);
 
   --scrollbarTrack: rgb(20, 23, 24);
