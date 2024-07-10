@@ -6,6 +6,8 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@/components/tag";
+import { formatDate } from "@/lib/utils";
+import { Icons } from "@/components/icons";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -64,6 +66,17 @@ export async function generateStaticParams(): Promise<
   return posts.map((post) => ({ slug: post.slugAsParams.split("/") }));
 }
 
+const categoryIcons = {
+  figma: Icons.figma,
+  react: Icons.react,
+};
+
+type Category = keyof typeof categoryIcons;
+
+function isCategory(category: string): category is Category {
+  return category in categoryIcons;
+}
+
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
 
@@ -71,19 +84,43 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
+  const category = post.category.toLowerCase();
+  const CategoryIcon = isCategory(category) ? categoryIcons[category] : null;
+
   return (
-    <article className="container py-6 prose dark:prose-invert max-w-3xl mx-auto">
-      <h1 className="mb-2">{post.title}</h1>
-      <div className="flex gap-2 mb-2">
-        {post.tags?.map((tag) => (
-          <Tag tag={tag} key={tag} />
-        ))}
-      </div>
-      {post.description ? (
-        <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
-      ) : null}
-      <hr className="my-4" />
-      <MDXContent code={post.body} />
-    </article>
+    <div className="flex default-layout pt-16">
+      <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
+        <div className="grid gap-7 mb-12">
+          <div className="flex items-center justify-start gap-4 mb-[-18px]">
+            <div className="flex items-center justify-center gap-2.5">
+              {CategoryIcon ? <CategoryIcon /> : null}
+              <span className="uppercase font-semibold tracking-[7px]">
+                {post.category}
+              </span>
+            </div>
+
+            <div className="w-1.5 h-1.5 bg-secondary-foreground rounded-full" />
+            <span className="text-secondary-foreground">
+              last updated :{" "}
+              <strong className="text-secondary-foreground">
+                {formatDate(post.date)}
+              </strong>
+            </span>
+          </div>
+          <h1 className="mb-0 text-[40px] font-bold leading-[3.25rem]">
+            {post.title}
+          </h1>
+          <div className="flex gap-2">
+            {post.tags?.map((tag) => (
+              <Tag tag={tag} key={tag} />
+            ))}
+          </div>
+          <hr className="m-0" />
+        </div>
+
+        <MDXContent code={post.body} />
+      </article>
+      {/* <aside></aside> */}
+    </div>
   );
 }

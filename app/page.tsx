@@ -44,19 +44,24 @@ export default function Home() {
           Latest Posts
         </h2>
         <ul className="flex flex-col">
-          {latestPosts.map((post) => (
-            post.published && (
-              <li key={post.slug} className="first:border-t first:border-border">
-                <PostItem
-                  slug={post.slug}
-                  title={post.title}
-                  description={post.description}
-                  date={post.date}
-                  tags={post.tags}
-                />
-              </li>
-            )
-          ))}
+          {latestPosts.map(
+            (post) =>
+              post.published && (
+                <li
+                  key={post.slug}
+                  className="first:border-t first:border-border"
+                >
+                  <PostItem
+                    slug={post.slug}
+                    title={post.title}
+                    description={post.description}
+                    date={post.date}
+                    category={post.category}
+                    tags={post.tags}
+                  />
+                </li>
+              )
+          )}
         </ul>
       </section>
     </>

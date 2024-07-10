@@ -9,6 +9,7 @@ interface PostItemProps {
   title: string;
   description?: string;
   date: string;
+  category: string;
   tags?: Array<string>;
 }
 
@@ -17,6 +18,7 @@ export function PostItem({
   title,
   description,
   date,
+  category,
   tags,
 }: PostItemProps) {
   return (
