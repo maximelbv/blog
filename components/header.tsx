@@ -13,10 +13,8 @@ export function Header() {
       </Link>
       <div className="flex items-center justify-center">
         {navigation.map((nav) => (
-          <Button variant={"ghost"}>
-            <Link href={nav.route} key={nav.name}>
-              {nav.name}
-            </Link>
+          <Button key={nav.name} variant={"ghost"}>
+            <Link href={nav.route}>{nav.name}</Link>
           </Button>
         ))}
         <ModeToggle />
