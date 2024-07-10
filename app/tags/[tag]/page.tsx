@@ -33,7 +33,7 @@ export default function TagPage({ params }: TagPageProps) {
   const title = tag.split("-").join(" ");
 
   const allPosts = getPostsByTagSlug(posts, tag);
-  const displayPosts = allPosts.filter(post => post.published);
+  const displayPosts = allPosts.filter((post) => post.published);
   const tags = getAllTags(posts);
   const sortedTags = sortTagsByCount(tags);
 
@@ -52,7 +52,7 @@ export default function TagPage({ params }: TagPageProps) {
           {displayPosts?.length > 0 ? (
             <ul className="flex flex-col">
               {displayPosts.map((post) => {
-                const { slug, date, title, description, tags } = post;
+                const { slug, date, title, description, category, tags } = post;
                 return (
                   <li key={slug}>
                     <PostItem
@@ -60,6 +60,7 @@ export default function TagPage({ params }: TagPageProps) {
                       date={date}
                       title={title}
                       description={description}
+                      category={category}
                       tags={tags}
                     />
                   </li>
