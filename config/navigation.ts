@@ -1,7 +1,7 @@
 export const navigation = [
   {
-    name: "Work",
-    route: "/work",
+    name: "Projects",
+    route: "/projects",
   },
   {
     name: "Blog",
