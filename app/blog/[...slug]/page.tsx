@@ -8,6 +8,8 @@ import { siteConfig } from "@/config/site";
 import { Tag } from "@/components/tag";
 import { formatDate } from "@/lib/utils";
 import { Icons } from "@/components/icons";
+import { Button } from "@/components/ui/button";
+import { BackButton } from "@/components/go-back-button";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -88,9 +90,10 @@ export default async function PostPage({ params }: PostPageProps) {
   const CategoryIcon = isCategory(category) ? categoryIcons[category] : null;
 
   return (
-    <div className="flex default-layout pt-16">
+    <div className="flex default-layout ">
       <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
         <div className="grid gap-7 mb-12">
+          <BackButton />
           <div className="flex items-center justify-start gap-4 mb-[-18px]">
             <div className="flex items-center justify-center gap-2.5">
               {CategoryIcon ? <CategoryIcon /> : null}
