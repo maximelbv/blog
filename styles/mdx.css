@@ -37,3 +37,19 @@
 .subheading-anchor {
   @apply no-underline hover:underline;
 }
+
+h1 a {
+  @apply font-bold text-3xl !important;
+}
+
+h2 a {
+  @apply font-bold text-2xl !important;
+}
+
+h3 a {
+  @apply font-bold text-xl !important;
+}
+
+p {
+  @apply text-lg font-medium leading-8 mt-0 mb-14 text-secondary-foreground/80 !important;
+}
