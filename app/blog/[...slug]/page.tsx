@@ -10,6 +10,7 @@ import { formatDate } from "@/lib/utils";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { BackButton } from "@/components/go-back-button";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -124,6 +125,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <MDXContent code={post.body} />
       </article>
       {/* <aside></aside> */}
+      <ScrollToTopButton />
     </div>
   );
 }

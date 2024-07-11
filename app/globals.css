@@ -90,6 +90,6 @@
 
 @layer components {
   .default-layout {
-    @apply max-w-classic mx-auto p-5; /* 20px padding is equivalent to 5 in Tailwind */
+    @apply max-w-classic mx-auto p-5;
   }
 }

@@ -38,6 +38,10 @@
   @apply no-underline hover:underline;
 }
 
+h2 {
+  @apply mb-1 !important;
+}
+
 h1 a {
   @apply font-bold text-3xl !important;
 }
