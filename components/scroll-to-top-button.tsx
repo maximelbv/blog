@@ -30,7 +30,7 @@ const ScrollToTopButton = () => {
     <Button
       variant="ghost"
       onClick={handleClick}
-      className={`bg-secondary rounded-full px-8 py-10 fixed right-5 bottom-5 group transition-transform duration-300 ${
+      className={`z-50 bg-secondary rounded-full px-8 py-10 fixed right-5 bottom-5 group transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "translate-y-[120%]"
       }`}
     >
