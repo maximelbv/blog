@@ -31,8 +31,13 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        pigment: {
+          DEFAULT: "hsl(var(--pigment))",
+          darker: "hsl(var(--pigment-darker))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
+          darker: "hsl(var(--primary-darker))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {

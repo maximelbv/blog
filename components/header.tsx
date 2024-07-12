@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 
 export function Header() {
   return (
-    <header className="flex w-full justify-between default-layout">
+    <header className="flex w-full justify-between default-layout p-5">
       <Link href="/">
         <Icons.logo />
       </Link>
