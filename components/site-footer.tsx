@@ -1,7 +1,4 @@
-import { siteConfig } from "@/config/site";
-import { Mail } from "lucide-react";
 import { Icons } from "./icons";
-import { navigation } from "@/config/navigation";
 import Link from "next/link";
 import { socials } from "@/config/socials";
 
@@ -24,7 +21,7 @@ export function SiteFooter() {
           </div>
           <div className="flex gap-7 items-center justify-center mr-20">
             {socials.map((Social) => (
-              <Link target="_blank" href={Social.route}>
+              <Link key={Social.name} target="_blank" href={Social.route}>
                 <Social.icon />
               </Link>
             ))}
