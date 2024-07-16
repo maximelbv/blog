@@ -6,6 +6,7 @@ import { Providers } from "@/components/providers";
 import { siteConfig } from "@/config/site";
 import { SiteFooter } from "@/components/site-footer";
 import { Header } from "@/components/header";
+import { ViewTransitions } from "next-view-transitions";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -39,11 +40,13 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          <div className="relative flex min-h-dvh flex-col bg-background">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
-          </div>
+          <ViewTransitions>
+            <div className="relative flex min-h-dvh flex-col bg-background">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <SiteFooter />
+            </div>
+          </ViewTransitions>
         </Providers>
       </body>
     </html>
