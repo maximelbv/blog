@@ -42,6 +42,39 @@ export const Icons = {
       />
     </svg>
   ),
+  burgerMenuIcon: (props: IconProps) => (
+    <svg
+      width="24"
+      height="22"
+      viewBox="0 0 24 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        y="0.399902"
+        width="12"
+        height="4.79998"
+        rx="2.39999"
+        className="fill-secondary-foreground"
+      />
+      <rect
+        x="1.2002"
+        y="8.7998"
+        width="22.7999"
+        height="4.79998"
+        rx="2.39999"
+        className="fill-secondary-foreground"
+      />
+      <rect
+        x="10.7998"
+        y="17.2"
+        width="12"
+        height="4.79998"
+        rx="2.39999"
+        className="fill-secondary-foreground"
+      />
+    </svg>
+  ),
   arrowBack: (props: IconProps) => (
     <svg
       className="fill-secondary-foreground"

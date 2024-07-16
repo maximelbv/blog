@@ -11,7 +11,7 @@ export function Header() {
       <Link href="/">
         <Icons.logo />
       </Link>
-      <div className="flex items-center justify-center">
+      <div className="hidden sm:flex items-center justify-center">
         {navigation.map((nav) => (
           <Button key={nav.name} variant={"ghost"}>
             <Link href={nav.route}>{nav.name}</Link>
