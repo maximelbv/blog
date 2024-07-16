@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { navigation } from "@/config/navigation";
 import { Icons } from "./icons";
 import { ModeToggle } from "./mode-toggle";
 import { MobileNav } from "./mobile-nav";
 import { Button } from "./ui/button";
+import { Link } from "next-view-transitions";
 
 export function Header() {
   return (
