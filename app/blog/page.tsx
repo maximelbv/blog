@@ -1,4 +1,5 @@
 import { posts } from "#site/content";
+import PageHeader from "@/components/page-header";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
 import { Tag } from "@/components/tag";
@@ -34,15 +35,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <div className="default-layout px-5">
-      <div>
-        <h1 className="font-dahliaBold text-[80px] text-secondary-foreground">
-          Blog
-        </h1>
-        <p className="text-secondary-foreground max-w-[400px]">
-          Collection of tutorials / snippets focused on coding and graphic
-          design
-        </p>
-      </div>
+      <PageHeader
+        title="Blog"
+        subtitle="Collection of tutorials / snippets focused on coding and graphic
+          design"
+      />
     </div>
   );
 }
