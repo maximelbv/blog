@@ -6,12 +6,11 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@/components/tag";
-import { formatDate } from "@/lib/utils";
-import { Icons } from "@/components/icons";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import Image from "next/image";
 import PostInfos from "@/components/post-infos";
+import BlurImage from "@/components/blur-image";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -84,10 +83,8 @@ export default async function PostPage({ params }: PostPageProps) {
           <BackButton />
           {post.image && (
             <div className="w-full h-[300px] relative m-0 rounded-md">
-              <Image
+              <BlurImage
                 src={post.image}
-                alt="article illustration"
-                fill
                 className="rounded-xl"
                 style={{
                   objectFit: "cover",
