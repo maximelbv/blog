@@ -22,7 +22,7 @@ export default async function BlogPage() {
         subtitle="Collection of tutorials / snippets focused on coding and graphic
           design"
       />
-      <div className="grid gap-[20px] lg:gap-[30px] lg:gap-y-[50px] row-gap w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10">
+      <div className="grid gap-[20px] lg:gap-[30px] lg:gap-y-[50px] row-gap w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-20">
         {publishedPosts.map((post) => (
           <PostCard key={post.slug} post={post} />
         ))}

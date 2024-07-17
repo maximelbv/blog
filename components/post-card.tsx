@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Tag } from "./tag";
 import PostInfos from "./post-infos";
+import { Icons } from "./icons";
 
 const PostCard = ({ post }: { post: Post }) => {
   return (
@@ -21,7 +22,9 @@ const PostCard = ({ post }: { post: Post }) => {
               }}
             />
           ) : (
-            <div className="rounded-md">ok</div>
+            <div className="rounded-md h-full w-full flex items-center justify-center bg-secondary">
+              <Icons.logoWithoutBg />
+            </div>
           )}
         </div>
         <div className="grid gap-[5px]">
