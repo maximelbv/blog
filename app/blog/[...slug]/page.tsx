@@ -11,6 +11,7 @@ import { Icons } from "@/components/icons";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import Image from "next/image";
+import PostInfos from "@/components/post-infos";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -69,17 +70,6 @@ export async function generateStaticParams(): Promise<
   return posts.map((post) => ({ slug: post.slugAsParams.split("/") }));
 }
 
-const categoryIcons = {
-  figma: Icons.figma,
-  react: Icons.react,
-};
-
-type Category = keyof typeof categoryIcons;
-
-function isCategory(category: string): category is Category {
-  return category in categoryIcons;
-}
-
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
 
@@ -87,11 +77,8 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  const category = post.category.toLowerCase();
-  const CategoryIcon = isCategory(category) ? categoryIcons[category] : null;
-
   return (
-    <div className="flex default-layout p-5">
+    <div className="flex default-layout p-5 pt-0 md:pt-5">
       <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
         <div className="grid gap-7 mb-12">
           <BackButton />
@@ -109,23 +96,7 @@ export default async function PostPage({ params }: PostPageProps) {
               />
             </div>
           )}
-
-          <div className="flex items-center justify-start gap-4 mb-[-18px]">
-            <div className="flex items-center justify-center gap-2.5">
-              {CategoryIcon ? <CategoryIcon /> : null}
-              <span className="uppercase font-semibold tracking-[7px]">
-                {post.category}
-              </span>
-            </div>
-
-            <div className="w-1.5 h-1.5 bg-secondary-foreground rounded-full" />
-            <span className="text-secondary-foreground">
-              last updated :{" "}
-              <strong className="text-secondary-foreground">
-                {formatDate(post.date)}
-              </strong>
-            </span>
-          </div>
+          <PostInfos category={post.category} date={post.date} />
           <h1 className="mb-0 text-[40px] font-bold leading-[3.25rem]">
             {post.title}
           </h1>
