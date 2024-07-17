@@ -52,7 +52,15 @@ export default function TagPage({ params }: TagPageProps) {
           {displayPosts?.length > 0 ? (
             <ul className="flex flex-col">
               {displayPosts.map((post) => {
-                const { slug, date, title, description, category, tags } = post;
+                const {
+                  slug,
+                  date,
+                  title,
+                  description,
+                  category,
+                  image,
+                  tags,
+                } = post;
                 return (
                   <li key={slug}>
                     <PostItem
@@ -61,6 +69,7 @@ export default function TagPage({ params }: TagPageProps) {
                       title={title}
                       description={description}
                       category={category}
+                      image={image}
                       tags={tags}
                     />
                   </li>

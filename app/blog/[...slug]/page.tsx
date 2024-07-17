@@ -10,6 +10,7 @@ import { formatDate } from "@/lib/utils";
 import { Icons } from "@/components/icons";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
+import Image from "next/image";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -94,6 +95,21 @@ export default async function PostPage({ params }: PostPageProps) {
       <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
         <div className="grid gap-7 mb-12">
           <BackButton />
+          {post.image && (
+            <div className="w-full h-[300px] relative m-0 rounded-md">
+              <Image
+                src={post.image}
+                alt="article illustration"
+                fill
+                className="rounded-xl"
+                style={{
+                  objectFit: "cover",
+                  margin: "0",
+                }}
+              />
+            </div>
+          )}
+
           <div className="flex items-center justify-start gap-4 mb-[-18px]">
             <div className="flex items-center justify-center gap-2.5">
               {CategoryIcon ? <CategoryIcon /> : null}
