@@ -77,7 +77,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <div className="flex default-layout p-5 pt-0 md:pt-5">
+    <div className="flex default-layout p-5 pt-0">
       <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
         <div className="grid gap-7 mb-12">
           <BackButton />
