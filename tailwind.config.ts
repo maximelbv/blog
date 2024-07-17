@@ -21,6 +21,8 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        dahlia: ["var(--font-dahlia)"],
+        dahliaBold: ["var(--font-dahlia-bold)"],
       },
       maxWidth: {
         classic: "1227px",

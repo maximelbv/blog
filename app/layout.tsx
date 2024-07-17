@@ -6,10 +6,21 @@ import { Providers } from "@/components/providers";
 import { siteConfig } from "@/config/site";
 import { SiteFooter } from "@/components/site-footer";
 import { Header } from "@/components/header";
+import localFont from "@next/font/local";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const dahlia = localFont({
+  src: "../public/fonts/dahlia/dahlia-medium.otf",
+  variable: "--font-dahlia",
+});
+
+const dahliaBold = localFont({
+  src: "../public/fonts/dahlia/dahlia-bold.otf",
+  variable: "--font-dahlia-bold",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +46,9 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          jakarta.variable
+          jakarta.variable,
+          dahlia.variable,
+          dahliaBold.variable
         )}
       >
         <Providers>
