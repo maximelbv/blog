@@ -4,6 +4,18 @@ import { cn, formatDate } from "@/lib/utils";
 import { Icons } from "./icons";
 
 const categoryIcons = {
+  javascript: Icons.javascript,
+  typescript: Icons.typescript,
+  threejs: Icons.threejs,
+  git: Icons.git,
+  nestjs: Icons.nestjs,
+  nextjs: Icons.nextjs,
+  docker: Icons.docker,
+  python: Icons.python,
+  blender: Icons.blender,
+  nodejs: Icons.nodejs,
+  unreal: Icons.unreal,
+
   figma: Icons.figma,
   react: Icons.react,
 };
@@ -47,22 +59,22 @@ function PostInfos({
   const CategoryIcon = isCategory(lowerCat) ? categoryIcons[lowerCat] : null;
 
   return (
-    <div className={cn(postInfosVariants({ variant }), className)} {...props}>
-      <div className="flex items-center justify-center gap-2.5">
+    <div
+      className={cn(postInfosVariants({ variant }), className, "gap-3.5")}
+      {...props}
+    >
+      <div className="flex items-center justify-center gap-2">
         {CategoryIcon && <CategoryIcon />}
-        <span className="uppercase font-semibold tracking-[7px]">
+        <span className="uppercase font-semibold tracking-[7px] mr-[-7px]">
           {lowerCat}
         </span>
       </div>
 
       <div className="w-1.5 h-1.5 bg-muted-foreground rounded-full" />
       <span className="text-muted-foreground flex gap-1">
-        <span className="hidden sm:block whitespace-nowrap">
-          last updated :{" "}
-        </span>
-        <strong className="text-muted-foreground whitespace-nowrap">
+        <span className="text-muted-foreground whitespace-nowrap">
           {formatDate(date)}
-        </strong>
+        </span>
       </span>
     </div>
   );

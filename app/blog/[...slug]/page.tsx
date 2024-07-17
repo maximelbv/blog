@@ -6,8 +6,6 @@ import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@/components/tag";
-import { formatDate } from "@/lib/utils";
-import { Icons } from "@/components/icons";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import Image from "next/image";
