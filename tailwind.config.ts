@@ -39,7 +39,6 @@ const config = {
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          darker: "hsl(var(--primary-darker))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
