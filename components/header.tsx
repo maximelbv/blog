@@ -2,8 +2,8 @@ import { navigation } from "@/config/navigation";
 import { Icons } from "./icons";
 import { ModeToggle } from "./mode-toggle";
 import { MobileNav } from "./mobile-nav";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import AnimatedButon from "./animated-buton";
 
 export function Header() {
   return (
@@ -14,9 +14,7 @@ export function Header() {
         </Link>
         <div className="hidden sm:flex items-center justify-center">
           {navigation.map((nav) => (
-            <Button key={nav.name} variant={"ghost"}>
-              <Link href={nav.route}>{nav.name}</Link>
-            </Button>
+            <AnimatedButon key={nav.route} nav={nav} />
           ))}
           <ModeToggle />
         </div>
