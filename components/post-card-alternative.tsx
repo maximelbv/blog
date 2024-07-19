@@ -4,10 +4,11 @@ import Link from "next/link";
 import PostInfos from "./post-infos";
 
 const PostCardAlternative = ({ post }: { post: Post }) => {
+  const sanitizedSlug = post.slug.replace("blog/", "");
   return (
     <>
       <Link
-        href={post.slug}
+        href={sanitizedSlug}
         className="flex flex-col gap-2 no-underline p-5 bg-secondary rounded-lg border-2 border-transparent hover:border-primary "
       >
         <PostInfos

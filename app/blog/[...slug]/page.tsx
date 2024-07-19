@@ -73,9 +73,21 @@ export async function generateStaticParams(): Promise<
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
 
-  // TODO: filtrer le post actuel, en mettre que 3 et ceux ayant les memes tags
-  // const otherPosts = posts.filter((p) => p.category === post?.category);
-  const otherPosts = posts;
+  const otherPosts = posts
+    .filter((p) => p.slug !== post?.slug)
+    .sort((a, b) => {
+      if (a.category === post?.category && b.category !== post?.category) {
+        return -1;
+      } else if (
+        a.category !== post?.category &&
+        b.category === post?.category
+      ) {
+        return 1;
+      } else {
+        return 0;
+      }
+    })
+    .slice(0, 3);
 
   if (!post || !post.published) {
     notFound();
@@ -117,9 +129,9 @@ export default async function PostPage({ params }: PostPageProps) {
         {/* <aside></aside> */}
         <ScrollToTopButton />
       </div>
-      <div className="my-5 grid gap-4 default-layout p-5 mt-0">
-        <span className="text-[32px] font-dahliaBold">Related posts</span>
-        <div className="my-5 grid gap-4 grid-cols-3">
+      <div className="my-5 grid gap-2 default-layout p-5 mt-0">
+        <span className="text-[32px] font-dahliaBold">More posts</span>
+        <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {otherPosts.map((post) => (
             <PostCardAlternative key={post.slug} post={post} />
           ))}
