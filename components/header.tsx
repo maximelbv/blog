@@ -2,21 +2,19 @@ import { navigation } from "@/config/navigation";
 import { Icons } from "./icons";
 import { ModeToggle } from "./mode-toggle";
 import { MobileNav } from "./mobile-nav";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import AnimatedButon from "./animated-buton";
 
 export function Header() {
   return (
     <>
       <header className="flex w-full justify-between default-layout px-5 pb-5 pt-7">
-        <Link href="/" className="flex items-center justify-center">
+        <Link href="/blog" className="flex items-center justify-center">
           <Icons.logo />
         </Link>
         <div className="hidden sm:flex items-center justify-center">
           {navigation.map((nav) => (
-            <Button key={nav.name} variant={"ghost"}>
-              <Link href={nav.route}>{nav.name}</Link>
-            </Button>
+            <AnimatedButon key={nav.route} nav={nav} />
           ))}
           <ModeToggle />
         </div>

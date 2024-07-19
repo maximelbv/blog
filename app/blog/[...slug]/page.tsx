@@ -11,6 +11,7 @@ import ScrollToTopButton from "@/components/scroll-to-top-button";
 import Image from "next/image";
 import PostInfos from "@/components/post-infos";
 import BlurImage from "@/components/blur-image";
+import PostCardAlternative from "@/components/post-card-alternative";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -72,43 +73,70 @@ export async function generateStaticParams(): Promise<
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
 
+  const otherPosts = posts
+    .filter((p) => p.slug !== post?.slug)
+    .sort((a, b) => {
+      if (a.category === post?.category && b.category !== post?.category) {
+        return -1;
+      } else if (
+        a.category !== post?.category &&
+        b.category === post?.category
+      ) {
+        return 1;
+      } else {
+        return 0;
+      }
+    })
+    .slice(0, 3);
+
   if (!post || !post.published) {
     notFound();
   }
 
   return (
-    <div className="flex default-layout p-5 pt-0">
-      <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
-        <div className="grid gap-7 mb-12">
-          <BackButton />
-          {post.image && (
-            <div className="w-full h-[300px] relative m-0 rounded-md">
-              <BlurImage
-                src={post.image}
-                className="rounded-xl"
-                style={{
-                  objectFit: "cover",
-                  margin: "0",
-                }}
-              />
+    <div>
+      <div className="flex default-layout p-5 py-0">
+        <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
+          <div className="grid gap-7 mb-12">
+            <BackButton />
+            {post.image && (
+              <div className="w-full h-[300px] relative m-0 rounded-md">
+                <BlurImage
+                  src={post.image}
+                  className="rounded-xl"
+                  style={{
+                    objectFit: "cover",
+                    margin: "0",
+                  }}
+                />
+              </div>
+            )}
+            <PostInfos category={post.category} date={post.date} />
+            <h1 className="mb-0 text-[40px] font-bold leading-[3.25rem]">
+              {post.title}
+            </h1>
+            <div className="flex gap-2">
+              {post.tags?.map((tag) => (
+                <Tag tag={tag} key={tag} />
+              ))}
             </div>
-          )}
-          <PostInfos category={post.category} date={post.date} />
-          <h1 className="mb-0 text-[40px] font-bold leading-[3.25rem]">
-            {post.title}
-          </h1>
-          <div className="flex gap-2">
-            {post.tags?.map((tag) => (
-              <Tag tag={tag} key={tag} />
-            ))}
+            <hr className="m-0" />
           </div>
-          <hr className="m-0" />
-        </div>
 
-        <MDXContent code={post.body} />
-      </article>
-      {/* <aside></aside> */}
-      <ScrollToTopButton />
+          <MDXContent code={post.body} />
+          <hr className="m-0" />
+        </article>
+        {/* <aside></aside> */}
+        <ScrollToTopButton />
+      </div>
+      <div className="my-5 grid gap-2 default-layout p-5 mt-0">
+        <span className="text-[32px] font-dahliaBold">More posts</span>
+        <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {otherPosts.map((post) => (
+            <PostCardAlternative key={post.slug} post={post} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
