@@ -26,6 +26,7 @@ const AnimatedButon = ({ nav }: AnimatedButonProps) => {
             {nav.name.split("").map((l, i) => {
               return (
                 <motion.span
+                  style={{ width: l === " " ? "0.5em" : "auto" }}
                   key={i}
                   className="inline-block"
                   variants={{
@@ -47,6 +48,7 @@ const AnimatedButon = ({ nav }: AnimatedButonProps) => {
             {nav.name.split("").map((l, i) => {
               return (
                 <motion.span
+                  style={{ width: l === " " ? "0.5em" : "auto" }}
                   key={i}
                   className="inline-block"
                   variants={{
