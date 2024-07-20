@@ -16,14 +16,14 @@ const ModeToggleAlt = () => {
       onValueChange={(value) => setTheme(value)}
     >
       <ToggleGroup.Item
-        className="w-[50%] h-20 flex items-center justify-center bg-muted/75 hover:bg-muted data-[state=on]:bg-primary text-primary-foreground rounded-l-lg"
+        className="w-[50%] h-16 flex items-center justify-center bg-muted/75 hover:bg-muted data-[state=on]:bg-primary text-primary-foreground rounded-l-lg"
         value="light"
         aria-label="Light theme"
       >
         <Sun className="h-[30px] w-[30px]" />
       </ToggleGroup.Item>
       <ToggleGroup.Item
-        className="w-[50%] h-20 flex items-center justify-center bg-muted/75 hover:bg-muted data-[state=on]:bg-primary text-primary-foreground rounded-r-lg"
+        className="w-[50%] h-16 flex items-center justify-center bg-muted/75 hover:bg-muted data-[state=on]:bg-primary text-primary-foreground rounded-r-lg"
         value="dark"
         aria-label="Dark theme"
       >
