@@ -16,12 +16,11 @@ export function Callout({
       className={cn(
         "my-6 items-start rounded-md border boder-l-4 p-4 w-full dark:max-w-none bg-secondary text-primary-foreground font-medium ",
         {
-          "border-green-800/50 bg-green-50 dark:bg-green-50/10 text-green-600":
+          " bg-green-50 dark:bg-green-300/10 text-green-500":
             type === "success",
-          "border-yellow-800/50 bg-yellow-50 dark:bg-yellow-50/10 text-yellow-600":
+          " bg-yellow-50 dark:bg-yellow-300/10 text-yellow-500":
             type === "warning",
-          "border-red-800/50 bg-red-50 dark:bg-red-50/10 text-red-600":
-            type === "danger",
+          " bg-red-50 dark:bg-red-300/10 text-red-500": type === "danger",
         }
       )}
       {...props}
