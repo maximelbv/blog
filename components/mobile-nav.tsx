@@ -7,6 +7,7 @@ import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
 import { Icons } from "./icons";
 import { navigation } from "@/config/navigation";
+import ModeToggleAlt from "./ui/mode-toggle-alt";
 
 interface MobileLinkProps extends LinkProps {
   children: React.ReactNode;
@@ -58,6 +59,8 @@ export function MobileNav() {
             {nav.name}
           </MobileLink>
         ))}
+        <hr className="mx-4" />
+        <ModeToggleAlt />
       </SheetContent>
     </Sheet>
   );

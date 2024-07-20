@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "MaximeLbv",
   url: "https://www.maximelbv.com",
-  description: "Nextjs 14 blog using velite, tailwind and shadcn",
+  description: "Personal website",
   author: "Maxime Lefebvre",
   links: {
     twitter: "https://twitter.com/maximelbv",
