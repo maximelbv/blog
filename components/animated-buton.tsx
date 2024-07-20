@@ -19,10 +19,7 @@ const AnimatedButon = ({ nav }: AnimatedButonProps) => {
     <Link href={nav.route}>
       <motion.div key={nav.name} initial="initial" whileHover="animate">
         <Button variant={"ghost"}>
-          <Link
-            href={nav.route}
-            className="block relative overflow-hidden whitespace-nowrap w-fit"
-          >
+          <div className="block relative overflow-hidden whitespace-nowrap">
             <span className="block w-fit">
               {nav.name.split("").map((l, i) => {
                 return (
@@ -67,7 +64,7 @@ const AnimatedButon = ({ nav }: AnimatedButonProps) => {
                 );
               })}
             </span>
-          </Link>
+          </div>
         </Button>
       </motion.div>
     </Link>
