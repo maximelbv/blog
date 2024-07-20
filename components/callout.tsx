@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface CalloutProps {
   children?: ReactNode;
-  type?: "default" | "warning" | "danger";
+  type?: "default" | "success" | "warning" | "danger";
 }
 
 export function Callout({
@@ -14,10 +14,13 @@ export function Callout({
   return (
     <div
       className={cn(
-        "my-6 items-start rounded-md border boder-l-4 p-4 w-full dark:max-w-none",
+        "my-6 items-start rounded-md border boder-l-4 p-4 w-full dark:max-w-none bg-secondary text-primary-foreground font-medium ",
         {
-          "border-red-900 bg-red-50 dark:prose": type === "danger",
-          "border-yellow-900 bg-yellow-50 dark:prose": type === "warning",
+          " bg-green-50 dark:bg-green-300/10 text-green-500":
+            type === "success",
+          " bg-yellow-50 dark:bg-yellow-300/10 text-yellow-500":
+            type === "warning",
+          " bg-red-50 dark:bg-red-300/10 text-red-500": type === "danger",
         }
       )}
       {...props}
