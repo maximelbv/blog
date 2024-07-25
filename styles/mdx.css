@@ -40,11 +40,11 @@
 
 h1,
 h2 {
-  @apply mb-2 !important;
+  @apply mb-3 !important;
 }
 
 h1 a {
-  @apply font-black text-3xl !important;
+  @apply font-black text-3xl  !important;
 }
 
 h2 a {
@@ -56,5 +56,5 @@ h3 a {
 }
 
 p {
-  @apply text-lg font-medium leading-8 mt-0 mb-6 text-secondary-foreground/80 !important;
+  @apply text-lg font-medium leading-8 mt-0 mb-8 text-secondary-foreground/70 !important;
 }
