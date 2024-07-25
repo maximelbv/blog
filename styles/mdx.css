@@ -38,22 +38,23 @@
   @apply no-underline;
 }
 
+h1,
 h2 {
-  @apply mb-1 !important;
+  @apply mb-2 !important;
 }
 
 h1 a {
-  @apply font-bold text-3xl !important;
+  @apply font-black text-3xl !important;
 }
 
 h2 a {
-  @apply font-bold text-2xl !important;
+  @apply font-black text-2xl !important;
 }
 
 h3 a {
-  @apply font-bold text-xl !important;
+  @apply font-black text-xl !important;
 }
 
 p {
-  @apply text-lg font-medium leading-8 mt-0 mb-14 text-secondary-foreground/80 !important;
+  @apply text-lg font-medium leading-8 mt-0 mb-6 text-secondary-foreground/80 !important;
 }

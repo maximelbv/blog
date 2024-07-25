@@ -112,7 +112,7 @@ export default async function PostPage({ params }: PostPageProps) {
               </div>
             )}
             <PostInfos category={post.category} date={post.date} />
-            <h1 className="mb-0 text-[40px] font-bold leading-[3.25rem]">
+            <h1 className="!mb-[-10px] text-[40px] font-bold leading-[3.25rem]">
               {post.title}
             </h1>
             <div className="flex gap-2">
