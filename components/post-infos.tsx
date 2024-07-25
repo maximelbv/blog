@@ -15,7 +15,7 @@ const categoryIcons = {
   blender: Icons.blender,
   nodejs: Icons.nodejs,
   unreal: Icons.unreal,
-
+  tools: Icons.tools,
   figma: Icons.figma,
   react: Icons.react,
 };
