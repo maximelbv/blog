@@ -1,5 +1,5 @@
 ---
-title: "VS Code custom snippets"
+title: "How to create custom VS Code snippets"
 description: "Speed up your workflow with custom code patterns in Visual Studio Code"
 date: 2024-07-21
 # image: "/images/vscode-custom-snippets.png"
@@ -28,13 +28,45 @@ but you can also create your own personalized snippets, let's see how to do that
 
 # Your first custom snippet
 
-<br />
-
-<Step number={1} title="Set up a new snippet file">
+<Step number={1} title="Set up a new snippets file">
   - In VS Code, open your command palette with <KeyboardKey value="CMD" /> +
   <KeyboardKey value="SHIFT" /> + <KeyboardKey value="P" /> (macOS) / <KeyboardKey value="CTRL" /> +
   <KeyboardKey value="SHIFT" /> + <KeyboardKey value="P" /> (Windows / Linux) and search for <strong>Snippets: Configure User Snippets</strong>
 
 - Select <strong>New Global Snippets file</strong> and name it. (You can also create a snippet file especially for your project or for a specific language, feel free to choose an option that suits your needs)
+
+</Step>
+
+<Step number={2} title="Understand the structure">
+
+By generating the file, you will se a bunch of informations and a default example at the end, you can uncomment it.
+
+Let's see how it is structured:
+
+```json
+"Print to console": {
+  "scope": "javascript,typescript",
+  "prefix": "log",
+  "body": [
+    "console.log('$1');",
+    "$2"
+  ],
+  "description": "Log output to console"
+}
+```
+
+```css
+pre {
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+pre [data-line] {
+  padding: 0 1rem;
+}
+```
+
+Here, we have a snippet that prints a value to the console.
+The `scope` defines where ths snippet is applicable. In this case, the snippet works in .js ans .ts files.
 
 </Step>

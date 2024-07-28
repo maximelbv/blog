@@ -1,9 +1,13 @@
+[data-rehype-pretty-code-figure] {
+  @apply mt-0 mb-7;
+}
+
 [data-rehype-pretty-code-figure] pre {
-  @apply px-0;
+  @apply px-0 !important;
 }
 
 [data-rehype-pretty-code-figure] code {
-  @apply text-sm !leading-loose md:text-base border-0 p-0;
+  @apply text-sm !leading-7 md:text-base border-0 p-0.5;
 }
 
 [data-rehype-pretty-code-figure] code[data-line-numbers] {
@@ -40,7 +44,7 @@
 
 h1,
 h2 {
-  @apply mb-3 !important;
+  @apply mt-10 mb-3 !important;
 }
 
 h1 a {
@@ -56,11 +60,11 @@ h3 a {
 }
 
 p {
-  @apply text-lg font-medium leading-8 mt-0 mb-8 text-secondary-foreground/70 !important;
+  @apply text-lg font-medium leading-8 mt-0 mb-7 text-secondary-foreground/70 !important;
 }
 
 ul {
-  @apply m-0 px-3 !important;
+  @apply m-0 p-3 grid gap-5 !important;
 }
 
 ul p {
@@ -68,5 +72,9 @@ ul p {
 }
 
 ul li {
-  @apply my-3 !important;
+  @apply my-0 !important;
+}
+
+br {
+  @apply m-0 !important;
 }

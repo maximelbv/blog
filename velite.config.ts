@@ -2,6 +2,7 @@ import { defineConfig, defineCollection, s } from "velite";
 import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import fs from "fs";
 
 const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
@@ -39,7 +40,14 @@ export default defineConfig({
   mdx: {
     rehypePlugins: [
       rehypeSlug,
-      [rehypePrettyCode, { theme: "github-dark" }],
+      [
+        rehypePrettyCode,
+        {
+          theme: JSON.parse(
+            fs.readFileSync("./public/themes/custom-theme.json", "utf-8")
+          ),
+        },
+      ],
       [
         rehypeAutolinkHeadings,
         {
@@ -54,3 +62,4 @@ export default defineConfig({
     remarkPlugins: [],
   },
 });
+// ayu-dark
