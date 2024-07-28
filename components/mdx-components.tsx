@@ -4,6 +4,8 @@ import { Callout } from "./callout";
 import CustomImage from "./custom-image";
 import AutoplayVideo from "./autoplay-video";
 import CustomLink from "./custom-link";
+import Step from "./step";
+import KeyboardKey from "./keyboard-key";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -16,6 +18,8 @@ const components = {
   CustomLink,
   AutoplayVideo,
   Callout,
+  Step,
+  KeyboardKey,
 };
 
 interface MdxProps {
