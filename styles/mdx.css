@@ -3,7 +3,7 @@
 }
 
 [data-rehype-pretty-code-figure] pre {
-  @apply px-0 !important;
+  @apply px-0 font-monoLisa !important;
 }
 
 [data-rehype-pretty-code-figure] code {
@@ -40,6 +40,15 @@
 
 .subheading-anchor {
   @apply no-underline;
+}
+
+code::before,
+code::after {
+  content: none !important;
+}
+
+code {
+  @apply p-0 bg-muted p-1 rounded-md border-[1px] border-border font-monoLisa;
 }
 
 h1,

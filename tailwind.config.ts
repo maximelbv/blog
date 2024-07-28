@@ -23,6 +23,7 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         dahlia: ["var(--font-dahlia)"],
         dahliaBold: ["var(--font-dahlia-bold)"],
+        monoLisa: ["var(--font-monolisa)"],
       },
       maxWidth: {
         classic: "1227px",

@@ -23,6 +23,11 @@ const dahliaBold = localFont({
   variable: "--font-dahlia-bold",
 });
 
+const monoLisa = localFont({
+  src: "../public/fonts/monoLisa/MonoLisaRegular.ttf",
+  variable: "--font-monolisa",
+});
+
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
@@ -48,7 +53,8 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           jakarta.variable,
           dahlia.variable,
-          dahliaBold.variable
+          dahliaBold.variable,
+          monoLisa.variable
         )}
       >
         <Providers>

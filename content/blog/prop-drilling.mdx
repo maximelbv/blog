@@ -8,42 +8,112 @@ image: /images/3-min.jpg
 published: true
 ---
 
-# React Hooks: Fishing for Components
+---
 
-In the vast sea of React, where components swim freely and side-effects lurk in the depths, a developer must become a skilled fisherman to catch their desired functionality. This guide will equip you with the React Hooks you need to catch components with precision and grace.
+title: Lets see what we can do with rehype pretty code
+description: Syntax highlighting, line numbers, line highlights, word highlights
+date: 2024-03-04
+tags: ["code", "rehype pretty", "mdx"]
+published: true
 
-## The Essential Fishing Gear
+---
 
-Before we set sail, let's ensure we have all the necessary gear:
+[`rehype-pretty-code`](https://github.com/atomiks/rehype-pretty-code) is a Rehype plugin powered by the
+[`shiki`](https://github.com/shikijs/shiki) syntax highlighter that provides beautiful code blocks for Markdown or MDX. It works on both the server at build-time (avoiding runtime syntax highlighting) and on the client for dynamic highlighting.
 
-- **useState:** The worm that tempts your components to the surface.
-- **useEffect:** The lure that attracts side-effects and keeps them at bay.
-- **useContext:** The net that gathers global states together, making it easier to share across your component sea.
+## Editor-Grade Highlighting
 
-## Setting Sail: Your First Catch
+<span className="mix-blend-plus-lighter text-zinc-400/80">
+  Enjoy the accuracy and granularity of VS Code's syntax highlighting engine and
+  the popularity of its themes ecosystem — use any VS Code theme you want!
+</span>
 
-With our gear ready, it's time to set sail into the React sea. Here's how to make your first catch:
+## Line Numbers and Line Highlighting
 
-1. **Bait your hook with useState:** Begin by choosing the right worm. `useState` allows you to add state to your functional components, making them more dynamic and responsive.
+Draw attention to a particular line of code.
 
-```jsx
-const [fish, setFish] = useState("🐟");
+```js {4} showLineNumbers
+import { useFloating } from "@floating-ui/react";
+
+function MyComponent() {
+  const { refs, floatingStyles } = useFloating();
+
+  return (
+    <>
+      <div ref={refs.setReference} />
+      <div ref={refs.setFloating} style={floatingStyles} />
+    </>
+  );
+}
 ```
 
-2. **Attract with useEffect:** Now, use `useEffect` as your lure. This Hook lets you perform side effects in your components, such as fetching data or subscribing to services. It's like casting your line into the water and waiting for a bite.
+## Word Highlighting
 
-```jsx
-useEffect(() => {
-  console.log(`You've caught ${fish}!`);
-}, [fish]);
+Draw attention to a particular word or series of characters.
+
+```js /floatingStyles/
+import { useFloating } from "@floating-ui/react";
+
+function MyComponent() {
+  const { refs, floatingStyles } = useFloating();
+
+  return (
+    <>
+      <div ref={refs.setReference} />
+      <div ref={refs.setFloating} style={floatingStyles} />
+    </>
+  );
+}
 ```
 
-3. **Gather with useContext:** Finally, use `useContext` as your net. This Hook lets you share state across many components without prop drilling. It's like gathering all your catches in one net for a bountiful harvest.
+## ANSI Highlighting
 
-## The Catch of the Day
+```ansi
+[0;36m  vite v5.0.0[0;32m dev server running at:[0m
 
-Congratulations! You've made your first catch in the React sea. But remember, the sea is vast, and there are many more components and hooks to explore. Each project is a new fishing trip, with its challenges and rewards.
+  > Local: [0;36mhttp://localhost:[0;36;1m3000[0;36m/[0m
+  > Network: [0;2muse `--host` to expose[0m
 
-Remember to release any components back into the sea if you don't need them. Keeping your application's waters clean and sustainable is key to a healthy React ecosystem.
+  [0;36mready in 125ms.[0m
 
-Happy fishing in the React sea!
+[0;2m8:38:02 PM[0m [0;36;1m[vite][0m [0;32mhmr update [0;2m/src/App.jsx
+```
+
+Inline ANSI: `> Local: [0;36mhttp://localhost:[0;36;1m3000[0;36m/[0m{:ansi}`
+
+---
+
+### Kitchen Sink Meta Strings
+
+```js showLineNumbers {2-4} title="isEven.js" /console/ caption="Im a caption"
+function isEven(number) {
+  if (number === 1) {
+    return false;
+  } else if (number === 2) {
+    return true;
+  } else if (number === 3) {
+    return false;
+  } else if (number === 4) {
+    return true;
+  } else if (number === 5) {
+    return false;
+  } else if (number === 6) {
+    return true;
+  } else if (number === 7) {
+    return false;
+  } else if (number === 8) {
+    return true;
+  } else if (number === 9) {
+    return false;
+  } else if (number === 10) {
+    return true;
+  } else {
+    return "Number is not between 1 and 10.";
+  }
+}
+
+// Example usage:
+console.log(isEven(3)); // Should return false
+console.log(isEven(4)); // Should return true
+console.log(isEven(11)); // Should return "Number is not between 1 and 10."
+```
