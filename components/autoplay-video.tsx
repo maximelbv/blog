@@ -7,7 +7,7 @@ const AutoplayVideo = ({ src }: { src: string }) => {
       controls
       loop
       autoPlay
-      playsinline
+      playsInline
       muted
       src={src}
       preload="metadata"
