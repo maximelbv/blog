@@ -58,3 +58,15 @@ h3 a {
 p {
   @apply text-lg font-medium leading-8 mt-0 mb-8 text-secondary-foreground/70 !important;
 }
+
+ul {
+  @apply m-0 px-3 !important;
+}
+
+ul p {
+  @apply m-0 !important;
+}
+
+ul li {
+  @apply my-1 !important;
+}
