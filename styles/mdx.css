@@ -68,5 +68,5 @@ ul p {
 }
 
 ul li {
-  @apply my-1 !important;
+  @apply my-3 !important;
 }
