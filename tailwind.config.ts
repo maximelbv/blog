@@ -34,6 +34,9 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        code: {
+          DEFAULT: "hsl(var(--code))",
+        },
         pigment: {
           DEFAULT: "hsl(var(--pigment))",
           darker: "hsl(var(--pigment-darker))",

@@ -43,6 +43,7 @@ export default defineConfig({
       [
         rehypePrettyCode,
         {
+          keepBackground: false,
           theme: JSON.parse(
             fs.readFileSync("./public/themes/custom-theme.json", "utf-8")
           ),

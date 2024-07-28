@@ -3,11 +3,11 @@
 }
 
 [data-rehype-pretty-code-figure] pre {
-  @apply px-0 font-monoLisa !important;
+  @apply px-0 font-monoLisa bg-code !important;
 }
 
 [data-rehype-pretty-code-figure] code {
-  @apply text-sm !leading-7 md:text-base border-0 p-0.5;
+  @apply text-sm !leading-7 md:text-base border-0;
 }
 
 [data-rehype-pretty-code-figure] code[data-line-numbers] {
@@ -24,11 +24,6 @@
   @apply border-l-2 border-l-transparent px-3;
 }
 
-[data-rehype-pretty-code-figure] [data-highlighted-line] {
-  background: rgba(200, 200, 255, 0.1);
-  @apply border-l-blue-400;
-}
-
 [data-rehype-pretty-code-figure] [data-highlighted-chars] {
   @apply rounded bg-zinc-600/50;
   box-shadow: 0 0 0 4px rgb(82 82 91 / 0.5);
@@ -36,6 +31,38 @@
 
 [data-rehype-pretty-code-figure] [data-chars-id] {
   @apply border-b-2 p-1 shadow-none;
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line] {
+  background: rgba(200, 200, 255, 0.1);
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line-id="blue"] {
+  @apply border-l-[5px] border-l-blue-500 !important;
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line-id="green"] {
+  @apply border-l-[5px] border-l-green-500 !important;
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line-id="purple"] {
+  @apply border-l-[5px] border-l-purple-500 !important;
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line-id="red"] {
+  @apply border-l-[5px] border-l-red-500 !important;
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line-id="orange"] {
+  @apply border-l-[5px] border-l-orange-500 !important;
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line-id="yellow"] {
+  @apply border-l-[5px] border-l-yellow-500 !important;
+}
+
+[data-rehype-pretty-code-figure] [data-highlighted-line-id="white"] {
+  @apply border-l-[5px] border-l-white !important;
 }
 
 .subheading-anchor {
@@ -48,7 +75,7 @@ code::after {
 }
 
 code {
-  @apply p-0 bg-muted p-1 rounded-md border-[1px] border-border font-monoLisa;
+  @apply bg-muted p-1 rounded-md border-[1px] border-border font-monoLisa;
 }
 
 h1,
