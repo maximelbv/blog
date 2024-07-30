@@ -1,5 +1,5 @@
 ---
-title: "MDX Almanac"
+title: "MDX Elements"
 description: "Collection of all mdx elements usables on this blog. Only for dev / writing purpose"
 date: 2024-07-21
 tags: ["mdx", "config"]
@@ -336,6 +336,35 @@ for (const car of cars) {
 ---
 
 ### Code block with line highlights and legend
+
+```json {2}#purple {3}#green {4}#blue {8}#red
+"Print to console": {
+  "scope": "javascript,typescript",
+  "prefix": "log",
+  "body": [
+    "console.log('$1');",
+    "$2"
+  ],
+  "description": "Log output to console"
+}
+```
+
+<ColorLegend color={"purple"}>
+  The `scope` defines where this snippet is applicable. In this case, the
+  snippet works in javascript ans typescriptP files
+</ColorLegend>
+
+<ColorLegend color={"green"}>
+  The `prefix` is the acronym that you will type to invoke the snippet
+</ColorLegend>
+
+<ColorLegend color={"blue"}>
+  The `body` contains the code that will be displayed
+</ColorLegend>
+
+<ColorLegend color={"red"}>
+  The `description` will show up in the autocomplete suggestions
+</ColorLegend>
 
 ---
 

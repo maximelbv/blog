@@ -4,6 +4,10 @@ import { Icons } from "./icons";
 const KeyboardKey = ({ value }: { value: string }) => {
   const specialChars = [
     {
+      value: "TAB",
+      icon: <Icons.tabKey />,
+    },
+    {
       value: "SHIFT",
       icon: <Icons.shiftKey />,
     },
@@ -26,7 +30,7 @@ const KeyboardKey = ({ value }: { value: string }) => {
     >
       {specialChar ? (
         <>
-          <span className="mr-1">{specialChar.icon}</span>
+          <span className="mr-2">{specialChar.icon}</span>
           {value}
         </>
       ) : (

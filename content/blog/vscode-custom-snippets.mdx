@@ -20,7 +20,7 @@ A code snippet is a small block of reusable code that you can quickly insert int
 In VS Code, snippets help developers avoid repetitive tasks by providing a quick way to generate
 common code structures.
 
-<AutoplayVideo src="/blog-assets/snippet-example.mov" />
+<AutoplayVideo src="/blog-assets/snippets-example.mov" />
 
 They can be accessed through VS Code extensions (if you use React, i highly
 recommend installing <CustomLink isExternal href='https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets'>this one</CustomLink>)
@@ -29,11 +29,11 @@ but you can also create your own personalized snippets, let's see how to do that
 # Your first custom snippet
 
 <Step number={1} title="Set up a new snippets file">
-  - In VS Code, open your command palette with <KeyboardKey value="CMD" /> +
+  In VS Code, open your command palette with <KeyboardKey value="CMD" /> +
   <KeyboardKey value="SHIFT" /> + <KeyboardKey value="P" /> (macOS) / <KeyboardKey value="CTRL" /> +
   <KeyboardKey value="SHIFT" /> + <KeyboardKey value="P" /> (Windows / Linux) and search for <strong>Snippets: Configure User Snippets</strong>
 
-- Select <strong>New Global Snippets file</strong> and name it. (You can also create a snippet file especially for your project or for a specific language, feel free to choose an option that suits your needs)
+Select <strong>New Global Snippets file</strong> and name it. (You can also create a snippet file especially for your project or for a specific language, feel free to choose an option that suits your needs)
 
 </Step>
 
@@ -56,6 +56,81 @@ Let's see how it is structured:
 ```
 
 Here, we have a snippet that prints a value to the console.
-The `scope` defines where this snippet is applicable. In this case, the snippet works in .js ans .ts files.
+
+<ColorLegend color={"purple"}>
+  The `scope` defines where this snippet is applicable. In this case, the
+  snippet works in javascript ans typescriptP files
+</ColorLegend>
+
+<ColorLegend color={"green"}>
+  The `prefix` is the acronym that you will type to invoke the snippet
+</ColorLegend>
+
+<ColorLegend color={"blue"}>
+  The `body` contains the code that will be displayed
+</ColorLegend>
+
+<ColorLegend color={"red"}>
+  The `description` will show up in the autocomplete suggestions
+</ColorLegend>
+
+Save this file, and open a new one with the .js extension, <br/>
+by typing 'log' you should see the vscode autocomplete suggestion for the snippet we just described, well done !
 
 </Step>
+
+<Step number={3} title="Tab stops, default value & multiple values">
+We now have the keys to create our custom snippets... <br/>But did you notice the `$1` and `$2` ?
+
+```json /$1/ /$2/
+"Print to console": {
+  "scope": "javascript,typescript",
+  "prefix": "log",
+  "body": [
+    "console.log('$1');",
+    "$2"
+  ],
+  "description": "Log output to console"
+}
+```
+
+These are **Tab Stops**, they define where the cursor will be placed at:
+
+- `$1` : initial position
+- `$2` : second position (after pressing <KeyboardKey value='TAB' />)
+- `$0` : last position
+
+This is not mandatory, but very helpfull if you have multiple values to add to your snippet. By default, the cursor is placed at the end of the body
+
+### Default values
+
+We can also define default values for tab stops that will automatically be highlighted.<br />
+Simply replace the `$1` by `${1:Your default value}`,
+
+If i take the previous example and replace the `$1` by `${1:Hello world}`, this will result to :
+
+<AutoplayVideo
+  src="/blog-assets/snippets-default-value.mov"
+  style={{ maxWidth: "70%" }}
+/>
+
+the default value will be selected and so, easily replaceable 👍
+
+It also works with multiple values, simply enclose the values between `||` chars :
+
+For example: `console.${2|log,error,table|}(${1:Hello world})` will result to :
+
+<AutoplayVideo
+  src="/blog-assets/snippets-multiple-values.mov"
+  style={{ maxWidth: "70%" }}
+/>
+
+</Step>
+
+# Conclusion
+
+That's all folks! <br />
+You now have the keys to create basic custom snippets in vscode
+
+If you're interested in going further, I highly recommend you take a look at the <CustomLink isExternal href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">
+official documentation</CustomLink>, which goes into more detail about custom snippets.

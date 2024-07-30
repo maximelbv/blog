@@ -6,6 +6,7 @@ import AutoplayVideo from "./autoplay-video";
 import CustomLink from "./custom-link";
 import Step from "./step";
 import KeyboardKey from "./keyboard-key";
+import ColorLegend from "./color-legend";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -20,6 +21,7 @@ const components = {
   Callout,
   Step,
   KeyboardKey,
+  ColorLegend,
 };
 
 interface MdxProps {

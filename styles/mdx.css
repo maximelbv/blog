@@ -102,8 +102,11 @@ code::after {
   content: none !important;
 }
 
-code {
-  @apply bg-muted p-1 rounded-md border-[1px] border-border font-monoLisa;
+p code,
+li code,
+ul code,
+ol code {
+  @apply bg-muted rounded-md border-[1px] border-border font-monoLisa p-1 mx-0.5;
 }
 
 h1,
