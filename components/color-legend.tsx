@@ -17,7 +17,7 @@ const ColorLegend = ({ color, children }: { color: string; children: any }) => {
         }`}
       />
 
-      <div>{children}</div>
+      <div className="[&>p]:!mb-4">{children}</div>
     </div>
   );
 };

@@ -1,18 +1,22 @@
 ---
 title: "How to create custom VS Code snippets"
 description: "Speed up your workflow with custom code patterns in Visual Studio Code"
-date: 2024-07-21
-# image: "/images/vscode-custom-snippets.png"
+date: 2024-07-30
+image: /images/vscode-custom-snippets.jpg
 tags: ["vscode", "config"]
 category: Tools
-image: /images/4-min.jpg
 published: true
 ---
 
-In this article, we will explore what code snippets are, how to set up custom snippets
-in Visual Studio Code, and ways to optimize them for better performance.
+As developers, we often find ourselves writing similar code patterns across different projects.
+Visual Studio Code offers many productivity features to address this, including **snippets**.
 
-By the end, you’ll have a comprehensive understanding of how to leverage snippets to streamline your coding workflow.
+While built-in snippets are useful, creating custom snippets tailored to your needs can
+significantly enhance your coding efficiency.
+
+In this tutorial, we'll introduce you to the basics of VS Code snippets.
+We'll cover what snippets are, how to create your first custom snippet,
+and explore some fundamental features like tab stops and default values.
 
 # What is a snippet ?
 
@@ -41,6 +45,7 @@ Select <strong>New Global Snippets file</strong> and name it. (You can also crea
 
 By generating the file, you will se a bunch of informations and a default example at the end, you can uncomment it.
 
+Here, we have a snippet that prints a value to the console.
 Let's see how it is structured:
 
 ```json {2}#purple {3}#green {4}#blue {8}#red
@@ -55,11 +60,9 @@ Let's see how it is structured:
 }
 ```
 
-Here, we have a snippet that prints a value to the console.
-
 <ColorLegend color={"purple"}>
   The `scope` defines where this snippet is applicable. In this case, the
-  snippet works in javascript ans typescriptP files
+  snippet works in javascript ans typescript files
 </ColorLegend>
 
 <ColorLegend color={"green"}>
@@ -74,8 +77,10 @@ Here, we have a snippet that prints a value to the console.
   The `description` will show up in the autocomplete suggestions
 </ColorLegend>
 
-Save this file, and open a new one with the .js extension, <br/>
-by typing 'log' you should see the vscode autocomplete suggestion for the snippet we just described, well done !
+#### **Try it yourself**
+
+Save this file, and open a new one with the `.js` extension, <br/>
+by typing `log` you should see the vscode autocomplete suggestion for the snippet we just described, well done !
 
 </Step>
 
