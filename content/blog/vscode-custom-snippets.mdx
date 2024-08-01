@@ -37,15 +37,19 @@ but you can also create your own personalized snippets, let's see how to do that
 # Your first custom snippet
 
 <Step number={1} title="Set up a new snippets file">
-In VS Code, open your command palette with `CMD + SHIFT + P` (`CTRL + SHIFT + P` on Windows / Linux) and search for <strong>Snippets: Configure User Snippets</strong>
+In VS Code, open your command palette with `CMD / CTRL + SHIFT + P` and search for "Snippets: Configure User Snippets"
 <SpacerS />
-Select <strong>New Global Snippets file</strong> and name it. (You can also create a snippet file especially for your project or for a specific language, feel free to choose an option that suits your needs)
+Select "New Global Snippets file" and name it. (You can also create a snippet file especially for your project or for a specific language, feel free to choose an option that suits your needs)
 
 </Step>
+
+---
 
 <Step number={2} title="Understand the structure">
 
 By generating the file, you will se a bunch of informations and a default example at the end, you can uncomment it.
+
+<SpacerS />
 
 Here, we have a snippet that prints a value to the console.
 Let's see how it is structured:
@@ -79,12 +83,20 @@ Let's see how it is structured:
   The `description` will show up in the autocomplete suggestions
 </ColorLegend>
 
-#### **Try it yourself**
+<SpacerM />
 
-Save this file, and open a new one with the `.js` extension, <br/>
-by typing `log` you should see the vscode autocomplete suggestion for the snippet we just described, well done !
+<Callout>
+  **Try it yourself**
+  <div className='h-1'/>
+
+&rarr; Save this file, and open a new one with the `.js` extension <br/>
+&rarr; by typing `log` you should see the vscode autocomplete suggestion for the snippet we just described
+
+</Callout>
 
 </Step>
+
+---
 
 <Step number={3} title="Tab stops, default value & multiple values">
 We now have the keys to create our custom snippets... <br/>But did you notice the `$1` and `$2` ?
@@ -109,10 +121,17 @@ These are **Tab Stops**, they define where the cursor will be placed at:
 
 This is not mandatory, but very helpfull if you have multiple values to add to your snippet. By default, the cursor is placed at the end of the body
 
-### Default values
+<SpacerM />
 
-We can also define default values for tab stops that will automatically be highlighted.<br />
+**Default values**
+
+We can also define default values for tab stops that will automatically be highlighted.
+
+<SpacerS />
+
 Simply replace the `$1` by `${1:Your default value}`,
+
+<SpacerS />
 
 If i take the previous example and replace the `$1` by `${1:Hello world}`, this will result to :
 
