@@ -15,7 +15,7 @@ const Step = ({ number, title, children }: StepTypes) => {
           {title}
         </span>
       </div>
-      <div className="ml-2">{children}</div>
+      <div className="ml-1">{children}</div>
     </div>
   );
 };

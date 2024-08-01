@@ -95,9 +95,9 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div>
-      <div className="flex max-w-[700px] mx-auto p-5 py-0">
+      <div className="flex article-layout p-5 py-0">
         <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
-          <div className="grid gap-4 mb-6">
+          <div className="grid gap-5 mb-12">
             <BackButton />
             {post.image && (
               <div className="w-full aspect-video relative m-0 rounded-md">
@@ -127,11 +127,9 @@ export default async function PostPage({ params }: PostPageProps) {
             </div>
             <hr className="m-0" />
           </div>
-
           <MDXContent code={post.body} />
-          <hr className="m-0" />
+          <hr className="m-0 mt-12" />
         </article>
-        {/* <aside></aside> */}
         <ScrollToTopButton />
       </div>
       <div className="my-5 grid gap-2 default-layout p-5 mt-0">

@@ -36,6 +36,8 @@ but you can also create your own personalized snippets, let's see how to do that
 
 # Your first custom snippet
 
+<hr className="mt-1" />
+
 <Step number={1} title="Set up a new snippets file">
 In VS Code, open your command palette with `CMD / CTRL + SHIFT + P` and search for "Snippets: Configure User Snippets"
 <SpacerS />
@@ -121,9 +123,9 @@ These are **Tab Stops**, they define where the cursor will be placed at:
 
 This is not mandatory, but very helpfull if you have multiple values to add to your snippet. By default, the cursor is placed at the end of the body
 
-<SpacerM />
+---
 
-**&rarr; Default values**
+**Default values**
 
 <SpacerXS />
 
@@ -144,9 +146,9 @@ If i take the previous example and replace the `$1` by `${1:Hello world}`, this 
 
 the default value will be selected and so, easily replaceable 👍
 
-<SpacerM />
+---
 
-**&rarr; Multiple values**
+**Multiple values**
 
 <SpacerXS />
 
@@ -163,8 +165,11 @@ For example: `console.${2|log,error,table|}(${1:Hello world})` will result to :
 
 # Conclusion
 
-That's all folks! <br />
+That's all folks!
+
 You now have the keys to create basic custom snippets in vscode
+
+<SpacerS />
 
 If you're interested in going further, I highly recommend you take a look at the <CustomLink isExternal href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">
 official documentation</CustomLink>, which goes into more detail about custom snippets.
