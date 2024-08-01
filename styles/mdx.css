@@ -1,5 +1,5 @@
 [data-rehype-pretty-code-figure] {
-  @apply mt-0 mb-7;
+  @apply my-8;
 }
 
 [data-rehype-pretty-code-figure] pre {
@@ -95,6 +95,10 @@
 
 .subheading-anchor {
   @apply no-underline;
+}
+
+code {
+  @apply !text-secondary-foreground/70;
 }
 
 code::before,
