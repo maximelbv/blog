@@ -10,6 +10,7 @@ import ColorLegend from "./color-legend";
 import SpacerS from "./spacer-s";
 import SpacerM from "./spacer-m";
 import SpacerL from "./spacer-l";
+import SpacerXS from "./spacer-xs";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -25,6 +26,7 @@ const components = {
   Step,
   KeyboardKey,
   ColorLegend,
+  SpacerXS,
   SpacerS,
   SpacerM,
   SpacerL,
