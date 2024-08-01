@@ -95,9 +95,9 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div>
-      <div className="flex default-layout p-5 py-0">
+      <div className="flex max-w-[700px] mx-auto p-5 py-0">
         <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
-          <div className="grid gap-7 mb-6">
+          <div className="grid gap-4 mb-6">
             <BackButton />
             {post.image && (
               <div className="w-full aspect-video relative m-0 rounded-md">
@@ -111,8 +111,13 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
               </div>
             )}
-            <PostInfos category={post.category} date={post.date} />
-            <h1 className="!mt-0 !mb-[-10px] text-[40px] font-bold leading-[3.25rem]">
+            <PostInfos
+              className="scale-90 w-max ml-[-12px]"
+              category={post.category}
+              date={post.date}
+            />
+
+            <h1 className="!mt-0 !mb-[-10px] text-[30px] font-bold leading-[3.25rem]">
               {post.title}
             </h1>
             <div className="flex gap-2">

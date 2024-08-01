@@ -115,7 +115,7 @@ h2 {
 }
 
 h1 a {
-  @apply font-black text-3xl  !important;
+  @apply font-bold text-[18px] mb-5 mt-20 !important;
 }
 
 h2 a {
@@ -127,7 +127,7 @@ h3 a {
 }
 
 p {
-  @apply text-lg font-medium leading-8 mt-0 mb-7 text-secondary-foreground/70 !important;
+  @apply text-[16.5px] font-medium leading-7 m-0 text-secondary-foreground/70 !important;
 }
 
 ul {

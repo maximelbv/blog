@@ -7,6 +7,9 @@ import CustomLink from "./custom-link";
 import Step from "./step";
 import KeyboardKey from "./keyboard-key";
 import ColorLegend from "./color-legend";
+import SpacerS from "./spacer-s";
+import SpacerM from "./spacer-m";
+import SpacerL from "./spacer-l";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -22,6 +25,9 @@ const components = {
   Step,
   KeyboardKey,
   ColorLegend,
+  SpacerS,
+  SpacerM,
+  SpacerL,
 };
 
 interface MdxProps {
