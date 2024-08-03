@@ -44,6 +44,7 @@ published: true
 - [Code block with line highlights and legend](#code-block-with-line-highlights-and-legend)
 - [Code block with file title and caption](#code-block-with-file-title-and-caption)
 - [Code block with line numbers](#code-block-with-line-numbers)
+- [Quizz](#quizz)
 - [Image](#image)
 - [16 /9 Blur-load Image (only internal)](#blur-load-image)
 - [Video](#video)
@@ -398,6 +399,30 @@ export interface Props {
   tags: Tag[];
 }
 ```
+
+---
+
+### Quizz
+
+<Quizz
+  questions={[
+    {
+      question: "first question",
+      rightAnswerIndex: "2",
+      answers: ["1", "2", "3", "4"],
+    },
+    {
+      question: "second question",
+      rightAnswerIndex: "0",
+      answers: ["1", "2", "3", "4"],
+    },
+    {
+      question: "third question",
+      rightAnswerIndex: "3",
+      answers: ["1", "2", "3", "4"],
+    },
+  ]}
+/>
 
 ---
 

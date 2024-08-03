@@ -11,6 +11,7 @@ import SpacerS from "./spacer-s";
 import SpacerM from "./spacer-m";
 import SpacerL from "./spacer-l";
 import SpacerXS from "./spacer-xs";
+import Quizz from "./quizz";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -30,6 +31,7 @@ const components = {
   SpacerS,
   SpacerM,
   SpacerL,
+  Quizz,
 };
 
 interface MdxProps {
