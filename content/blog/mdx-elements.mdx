@@ -407,19 +407,23 @@ export interface Props {
 <Quizz
   questions={[
     {
-      question: "first question",
+      question: "The syntax to define a tab stop is :",
       rightAnswerIndex: "2",
-      answers: ["1", "2", "3", "4"],
+      answers: [":1", "tabStop()", "$1", "$:1"],
     },
     {
-      question: "second question",
+      question: "Snippets can be specific to a project",
       rightAnswerIndex: "0",
-      answers: ["1", "2", "3", "4"],
+      answers: ["Yes", "No"],
     },
     {
-      question: "third question",
-      rightAnswerIndex: "3",
-      answers: ["1", "2", "3", "4"],
+      question: "By default (with no tab stops) where is placed the cursor ?",
+      rightAnswerIndex: "1",
+      answers: [
+        "At the begining",
+        "At the end",
+        "At the end of the first line",
+      ],
     },
   ]}
 />
