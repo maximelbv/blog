@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
+import { ChevronLeft } from "lucide-react";
 
 export function BackButton() {
   const router = useRouter();
@@ -11,9 +12,10 @@ export function BackButton() {
     <Button
       onClick={() => router.back()}
       variant="ghost"
-      className="w-fit h-9 py-0 px-[10px] rounded-full bg-secondary"
+      className="w-fit p-0 ml-[-5px] flex gap-1 hover:bg-transparent text-muted-foreground hover:text-secondary-foreground"
     >
-      <Icons.arrowBack />
+      <ChevronLeft className="scale-90" />
+      Blog
     </Button>
   );
 }

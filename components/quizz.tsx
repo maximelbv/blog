@@ -39,7 +39,7 @@ const Question = ({ question }: { question: Question }) => {
   };
 
   return (
-    <div className="p-8 grid gap-4 rounded-xl bg-secondary min-h-[200px]">
+    <div className="grid gap-4">
       <div className="text-[18px] font-semibold mb-2 leading-[1.5]">
         {question.question}
       </div>
@@ -79,7 +79,7 @@ const Question = ({ question }: { question: Question }) => {
                         <Icons.cancel />
                       )
                     ) : (
-                      <span>{index + 1}</span>
+                      <span className="font-bold">{index + 1}</span>
                     )}
                   </span>
                 </div>
@@ -94,7 +94,7 @@ const Question = ({ question }: { question: Question }) => {
 
 const Quizz = ({ questions }: QuizzProps) => {
   return (
-    <Carousel>
+    <Carousel className="p-8 rounded-lg bg-secondary min-h-[200px]">
       <CarouselContent>
         {questions.map((question) => (
           <CarouselItem key={question.question}>
@@ -102,8 +102,8 @@ const Quizz = ({ questions }: QuizzProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="relative" />
+      <CarouselNext className="relative" />
     </Carousel>
   );
 };
