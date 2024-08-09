@@ -8,7 +8,6 @@ import { siteConfig } from "@/config/site";
 import { Tag } from "@/components/tag";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
-import Image from "next/image";
 import PostInfos from "@/components/post-infos";
 import BlurImage from "@/components/blur-image";
 import PostCardAlternative from "@/components/post-card-alternative";
@@ -95,12 +94,12 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div>
-      <div className="flex article-layout p-5 py-0">
-        <article className="container py-6 prose dark:prose-invert max-w-3xl m-0 p-0">
-          <div className="grid gap-5 mb-12">
+      <div className="flex default-layout p-5 py-0">
+        <article className="container py-6 prose dark:prose-invert w-full m-0 p-0 max-w-full">
+          <div className="gap-5 mb-12 flex flex-col">
             <BackButton />
             {post.image && (
-              <div className="w-full aspect-video relative m-0 rounded-md">
+              <div className="w-full aspect-21/9 relative rounded-md max-w-[800px] m-auto">
                 <BlurImage
                   src={post.image}
                   className="rounded-xl"
@@ -111,23 +110,28 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
               </div>
             )}
-            <PostInfos
-              className="scale-90 w-max ml-[-12px]"
-              category={post.category}
-              date={post.date}
-            />
 
-            <h1 className="!mt-0 !mb-[-10px] text-[30px] font-bold leading-[3.25rem]">
-              {post.title}
-            </h1>
-            <div className="flex gap-2">
-              {post.tags?.map((tag) => (
-                <Tag tag={tag} key={tag} />
-              ))}
+            <div className="flex flex-col gap-4 w-full !article-layout mt-8">
+              <PostInfos
+                className="scale-90 w-max ml-[-12px]"
+                category={post.category}
+                date={post.date}
+              />
+              <h1 className="!mt-0 !mb-[-10px] text-[30px] font-bold leading-[3.25rem]">
+                {post.title}
+              </h1>
+              <div className="flex gap-2">
+                {post.tags?.map((tag) => (
+                  <Tag tag={tag} key={tag} />
+                ))}
+              </div>
+              <hr className="m-0 mt-8" />
             </div>
-            <hr className="m-0" />
           </div>
-          <MDXContent code={post.body} />
+          <div className="article-layout">
+            <MDXContent code={post.body} />
+          </div>
+
           <hr className="m-0 mt-12" />
         </article>
         <ScrollToTopButton />

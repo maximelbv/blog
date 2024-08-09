@@ -26,7 +26,11 @@ const config = {
         monoLisa: ["var(--font-monolisa)"],
       },
       maxWidth: {
-        classic: "1227px",
+        // classic: "1227px",
+        classic: "1024px",
+      },
+      aspectRatio: {
+        "21/9": "21 / 9",
       },
       colors: {
         border: "hsl(var(--border))",
