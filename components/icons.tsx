@@ -202,9 +202,9 @@ export const Icons = {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke-width="5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-x stroke-red-500 scale-50"
     >
       <path d="M18 6 6 18" className="translate-[0, -15.674]" />
@@ -219,9 +219,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-check stroke-green-500 scale-50"
     >
       <path d="M20 6 9 17l-5-5" className="translate-[0, -15.674]" />
@@ -373,23 +373,23 @@ export const Icons = {
         <path
           d="M6.4219 13.8046L4 4L13.7088 6.79522L6.4219 13.8046Z"
           stroke="white"
-          stroke-width="0.224182"
+          strokeWidth="0.224182"
           stroke-miterlimit="10"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
         <path
           d="M8.85255 5.39789L10.0626 10.3017L5.21094 8.90359L8.85255 5.39789Z"
           stroke="white"
-          stroke-width="0.224182"
+          strokeWidth="0.224182"
           stroke-miterlimit="10"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
         <path
           d="M7.64838 9.56869L7.04735 7.13266L9.45776 7.8246L7.64838 9.56869ZM6.44604 4.69962L7.04713 7.13564L4.63672 6.4437L6.44604 4.69962ZM11.2667 6.08826L11.8677 8.52428L9.45731 7.83234L11.2667 6.08826ZM7.64866 9.57037L8.2497 12.0064L5.83929 11.3144L7.64866 9.57037Z"
           stroke="white"
-          stroke-width="0.224182"
+          strokeWidth="0.224182"
           stroke-miterlimit="10"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>

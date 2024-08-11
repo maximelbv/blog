@@ -22,6 +22,8 @@ In this tutorial, we'll introduce you to the basics of VS Code snippets.
 We'll cover what snippets are, how to create your first custom snippet,
 and explore some fundamental features like tab stops and default values.
 
+<SpacerS />
+
 # What is a snippet ?
 
 A code snippet is a small block of reusable code that you can quickly insert into your programs.
@@ -162,6 +164,32 @@ For example: `console.${2|log,error,table|}(${1:Hello world})` will result to
 />
 
 </Step>
+
+---
+
+<Quizz
+  questions={[
+    {
+      question: "The syntax to define a tab stop is :",
+      rightAnswerIndex: "2",
+      answers: [":1", "tabStop()", "$1", "$:1"],
+    },
+    {
+      question: "Snippets can be specific to a project",
+      rightAnswerIndex: "0",
+      answers: ["Yes", "No"],
+    },
+    {
+      question: "By default (with no tab stops) where is placed the cursor ?",
+      rightAnswerIndex: "1",
+      answers: [
+        "At the begining",
+        "At the end",
+        "At the end of the first line",
+      ],
+    },
+  ]}
+/>
 
 # Conclusion
 

@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "./ui/button";
 import { Icons } from "./icons";
+import { RotateCcw } from "lucide-react";
 
 interface Question {
   question: string;
@@ -48,25 +50,25 @@ const Question = ({ question }: { question: Question }) => {
           question.answers.map((answer, index) => {
             const rightIndex = Number(question.rightAnswerIndex);
             const isSelected = selectedAnswerIndex === index;
-            const className =
+            const buttonClassName =
               isSelected && isAnswered
                 ? isCorrect
-                  ? "gap-3 justify-start bg-green-500 min-h-[45px] rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-green-500"
-                  : "gap-3 justify-start bg-red-500 min-h-[45px] rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-red-500"
+                  ? "gap-3 justify-start bg-green-500 min-h-[45px] rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-green-500 !text-white disabled:!opacity-100 disabled:!cursor-auto"
+                  : "gap-3 justify-start bg-red-500 min-h-[45px] rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-red-500 !text-white disabled:!opacity-100 disabled:!cursor-auto"
                 : "gap-3 justify-start w-full min-h-[45px] rounded-full bg-highlighted text-pretty text-[16px] p-2 hover:bg-highlighted";
 
             const iconClassName =
               isSelected && isAnswered
                 ? isCorrect
-                  ? "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-secondary-foreground rounded-full !bg-secondary-foreground "
-                  : "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-secondary-foreground rounded-full !bg-secondary-foreground"
+                  ? "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-white rounded-full !bg-white"
+                  : "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-white rounded-full !bg-white"
                 : "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-secondary-foreground rounded-full";
 
             return (
               <Button
                 variant="secondary"
-                className={className}
-                // disabled={isAnswered}
+                className={buttonClassName}
+                disabled={isAnswered}
                 onClick={() => handleValidate(index, rightIndex)}
                 key={answer}
               >
@@ -93,18 +95,64 @@ const Question = ({ question }: { question: Question }) => {
 };
 
 const Quizz = ({ questions }: QuizzProps) => {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+  const [resetKey, setResetKey] = React.useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
+  const handleReset = () => {
+    setResetKey((prevKey) => prevKey + 1);
+  };
+
   return (
-    <Carousel className="p-8 rounded-lg bg-secondary min-h-[200px]">
+    <Carousel
+      setApi={setApi}
+      key={resetKey}
+      className="p-8 rounded-lg bg-secondary min-h-[200px]"
+    >
+      <div className="flex justify-between mb-2 mt-[-14px]">
+        <span className="font-dahliaBold text-[24px]">Quizz</span>
+        <span className="font-dahliaBold text-[24px]">
+          {current && current}{" "}
+          <span className="text-muted-foreground">/ {count && count}</span>
+        </span>
+      </div>
+      <hr className="my-5" />
       <CarouselContent>
-        {questions.map((question) => (
-          <CarouselItem key={question.question}>
-            <Question question={question} />
-          </CarouselItem>
-        ))}
+        {questions.map((question, index) => {
+          return (
+            <CarouselItem key={`${resetKey}-${index}`}>
+              <Question question={question} />
+            </CarouselItem>
+          );
+        })}
       </CarouselContent>
-      <div className="flex gap-2 justify-end mt-12 mb-[-20px]">
-        <CarouselPrevious variant={"secondary"} />
-        <CarouselNext variant={"secondary"} />
+      <div className="flex justify-between items-end">
+        <Button
+          variant={"ghost"}
+          className="flex gap-1 p-0"
+          onClick={handleReset}
+        >
+          <RotateCcw className="scale-75" />
+          Reset
+        </Button>
+        <div className="flex gap-2 justify-end mt-12 mb-[-20px]">
+          <CarouselPrevious variant={"secondary"} />
+          <CarouselNext variant={"secondary"} />
+        </div>
       </div>
     </Carousel>
   );
