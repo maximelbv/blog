@@ -39,7 +39,7 @@ const Question = ({ question }: { question: Question }) => {
   };
 
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-2">
       <div className="text-[18px] font-semibold mb-2 leading-[1.5]">
         {question.question}
       </div>
@@ -102,8 +102,10 @@ const Quizz = ({ questions }: QuizzProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="relative" />
-      <CarouselNext className="relative" />
+      <div className="flex gap-2 justify-end mt-12 mb-[-20px]">
+        <CarouselPrevious variant={"secondary"} />
+        <CarouselNext variant={"secondary"} />
+      </div>
     </Carousel>
   );
 };

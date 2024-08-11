@@ -107,6 +107,6 @@
   }
 
   .article-layout {
-    @apply max-w-[700px] mx-auto;
+    @apply max-w-[650px] mx-auto;
   }
 }

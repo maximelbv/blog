@@ -99,7 +99,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <div className="gap-5 mb-12 flex flex-col">
             <BackButton />
             {post.image && (
-              <div className="w-full aspect-21/9 relative rounded-md max-w-[800px] m-auto">
+              <div className="w-full aspect-21/9 relative rounded-md max-w-[800px] m-auto mt-8">
                 <BlurImage
                   src={post.image}
                   className="rounded-xl"
