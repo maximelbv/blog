@@ -185,19 +185,63 @@ For example: `console.${2|log,error,table|}(${1:Hello world})` will result to
       question: "How can you create a new global snippets file in VS Code ?",
       rightAnswerIndex: "0",
       answers: [
-        "Through the command palette with 'Snippets: Configure User Snippets'",
+        'Through the command palette with "Snippets: Configure User Snippets"',
         "By clicking 'File > New Snippet'",
         "By installing an extension",
         "By creating a new file with a .snippet extension",
       ],
     },
     {
-      question: "By default (with no tab stops) where is placed the cursor ?",
+      question:
+        'In a VS Code snippet, what does the "prefix" field represent ?',
+      rightAnswerIndex: "2",
+      answers: [
+        "The code that is inserted by the snippet",
+        "A description of the snippet",
+        "A short string you type to trigger the snippet",
+        "The language where the snippet is applicable",
+      ],
+    },
+    {
+      question: "What is the purpose of $1, $2, and $0 in a VS Code snippet?",
       rightAnswerIndex: "1",
       answers: [
-        "At the begining",
-        "At the end",
-        "At the end of the first line",
+        "They are used to define code comments",
+        "They define where the cursor will move within the snippet",
+        "They are placeholders for variable names",
+        "They define the scope of the snippet",
+      ],
+    },
+    {
+      question:
+        "What is the right syntax to define a default value for a tab stop ?",
+      rightAnswerIndex: "0",
+      answers: [
+        "${1:My default value}",
+        "${1|My default value|}",
+        "${1}:My default value",
+        "${1/My default value}",
+      ],
+    },
+    {
+      question: 'What does the "scope" field in a VS Code snippet specify ?',
+      rightAnswerIndex: "3",
+      answers: [
+        "The description of the snippet",
+        "The prefix to invoke the snippet",
+        "The code that the snippet generates",
+        "The languages where the snippet can be used",
+      ],
+    },
+    {
+      question:
+        "How can you provide multiple selectable values for a tab stop in a snippet ?",
+      rightAnswerIndex: "1",
+      answers: [
+        "By separating the values with commas",
+        "By using the || characters to enclose the values",
+        "By typing the values in a list",
+        "By placing each value in a new line",
       ],
     },
   ]}

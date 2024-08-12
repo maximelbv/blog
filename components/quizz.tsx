@@ -121,6 +121,7 @@ const Quizz = ({ questions }: QuizzProps) => {
     <Carousel
       setApi={setApi}
       key={resetKey}
+      draggable={false}
       className="p-4 md:p-8 rounded-lg bg-secondary min-h-[200px]"
     >
       <div className="flex justify-between mb-2 md:mt-[-14px]">
