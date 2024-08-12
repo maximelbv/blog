@@ -45,7 +45,7 @@ const Question = ({ question }: { question: Question }) => {
       <div className="text-[18px] font-semibold mb-2 leading-[1.5]">
         {question.question}
       </div>
-      <div className="grid gap-4 col md:grid-cols-2 grid-cols-1">
+      <div className="grid gap-4 col md:grid-cols-1 grid-cols-1">
         {question.answers &&
           question.answers.map((answer, index) => {
             const rightIndex = Number(question.rightAnswerIndex);
@@ -53,16 +53,16 @@ const Question = ({ question }: { question: Question }) => {
             const buttonClassName =
               isSelected && isAnswered
                 ? isCorrect
-                  ? "gap-3 justify-start bg-green-500 min-h-[45px] rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-green-500 !text-white disabled:!opacity-100 disabled:!cursor-auto"
-                  : "gap-3 justify-start bg-red-500 min-h-[45px] rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-red-500 !text-white disabled:!opacity-100 disabled:!cursor-auto"
-                : "gap-3 justify-start w-full min-h-[45px] rounded-full bg-highlighted text-pretty text-[16px] p-2 hover:bg-highlighted";
+                  ? "gap-3 grid grid-cols-[auto_1fr] bg-green-500 min-h-[45px] !h-fit rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-green-500 !text-white disabled:!opacity-100 disabled:!cursor-auto text-start disabled:!h-fit disabled:w-full disabled:text-wrap"
+                  : "gap-3 grid grid-cols-[auto_1fr] bg-red-500 min-h-[45px] !h-fit rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-red-500 !text-white disabled:!opacity-100 disabled:!cursor-auto text-start disabled:!h-fit disabled:w-full disabled:text-wrap"
+                : "gap-3 grid grid-cols-[auto_1fr] w-full min-h-[45px] !h-fit rounded-full bg-highlighted text-pretty text-[16px] p-2 hover:bg-highlighted text-start disabled:h-fit disabled:w-fit disabled:w-full disabled:text-wrap";
 
             const iconClassName =
               isSelected && isAnswered
                 ? isCorrect
-                  ? "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-white rounded-full !bg-white"
-                  : "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-white rounded-full !bg-white"
-                : "w-7 h-7 text-[14px] flex items-center justify-center border-[1px] border-secondary-foreground rounded-full";
+                  ? "!w-7 !h-7 text-[14px] flex items-center justify-center border-[1px] border-white rounded-full !bg-white"
+                  : "!w-7 !h-7 text-[14px] flex items-center justify-center border-[1px] border-white rounded-full !bg-white"
+                : "!w-7 !h-7 text-[14px] flex items-center justify-center border-[1px] border-secondary-foreground rounded-full";
 
             return (
               <Button
@@ -85,7 +85,7 @@ const Question = ({ question }: { question: Question }) => {
                     )}
                   </span>
                 </div>
-                {answer}
+                <p>{answer}</p>
               </Button>
             );
           })}
@@ -121,11 +121,13 @@ const Quizz = ({ questions }: QuizzProps) => {
     <Carousel
       setApi={setApi}
       key={resetKey}
-      className="p-8 rounded-lg bg-secondary min-h-[200px]"
+      className="p-4 md:p-8 rounded-lg bg-secondary min-h-[200px]"
     >
-      <div className="flex justify-between mb-2 mt-[-14px]">
-        <span className="font-dahliaBold text-[24px]">Quizz</span>
-        <span className="font-dahliaBold text-[24px]">
+      <div className="flex justify-between mb-2 md:mt-[-14px]">
+        <span className="font-dahliaBold text-[22px] md:text-[24px] mr-2">
+          Test your knowledge
+        </span>
+        <span className="font-dahliaBold text-[22px] md:text-[24px]">
           {current && current}{" "}
           <span className="text-muted-foreground">/ {count && count}</span>
         </span>
