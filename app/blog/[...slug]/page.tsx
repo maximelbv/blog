@@ -111,7 +111,7 @@ export default async function PostPage({ params }: PostPageProps) {
               </div>
             )}
 
-            <div className="flex flex-col gap-4 w-full !article-layout mt-8">
+            <div className="flex flex-col gap-4 w-full !article-layout mt-6">
               <PostInfos
                 className="scale-90 w-max ml-[-12px]"
                 category={post.category}
@@ -125,7 +125,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   <Tag tag={tag} key={tag} />
                 ))}
               </div>
-              <hr className="m-0 mt-8" />
+              <hr className="m-0 mt-6" />
             </div>
           </div>
           <div className="article-layout">

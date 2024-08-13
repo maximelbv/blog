@@ -9,7 +9,7 @@ export function Header() {
   return (
     <>
       <header className="flex w-full justify-between default-layout px-5 pb-5 pt-7">
-        <Link href="/blog" className="flex items-center justify-center">
+        <Link href="/blog" className="flex items-center ml-[-10px]">
           <Icons.logo />
         </Link>
         <div className="hidden sm:flex items-center justify-center">
