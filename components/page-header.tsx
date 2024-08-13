@@ -6,7 +6,7 @@ interface PageHeaderProps {
 const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
   return (
     <div>
-      <h1 className="font-dahliaBold text-[80px] text-secondary-foreground">
+      <h1 className="font-dahliaBold text-[60px] text-secondary-foreground !m-0">
         {title}
       </h1>
       <span className="inline-block text-secondary-foreground max-w-[400px]">
