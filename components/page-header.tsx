@@ -1,6 +1,6 @@
 interface PageHeaderProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
 }
 
 const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
@@ -10,7 +10,7 @@ const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
         {title}
       </h1>
       <span className="inline-block text-secondary-foreground max-w-[400px]">
-        {subtitle}
+        {subtitle && subtitle}
       </span>
     </div>
   );

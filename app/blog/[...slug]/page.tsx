@@ -99,7 +99,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <div className="gap-5 mb-12 flex flex-col">
             <BackButton href="/blog" label="blog" />
             {post.image && (
-              <div className="w-full aspect-21/9 relative rounded-md max-w-[800px] m-auto mt-8">
+              <div className="w-full aspect-video relative rounded-md max-w-[650px] m-auto mt-8">
                 <BlurImage
                   src={post.image}
                   className="rounded-xl"
@@ -111,7 +111,7 @@ export default async function PostPage({ params }: PostPageProps) {
               </div>
             )}
 
-            <div className="flex flex-col gap-4 w-full !article-layout mt-6">
+            <div className="flex flex-col gap-4 w-full !article-layout mt-4">
               <PostInfos
                 className="scale-90 w-max ml-[-12px]"
                 category={post.category}
@@ -125,7 +125,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   <Tag tag={tag} key={tag} />
                 ))}
               </div>
-              <hr className="m-0 mt-6" />
+              <hr className="m-0 mt-4" />
             </div>
           </div>
           <div className="article-layout">

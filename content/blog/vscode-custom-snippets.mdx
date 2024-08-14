@@ -47,8 +47,6 @@ Select "New Global Snippets file" and name it. (You can also create a snippet fi
 
 </Step>
 
----
-
 <Step number={2} title="Understand the structure">
 
 By generating the file, you will se a bunch of informations and a default example at the end, you can uncomment it.
@@ -87,22 +85,20 @@ Let's see how it is structured:
   The `description` will show up in the autocomplete suggestions
 </ColorLegend>
 
-<SpacerM />
-
-<Callout>
-  **Try it yourself**
-  <SpacerXS />
-
-&rarr; Save this file, and open a new one with the `.js` extension <br/>
-&rarr; by typing `log` you should see the vscode autocomplete suggestion for the snippet we just described
-
-</Callout>
+<SpacerS />
 
 </Step>
 
----
+<Step number={3} title="Try it yourself">
+  1. Save this file, and open a new one with the `.js` extension <br />
+  2. by typing `log` you should see the vscode autocomplete suggestion for the snippet
+  we just described
+</Step>
 
-<Step number={3} title="Tab stops, default value & multiple values">
+<SpacerM />
+
+# Tab stops
+
 We now have the keys to create our custom snippets... <br/>But did you notice the `$1` and `$2` ?
 
 ```json /$1/ /$2/
@@ -125,9 +121,7 @@ These are **Tab Stops**, they define where the cursor will be placed at:
 
 This is not mandatory, but very helpfull if you have multiple values to add to your snippet. By default, the cursor is placed at the end of the body
 
-<SpacerL />
-
-**Default values**
+# Default values
 
 <SpacerXS />
 
@@ -148,9 +142,7 @@ If i take the previous example and replace the `$1` by `${1:Hello world}`, this 
 
 the default value will be selected and so, easily replaceable 👍
 
-<SpacerL />
-
-**Multiple values**
+# Multiple values
 
 <SpacerXS />
 
@@ -163,9 +155,22 @@ For example: `console.${2|log,error,table|}(${1:Hello world})` will result to
   style={{ maxWidth: "70%" }}
 />
 
-</Step>
+# Conclusion
 
----
+That's all folks!
+
+You now have the keys to create basic custom snippets in vscode
+
+<SpacerS />
+
+If you're interested in going further, I highly recommend you take a look at the <CustomLink isExternal href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">
+official documentation</CustomLink>, which goes into more detail about custom snippets.
+
+<SpacerS />
+
+in the meantime, you can take this quiz to test your knowledge ↓
+
+<SpacerM />
 
 <Quizz
   questions={[
@@ -244,14 +249,3 @@ For example: `console.${2|log,error,table|}(${1:Hello world})` will result to
     },
   ]}
 />
-
-# Conclusion
-
-That's all folks!
-
-You now have the keys to create basic custom snippets in vscode
-
-<SpacerS />
-
-If you're interested in going further, I highly recommend you take a look at the <CustomLink isExternal href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">
-official documentation</CustomLink>, which goes into more detail about custom snippets.

@@ -42,7 +42,7 @@ const Question = ({ question }: { question: Question }) => {
 
   return (
     <div className="grid gap-2">
-      <div className="text-[18px] font-semibold mb-2 leading-[1.5]">
+      <div className="text-[16.5px] font-semibold mb-2 leading-[1.5]">
         {question.question}
       </div>
       <div className="grid gap-4 col md:grid-cols-1 grid-cols-1">
