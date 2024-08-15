@@ -16,7 +16,7 @@ export function BackButton({ href, label }: BackButtonProps) {
     <Button
       onClick={() => router.push(href)}
       variant="ghost"
-      className="w-fit p-0 flex gap-[2px] hover:bg-transparent text-muted-foreground hover:text-secondary-foreground"
+      className="w-fit p-0 flex gap-[2px] hover:bg-transparent text-muted-foreground hover:text-secondary-foreground ml-[-10px]"
     >
       <ChevronLeft className="scale-75" />
       {label}

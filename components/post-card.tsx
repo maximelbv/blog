@@ -32,7 +32,9 @@ const PostCard = ({ post }: { post: Post }) => {
             date={post.date}
           />
           <h3 className="text-[20px] font-bold">{post.title}</h3>
-          <span className="text-muted-foreground">{post.description}</span>
+          <span className="text-foregroundAlt font-normal">
+            {post.description}
+          </span>
         </div>
         <div className="flex gap-[5px]">
           {post.tags &&

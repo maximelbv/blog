@@ -1,7 +1,6 @@
 import { posts } from "#site/content";
 import { MDXContent } from "@/components/mdx-components";
 import { notFound } from "next/navigation";
-
 import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
@@ -9,8 +8,9 @@ import { Tag } from "@/components/tag";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
 import PostInfos from "@/components/post-infos";
-import BlurImage from "@/components/blur-image";
 import PostCardAlternative from "@/components/post-card-alternative";
+import TableOfContents from "@/components/table-of-contents";
+
 interface PostPageProps {
   params: {
     slug: string[];
@@ -96,9 +96,8 @@ export default async function PostPage({ params }: PostPageProps) {
     <div>
       <div className="flex default-layout p-5 py-0">
         <article className="container py-6 prose dark:prose-invert w-full m-0 p-0 max-w-full">
-          <div className="gap-5 mb-12 flex flex-col">
-            <BackButton href="/blog" label="blog" />
-            {post.image && (
+          <div className="gap-0 mb-12 flex flex-col">
+            {/* {post.image && (
               <div className="w-full aspect-video relative rounded-md max-w-[650px] m-auto mt-8">
                 <BlurImage
                   src={post.image}
@@ -109,9 +108,9 @@ export default async function PostPage({ params }: PostPageProps) {
                   }}
                 />
               </div>
-            )}
-
-            <div className="flex flex-col gap-4 w-full !article-layout mt-4">
+            )} */}
+            <BackButton href="/blog" label="blog" />
+            <div className="flex flex-col gap-4 w-full mt-4">
               <PostInfos
                 className="scale-90 w-max ml-[-12px]"
                 category={post.category}
@@ -125,13 +124,15 @@ export default async function PostPage({ params }: PostPageProps) {
                   <Tag tag={tag} key={tag} />
                 ))}
               </div>
-              <hr className="m-0 mt-4" />
+              <hr className="m-0 mt-4 border-border" />
             </div>
           </div>
-          <div className="article-layout">
-            <MDXContent code={post.body} />
+          <div className="flex gap-20">
+            <div className="article-layout m-0">
+              <MDXContent code={post.body} />
+            </div>
+            {post.index && <TableOfContents index={post.index} />}
           </div>
-
           <hr className="m-0 mt-12" />
         </article>
         <ScrollToTopButton />

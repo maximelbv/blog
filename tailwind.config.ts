@@ -38,6 +38,7 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        foregroundAlt: "hsl(var(--foreground-alt))",
         code: {
           DEFAULT: "hsl(var(--code))",
         },

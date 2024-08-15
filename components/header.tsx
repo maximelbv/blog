@@ -1,16 +1,37 @@
+"use client";
+
 import { navigation } from "@/config/navigation";
 import { Icons } from "./icons";
 import { ModeToggle } from "./mode-toggle";
 import { MobileNav } from "./mobile-nav";
 import Link from "next/link";
 import AnimatedButon from "./animated-buton";
+import { useEffect, useState } from "react";
 
 export function Header() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 230 ? true : false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="flex w-full justify-between default-layout px-5 pb-5 pt-7">
+      <header
+        className={`flex w-full justify-between default-layout px-5 pb-5 pt-7 sticky top-0 bg-background z-50 ${
+          isVisible && "border-b-[1px] border-border"
+        }`}
+      >
         <Link href="/" className="flex items-center">
-          <Icons.logo />
+          <Icons.logoNoTxt />
         </Link>
         <div className="hidden sm:flex items-center justify-center">
           {navigation.map((nav) => (
@@ -20,8 +41,6 @@ export function Header() {
         </div>
         <MobileNav />
       </header>
-      {/* <div className="h-[.5px] w-full bg-muted-foreground px-5 default-layout max-w-[1187px]"></div> */}
-      {/* <hr className="m-0" /> */}
     </>
   );
 }

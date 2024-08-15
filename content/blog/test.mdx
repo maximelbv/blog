@@ -1,0 +1,491 @@
+---
+title: "Test"
+description: "Collection of all mdx elements usables on this blog. Only for dev / writing purpose"
+date: 2024-07-21
+tags: ["mdx", "config"]
+index:
+  [
+    { name: "truc", link: "#classic-text" },
+    { name: "link", link: "#link" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+    { name: "truc", link: "#classic-text" },
+  ]
+category: Tools
+published: true
+---
+
+## Index
+
+- [h1 title](#h1-title)
+- [h2 title](#h2-title)
+- [h3 title](#h3-title)
+- [h4 title](#h4-title)
+- [h5 title](#h5-title)
+- [h6 title](#h6-title)
+- [Classic text](#classic-text)
+- [Classic text multiline](#classic-text-multiline)
+- [Italic text](#italic-text)
+- [Bold text](#bold-text)
+- [Bold + italic text](#bold-italic-text)
+- [Strikethrough text](#strikethrough-text)
+- [Subscript](#subscript)
+- [Superscript](#superscript)
+- [Footnote](#footnote)
+- [Link](#link)
+- [CustomLink internal](#customlink-internal)
+- [CustomLink external](#customlink-external)
+- [Inline code](#inline-code)
+- [Highlighted inline code](#highlighted-inline-code)
+- [KeyboardKey](#keyboardkey)
+- [Quote](#quote)
+- [Callout](#callout)
+- [Ordered list](#ordered-list)
+- [Unordered list](#unordered-list)
+- [Tasks list](#tasks-list)
+- [Step](#step)
+- [Table](#table)
+- [Aligned Table](#aligned-table)
+- [Code block](#code-block)
+- [Code block with word highlights](#code-block-with-word-highlights)
+- [Code block with line highlights](#code-block-with-line-highlights)
+- [Code block with line highlights and legend](#code-block-with-line-highlights-and-legend)
+- [Code block with file title and caption](#code-block-with-file-title-and-caption)
+- [Code block with line numbers](#code-block-with-line-numbers)
+- [Quizz](#quizz)
+- [Image](#image)
+- [16 /9 Blur-load Image (only internal)](#blur-load-image)
+- [Video](#video)
+- [AutoplayVideo](#autoplayvideo)
+
+### h1 title
+
+# This is a title h1
+
+---
+
+### h2 title
+
+## This is a title h2
+
+---
+
+### h3 title
+
+### This is a title h3
+
+---
+
+### h4 title
+
+#### This is a title h4
+
+---
+
+### h5 title
+
+##### This is a title h5
+
+---
+
+### h6 title
+
+###### This is a title h6
+
+---
+
+### Classic text
+
+Classic Text
+
+---
+
+### Classic text multiline
+
+Voluptate tempor voluptate est aliqua in enim enim sint consequat et sint id exercitation mollit. Non magna elit ad aute excepteur eiusmod. Qui nulla occaecat magna aliqua occaecat aute labore enim. Ad quis fugiat nisi irure enim culpa officia. Ex officia ullamco ea nulla.
+
+---
+
+### Italic text
+
+This is an _italic_ text.
+
+---
+
+### Bold text
+
+This is a **grassouillet** text.
+
+---
+
+### Bold italic text
+
+This is an **_italic + bold text_**
+
+---
+
+### Strikethrough text
+
+This is a ~~strikethrough~~ text
+
+---
+
+### Subscript
+
+This is a <sub>subscript</sub> text
+
+---
+
+### Superscript
+
+This is a <sup>superscript</sup> text
+
+---
+
+### Footnote
+
+    Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+---
+
+### Arrow symbols
+
+&uarr; Up
+&larr; Left
+&rarr; Right
+&darr; Down
+&harr; Double headed
+
+### Link
+
+Check [this](https://www.google.com) out !
+
+---
+
+### Customlink internal
+
+Check <CustomLink href="https://www.google.com">this</CustomLink> out !
+
+---
+
+### CustomLink external
+
+Check <CustomLink href="https://www.google.com" isExternal>this</CustomLink> out !
+
+---
+
+### Inline code
+
+You should use an `<addr>` element here instead.
+
+---
+
+### Highlighted inline code
+
+You should use an `<addr>{:js}` element here instead.
+
+---
+
+### KeyboardKey
+
+In VS Code, open your command palette with <KeyboardKey value="CMD" /> + <KeyboardKey value="SHIFT" /> + <KeyboardKey value="P" /> (macOS) / <KeyboardKey value="CTRL" /> + <KeyboardKey value="SHIFT" /> + <KeyboardKey value="P" /> (Windows / Linux)
+
+---
+
+### Quote
+
+> Hello, i'm a quote
+
+> _Dear Mr. Carraway._
+>
+> _This has been one of the most terrible shocks of my life to me I hardly can believe it that it is true at all. Such a mad act as that man did should make us all think. I cannot come down now as I am tied up in some very important business and cannot get mixed up in this thing now. If there is anything I can do a little later let me know in a letter by Edgar. I hardly know where I am when I hear about a thing like this and am completely knocked down and out._
+>
+> > _Yours truly_
+> >
+> > > **MEYER WOLFSHIEM**
+>
+> and then hasty addenda beneath:
+>
+> > _Let me know about the funeral etc do not know his family at all._
+
+---
+
+### Callout
+
+<Callout>Hello I am a default callout</Callout>
+<Callout type="success">Hello I am a success callout</Callout>
+<Callout type="warning">Hello I am a warning callout</Callout>
+<Callout type="danger">Hello I am an error callout</Callout>
+
+---
+
+### Ordered list
+
+1. This is step 1.
+2. This is the next step.
+3. This is yet another step, the third.
+4. This is step 1.
+   1. This is sub-step 1
+   2. This is sub-step 2
+5. This is the next step.
+6. This is yet another step, the third.
+
+---
+
+### Unordered list
+
+- First item in an unordered list.
+- Another item.
+- Here we go again.
+
+- First item in an unordered list.
+  - Nested element number one
+  - Second nested element
+- Another item.
+- Here we go again.
+
+---
+
+### Tasks list
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+---
+
+### Step
+
+<Step number={1} title="This is the first step">
+  First, complete the step, then go to the second step
+</Step>
+
+---
+
+### Table
+
+| Header | Another header | Yet another header |
+| ------ | -------------- | ------------------ |
+| row 1  | column 2       | column 3           |
+| row 2  | row 2 column 2 | row 2 column 3     |
+
+---
+
+### Aligned Table
+
+| Left              |       Center        |              Right |
+| :---------------- | :-----------------: | -----------------: |
+| Left-aligned text | Center-aligned text | Right-aligned text |
+
+---
+
+### Code block
+
+```jsx
+"use client";
+
+import React from "react";
+
+const MyCounter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+};
+
+export default MyCounter;
+```
+
+---
+
+### Code block with word highlights
+
+```jsx /needsRepair/
+for (const car of cars) {
+  if (car.needsRepair) {
+    await this.garageService.repair(car);
+  }
+}
+```
+
+```jsx /car/3-5#blue
+for (const car of cars) {
+  if (car.needsRepair) {
+    await this.garageService.repair(car);
+  }
+}
+```
+
+---
+
+### Code block with line highlights
+
+```json {4-7}
+"Print to console": {
+  "scope": "javascript,typescript",
+  "prefix": "log",
+  "body": [
+    "console.log('$1');",
+    "$2"
+  ],
+  "description": "Log output to console"
+}
+```
+
+```json {2}#purple {3}#green {4}#blue {8}#red
+"Print to console": {
+  "scope": "javascript,typescript",
+  "prefix": "log",
+  "body": [
+    "console.log('$1');",
+    "$2"
+  ],
+  "description": "Log output to console"
+}
+```
+
+---
+
+### Code block with line highlights and legend
+
+```json {2}#purple {3}#green {4}#blue {8}#red
+"Print to console": {
+  "scope": "javascript,typescript",
+  "prefix": "log",
+  "body": [
+    "console.log('$1');",
+    "$2"
+  ],
+  "description": "Log output to console"
+}
+```
+
+<ColorLegend color={"purple"}>
+  The `scope` defines where this snippet is applicable. In this case, the
+  snippet works in javascript ans typescriptP files
+</ColorLegend>
+
+<ColorLegend color={"green"}>
+  The `prefix` is the acronym that you will type to invoke the snippet
+</ColorLegend>
+
+<ColorLegend color={"blue"}>
+  The `body` contains the code that will be displayed
+</ColorLegend>
+
+<ColorLegend color={"red"}>
+  The `description` will show up in the autocomplete suggestions
+</ColorLegend>
+
+---
+
+### Code block with file title and caption
+
+```py title="Factorial of a Number using Recursion" caption="i'm a code block caption"
+def factorial(x):
+    if x == 1:
+        return 1
+    else:
+        # recursive call to the function
+        return (x * factorial(x-1))
+```
+
+---
+
+### Code block with line numbers
+
+```js showLineNumbers
+export interface Props {
+  title: string;
+  children: React.ReactNode;
+  tags: Tag[];
+}
+```
+
+---
+
+### Quizz
+
+<Quizz
+  questions={[
+    {
+      question: "The syntax to define a tab stop is :",
+      rightAnswerIndex: "2",
+      answers: [":1", "tabStop()", "$1", "$:1"],
+    },
+    {
+      question: "Snippets can be specific to a project",
+      rightAnswerIndex: "0",
+      answers: ["Yes", "No"],
+    },
+    {
+      question: "By default (with no tab stops) where is placed the cursor ?",
+      rightAnswerIndex: "1",
+      answers: [
+        "At the begining",
+        "At the end",
+        "At the end of the first line",
+      ],
+    },
+  ]}
+/>
+
+---
+
+### Image
+
+![Alternative text](/images/samples/1.jpg)
+
+![Alternative text](/images/samples/2.png)
+
+---
+
+### Blur-load Image
+
+<CustomImage href="/images/samples/1.jpg" />
+
+<CustomImage href="/images/samples/2.png" />
+
+---
+
+### Video
+
+<video
+  controls
+  playsInline
+  src={"/blog-assets/snippet-example.mov"}
+  preload="metadata"
+/>
+
+---
+
+### AutoplayVideo
+
+<AutoplayVideo src="/blog-assets/snippet-example.mov" />
+
+---

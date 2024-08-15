@@ -4,12 +4,18 @@ import { buttonVariants } from "./ui/button";
 import { cn, formatDate } from "@/lib/utils";
 import { Tag } from "./tag";
 
+interface Index {
+  name: string;
+  link: string;
+}
+
 interface PostItemProps {
   slug: string;
   title: string;
   description?: string;
   date: string;
   category: string;
+  index: Index[];
   image?: string;
   tags?: Array<string>;
 }
@@ -20,6 +26,7 @@ export function PostItem({
   description,
   date,
   category,
+  index,
   image,
   tags,
 }: PostItemProps) {

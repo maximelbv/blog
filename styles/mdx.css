@@ -132,7 +132,7 @@ h3 a {
 }
 
 p {
-  @apply text-[16.5px] font-medium leading-7 m-0 text-secondary-foreground/70 !important;
+  @apply text-[16.5px] font-medium leading-7 m-0 text-foregroundAlt !important;
 }
 
 ul {

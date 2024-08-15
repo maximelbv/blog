@@ -20,6 +20,14 @@ const posts = defineCollection({
       date: s.isodate(),
       published: s.boolean().default(true),
       category: s.string(),
+      index: s
+        .array(
+          s.object({
+            name: s.string(),
+            link: s.string(),
+          })
+        )
+        .optional(),
       image: s.string().optional(),
       tags: s.array(s.string()).optional(),
       body: s.mdx(),
