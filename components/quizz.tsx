@@ -86,7 +86,7 @@ const Question = ({ question }: { question: Question }) => {
                   </span>
                 </div>
                 <p
-                  className={`hyphens-auto max-w-full w-full text-foreground ${
+                  className={`hyphens-auto text-balance md:text-wrap max-w-full w-full text-foreground ${
                     isSelected && "!text-[#fff]"
                   }`}
                 >
