@@ -26,7 +26,7 @@ export function Header() {
   return (
     <>
       <header
-        className={`flex w-full justify-between default-layout px-5 pb-5 pt-7 sticky top-0 bg-background z-50 ${
+        className={`flex w-full justify-between default-layout px-5 pb-5 pt-5 sticky top-0 bg-background z-50 ${
           isVisible && "border-b-[1px] border-border"
         }`}
       >

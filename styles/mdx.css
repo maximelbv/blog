@@ -98,7 +98,7 @@
 }
 
 code {
-  @apply !text-secondary-foreground/70;
+  @apply !text-foregroundAlt;
 }
 
 code::before,
@@ -132,7 +132,7 @@ h3 a {
 }
 
 p {
-  @apply text-[16.5px] font-medium leading-7 m-0 text-foregroundAlt !important;
+  @apply !text-[16.5px] !font-medium !leading-7 !m-0 text-foregroundAlt;
 }
 
 ul {

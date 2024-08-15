@@ -28,7 +28,7 @@ export default function TableOfContents({ index }: TableOfContentsProps) {
   };
 
   return (
-    <div className="grid gap-1 h-fit sticky top-[120px]">
+    <div className="grid sticky top-[120px] !overflow-scroll h-fit max-h-[80svh]">
       <span className="uppercase font-bold tracking-wider">
         Table of content
       </span>
