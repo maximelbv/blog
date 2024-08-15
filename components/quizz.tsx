@@ -53,9 +53,9 @@ const Question = ({ question }: { question: Question }) => {
             const buttonClassName =
               isSelected && isAnswered
                 ? isCorrect
-                  ? "gap-3 grid grid-cols-[auto_1fr] bg-green-500 min-h-[45px] !h-fit rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-green-500 !text-white disabled:!opacity-100 disabled:!cursor-auto text-start disabled:!h-fit disabled:w-full disabled:text-wrap"
-                  : "gap-3 grid grid-cols-[auto_1fr] bg-red-500 min-h-[45px] !h-fit rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-red-500 !text-white disabled:!opacity-100 disabled:!cursor-auto text-start disabled:!h-fit disabled:w-full disabled:text-wrap"
-                : "gap-3 grid grid-cols-[auto_1fr] w-full min-h-[45px] !h-fit rounded-full bg-highlighted text-pretty text-[16px] p-2 hover:bg-highlighted text-start disabled:h-fit disabled:w-fit disabled:w-full disabled:text-wrap";
+                  ? "gap-3 hyphens-auto text-balance grid grid-cols-[auto_1fr] bg-green-500 min-h-[45px] max-w-full !h-fit rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-green-500 !text-white disabled:!opacity-100 disabled:!cursor-auto text-start disabled:!h-fit disabled:w-full disabled:text-wrap"
+                  : "gap-3 hyphens-auto text-balance grid grid-cols-[auto_1fr] bg-red-500 min-h-[45px] max-w-full !h-fit rounded-full text-[16px] p-2 !text-secondary-foreground hover:bg-red-500 !text-white disabled:!opacity-100 disabled:!cursor-auto text-start disabled:!h-fit disabled:w-full disabled:text-wrap"
+                : "gap-3 hyphens-auto text-balance grid grid-cols-[auto_1fr] !w-full max-w-full min-h-[45px] !h-fit rounded-full bg-highlighted text-pretty text-[16px] p-2 hover:bg-highlighted text-start disabled:h-fit disabled:w-fit disabled:w-full disabled:text-wrap";
 
             const iconClassName =
               isSelected && isAnswered
