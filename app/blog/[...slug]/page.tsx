@@ -127,8 +127,8 @@ export default async function PostPage({ params }: PostPageProps) {
               <hr className="m-0 mt-4 border-border" />
             </div>
           </div>
-          <div className="flex gap-20">
-            <div className="article-layout m-0">
+          <div className="flex !w-full min-[900px]:gap-6 lg:gap-20">
+            <div className="article-layout !w-full m-0">
               <MDXContent code={post.body} />
             </div>
             {post.index && <TableOfContents index={post.index} />}
