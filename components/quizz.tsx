@@ -86,7 +86,7 @@ const Question = ({ question }: { question: Question }) => {
                   </span>
                 </div>
                 <p
-                  className={`!text-foreground ${isSelected && "!text-[#fff]"}`}
+                  className={`text-foreground ${isSelected && "!text-[#fff]"}`}
                 >
                   {answer}
                 </p>
