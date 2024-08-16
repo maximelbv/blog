@@ -11,14 +11,19 @@ const PostCardAlternative = ({ post }: { post: Post }) => {
         href={sanitizedSlug}
         className="flex flex-col gap-2 no-underline p-5 bg-secondary rounded-lg border-2 border-transparent hover:border-primary "
       >
-        <PostInfos
-          className=""
-          variant="small"
-          category={post.category}
-          date={post.date}
-        />
-        <h3 className="text-[22px] font-bold m-0">{post.title}</h3>
-        <span className="text-muted-foreground">{post.description}</span>
+        <div className="scale-90 ml-[-16px]">
+          <PostInfos
+            className=""
+            variant="small"
+            category={post.category}
+            date={post.date}
+          />
+        </div>
+
+        <h3 className="text-[20px] font-bold m-0">{post.title}</h3>
+        <span className="text-muted-foreground text-[15px]">
+          {post.description}
+        </span>
 
         <div className="flex gap-[5px]">
           {post.tags &&

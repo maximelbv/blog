@@ -19,6 +19,12 @@ const config = {
       },
     },
     extend: {
+      height: {
+        "fill-available": "-webkit-fill-available",
+      },
+      width: {
+        "fill-available": "-webkit-fill-available",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         dahlia: ["var(--font-dahlia)"],
