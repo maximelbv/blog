@@ -13,6 +13,11 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
 });
 
+const dahliaLight = localFont({
+  src: "../public/fonts/dahlia/dahlia-regular.otf",
+  variable: "--font-dahlia-light",
+});
+
 const dahlia = localFont({
   src: "../public/fonts/dahlia/dahlia-medium.otf",
   variable: "--font-dahlia",
@@ -52,6 +57,7 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           jakarta.variable,
+          dahliaLight.variable,
           dahlia.variable,
           dahliaBold.variable,
           monoLisa.variable

@@ -27,6 +27,7 @@ const config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        dahliaLight: ["var(--font-dahlia-light)"],
         dahlia: ["var(--font-dahlia)"],
         dahliaBold: ["var(--font-dahlia-bold)"],
         monoLisa: ["var(--font-monolisa)"],
