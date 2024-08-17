@@ -11,11 +11,11 @@ export const socials = [
     route: "https://www.linkedin.com/in/maxime-lefebvre-85b545199/",
     icon: Icons.linkedin,
   },
-  {
-    name: "Instagram",
-    route: "https://www.instagram.com/maximelbv/",
-    icon: Icons.instagram,
-  },
+  // {
+  //   name: "Instagram",
+  //   route: "https://www.instagram.com/maximelbv/",
+  //   icon: Icons.instagram,
+  // },
   {
     name: "Twitter",
     route: "https://x.com/maximelbv",
