@@ -1,5 +1,5 @@
 import { posts } from "#site/content";
-import GoBlogButton from "@/components/go-blog-button";
+import AnimatedButon from "@/components/animated-buton";
 import PostInfos from "@/components/post-infos";
 import { sortPosts } from "@/lib/utils";
 import Link from "next/link";
@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <div>
       <div
-        className="w-full flex flex-col items-center justify-end"
+        className="w-full flex flex-col items-center justify-center"
         style={{ height: "calc(100svh - 80px)" }}
       >
-        <div className="mb-14 flex flex-col items-center">
+        <div className="mb-[20svh] flex flex-col items-center">
           <h1 className="text-[80px] font-dahliaLight text-foreground !mb-[-10px]">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
           </h1>
@@ -23,7 +23,6 @@ export default function Home() {
             design engineer
           </span>
         </div>
-        <div className="w-[2px] h-[45svh] bg-border"></div>
       </div>
       <div
         className="relative w-full flex flex-col gap-20 justify-center items-center"
@@ -34,12 +33,8 @@ export default function Home() {
         </span>
         <div className="flex items-end">
           <div className="relative group">
-            {/* <div
-              className="absolute w-[210px] h-[210px] bg-secondary border-[1px] border-border rounded-[20px] rotate-[-10deg] group-hover:rotate-0 transition-transform duration-500 ease-in-out"
-              style={{ zIndex: 0 }}
-            ></div> */}
             <Link href={nextToLastPost.slug}>
-              <div className="p-4 flex flex-col justify-between w-[210px] h-[210px] bg-secondary border-[1px] border-border rounded-[20px] -rotate-3 hover:rotate-0 mr-[-30px] transition-transform duration-500 ease-in-out">
+              <div className="p-4 flex flex-col justify-between w-[210px] h-[210px] bg-secondary border-[1px] border-border rounded-[20px] -rotate-3 hover:rotate-0 mr-[-30px] transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)">
                 <div className="flex flex-col gap-2">
                   <PostInfos
                     className=""
@@ -50,7 +45,6 @@ export default function Home() {
                   <span className="text-[20px] font-dahlia font-bold">
                     {nextToLastPost.title}
                   </span>
-                  {/* <span>{nextToLastPost.description}</span> */}
                 </div>
 
                 <div className="flex gap-2">
@@ -70,13 +64,13 @@ export default function Home() {
 
           <div className="relative group">
             <div
-              className="absolute w-[350px] h-[350px] bg-secondary border-[1px] border-border rounded-[20px] rotate-[14deg] group-hover:rotate-0 transition-transform duration-500 ease-in-out"
+              className="absolute w-[350px] h-[350px] bg-secondary border-[1px] border-border rounded-[20px] rotate-[14deg] group-hover:rotate-0 transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)"
               style={{ zIndex: 0 }}
             ></div>
 
             <Link href={lastPost.slug}>
               <div
-                className="p-7 flex flex-col justify-between gap-2 relative w-[350px] h-[350px] bg-secondary border-[1px] border-border rounded-[20px] rotate-6 hover:rotate-0 mb-16 transition-transform duration-500 ease-in-out"
+                className="p-7 flex flex-col justify-between gap-2 relative w-[350px] h-[350px] bg-secondary border-[1px] border-border rounded-[20px] rotate-6 hover:rotate-0 mb-16 transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)"
                 style={{ zIndex: 1 }}
               >
                 <div className="flex flex-col gap-2">
@@ -109,7 +103,15 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <GoBlogButton />
+        <AnimatedButon
+          nav={{
+            route: "/blog",
+            name: "View all",
+          }}
+          duration={0.5}
+          stagger={0.019}
+          className="!bg-blue-500 !rounded-full !text-[#fff] !font-semibold !text-[15px]"
+        />
       </div>
     </div>
   );
