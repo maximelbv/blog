@@ -9,7 +9,7 @@ interface AnimatedButonProps {
     route: string;
     name: string;
   };
-  className: string;
+  className?: string;
   duration?: number;
   stagger?: number;
   ease?: number[] | string;
