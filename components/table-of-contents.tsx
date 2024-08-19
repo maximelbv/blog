@@ -29,7 +29,7 @@ export default function TableOfContents({ index }: TableOfContentsProps) {
 
   return (
     <div className="hidden min-[900px]:grid sticky top-[120px] !overflow-y-auto h-fit max-h-[80svh]">
-      <span className="uppercase font-bold tracking-wider">
+      <span className="uppercase font-bold tracking-widest text-foreground text-[14px]">
         Table of content
       </span>
       {index.map((item) => (

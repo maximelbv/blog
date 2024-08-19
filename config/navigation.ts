@@ -1,11 +1,15 @@
 export const navigation = [
-  // {
-  //   name: "Projects",
-  //   route: "/projects",
-  // },
+  {
+    name: "Projects",
+    route: "/projects",
+  },
   {
     name: "Blog",
     route: "/blog",
+  },
+  {
+    name: "Portfolio",
+    route: "/portfolio",
   },
   {
     name: "About",
