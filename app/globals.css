@@ -110,6 +110,6 @@
   }
 
   .article-layout {
-    @apply max-w-[650px] mx-auto;
+    @apply max-w-[675px] mx-auto;
   }
 }

@@ -95,7 +95,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div>
-      <div className="flex default-layout p-5 py-0">
+      <div className="flex article-layout p-5 py-0">
         <article className="container py-6 prose dark:prose-invert w-full m-0 p-0 max-w-full">
           <div className="gap-0 mb-12 flex flex-col">
             <BackButton href="/blog" label="blog" />
@@ -132,14 +132,16 @@ export default async function PostPage({ params }: PostPageProps) {
             <div className="article-layout !w-full m-0">
               <MDXContent code={post.body} />
             </div>
-            <div className="min-w-[250px]">
+            <div className="fixed left-10 top-[40svh]">
               {post.index && <TableOfContents index={post.index} />}
             </div>
           </div>
-          <hr className="m-0 mt-12" />
         </article>
+
         <ScrollToTopButton />
       </div>
+      <hr className="m-0 mt-12 default-layout m-auto" />
+
       <div className="my-5 grid gap-2 default-layout p-5 mt-0">
         <span className="text-[28px] font-dahliaBold">More posts</span>
         <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
