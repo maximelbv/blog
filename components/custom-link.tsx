@@ -16,7 +16,7 @@ const CustomLink = ({
       <Link
         target={isExternal ? "_blank" : ""}
         href={href}
-        className="underline-offset-10 hover:underline no-underline text-blue-500"
+        className="underline-offset-10 hover:underline no-underline text-blue-400"
       >
         {children}
       </Link>

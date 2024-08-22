@@ -10,6 +10,7 @@ import ScrollToTopButton from "@/components/scroll-to-top-button";
 import PostInfos from "@/components/post-infos";
 import PostCardAlternative from "@/components/post-card-alternative";
 import TableOfContents from "@/components/table-of-contents";
+import BlurImage from "@/components/blur-image";
 
 interface PostPageProps {
   params: {
@@ -97,8 +98,9 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="flex default-layout p-5 py-0">
         <article className="container py-6 prose dark:prose-invert w-full m-0 p-0 max-w-full">
           <div className="gap-0 mb-12 flex flex-col">
-            {/* {post.image && (
-              <div className="w-full aspect-video relative rounded-md max-w-[650px] m-auto mt-8">
+            <BackButton href="/blog" label="blog" />
+            {post.image && (
+              <div className="w-full aspect-video md:aspect-21/9 relative rounded-md my-4">
                 <BlurImage
                   src={post.image}
                   className="rounded-xl"
@@ -108,8 +110,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   }}
                 />
               </div>
-            )} */}
-            <BackButton href="/blog" label="blog" />
+            )}
             <div className="flex flex-col gap-4 w-full mt-4">
               <PostInfos
                 className="scale-90 w-max ml-[-12px]"
