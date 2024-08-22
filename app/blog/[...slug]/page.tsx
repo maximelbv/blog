@@ -127,11 +127,13 @@ export default async function PostPage({ params }: PostPageProps) {
               <hr className="m-0 mt-4 border-border" />
             </div>
           </div>
-          <div className="flex !w-full min-[900px]:gap-6 lg:gap-20">
+          <div className="flex justify-between !w-full min-[900px]:gap-6 lg:gap-20">
             <div className="article-layout !w-full m-0">
               <MDXContent code={post.body} />
             </div>
-            {post.index && <TableOfContents index={post.index} />}
+            <div className="min-w-[250px]">
+              {post.index && <TableOfContents index={post.index} />}
+            </div>
           </div>
           <hr className="m-0 mt-12" />
         </article>
@@ -140,9 +142,10 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="my-5 grid gap-2 default-layout p-5 mt-0">
         <span className="text-[28px] font-dahliaBold">More posts</span>
         <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {otherPosts.map((post) => (
-            <PostCardAlternative key={post.slug} post={post} />
-          ))}
+          {otherPosts.map((post) => {
+            post.slug = post.slug.replace("blog/", "");
+            return <PostCardAlternative key={post.slug} post={post} />;
+          })}
         </div>
       </div>
     </div>

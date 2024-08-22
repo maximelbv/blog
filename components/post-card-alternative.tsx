@@ -3,22 +3,25 @@ import React from "react";
 import Link from "next/link";
 import PostInfos from "./post-infos";
 
-const PostCardAlternative = ({ post }: { post: Post }) => {
-  const sanitizedSlug = post.slug.replace("blog/", "");
+const PostCardAlternative = ({
+  post,
+  className,
+}: {
+  post: Post;
+  className?: string;
+}) => {
   return (
     <>
       <Link
-        href={sanitizedSlug}
-        className="flex flex-col gap-2 no-underline p-5 bg-secondary rounded-lg border-2 border-transparent hover:border-primary "
+        href={post.slug}
+        className={`${className} flex flex-col gap-2 no-underline p-5 bg-secondary rounded-lg border-2 border-transparent hover:border-primary`}
       >
-        <div className="scale-90 ml-[-16px]">
-          <PostInfos
-            className=""
-            variant="small"
-            category={post.category}
-            date={post.date}
-          />
-        </div>
+        <PostInfos
+          className=""
+          variant="small"
+          category={post.category}
+          date={post.date}
+        />
 
         <h3 className="text-[20px] font-bold m-0">{post.title}</h3>
         <span className="text-muted-foreground text-[15px]">

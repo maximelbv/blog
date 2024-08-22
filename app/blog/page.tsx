@@ -1,6 +1,7 @@
 import { posts } from "#site/content";
 import PageHeader from "@/components/page-header";
 import PostCard from "@/components/post-card";
+import PostCardAlternative from "@/components/post-card-alternative";
 import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
 import { Metadata } from "next";
 
@@ -22,7 +23,7 @@ export default async function BlogPage() {
         subtitle="Collection of tutorials / snippets focused on coding and graphic
           design"
       />
-      <div className="grid gap-[20px] lg:gap-[10px] lg:gap-y-[50px] row-gap w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-20">
+      <div className="grid row-gap w-full grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {publishedPosts.map((post) => (
           <PostCard key={post.slug} post={post} />
         ))}

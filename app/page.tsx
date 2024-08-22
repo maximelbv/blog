@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <div
         className="relative w-full flex flex-col gap-20 justify-center items-center"
-        style={{ height: "calc(100svh - 80px)" }}
+        style={{ height: "calc(100svh - 224px)" }}
       >
         <span className="font-dahlia text-[50px] text-foregroundz-10">
           Latest Posts

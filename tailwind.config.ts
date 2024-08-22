@@ -34,7 +34,8 @@ const config = {
       },
       maxWidth: {
         // classic: "1227px",
-        classic: "1024px",
+        // classic: "1024px",
+        classic: "1100px",
       },
       aspectRatio: {
         "21/9": "21 / 9",

@@ -28,15 +28,15 @@ export default function TableOfContents({ index }: TableOfContentsProps) {
   };
 
   return (
-    <div className="hidden min-[900px]:grid sticky top-[120px] !overflow-y-auto h-fit max-h-[80svh]">
-      <span className="uppercase font-bold tracking-widest text-foreground text-[14px]">
+    <div className="hidden min-[900px]:grid sticky top-[120px] !overflow-y-auto h-fit max-h-[80svh] w-full">
+      <span className="uppercase font-bold tracking-widest text-foreground text-[14px] mb-1">
         Table of content
       </span>
       {index.map((item) => (
         <a
           href={item.link}
           key={item.name}
-          className="no-underline hover:underline text-foregroundAlt"
+          className="no-underline hover:underline text-foregroundAlt text-[16px]"
           onClick={handleSmoothScroll}
         >
           {item.name}
