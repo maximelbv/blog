@@ -1,7 +1,5 @@
 import { Post } from "@/.velite";
-import Image from "next/image";
 import Link from "next/link";
-import { Tag } from "./tag";
 import PostInfos from "./post-infos";
 import ImagePlaceholder from "./image-placeholder";
 import BlurImage from "./blur-image";

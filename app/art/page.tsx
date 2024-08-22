@@ -1,12 +1,12 @@
 import PageHeader from "@/components/page-header";
 import React from "react";
 
-const ProjectsPage = () => {
+const ArtPage = () => {
   return (
     <div className="default-layout px-5 grid gap-[32px]">
-      <PageHeader title="Projects" />
+      <PageHeader title="Art Gallery" subtitle="My artistic portfolio" />
     </div>
   );
 };
 
-export default ProjectsPage;
+export default ArtPage;

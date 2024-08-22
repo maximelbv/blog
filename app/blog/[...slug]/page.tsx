@@ -142,10 +142,9 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="my-5 grid gap-2 default-layout p-5 mt-0">
         <span className="text-[28px] font-dahliaBold">More posts</span>
         <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {otherPosts.map((post) => {
-            post.slug = post.slug.replace("blog/", "");
-            return <PostCardAlternative key={post.slug} post={post} />;
-          })}
+          {otherPosts.map((post) => (
+            <PostCardAlternative key={post.slug} post={post} />
+          ))}
         </div>
       </div>
     </div>
