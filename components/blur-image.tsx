@@ -5,8 +5,8 @@ import { getPlaiceholder } from "plaiceholder";
 
 interface BlurImageProps {
   src: string;
-  className: string;
-  style: object;
+  className?: string;
+  style?: object;
 }
 
 const BlurImage = async ({ src, className, style }: BlurImageProps) => {

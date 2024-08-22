@@ -16,11 +16,11 @@ export default function Home() {
         style={{ height: "calc(100svh - 80px)" }}
       >
         <div className="mb-[20svh] flex flex-col items-center">
-          <h1 className="text-[80px] font-dahliaLight text-foreground !mb-[-10px]">
+          <h1 className="text-[80px] font-dahliaLight text-foreground ">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
           </h1>
-          <span className="font-dahlia text-[32px] text-foregroundAlt">
-            design engineer
+          <span className=" text-[18px] text-foregroundAlt uppercase">
+            web · 3d · data · motion
           </span>
         </div>
       </div>
