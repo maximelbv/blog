@@ -51,9 +51,9 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="bottom" className="rounded-t-xl grid gap-2">
-        <MobileLink onOpenChange={setOpen} href={"/"}>
+        {/* <MobileLink onOpenChange={setOpen} href={"/"}>
           Home
-        </MobileLink>
+        </MobileLink> */}
         {navigation.map((nav) => (
           <MobileLink onOpenChange={setOpen} href={nav.route} key={nav.route}>
             {nav.name}

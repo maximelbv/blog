@@ -10,9 +10,9 @@ export default function Home() {
 
   return (
     <div className="default-layout p-5 flex flex-col gap-16">
-      <div className="relative w-full flex flex-col items-start justify-center gap-2">
+      <div className="relative w-full flex flex-col items-start justify-center gap-2 md:mt-10">
         <div className="flex flex-col items-start">
-          <h1 className="text-[40px] sm:text-[60px] font-dahliaLight text-foreground !m-0 !mb-[-6px] ">
+          <h1 className="text-[50px] sm:text-[60px] font-dahliaLight text-foreground !m-0 !mb-[-6px] ">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
           </h1>
         </div>
@@ -28,7 +28,7 @@ export default function Home() {
         <span className="text-[20px] italic text-foreground">Latest Posts</span>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {lastThreePosts.map((post) => (
-            <PostCard key={post.slug} post={post} />
+            <PostCard key={post.slug} post={post} homePageCard />
           ))}
         </div>
 

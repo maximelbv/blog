@@ -4,7 +4,13 @@ import PostInfos from "./post-infos";
 import ImagePlaceholder from "./image-placeholder";
 import BlurImage from "./blur-image";
 
-const PostCard = ({ post }: { post: Post }) => {
+const PostCard = ({
+  post,
+  homePageCard,
+}: {
+  post: Post;
+  homePageCard: boolean;
+}) => {
   return (
     <>
       <Link href={post.slug} className="flex flex-col gap-4">
@@ -34,17 +40,19 @@ const PostCard = ({ post }: { post: Post }) => {
             {post.description}
           </span>
         </div>
-        <div className="flex gap-[5px]">
-          {post.tags &&
-            post.tags.map((tag) => (
-              <span
-                className="inline-flex items-center rounded-full border px-2.5 py-1 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 no-underline border-transparent bg-secondary text-muted-foreground"
-                key={tag}
-              >
-                {tag}
-              </span>
-            ))}
-        </div>
+        {!homePageCard && (
+          <div className="flex gap-[5px]">
+            {post.tags &&
+              post.tags.map((tag) => (
+                <span
+                  className="inline-flex items-center rounded-full border px-2.5 py-1 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 no-underline border-transparent bg-secondary text-muted-foreground"
+                  key={tag}
+                >
+                  {tag}
+                </span>
+              ))}
+          </div>
+        )}
       </Link>
     </>
   );

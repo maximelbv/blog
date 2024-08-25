@@ -1,19 +1,11 @@
 export const navigation = [
   {
-    name: "Projects",
-    route: "/projects",
+    name: "Home",
+    route: "/",
   },
   {
     name: "Blog",
     route: "/blog",
-  },
-  {
-    name: "Art",
-    route: "/art",
-  },
-  {
-    name: "About",
-    route: "/about",
   },
 ];
 
