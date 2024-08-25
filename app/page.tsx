@@ -54,10 +54,15 @@ export default function Home() {
     <div>
       <div
         className="relative w-full flex flex-col items-center justify-center"
-        style={{ height: "calc(100svh - 80px)" }}
+        style={{
+          height: "calc(100svh - 80px)",
+          ...(window.innerWidth < 640 && {
+            height: "calc(100svh - 101px)",
+          }),
+        }}
       >
         <div className="mb-[20svh] flex flex-col items-center">
-          <h1 className="text-[80px] font-dahliaLight text-foreground ">
+          <h1 className="scale-[70%] sm:scale-[85%] md:scale-100 text-[80px] font-dahliaLight text-foreground ">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
           </h1>
           <span className="text-[18px] text-foregroundAlt uppercase">
@@ -86,16 +91,21 @@ export default function Home() {
       </div>
       <div
         id="latest-posts"
-        className="relative w-full flex flex-col gap-20 justify-center items-center"
-        style={{ height: "calc(100svh - 224px)" }}
+        className="relative w-full flex flex-col  justify-between items-center py-[5svh]"
+        style={{
+          height: "calc(100svh - 224px)",
+          ...(window.innerWidth < 640 && {
+            height: "calc(100svh - 333px)",
+          }),
+        }}
       >
         <span className="font-dahlia text-[50px] text-foreground z-10">
           Latest Posts
         </span>
-        <div className="flex items-end">
+        <div className="scale-[70%] sm:scale-[85%] md:scale-90 lg:scale-100 flex items-end">
           <div className="relative group">
             <Link href={nextToLastPost.slug}>
-              <div className="p-4 flex flex-col justify-between w-[210px] h-[210px] bg-secondary border-[1px] border-border rounded-[20px] -rotate-3 hover:rotate-0 mr-[-30px] transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)">
+              <div className="p-4 flex flex-col justify-between w-[210px] md:h-[210px] bg-secondary border-[1px] border-border rounded-[20px] -rotate-3 hover:rotate-0 mr-[-30px] transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)">
                 <div className="flex flex-col gap-2">
                   <PostInfos
                     className=""

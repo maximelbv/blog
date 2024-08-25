@@ -16,7 +16,7 @@ export function SiteFooter() {
             <div className="scale-75 ml-[-5px] sm:ml-[-25px]">
               <Icons.logo />
             </div>
-            <div className="sm:text-center">
+            <div className="!text-center">
               <span className="text-foregroundAlt text-[15px] font-semibold">
                 © Copyright Maxime Lefebvre 2024
               </span>
