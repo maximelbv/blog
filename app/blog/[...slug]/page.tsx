@@ -136,11 +136,11 @@ export default async function PostPage({ params }: PostPageProps) {
               {post.index && <TableOfContents index={post.index} />}
             </div>
           </div>
+          <hr className="m-0 mt-12" />
         </article>
 
         <ScrollToTopButton />
       </div>
-      <hr className="m-0 mt-12 default-layout m-auto" />
 
       <div className="my-5 grid gap-2 default-layout p-5 mt-0">
         <span className="text-[28px] font-dahliaBold">More posts</span>

@@ -1,34 +1,95 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { posts } from "#site/content";
 import AnimatedButon from "@/components/animated-buton";
+import { Icons } from "@/components/icons";
 import PostInfos from "@/components/post-infos";
 import { sortPosts } from "@/lib/utils";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const [showArrow, setShowArrow] = useState(true);
   const publishedPosts = sortPosts(posts.filter((post) => post.published));
   const lastPost = publishedPosts[0];
   const nextToLastPost = publishedPosts[1];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setShowArrow(false);
+      } else {
+        setShowArrow(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href")?.slice(1);
+    const targetElement = document.getElementById(targetId || "");
+
+    if (targetElement) {
+      const offset = 100;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div>
       <div
-        className="w-full flex flex-col items-center justify-center"
+        className="relative w-full flex flex-col items-center justify-center"
         style={{ height: "calc(100svh - 80px)" }}
       >
         <div className="mb-[20svh] flex flex-col items-center">
           <h1 className="text-[80px] font-dahliaLight text-foreground ">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
           </h1>
-          <span className=" text-[18px] text-foregroundAlt uppercase">
+          <span className="text-[18px] text-foregroundAlt uppercase">
             web · 3d · data · motion
           </span>
         </div>
+        <a
+          href="#latest-posts"
+          className="absolute bottom-10 text-[18px] text-foregroundAlt uppercase"
+          onClick={handleSmoothScroll}
+          style={{ opacity: showArrow ? 1 : 0, transition: "opacity 0.3s" }}
+        >
+          <motion.div
+            animate={{
+              y: [0, 10, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <Icons.arrowDown />
+          </motion.div>
+        </a>
       </div>
       <div
+        id="latest-posts"
         className="relative w-full flex flex-col gap-20 justify-center items-center"
         style={{ height: "calc(100svh - 224px)" }}
       >
-        <span className="font-dahlia text-[50px] text-foregroundz-10">
+        <span className="font-dahlia text-[50px] text-foreground z-10">
           Latest Posts
         </span>
         <div className="flex items-end">

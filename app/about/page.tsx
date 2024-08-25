@@ -15,10 +15,10 @@ export default async function AboutPage() {
           👋 Hi, i'm Maxime
         </span>
         <p className="text-foregroundAlt text-[20px]">
-          I am a web developer based in Paris with a strong foundation in both
-          frontend and backend technologies. My journey into web development
-          began four years ago after a career retraining, and since then, I have
-          built a solid foundation in creating complete, dynamic web solutions.
+          I am a web developer based in Paris. I started my journey into web
+          development four years ago after a career retraining, and since then,
+          I have built a solid foundation in creating complete, dynamic web
+          solutions.
           <br />
           <br />
           Currently, I am nearing the completion of a work-study program, where
