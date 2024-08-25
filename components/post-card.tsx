@@ -9,7 +9,7 @@ const PostCard = ({
   homePageCard,
 }: {
   post: Post;
-  homePageCard: boolean;
+  homePageCard?: boolean;
 }) => {
   return (
     <>
