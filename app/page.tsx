@@ -11,6 +11,10 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const [showArrow, setShowArrow] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
   const publishedPosts = sortPosts(posts.filter((post) => post.published));
   const lastPost = publishedPosts[0];
   const nextToLastPost = publishedPosts[1];
@@ -24,10 +28,16 @@ export default function Home() {
       }
     };
 
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -55,10 +65,8 @@ export default function Home() {
       <div
         className="relative w-full flex flex-col items-center justify-center"
         style={{
-          height: "calc(100svh - 80px)",
-          ...(window.innerWidth < 640 && {
-            height: "calc(100svh - 101px)",
-          }),
+          height:
+            windowWidth < 640 ? "calc(100svh - 101px)" : "calc(100svh - 80px)",
         }}
       >
         <div className="mb-[20svh] flex flex-col items-center">
@@ -93,10 +101,8 @@ export default function Home() {
         id="latest-posts"
         className="relative w-full flex flex-col  justify-between items-center py-[5svh]"
         style={{
-          height: "calc(100svh - 224px)",
-          ...(window.innerWidth < 640 && {
-            height: "calc(100svh - 333px)",
-          }),
+          height:
+            windowWidth < 640 ? "calc(100svh - 333px)" : "calc(100svh - 224px)",
         }}
       >
         <span className="font-dahlia text-[50px] text-foreground z-10">
