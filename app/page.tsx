@@ -24,7 +24,7 @@ export default function Home() {
           and 3D.
         </div>
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-3">
         <span className="text-[20px] italic text-foreground">Latest Posts</span>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {lastThreePosts.map((post) => (
@@ -43,7 +43,7 @@ export default function Home() {
         </div> */}
 
         <AnimatedButon
-          className="mt-2 bg-blue-500 rounded-full hover:bg-blue-500"
+          className="mt-4 bg-blue-500 rounded-full hover:bg-blue-500 text-[#fff]"
           nav={{ route: "/blog", name: "View all posts" }}
         />
       </div>
