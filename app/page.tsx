@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div className="default-layout p-5 flex flex-col gap-16">
-      <div className="relative w-full flex flex-col items-start justify-center gap-2 md:mt-10">
+      <div className="relative w-full flex flex-col items-start justify-center gap-2 md:mt-4">
         <div className="flex flex-col items-start">
           <h1 className="text-[50px] sm:text-[60px] font-dahliaLight text-foreground !m-0 !mb-[-6px] ">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
