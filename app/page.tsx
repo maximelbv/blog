@@ -1,193 +1,50 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { posts } from "#site/content";
 import AnimatedButon from "@/components/animated-buton";
-import { Icons } from "@/components/icons";
-import PostInfos from "@/components/post-infos";
+import PostCard from "@/components/post-card";
+import PostCardAlternative from "@/components/post-card-alternative";
 import { sortPosts } from "@/lib/utils";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Home() {
-  const [showArrow, setShowArrow] = useState(true);
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
-
   const publishedPosts = sortPosts(posts.filter((post) => post.published));
-  const lastPost = publishedPosts[0];
-  const nextToLastPost = publishedPosts[1];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setShowArrow(false);
-      } else {
-        setShowArrow(true);
-      }
-    };
-
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleSmoothScroll = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    const targetId = e.currentTarget.getAttribute("href")?.slice(1);
-    const targetElement = document.getElementById(targetId || "");
-
-    if (targetElement) {
-      const offset = 100;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  const lastThreePosts = publishedPosts.slice(0, 3);
 
   return (
-    <div>
-      <div
-        className="relative w-full flex flex-col items-center justify-center"
-        style={{
-          height:
-            windowWidth < 640 ? "calc(100svh - 101px)" : "calc(100svh - 80px)",
-        }}
-      >
-        <div className="mb-[20svh] flex flex-col items-center">
-          <h1 className="scale-[70%] sm:scale-[85%] md:scale-100 text-[80px] font-dahliaLight text-foreground ">
+    <div className="default-layout p-5 flex flex-col gap-16">
+      <div className="relative w-full flex flex-col items-start justify-center gap-2">
+        <div className="flex flex-col items-start">
+          <h1 className="text-[40px] sm:text-[60px] font-dahliaLight text-foreground !m-0 !mb-[-6px] ">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
           </h1>
-          <span className="text-[18px] text-foregroundAlt uppercase">
-            web · 3d · data · motion
-          </span>
         </div>
-        <a
-          href="#latest-posts"
-          className="absolute bottom-10 text-[18px] text-foregroundAlt uppercase"
-          onClick={handleSmoothScroll}
-          style={{ opacity: showArrow ? 1 : 0, transition: "opacity 0.3s" }}
-        >
-          <motion.div
-            animate={{
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <Icons.arrowDown />
-          </motion.div>
-        </a>
+        <div className="max-w-[750px] text-[18px] text-foregroundAlt">
+          Hi, welcome to my personnal website, i am a web developer and designer
+          based in Paris. <br />
+          🚧 Currently, the site is under construction, but you can still check
+          out my blog posts. It covers topics like programming, graphic design,
+          and 3D.
+        </div>
       </div>
-      <div
-        id="latest-posts"
-        className="relative w-full flex flex-col  justify-between items-center py-[5svh]"
-        style={{
-          height:
-            windowWidth < 640 ? "calc(100svh - 333px)" : "calc(100svh - 224px)",
-        }}
-      >
-        <span className="font-dahlia text-[50px] text-foreground z-10">
-          Latest Posts
-        </span>
-        <div className="scale-[70%] sm:scale-[85%] md:scale-90 lg:scale-100 flex items-end">
-          <div className="relative group">
-            <Link href={nextToLastPost.slug}>
-              <div className="p-4 flex flex-col justify-between w-[210px] md:h-[210px] bg-secondary border-[1px] border-border rounded-[20px] -rotate-3 hover:rotate-0 mr-[-30px] transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)">
-                <div className="flex flex-col gap-2">
-                  <PostInfos
-                    className=""
-                    variant="small"
-                    category={nextToLastPost.category}
-                    date={nextToLastPost.date}
-                  />
-                  <span className="text-[20px] font-dahlia font-bold">
-                    {nextToLastPost.title}
-                  </span>
-                </div>
-
-                <div className="flex gap-2">
-                  {nextToLastPost.tags &&
-                    nextToLastPost.tags.map((tag) => (
-                      <span
-                        className="inline-flex items-center rounded-full border px-2.5 py-1 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 no-underline border-transparent bg-highlighted text-muted-foreground"
-                        key={tag}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="relative group">
-            <div
-              className="absolute w-[350px] h-[350px] bg-secondary border-[1px] border-border rounded-[20px] rotate-[14deg] group-hover:rotate-0 transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)"
-              style={{ zIndex: 0 }}
-            ></div>
-
-            <Link href={lastPost.slug}>
-              <div
-                className="p-7 flex flex-col justify-between gap-2 relative w-[350px] h-[350px] bg-secondary border-[1px] border-border rounded-[20px] rotate-6 hover:rotate-0 mb-16 transition-transform duration-500 cubic-bezier(.73,-0.01,.01,1)"
-                style={{ zIndex: 1 }}
-              >
-                <div className="flex flex-col gap-2">
-                  <PostInfos
-                    className=""
-                    variant="small"
-                    category={lastPost.category}
-                    date={lastPost.date}
-                  />
-                  <span className="font-dahlia text-[30px] font-bold">
-                    {lastPost.title}
-                  </span>
-                  <span className="text-foregroundAlt">
-                    {lastPost.description}
-                  </span>
-                </div>
-
-                <div className="flex gap-2">
-                  {lastPost.tags &&
-                    lastPost.tags.map((tag) => (
-                      <span
-                        className="inline-flex items-center rounded-full border px-2.5 py-1 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 no-underline border-transparent bg-highlighted text-muted-foreground"
-                        key={tag}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                </div>
-              </div>
-            </Link>
-          </div>
+      <div className="flex flex-col gap-6">
+        <span className="text-[20px] italic text-foreground">Latest Posts</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {lastThreePosts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
         </div>
+
+        {/* <div className="grid grid-cols-1">
+          {lastThreePosts.map((post) => (
+            <PostCardAlternative
+              key={post.slug}
+              post={post}
+              className="bg-transparent pl-0 border-none hover:border-none"
+            />
+          ))}
+        </div> */}
+
         <AnimatedButon
-          nav={{
-            route: "/blog",
-            name: "View all",
-          }}
-          duration={0.5}
-          stagger={0.019}
-          className="!bg-blue-500 !rounded-full !text-[#fff] !font-semibold !text-[15px]"
+          className="mt-2 bg-blue-500 rounded-full hover:bg-blue-500"
+          nav={{ route: "/blog", name: "View all posts" }}
         />
       </div>
     </div>

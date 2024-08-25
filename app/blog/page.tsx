@@ -19,7 +19,7 @@ export default async function BlogPage() {
   return (
     <div className="default-layout px-5 grid gap-[32px]">
       <PageHeader
-        title="Blog"
+        title="All Posts"
         subtitle="Collection of tutorials / snippets focused on coding and graphic
           design"
       />
