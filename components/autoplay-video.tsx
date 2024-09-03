@@ -4,7 +4,7 @@ const AutoplayVideo = ({ src, style }: { src: string; style: object }) => {
   return (
     <video
       style={style}
-      className="rounded-lg my-14"
+      className="rounded-lg my-8"
       controls
       loop
       autoPlay
