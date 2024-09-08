@@ -1,17 +1,22 @@
+import AnimatedText from "./animated-text";
+
 interface PageHeaderProps {
-  title: string | React.ReactNode;
-  subtitle?: string | React.ReactNode;
+  title: string;
+  subtitle: string;
 }
 
 const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
   return (
-    <div className="mt-10">
-      <h1 className="font-dahliaBold text-[60px] text-foreground !m-0">
-        {title}
-      </h1>
-      <span className="inline-block text-foregroundAlt font-medium max-w-[400px]">
-        {subtitle && subtitle}
-      </span>
+    <div>
+      <AnimatedText
+        text={title}
+        className="font-dahliaBold text-[60px] text-foreground !m-0"
+      />
+      <AnimatedText
+        delay={0.5}
+        text={subtitle}
+        className="inline-block text-foregroundAlt font-medium max-w-[400px]"
+      />
     </div>
   );
 };

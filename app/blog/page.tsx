@@ -1,5 +1,6 @@
 import { posts } from "#site/content";
 import PageHeader from "@/components/page-header";
+import PopAnimWraper from "@/components/pop-anim-wraper";
 import PostCard from "@/components/post-card";
 import PostCardAlternative from "@/components/post-card-alternative";
 import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
@@ -24,8 +25,10 @@ export default async function BlogPage() {
           design"
       />
       <div className="grid row-gap w-full grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {publishedPosts.map((post) => (
-          <PostCard key={post.slug} post={post} />
+        {publishedPosts.map((post, index) => (
+          <PopAnimWraper delay={(index + 1) * 0.2}>
+            <PostCard key={post.slug} post={post} />
+          </PopAnimWraper>
         ))}
       </div>
     </div>
