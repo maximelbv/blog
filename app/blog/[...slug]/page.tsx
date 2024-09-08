@@ -97,7 +97,7 @@ export default async function PostPage({ params }: PostPageProps) {
     <div>
       <div className="flex article-layout p-5 py-0">
         <article className="container py-6 prose dark:prose-invert w-full m-0 p-0 max-w-full">
-          <div className="gap-0 mb-12 flex flex-col">
+          <div className="gap-0 mb-8 flex flex-col">
             <BackButton href="/blog" label="blog" />
             {post.image && (
               <div className="w-full aspect-video md:aspect-21/9 relative rounded-md my-4">

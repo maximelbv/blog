@@ -1,5 +1,5 @@
 [data-rehype-pretty-code-figure] {
-  @apply my-8;
+  @apply my-6;
 }
 
 [data-rehype-pretty-code-figure] pre {
@@ -136,7 +136,7 @@ p {
 }
 
 ul {
-  @apply pl-5 my-8 !important;
+  @apply pl-5 my-0 !important;
 }
 
 ul p {

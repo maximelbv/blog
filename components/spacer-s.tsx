@@ -1,5 +1,5 @@
 const SpacerS = () => {
-  return <div className="h-8" />;
+  return <div className="h-6" />;
 };
 
 export default SpacerS;

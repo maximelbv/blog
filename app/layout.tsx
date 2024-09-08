@@ -66,7 +66,7 @@ export default function RootLayout({
         <Providers>
           <div className="relative flex min-h-dvh flex-col bg-background">
             <Header />
-            <main className="min-h-[100svh]">{children}</main>
+            <main className="x">{children}</main>
             <SiteFooter />
           </div>
         </Providers>
