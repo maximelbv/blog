@@ -14,7 +14,12 @@ export default function TableOfContents({ index }: TableOfContentsProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 230 ? true : false);
+      setIsVisible(
+        window.scrollY > 230 &&
+          window.scrollY < document.body.scrollHeight - window.innerHeight - 230
+          ? true
+          : false
+      );
     };
 
     window.addEventListener("scroll", handleScroll);

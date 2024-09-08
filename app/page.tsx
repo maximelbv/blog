@@ -9,14 +9,14 @@ export default function Home() {
   const lastThreePosts = publishedPosts.slice(0, 3);
 
   return (
-    <div className="default-layout p-5 flex flex-col gap-16">
+    <div className="default-layout p-5 flex flex-col gap-10">
       <div className="relative w-full flex flex-col items-start justify-center gap-2 md:mt-4">
         <div className="flex flex-col items-start">
           <h1 className="text-[50px] sm:text-[60px] font-dahliaLight text-foreground !m-0 !mb-[-6px] ">
             <span className="font-dahliaBold mr-1">maxime</span>lefebvre
           </h1>
         </div>
-        <div className="max-w-[750px] text-[18px] text-foregroundAlt">
+        <div className="max-w-[750px] text-[16px] text-foregroundAlt">
           Hi, welcome to my personnal website, i am a web developer and designer
           based in Paris. <br />
           🚧 Currently, the site is under construction, but you can still check
