@@ -1,7 +1,8 @@
 export const siteConfig = {
   name: "MaximeLbv",
   url: "https://www.maximelbv.com",
-  description: "Personal website",
+  description:
+    "Web developer, graphic designer, and 3D artist. Discover creative projects and tutorials covering design, technology, and digital art.",
   author: "Maxime Lefebvre",
   links: {
     twitter: "https://twitter.com/maximelbv",
