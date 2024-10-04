@@ -132,11 +132,11 @@ h3 a {
 }
 
 p {
-  @apply !text-[18px] !font-medium !leading-8 !m-0 text-foregroundAlt;
+  @apply !text-[17px] !font-medium !leading-[1.8rem] !m-0 text-foregroundAlt;
 }
 
 ul {
-  @apply pl-5 my-5 text-[18px] !important;
+  @apply pl-5 my-4 text-[18px] !important;
 }
 
 ul p {
