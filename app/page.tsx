@@ -21,7 +21,7 @@ export default function Home() {
         </h1>
 
         <AnimatedText
-          text="web developer · graphic designer · 3d artist"
+          text="web developer · motion designer · 3d artist"
           delay={0.5}
           className="text-foregroundAlt uppercase text-[14px]"
         />
