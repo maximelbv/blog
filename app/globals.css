@@ -6,8 +6,8 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0, 0%, 20%;
-    /* --foreground-alt: 228, 10%, 53%; */
     --foreground-alt: 217, 20%, 35%;
+    --foreground-alt: 44, 0%, 12%;
 
     --card: 0 0% 100%;
     --card-foreground: 0, 0%, 20%;
@@ -111,6 +111,7 @@
   }
 
   .article-layout {
-    @apply max-w-[675px] mx-auto;
+    /* @apply max-w-[675px] mx-auto; */
+    @apply max-w-[750px] mx-auto;
   }
 }
