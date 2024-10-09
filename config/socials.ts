@@ -23,7 +23,7 @@ export const socials = [
   },
   {
     name: "Email",
-    route: "mailto:lefebvremaxime00@gmail.com",
+    route: "mailto:contact@maximelbv.com",
     icon: Icons.email,
   },
 ];

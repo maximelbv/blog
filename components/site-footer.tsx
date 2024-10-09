@@ -4,7 +4,7 @@ import { socials } from "@/config/socials";
 
 export function SiteFooter() {
   return (
-    <footer className="w-full bg-background z-50 flex-shrink-0">
+    <footer className="w-full bg-none z-50 flex-shrink-0">
       <div className="default-layout px-5 py-10 flex flex-col sm:flex-row justify-between items-center sm:items-end gap-16">
         <div className="flex flex-col gap-1 items-center sm:items-start ">
           <div className="scale-75 ml-[-5px] sm:ml-[-25px]">
