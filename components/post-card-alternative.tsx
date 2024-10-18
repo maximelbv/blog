@@ -15,7 +15,7 @@ const PostCardAlternative = ({
     <>
       <Link
         href={sanitizedSlug}
-        className={`${className} flex flex-col gap-2 no-underline p-5 bg-secondary rounded-lg border-2 border-transparent hover:border-primary`}
+        className={`${className} flex flex-col gap-2 no-underline p-5 bg-secondary rounded-lg border-2 border-transparent hover:border-pigment`}
       >
         <PostInfos
           className=""

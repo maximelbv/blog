@@ -61,7 +61,7 @@ export default function TableOfContents({ index }: TableOfContentsProps) {
         <a
           href={item.link}
           key={item.name}
-          className="no-underline hover:text-blue-400 text-foregroundAlt text-[14px]"
+          className="no-underline hover:text-link text-foregroundAlt text-[14px]"
           onClick={handleSmoothScroll}
         >
           {item.name}

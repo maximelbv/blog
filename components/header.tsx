@@ -31,7 +31,7 @@ export function Header() {
         }`}
       >
         <Link href="/" className="flex items-center">
-          <Icons.logoNoTxt />
+          <Icons.logo />
         </Link>
         <div className="hidden sm:flex items-center justify-center">
           {navigation.map((nav) => (

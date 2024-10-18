@@ -47,6 +47,7 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         foregroundAlt: "hsl(var(--foreground-alt))",
+        link: "hsl(var(--link))",
         code: {
           DEFAULT: "hsl(var(--code))",
         },

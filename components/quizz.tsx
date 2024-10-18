@@ -131,10 +131,10 @@ const Quizz = ({ questions }: QuizzProps) => {
       className="p-4 md:p-8 rounded-lg bg-secondary min-h-[200px]"
     >
       <div className="flex justify-between mb-2 md:mt-[-14px]">
-        <span className="font-dahliaBold text-[22px] md:text-[24px] mr-2">
+        <span className="font-bold text-[22px] md:text-[24px] mr-2">
           Test your knowledge
         </span>
-        <span className="font-dahliaBold text-[22px] md:text-[24px]">
+        <span className="font-bold text-[22px] md:text-[24px]">
           {current && current}{" "}
           <span className="text-muted-foreground">/ {count && count}</span>
         </span>

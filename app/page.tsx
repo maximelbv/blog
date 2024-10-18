@@ -32,7 +32,7 @@ export default function Home() {
         className="flex flex-col items-center justify-center"
       >
         <AnimatedButon
-          className="mt-4 bg-blue-500 rounded-full hover:bg-blue-500 text-[#fff]"
+          className="mt-4 bg-blue-500 rounded-full hover:bg-blue-500 text-[#fff] hover:text-[#fff]"
           nav={{ route: "/blog", name: "Blog" }}
         />
       </PopAnimWraper>
