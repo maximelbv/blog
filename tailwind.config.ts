@@ -52,8 +52,11 @@ const config = {
           DEFAULT: "hsl(var(--code))",
         },
         pigment: {
-          DEFAULT: "hsl(var(--pigment))",
-          darker: "hsl(var(--pigment-darker))",
+          pink: "hsl(var(--pigment-pink))",
+          purple: "hsl(var(--pigment-purple))",
+          blue: "hsl(var(--pigment-blue))",
+          blueLighter: "hsl(var(--pigment-blue-lighter))",
+          pinker: "hsl(var(--pigment-pinker))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",

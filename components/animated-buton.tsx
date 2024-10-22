@@ -8,6 +8,7 @@ interface AnimatedButonProps {
   nav: {
     route: string;
     name: string;
+    filled?: boolean;
   };
   className?: string;
   duration?: number;
@@ -25,7 +26,13 @@ const AnimatedButon = ({
   return (
     <Link href={nav.route}>
       <motion.div key={nav.name} initial="initial" whileHover="animate">
-        <Button variant={"ghost"} className={className}>
+        <Button
+          variant={"ghost"}
+          className={`${className} ${
+            nav.filled &&
+            "font-semibold text-background hover:text-background bg-foreground rounded-full hover:bg-foreground"
+          }`}
+        >
           <div className="block relative overflow-hidden whitespace-nowrap">
             <span className="block w-fit">
               {nav.name.split("").map((l, i) => {

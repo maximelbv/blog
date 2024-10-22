@@ -33,7 +33,7 @@ export function Header() {
         <Link href="/" className="flex items-center">
           <Icons.logo />
         </Link>
-        <div className="hidden sm:flex items-center justify-center">
+        <div className="hidden sm:flex items-center justify-center gap-2">
           {navigation.map((nav) => (
             <AnimatedButon key={nav.route} nav={nav} />
           ))}

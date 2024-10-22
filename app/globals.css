@@ -6,6 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0, 0%, 20%;
+    /* --foreground: 229, 19%, 22%; */
     --foreground-alt: 217, 20%, 35%;
     --foreground-alt: 44, 0%, 12%;
 
@@ -15,8 +16,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0, 0%, 20%;
 
-    --pigment: 225, 97%, 71%;
-    --pigment-darker: 247, 40%, 58%;
+    --pigment-blue: 217, 91%, 60%;
+    --pigment-blue-lighter: 200, 91%, 60%;
+    --pigment-purple: 252, 97%, 69%;
+    --pigment-pink: 281, 97%, 69%;
+    --pigment-pinker: 335, 90%, 64%;
 
     --code: 233, 13%, 14%;
     --link: 213, 91%, 45%;
@@ -68,9 +72,6 @@
 
     --border: 217, 19%, 27%;
     --input: 217 23.5% 9.6%;
-
-    --pigment: 225, 97%, 71%;
-    --pigment-darker: 247, 40%, 58%;
 
     --code: 220, 24%, 10%;
 
