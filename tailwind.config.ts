@@ -30,6 +30,7 @@ const config = {
         dahliaLight: ["var(--font-dahlia-light)"],
         dahlia: ["var(--font-dahlia)"],
         dahliaBold: ["var(--font-dahlia-bold)"],
+        gelica: ["var(--font-gelica)"],
         monoLisa: ["var(--font-monolisa)"],
       },
       maxWidth: {

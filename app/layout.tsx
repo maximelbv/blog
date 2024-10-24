@@ -28,6 +28,11 @@ const dahliaBold = localFont({
   variable: "--font-dahlia-bold",
 });
 
+const gelica = localFont({
+  src: "../public/fonts/gelica/regular.otf",
+  variable: "--font-sans",
+});
+
 const monoLisa = localFont({
   src: "../public/fonts/monoLisa/MonoLisaRegular.ttf",
   variable: "--font-monolisa",
@@ -56,6 +61,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
+          gelica.variable,
           jakarta.variable,
           dahliaLight.variable,
           dahlia.variable,
