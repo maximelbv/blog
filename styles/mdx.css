@@ -131,7 +131,7 @@ h3 a {
 }
 
 p {
-  @apply !text-[19px] !font-gelica !font-medium !leading-[2rem] !m-0 text-foregroundAlt;
+  @apply !text-[19px] !font-gelica !font-medium !leading-[1.8rem] !m-0 text-foregroundAlt;
 }
 
 ul {
