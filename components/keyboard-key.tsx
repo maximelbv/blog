@@ -26,7 +26,7 @@ const KeyboardKey = ({ value }: { value: string }) => {
   return (
     <span
       className=" h-6 text-foregroundAlt inline-flex items-center justify-center bg-muted border-[1px] 
-    border-border rounded-md leading-5 py-0.5 px-1 text-[15px] font-semibold"
+    border-border rounded-md leading-5 py-0.5 px-1 text-[14px] font-semibold"
     >
       {specialChar ? (
         <>

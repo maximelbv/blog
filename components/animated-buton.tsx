@@ -40,7 +40,7 @@ const AnimatedButon = ({
                   <motion.span
                     style={{ width: l === " " ? "0.3em" : "auto" }}
                     key={i}
-                    className="inline-block"
+                    className="inline-block text-[16px]"
                     variants={{
                       initial: { y: 0 },
                       animate: { y: "-100%" },
@@ -62,7 +62,7 @@ const AnimatedButon = ({
                   <motion.span
                     style={{ width: l === " " ? "0.3em" : "auto" }}
                     key={i}
-                    className="inline-block"
+                    className="inline-block text-[16px]"
                     variants={{
                       initial: { y: "100%" },
                       animate: { y: 0 },

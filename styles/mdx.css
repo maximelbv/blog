@@ -98,7 +98,7 @@
 }
 
 code {
-  @apply !text-foregroundAlt;
+  @apply !text-foregroundAlt !text-[14px];
 }
 
 code::before,
@@ -115,7 +115,7 @@ ol code {
 
 h1,
 h2 {
-  @apply mt-20 mb-3 !important;
+  @apply mt-20 mb-2 !important;
 }
 
 h1 a {

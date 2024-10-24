@@ -60,12 +60,12 @@ function PostInfos({
 
   return (
     <div
-      className={cn(postInfosVariants({ variant }), className, "gap-3.5")}
+      className={cn(postInfosVariants({ variant }), className, "gap-2")}
       {...props}
     >
       <div className="flex items-center justify-center gap-2">
         {CategoryIcon && <CategoryIcon />}
-        <span className="uppercase text-foregroundAlt font-semibold tracking-[1px] mr-[-7px]">
+        <span className="uppercase text-foregroundAlt font-semibold tracking-[1px]">
           {lowerCat}
         </span>
       </div>

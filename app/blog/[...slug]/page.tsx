@@ -111,21 +111,21 @@ export default async function PostPage({ params }: PostPageProps) {
                 />
               </div>
             )} */}
-            <div className="flex flex-col gap-4 w-full mt-4">
+            <div className="flex flex-col gap-[1.2rem] w-full mt-4">
               <PostInfos
-                className="scale-90 w-max ml-[-12px]"
+                className="scale-90 w-max ml-[-10px]"
                 category={post.category}
                 date={post.date}
               />
               <h1 className="!mt-0 !mb-[-2px] text-[38px] font-bold leading-[3.25rem]">
                 {post.title}
               </h1>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mt-[-8px]">
                 {post.tags?.map((tag) => (
                   <Tag tag={tag} key={tag} />
                 ))}
               </div>
-              <hr className="m-0 mt-4 border-border" />
+              <hr className="m-0 mt-2 border-border" />
             </div>
           </div>
           <div className="flex justify-between !w-full min-[900px]:gap-6 lg:gap-20">
@@ -136,7 +136,7 @@ export default async function PostPage({ params }: PostPageProps) {
               {post.index && <TableOfContents index={post.index} />}
             </div>
           </div>
-          <hr className="m-0 mt-12" />
+          <hr className="m-0 mt-14" />
         </article>
 
         <ScrollToTopButton />

@@ -23,7 +23,7 @@ export default function Home() {
         <AnimatedText
           text="web developer · motion designer · 3d artist"
           delay={0.5}
-          className="text-foregroundAlt uppercase text-[14px]"
+          className="text-foregroundAlt uppercase text-[16px]"
         />
       </div>
 
