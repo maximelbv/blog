@@ -26,7 +26,7 @@ export default async function BlogPage() {
       />
       <div className="grid row-gap w-full grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {publishedPosts.map((post, index) => (
-          <PopAnimWraper delay={(index + 1) * 0.2}>
+          <PopAnimWraper key={index} delay={(index + 1) * 0.2}>
             <PostCard key={post.slug} post={post} />
           </PopAnimWraper>
         ))}

@@ -14,8 +14,8 @@ export const Icons = {
         fill="url(#paint0_linear_486_721)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M35.982 3.13633C38.9335 6.565 39.0859 11.8148 37.446 15.76C36.9434 16.9691 35.5558 17.5418 34.3468 17.0392C33.1377 16.5366 32.565 15.149 33.0676 13.94C34.2199 11.1678 33.8656 7.94581 32.3884 6.22974C31.7078 5.43906 30.709 4.85263 29.2019 4.75568C27.6343 4.65484 25.4104 5.08355 22.427 6.60847C17.412 9.17178 13.1862 13.2142 10.1067 17.5844C7.00944 21.9799 5.19989 26.5227 4.81767 29.9649C4.626 31.6911 4.81389 32.9462 5.18103 33.7474C5.50368 34.4516 5.9798 34.8688 6.75717 35.0577C7.65116 35.2749 9.13977 35.2265 11.4173 34.404C13.6699 33.5906 16.5103 32.0856 19.9924 29.6587C21.0666 28.9101 22.5443 29.1739 23.293 30.2481C24.0417 31.3223 23.7778 32.8001 22.7036 33.5488C19.0139 36.1204 15.7981 37.8634 13.0278 38.8638C10.2825 39.8551 7.78168 40.1863 5.63742 39.6652C3.37654 39.1157 1.76564 37.6765 0.870349 35.7226C0.0195471 33.8657 -0.141423 31.6609 0.104999 29.4417C0.598956 24.9931 2.81335 19.7029 6.23068 14.8532C9.66582 9.97819 14.4452 5.36308 20.269 2.38639C23.7331 0.615738 26.8207 -0.148937 29.5063 0.0238257C32.2523 0.200473 34.4483 1.35463 35.982 3.13633Z"
         fill="url(#paint1_linear_486_721)"
       />
@@ -32,8 +32,8 @@ export const Icons = {
           y2="35.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3C84F6" />
-          <stop offset="1" stop-color="#8263FD" />
+          <stop stopColor="#3C84F6" />
+          <stop offset="1" stopColor="#8263FD" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_486_721"
@@ -43,8 +43,8 @@ export const Icons = {
           y2="35.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3C84F6" />
-          <stop offset="1" stop-color="#8263FD" />
+          <stop stopColor="#3C84F6" />
+          <stop offset="1" stopColor="#8263FD" />
         </linearGradient>
       </defs>
     </svg>
@@ -62,8 +62,8 @@ export const Icons = {
         className="fill-foreground"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M35.982 3.13633C38.9335 6.565 39.0859 11.8148 37.446 15.76C36.9434 16.9691 35.5558 17.5418 34.3468 17.0392C33.1377 16.5366 32.565 15.149 33.0676 13.94C34.2199 11.1678 33.8656 7.94581 32.3884 6.22974C31.7078 5.43906 30.709 4.85263 29.2019 4.75568C27.6343 4.65484 25.4104 5.08355 22.427 6.60847C17.412 9.17178 13.1862 13.2142 10.1067 17.5844C7.00944 21.9799 5.19989 26.5227 4.81767 29.9649C4.626 31.6911 4.81389 32.9462 5.18103 33.7474C5.50368 34.4516 5.9798 34.8688 6.75717 35.0577C7.65116 35.2749 9.13977 35.2265 11.4173 34.404C13.6699 33.5906 16.5103 32.0856 19.9924 29.6587C21.0666 28.9101 22.5443 29.1739 23.293 30.2481C24.0417 31.3223 23.7778 32.8001 22.7036 33.5488C19.0139 36.1204 15.7981 37.8634 13.0278 38.8638C10.2825 39.8551 7.78168 40.1863 5.63742 39.6652C3.37654 39.1157 1.76564 37.6765 0.870349 35.7226C0.0195471 33.8657 -0.141423 31.6609 0.104999 29.4417C0.598956 24.9931 2.81335 19.7029 6.23068 14.8532C9.66582 9.97819 14.4452 5.36308 20.269 2.38639C23.7331 0.615738 26.8207 -0.148937 29.5063 0.0238257C32.2523 0.200473 34.4483 1.35463 35.982 3.13633Z"
         className="fill-foreground"
       />
@@ -86,8 +86,8 @@ export const Icons = {
         className="fill-secondary-foreground"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M34.5892 3.01493C37.4264 6.31088 37.573 11.3575 35.9966 15.15C35.5134 16.3122 34.1796 16.8628 33.0173 16.3797C31.855 15.8965 31.3045 14.5627 31.7876 13.4004C32.8953 10.7356 32.5548 7.63825 31.1348 5.9886C30.4805 5.22853 29.5204 4.6648 28.0716 4.5716C26.5647 4.47466 24.4269 4.88678 21.5589 6.35268C16.738 8.81677 12.6758 12.7027 9.7155 16.9038C6.73813 21.1291 4.99862 25.4961 4.63119 28.8051C4.44694 30.4644 4.62756 31.6709 4.98048 32.4412C5.29064 33.1181 5.74834 33.5191 6.49562 33.7007C7.355 33.9095 8.78599 33.863 10.9754 33.0724C13.1408 32.2904 15.8713 30.8437 19.2185 28.5107C20.2511 27.791 21.6717 28.0447 22.3914 29.0773C23.1111 30.1099 22.8574 31.5305 21.8248 32.2502C18.2779 34.7223 15.1866 36.3978 12.5235 37.3595C9.88454 38.3125 7.48047 38.6308 5.41921 38.1299C3.24584 37.6017 1.6973 36.2182 0.83666 34.3398C0.0187905 32.5549 -0.135949 30.4354 0.100935 28.3021C0.575772 24.0257 2.70445 18.9403 5.98951 14.2783C9.29168 9.59197 13.8861 5.15549 19.4844 2.29402C22.8145 0.591905 25.7826 -0.143172 28.3642 0.0229035C31.0039 0.192714 33.1149 1.3022 34.5892 3.01493Z"
         className="fill-secondary-foreground"
       />
@@ -314,9 +314,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-twitter stroke-foregroundAlt hover:stroke-foreground"
     >
       <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
@@ -330,9 +330,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-instagram stroke-foregroundAlt hover:stroke-foreground"
     >
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -348,9 +348,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-github stroke-foregroundAlt hover:stroke-foreground"
     >
       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
@@ -365,9 +365,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-linkedin stroke-foregroundAlt hover:stroke-foreground"
     >
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -383,9 +383,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-mail stroke-foregroundAlt hover:stroke-foreground"
     >
       <rect width="20" height="16" x="2" y="4" rx="2" />

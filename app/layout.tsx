@@ -30,7 +30,7 @@ const dahliaBold = localFont({
 
 const gelica = localFont({
   src: "../public/fonts/gelica/regular.otf",
-  variable: "--font-sans",
+  variable: "--font-gelica",
 });
 
 const monoLisa = localFont({

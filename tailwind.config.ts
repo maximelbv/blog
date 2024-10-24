@@ -26,7 +26,7 @@ const config = {
         "fill-available": "-webkit-fill-available",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["var(--font-gelica)", ...fontFamily.sans],
         dahliaLight: ["var(--font-dahlia-light)"],
         dahlia: ["var(--font-dahlia)"],
         dahliaBold: ["var(--font-dahlia-bold)"],
