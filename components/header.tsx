@@ -24,11 +24,13 @@ export function Header() {
   }, []);
 
   return (
-    <>
+    <div
+      className={`sticky top-0 bg-background z-50 ${
+        isVisible && "border-b-[1px] border-border"
+      }`}
+    >
       <header
-        className={`flex w-full justify-between default-layout px-5 pb-5 pt-5 sticky top-0 bg-background z-50 ${
-          isVisible && "border-b-[1px] border-border"
-        }`}
+        className={`flex w-full justify-between default-layout px-5 pb-5 pt-5 `}
       >
         <Link href="/" className="flex items-center">
           <Icons.logo />
@@ -41,6 +43,6 @@ export function Header() {
         </div>
         <MobileNav />
       </header>
-    </>
+    </div>
   );
 }

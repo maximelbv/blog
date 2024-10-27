@@ -45,7 +45,7 @@ export interface PostInfosProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof postInfosVariants> {
   category: string;
-  date: string;
+  date?: string;
 }
 
 function PostInfos({
@@ -69,13 +69,16 @@ function PostInfos({
           {lowerCat}
         </span>
       </div>
-
-      <div className="w-1.5 h-1.5 bg-muted-foreground rounded-full" />
-      <span className="text-muted-foreground flex gap-1">
-        <span className="text-muted-foreground whitespace-nowrap">
-          {formatDate(date)}
-        </span>
-      </span>
+      {date && (
+        <>
+          <div className="w-1.5 h-1.5 bg-muted-foreground rounded-full" />
+          <span className="text-muted-foreground flex gap-1">
+            <span className="text-muted-foreground whitespace-nowrap">
+              {formatDate(date)}
+            </span>
+          </span>
+        </>
+      )}
     </div>
   );
 }
