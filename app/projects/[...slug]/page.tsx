@@ -99,6 +99,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   if (!project || !project.published) {
     notFound();
+    //
   }
 
   return (
