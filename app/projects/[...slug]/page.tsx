@@ -108,7 +108,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <BackButton href="/projects" label="Projects" />
       </div>
 
-      <div className="grid gap-20 p-5 py-0 my-[40px]">
+      <div className="grid gap-20 p-0 py-0 my-[40px]">
         <div className="grid items-center justify-center">
           {project.logo && (
             <FadeIn>

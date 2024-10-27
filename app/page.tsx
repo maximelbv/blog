@@ -29,10 +29,14 @@ export default function Home() {
 
       <PopAnimWraper
         delay={0.8}
-        className="flex flex-col items-center justify-center"
+        className="flex gap-2 items-center justify-center"
       >
         <AnimatedButon
           className="mt-4 bg-gradient-to-tr from-pigment-blue to-pigment-blueLighter rounded-full hover:bg-gradient-to-tr hover:from-blue hover:to-pigment-blueLighter text-[#fff] hover:text-[#fff]"
+          nav={{ route: "/projects", name: "Projects" }}
+        />
+        <AnimatedButon
+          className="mt-4 rounded-full"
           nav={{ route: "/blog", name: "Blog" }}
         />
       </PopAnimWraper>

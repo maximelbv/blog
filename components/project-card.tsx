@@ -41,7 +41,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             )}
           </div>
           <div className="grid ">
-            <h3 className="text-[30px]">{title}</h3>
+            <h3 className="text-[34px] font-dahliaBold">{title}</h3>
             <span className="text-foregroundAlt font-normal">
               {description}
             </span>
