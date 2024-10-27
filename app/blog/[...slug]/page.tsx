@@ -74,7 +74,7 @@ export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
 
   const otherPosts = posts
-    .filter((p) => p.slug !== post?.slug)
+    .filter((p) => p.slug !== post?.slug && p.published === true)
     .sort((a, b) => {
       if (a.category === post?.category && b.category !== post?.category) {
         return -1;
@@ -142,14 +142,16 @@ export default async function PostPage({ params }: PostPageProps) {
         <ScrollToTopButton />
       </div>
 
-      <div className="my-5 grid gap-2 default-layout p-5 mt-0">
-        <span className="text-[28px]">More posts</span>
-        <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {otherPosts.map((post) => (
-            <PostCardAlternative key={post.slug} post={post} />
-          ))}
+      {otherPosts.length > 0 && (
+        <div className="my-5 grid gap-2 default-layout p-5 mt-0">
+          <span className="text-[28px]">More posts</span>
+          <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {otherPosts.map((post) => (
+              <PostCardAlternative key={post.slug} post={post} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -115,7 +115,7 @@ ol code {
 
 h1,
 h2 {
-  @apply mt-20 mb-2 !important;
+  @apply mt-[4.5rem] mb-2 !important;
 }
 
 h1 a {
