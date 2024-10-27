@@ -7,6 +7,7 @@ import { siteConfig } from "@/config/site";
 import { SiteFooter } from "@/components/site-footer";
 import { Header } from "@/components/header";
 import localFont from "@next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function RootLayout({
             <main className="flex-grow">{children}</main>
             <SiteFooter />
           </div>
+          <Analytics />
         </Providers>
       </body>
     </html>
