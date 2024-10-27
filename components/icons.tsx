@@ -32,7 +32,7 @@ export const Icons = {
           y2="35.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#3C84F6" />
+          <stop stopColor="#CB63FD" />
           <stop offset="1" stopColor="#8263FD" />
         </linearGradient>
         <linearGradient
@@ -43,7 +43,7 @@ export const Icons = {
           y2="35.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#3C84F6" />
+          <stop stopColor="#CB63FD" />
           <stop offset="1" stopColor="#8263FD" />
         </linearGradient>
       </defs>

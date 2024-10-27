@@ -126,7 +126,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           )}
           <AnimatedText
             text={project.title}
-            className="font-dahliaBold text-[120px] !m-0"
+            className="text-center font-dahliaBold lg:text-[120px] lg:mb-0 mb-2 text-[50px] m-0"
           />
           {project.description && (
             <AnimatedText
@@ -136,7 +136,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             ></AnimatedText>
           )}
           <FadeIn>
-            <div className="mt-20 flex justify-between">
+            <div className="mt-20 flex justify-between gap-6">
               {project.category && (
                 <div className="grid gap-3">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
