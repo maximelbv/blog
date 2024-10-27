@@ -122,38 +122,34 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </p>
             </SlideIn>
           )}
-          <SlideIn delay={0.6}>
-            <div className="mt-20 flex justify-between">
-              {project.category && (
-                <div className="grid gap-3">
-                  <span className="text-foregroundAlt text-[18px] opacity-65">
-                    category
-                  </span>
-                  <span className="text-[18px]">{project.category}</span>
-                </div>
-              )}
-              {project.roles && (
-                <div className="grid gap-3">
-                  <span className="text-foregroundAlt text-[18px] opacity-65">
-                    {project.roles.length > 1 ? "roles" : "role"}
-                  </span>
-                  <span className="text-[18px]">
-                    {project.roles.join(", ")}
-                  </span>
-                </div>
-              )}
-              {project.date && (
-                <div className="grid gap-3">
-                  <span className="text-foregroundAlt text-[18px] opacity-65">
-                    completed
-                  </span>
-                  <span className="text-[18px]">
-                    {formatDateToMonthYear(project.date)}
-                  </span>
-                </div>
-              )}
-            </div>
-          </SlideIn>
+          <div className="mt-20 flex justify-between">
+            {project.category && (
+              <div className="grid gap-3">
+                <span className="text-foregroundAlt text-[18px] opacity-65">
+                  category
+                </span>
+                <span className="text-[18px]">{project.category}</span>
+              </div>
+            )}
+            {project.roles && (
+              <div className="grid gap-3">
+                <span className="text-foregroundAlt text-[18px] opacity-65">
+                  {project.roles.length > 1 ? "roles" : "role"}
+                </span>
+                <span className="text-[18px]">{project.roles.join(", ")}</span>
+              </div>
+            )}
+            {project.date && (
+              <div className="grid gap-3">
+                <span className="text-foregroundAlt text-[18px] opacity-65">
+                  completed
+                </span>
+                <span className="text-[18px]">
+                  {formatDateToMonthYear(project.date)}
+                </span>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="project-layout !w-full m-auto">
