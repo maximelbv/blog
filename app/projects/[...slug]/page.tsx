@@ -14,6 +14,8 @@ import BlurImage from "@/components/blur-image";
 import { formatDateToMonthYear } from "@/lib/utils";
 import AnimatedTitle from "@/components/animated-title";
 import SlideIn from "@/components/slide-in";
+import AnimatedText from "@/components/animated-text";
+import FadeIn from "@/components/fade-in";
 
 interface ProjectPageProps {
   params: {
@@ -104,52 +106,58 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <div className="grid gap-20 p-5 py-0 my-[60px]">
         <div className="grid items-center justify-center">
           {project.logo && (
-            <div className="flex items-center justify-center">
-              <BlurImage
-                src={project.logo}
-                className="!w-[100px] !relative !h-fit"
-              />
-            </div>
+            <FadeIn>
+              <div className="flex items-center justify-center">
+                <BlurImage
+                  src={project.logo}
+                  className="!w-[100px] !relative !h-fit"
+                />
+              </div>
+            </FadeIn>
           )}
-          <AnimatedTitle
+          <AnimatedText
             text={project.title}
             className="font-dahliaBold text-[120px] !m-0"
           />
           {project.description && (
-            <SlideIn delay={0.2}>
-              <p className="text-[18px] text-center !mt-[-10px] text-foregroundAlt">
-                {project.description}
-              </p>
-            </SlideIn>
+            <AnimatedText
+              delay={0.5}
+              className="text-[18px] text-center !mt-[-10px] text-foregroundAlt"
+              text={project.description}
+            ></AnimatedText>
           )}
-          <div className="mt-20 flex justify-between">
-            {project.category && (
-              <div className="grid gap-3">
-                <span className="text-foregroundAlt text-[18px] opacity-65">
-                  category
-                </span>
-                <span className="text-[18px]">{project.category}</span>
-              </div>
-            )}
-            {project.roles && (
-              <div className="grid gap-3">
-                <span className="text-foregroundAlt text-[18px] opacity-65">
-                  {project.roles.length > 1 ? "roles" : "role"}
-                </span>
-                <span className="text-[18px]">{project.roles.join(", ")}</span>
-              </div>
-            )}
-            {project.date && (
-              <div className="grid gap-3">
-                <span className="text-foregroundAlt text-[18px] opacity-65">
-                  completed
-                </span>
-                <span className="text-[18px]">
-                  {formatDateToMonthYear(project.date)}
-                </span>
-              </div>
-            )}
-          </div>
+          <FadeIn>
+            <div className="mt-20 flex justify-between">
+              {project.category && (
+                <div className="grid gap-3">
+                  <span className="text-foregroundAlt text-[18px] opacity-65">
+                    category
+                  </span>
+                  <span className="text-[18px]">{project.category}</span>
+                </div>
+              )}
+              {project.roles && (
+                <div className="grid gap-3">
+                  <span className="text-foregroundAlt text-[18px] opacity-65">
+                    {project.roles.length > 1 ? "roles" : "role"}
+                  </span>
+                  <span className="text-[18px]">
+                    {project.roles.join(", ")}
+                  </span>
+                </div>
+              )}
+              {project.date && (
+                <div className="grid gap-3">
+                  <span className="text-foregroundAlt text-[18px] opacity-65">
+                    completed
+                  </span>
+                  <span className="text-[18px]">
+                    {formatDateToMonthYear(project.date)}
+                  </span>
+                </div>
+              )}
+            </div>
+          </FadeIn>
         </div>
 
         <div className="project-layout !w-full m-auto">
