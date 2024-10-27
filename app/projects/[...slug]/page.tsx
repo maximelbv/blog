@@ -16,6 +16,7 @@ import AnimatedTitle from "@/components/animated-title";
 import SlideIn from "@/components/slide-in";
 import AnimatedText from "@/components/animated-text";
 import FadeIn from "@/components/fade-in";
+import Image from "next/image";
 
 interface ProjectPageProps {
   params: {
@@ -103,14 +104,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div>
-      <div className="grid gap-20 p-5 py-0 my-[60px]">
+      <div className="default-layout m-auto w-full px-5">
+        <BackButton href="/projects" label="Projects" />
+      </div>
+
+      <div className="grid gap-20 p-5 py-0 my-[40px]">
         <div className="grid items-center justify-center">
           {project.logo && (
             <FadeIn>
               <div className="flex items-center justify-center">
-                <BlurImage
+                <Image
+                  priority
                   src={project.logo}
-                  className="!w-[100px] !relative !h-fit"
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  className="!relative !h-fit"
                 />
               </div>
             </FadeIn>

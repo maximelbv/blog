@@ -7,16 +7,17 @@ import { ChevronLeft } from "lucide-react";
 interface BackButtonProps {
   href: string;
   label: string;
+  className?: string;
 }
 
-export function BackButton({ href, label }: BackButtonProps) {
+export function BackButton({ href, label, className }: BackButtonProps) {
   const router = useRouter();
 
   return (
     <Button
       onClick={() => router.push(href)}
       variant="ghost"
-      className="w-fit p-0 flex gap-[2px] hover:bg-transparent text-muted-foreground hover:text-secondary-foreground ml-[-6px] text-[16px]"
+      className={`${className} w-fit p-0 flex gap-[2px] hover:bg-transparent text-muted-foreground hover:text-secondary-foreground ml-[-6px] text-[16px]`}
     >
       <ChevronLeft className="scale-75" />
       {label}

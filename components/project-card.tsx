@@ -4,6 +4,7 @@ import React from "react";
 import ImagePlaceholder from "./image-placeholder";
 import BlurImage from "./blur-image";
 import PostInfos from "./post-infos";
+import FadeIn from "./fade-in";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const {
@@ -22,28 +23,32 @@ const ProjectCard = ({ project }: { project: Project }) => {
   } = project;
 
   return (
-    <div>
-      <Link href={slug} className="grid gap-2">
-        <div className="w-full aspect-video relative m-0">
-          {image ? (
-            <BlurImage
-              src={image}
-              className="rounded-[6px]"
-              style={{
-                objectFit: "cover",
-                margin: "0",
-              }}
-            />
-          ) : (
-            <ImagePlaceholder />
-          )}
-        </div>
-        <div className="grid ">
-          <h3 className="text-[30px]">{title}</h3>
-          <span className="text-foregroundAlt font-normal">{description}</span>
-        </div>
-      </Link>
-    </div>
+    <FadeIn>
+      <div>
+        <Link href={slug} className="grid gap-2">
+          <div className="w-full aspect-video relative m-0">
+            {image ? (
+              <BlurImage
+                src={image}
+                className="rounded-[6px]"
+                style={{
+                  objectFit: "cover",
+                  margin: "0",
+                }}
+              />
+            ) : (
+              <ImagePlaceholder />
+            )}
+          </div>
+          <div className="grid ">
+            <h3 className="text-[30px]">{title}</h3>
+            <span className="text-foregroundAlt font-normal">
+              {description}
+            </span>
+          </div>
+        </Link>
+      </div>
+    </FadeIn>
   );
 };
 

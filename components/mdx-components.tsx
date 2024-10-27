@@ -12,6 +12,7 @@ import SpacerM from "./spacer-m";
 import SpacerL from "./spacer-l";
 import SpacerXS from "./spacer-xs";
 import Quizz from "./quizz";
+import FadeIn from "./fade-in";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -32,6 +33,7 @@ const components = {
   SpacerM,
   SpacerL,
   Quizz,
+  FadeIn,
 };
 
 interface MdxProps {
