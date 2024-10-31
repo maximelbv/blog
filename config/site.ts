@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "MaximeLbv",
+  name: "Maxime Lefebvre - Design Engineer",
   url: "https://www.maximelbv.com",
   description:
     "Web developer, motion designer, and 3D artist. Discover creative projects and tutorials covering design, technology, and digital art.",
