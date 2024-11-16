@@ -95,9 +95,9 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div>
-      <div className="flex article-layout p-5 py-0">
+      <div className="flex default-layout p-5 py-0">
         <article className="container py-6 prose dark:prose-invert w-full m-0 p-0 max-w-full">
-          <div className="gap-0 mb-8 flex flex-col">
+          <div className="gap-0 mb-8 flex flex-col article-layout">
             <BackButton href="/blog" label="blog" />
             {/* {post.image && (
               <div className="w-full aspect-video md:aspect-21/9 relative rounded-md my-4">
@@ -117,7 +117,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 category={post.category}
                 date={post.date}
               />
-              <h1 className="!mt-0 !mb-[-2px] text-[38px] font-bold leading-[3.25rem]">
+              <h1 className="!mt-0 !mb-[-2px] !mx-0 text-[38px] font-bold leading-[3.25rem]">
                 {post.title}
               </h1>
               <div className="flex gap-2 mt-[-8px]">
@@ -129,7 +129,7 @@ export default async function PostPage({ params }: PostPageProps) {
             </div>
           </div>
           <div className="flex justify-between !w-full min-[900px]:gap-6 lg:gap-20">
-            <div className="article-layout !w-full m-0">
+            <div className="!w-full m-auto">
               <MDXContent code={post.body} />
             </div>
             <div className="fixed left-10 top-[40svh]">

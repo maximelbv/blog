@@ -128,7 +128,7 @@ const Quizz = ({ questions }: QuizzProps) => {
       setApi={setApi}
       key={resetKey}
       draggable={false}
-      className="p-4 md:p-8 rounded-lg bg-secondary min-h-[200px]"
+      className="p-4 md:p-8 rounded-lg bg-secondary min-h-[200px] article-layout"
     >
       <div className="flex justify-between mb-2 md:mt-[-14px]">
         <span className="font-bold text-[22px] md:text-[24px] mr-2">

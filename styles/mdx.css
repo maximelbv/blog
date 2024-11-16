@@ -1,5 +1,5 @@
 [data-rehype-pretty-code-figure] {
-  @apply my-6;
+  @apply my-6 article-layout;
 }
 
 [data-rehype-pretty-code-figure] pre {
@@ -113,9 +113,12 @@ ol code {
   @apply bg-muted rounded-md border-[1px] border-border font-monoLisa p-1 mx-0.5;
 }
 
-h1,
+h1 {
+  @apply mt-[4rem] mb-2 article-layout !important;
+}
+
 h2 {
-  @apply mt-[4.5rem] mb-2 !important;
+  @apply mt-[1.5rem] mb-1 article-layout !important;
 }
 
 h1 a {
@@ -123,7 +126,7 @@ h1 a {
 }
 
 h2 a {
-  @apply font-black text-2xl !important;
+  @apply font-black text-[1.35rem] !important;
 }
 
 h3 a {
@@ -131,11 +134,12 @@ h3 a {
 }
 
 p {
-  @apply !text-[19px] !font-gelica !font-medium !leading-[1.8rem] !m-0 text-foregroundAlt;
+  @apply !text-[19px] !font-gelica !font-medium !leading-[1.8rem] !m-auto text-foregroundAlt article-layout;
 }
 
-ul {
-  @apply pl-5 my-4 text-[18px] !important;
+ul,
+ol {
+  @apply pl-5 my-4 text-[18px] article-layout !important;
 }
 
 ul p {

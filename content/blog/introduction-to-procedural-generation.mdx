@@ -1,0 +1,65 @@
+---
+title: "Introduction to Procedural Generation: From Randomness to Realism"
+description: "Explore how procedural generation uses algorithms to craft unique landscapes, textures, and environments through hands-on examples"
+date: 2024-11-05
+image: /images/procedural-generation.jpg
+tags: ["procedural generation", "algorithms"]
+category: Computer graphics
+index: []
+published: true
+---
+
+You’ve probably heard about procedural generation in games like **Minecraft** or **No Man’s Sky**,
+where it’s used to create endless and unique landscapes and ecosystems.
+
+<SpacerS />
+
+Procedural generation goes far beyond that, it’s a powerful tool across <u>**many**</u> industries. 
+In this article, however, we’ll focus on its applications specifically in **3D rendering** 
+(Video games, Cinema, Animation, Architecture, Scientific simulations, ...). 
+
+# Part 1: Random !
+
+The first step in procedural generation is to introduce randomness. But 
+not just any kind of randomness. For many applications, pure 
+randomness is too chaotic and disconnected. What we often need is **randomness with 
+structure**, a type of controlled variation that feels smooth and natural.
+
+<SpacerS />
+
+[bar chart avec un gros bouton 'on/off' qui change les données du chart: de full randomness à bruit de perlin]
+
+<SpacerS />
+
+Take the example above, the first chart illustrates pure random values. 
+These values are entirely **independent of each other**, resulting in 
+abrupt changes. While this type of randomness can 
+be useful in certain scenarios, it often falls short when it comes to 
+simulating natural or organic patterns.
+
+<SpacerS />
+
+The second chart showcases a more structured approach known as **Perlin noise**, 
+a technique among others that introduces a sense of continuity. By ensuring 
+**neighboring values are similar**, it produces smoother transitions that are ideal 
+for generating lifelike textures, flowing landscapes, and organic forms.
+
+<SpacerS />
+
+The Perlin noise algorithm is one of the most popular techniques for adding 
+structure to randomness. Its ability to produce smooth and continuous variations 
+has made it a go-to solution for many applications, let’s take a closer look at how it works:
+
+<SpacerS />
+
+
+On a digital canvas, each pixel is assigned a brightness value **between 0 and 100**, 
+with 0 representing pure black and 100 pure white. However, as we’ve seen, it’s 
+not just about assigning random values to each pixel. There’s a gradual transition 
+between neighboring values, creating smooth changes across the canvas :
+
+<SpacerS />
+
+<PerlinNoiseGenerator />
+
+<SpacerS />

@@ -13,6 +13,7 @@ import SpacerL from "./spacer-l";
 import SpacerXS from "./spacer-xs";
 import Quizz from "./quizz";
 import FadeIn from "./fade-in";
+import PerlinNoiseGenerator from "./perlin-generator";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -34,6 +35,7 @@ const components = {
   SpacerL,
   Quizz,
   FadeIn,
+  PerlinNoiseGenerator,
 };
 
 interface MdxProps {
