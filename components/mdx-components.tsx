@@ -14,6 +14,7 @@ import SpacerXS from "./spacer-xs";
 import Quizz from "./quizz";
 import FadeIn from "./fade-in";
 import PerlinNoiseGenerator from "./perlin-generator";
+import ImagesGrid from "./images-grid";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -36,6 +37,7 @@ const components = {
   Quizz,
   FadeIn,
   PerlinNoiseGenerator,
+  ImagesGrid,
 };
 
 interface MdxProps {
