@@ -15,6 +15,9 @@ import Quizz from "./quizz";
 import FadeIn from "./fade-in";
 import PerlinNoiseGenerator from "./perlin-generator";
 import ImagesGrid from "./images-grid";
+import BarChartRandomValues from "./bar-chart-random-values";
+import BarChartRandom from "./bar-chart-random-values";
+import BarChartProcedural from "./bar-chart-procedural";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -38,6 +41,8 @@ const components = {
   FadeIn,
   PerlinNoiseGenerator,
   ImagesGrid,
+  BarChartRandom,
+  BarChartProcedural,
 };
 
 interface MdxProps {

@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Procedural Generation: From Randomness to Realism"
-description: "Explore how procedural generation uses algorithms to craft unique landscapes, textures, and environments through hands-on examples"
+title: "The Procedural Generation: From Randomness to Realism"
+description: "Procedural generation uses algorithms to craft unique landscapes, textures, and environments through hands-on examples"
 date: 2024-11-05
 image: /images/procedural-generation.jpg
 tags: ["procedural generation", "algorithms"]
@@ -9,33 +9,47 @@ index: []
 published: true
 ---
 
-You’ve probably heard about procedural generation in games like **Minecraft** or **No Man’s Sky**,
-where it’s used to create endless and unique landscapes and ecosystems.
+Have you ever wondered, “How does Minecraft create unique and infinite worlds ? Do the developers painstakingly 
+design every detail by hand for each ??” The answer is no, thankfully.
 
 <SpacerS />
 
-Procedural generation goes far beyond that, it’s a powerful tool across <u>**many**</u> industries. 
-In this article, however, we’ll focus on its applications specifically in **3D rendering** 
-(Video games, Cinema, Animation, Architecture, Scientific simulations, ...). 
+They use a technique called **procedural generation**. Simply put, it’s a method that uses 
+algorithms to automatically generate complex and varied content. 
+
+<SpacerS />
+
+In video games, procedural generation is used for a wide range of tasks: creating realistic 
+textures, generating landscapes, designing NPC behavior, populating dungeons, simulating dynamic 
+weather systems, etc ...
+
+<SpacerS />
+
+This technology enables developers to build vast and immersive worlds that feel alive and varied 
+with minimal manual effort.
+
+<SpacerS />
+
+So, how does it work ? 
 
 <SpacerM />
 
-<ImagesGrid columns={3} images={[{src:"/images/procedural_generation_example_1.gif", alt: 'Sword Shader by @Snoopethduckduck'}, {src:"/images/procedural_generation_example_2.jpg", alt:'Procedural Texture from 3dzip pack'}, {src:"/images/procedural_generation_example_3.gif", alt:'Map generator by @hippowombat'}]} />
+<ImagesGrid columns={3} images={[{src:"/images/procedural_generation_example_1.gif", alt: 'Sword Shader by @snoopethduckduck'}, {src:"/images/procedural_generation_example_2.jpg", alt:'Procedural Texture from 3dzip pack'}, {src:"/images/procedural_generation_example_3.gif", alt:'Map generator by @hippowombat'}]} />
 
-# Part 1: Random !
+# Random !
 
-The first step in procedural generation is to introduce randomness. But 
+The first step in procedural generation is to create randomness. But 
 not just any kind of randomness. For many applications, pure 
 randomness is too chaotic and disconnected. What we often need is **randomness with 
 structure**, a type of controlled variation that feels smooth and natural.
 
 <SpacerS />
 
-[bar chart avec un gros bouton 'on/off' qui change les données du chart: de full randomness à bruit de perlin]
+<BarChartRandom />
 
 <SpacerS />
 
-Take the example above, the first chart illustrates pure random values. 
+Take the example above, the chart illustrates pure random values. 
 These values are entirely **independent of each other**, resulting in 
 abrupt changes. While this type of randomness can 
 be useful in certain scenarios, it often falls short when it comes to 
@@ -43,7 +57,11 @@ simulating natural or organic patterns.
 
 <SpacerS />
 
-The second chart showcases a more structured approach known as **Perlin noise**, 
+<BarChartProcedural />
+
+<SpacerS />
+
+This chart showcases a more structured approach known as **Perlin noise**, 
 a technique among others that introduces a sense of continuity. By ensuring 
 **neighboring values are similar**, it produces smoother transitions that are ideal 
 for generating lifelike textures, flowing landscapes, and organic forms.
@@ -52,9 +70,9 @@ for generating lifelike textures, flowing landscapes, and organic forms.
 
 ## The Perlin Noise
 
-The Perlin noise algorithm is one of the most popular techniques for adding 
-structure to randomness. Its ability to produce smooth and continuous variations 
-has made it a go-to solution for many applications, let’s take a closer look at how it works:
+The Perlin noise is one of the most popular algorithms for procedural generation. 
+Its ability to produce smooth and continuous variations 
+has made it a solution for many applications, let’s take a closer look at how it works:
 
 <SpacerS />
 
@@ -67,5 +85,14 @@ between neighboring values, creating smooth changes across the canvas :
 <SpacerS />
 
 <PerlinNoiseGenerator />
+
+<SpacerS />
+
+If you want to dive deeper into Perlin noise and understand how it's generated, 
+I recommend reading <CustomLink isExternal href="https://rtouti.github.io/graphics/perlin-noise-algorithm">this article</CustomLink>from Raouf Touti.
+
+<SpacerS />
+
+We will use this algorithm for the next steps, but be aware that many others exist for various purposes.
 
 <SpacerS />
