@@ -1,7 +1,7 @@
 @import "./globals.css";
 
 [data-rehype-pretty-code-figure] {
-  @apply my-6 article-layout;
+  @apply my-6 max-w-[750px] mx-auto;
 }
 
 [data-rehype-pretty-code-figure] pre {
