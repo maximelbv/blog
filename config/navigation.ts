@@ -8,6 +8,11 @@ export const navigation = [
     route: "/blog",
   },
   {
+    name: "Motion Lab",
+    route: "https://labs.maximelbv.com",
+    isExternal: true,
+  },
+  {
     name: "Contact",
     route: "mailto:contact@maximelbv.com",
     filled: true,
