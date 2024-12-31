@@ -9,7 +9,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  safelist: ["article-layout", "default-layout", "project-layout"],
+  preserveHtml: true,
   prefix: "",
   theme: {
     container: {
