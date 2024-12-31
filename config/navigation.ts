@@ -10,7 +10,6 @@ export const navigation = [
   {
     name: "Motion Lab",
     route: "https://labs.maximelbv.com",
-    isExternal: true,
   },
   {
     name: "Contact",
