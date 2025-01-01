@@ -3,6 +3,7 @@ import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import ScrollableDialogContent from "@/components/scrollable-dialog-content";
 import { MDXContent } from "./mdx-components";
 import "@/styles/mdx.css";
+import PostInfos from "./post-infos";
 const SnippetCard = ({
   post,
   className,
@@ -16,6 +17,12 @@ const SnippetCard = ({
         <div
           className={`${className} w-fit flex flex-col gap-1 no-underline p-3 bg-secondary rounded-lg border-2 border-transparent text-start`}
         >
+          <PostInfos
+            className=""
+            variant="small"
+            category={post.category}
+            // date={post.date}
+          />
           <h3 className="text-[18px] font-bold m-0">{post.title}</h3>
           <div className="flex gap-[10px]">
             {post.tags &&
@@ -32,10 +39,7 @@ const SnippetCard = ({
         </div>
       </DialogTrigger>
 
-      <ScrollableDialogContent
-        title={post.title}
-        className="prose dark:prose-invert"
-      >
+      <ScrollableDialogContent post={post} className="prose dark:prose-invert">
         <MDXContent code={post.body} />
       </ScrollableDialogContent>
     </Dialog>

@@ -13,7 +13,7 @@ export function Tag({ tag, current, count }: TagProps) {
         variant: current ? "default" : "secondary",
       })}
     >
-      #{tag} {count ? `(${count})` : null}
+      {tag} {count ? `(${count})` : null}
     </Button>
   );
 }
