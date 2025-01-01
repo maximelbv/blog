@@ -281,7 +281,11 @@ const ControlPanel: React.FC<{
       <input
         type="number"
         value={seed}
-        onChange={(e) => setSeed(parseInt(e.target.value, 10))}
+        onChange={(e) => {
+          const newSeed =
+            e.target.value === "" ? 0 : parseInt(e.target.value, 10);
+          setSeed(newSeed);
+        }}
         className="border p-2 w-full rounded-md shadow-sm"
       />
     </label>

@@ -14,7 +14,7 @@ export function Callout({
   return (
     <div
       className={cn(
-        "my-6 items-start rounded-md border boder-l-4 p-4 w-full dark:max-w-none bg-secondary text-foregroundAlt font-medium ",
+        "my-6 items-start rounded-md p-4 w-full bg-blue-50 dark:bg-blue-500/20 font-medium text-blue-500 max-w-[750px] mx-auto text-[19px]",
         {
           " bg-green-50 dark:bg-green-300/10 text-green-500":
             type === "success",
@@ -25,7 +25,7 @@ export function Callout({
       )}
       {...props}
     >
-      <div>{children}</div>
+      <div className="max-w-[750px] mx-auto">{children}</div>
     </div>
   );
 }
