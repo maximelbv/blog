@@ -15,6 +15,7 @@ interface PostItemProps {
   description?: string;
   date: string;
   category: string;
+  type: string;
   index: Index[];
   image?: string;
   tags?: Array<string>;
@@ -26,6 +27,7 @@ export function PostItem({
   description,
   date,
   category,
+  type,
   index,
   image,
   tags,

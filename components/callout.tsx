@@ -14,7 +14,7 @@ export function Callout({
   return (
     <div
       className={cn(
-        "my-6 items-start rounded-md p-4 w-full bg-blue-50 dark:bg-blue-500/20 font-medium text-blue-500 max-w-[750px] mx-auto text-[19px]",
+        "my-6 items-start rounded-md p-3 w-full bg-blue-50 dark:bg-blue-500/20 font-medium text-blue-500 max-w-[750px] mx-auto text-[19px] leading-[1.8rem]",
         {
           " bg-green-50 dark:bg-green-300/10 text-green-500":
             type === "success",

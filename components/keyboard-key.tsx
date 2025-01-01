@@ -25,17 +25,22 @@ const KeyboardKey = ({ value }: { value: string }) => {
 
   return (
     <span
-      className=" h-6 text-foregroundAlt inline-flex items-center justify-center bg-muted border-[1px] 
-    border-border rounded-md leading-5 py-0.5 px-1 text-[14px] font-semibold"
+      className="h-6 text-foregroundAlt inline-flex items-center justify-center bg-muted border-[1px] 
+      border-border rounded-md leading-none py-0.5 px-1 text-[14px] font-semibold"
     >
-      {specialChar ? (
-        <>
-          <span className="mr-2">{specialChar.icon}</span>
-          {value}
-        </>
-      ) : (
-        value
-      )}
+      <span className="flex items-center min-h-[1.5rem]">
+        {specialChar ? (
+          <>
+            <span className="mr-2 flex items-center">{specialChar.icon}</span>
+            <span className="align-middle">{value}</span>
+          </>
+        ) : (
+          <>
+            <span className="flex items-center">{<Icons.invisibleKey />}</span>
+            <span className="align-middle">{value}</span>
+          </>
+        )}
+      </span>
     </span>
   );
 };

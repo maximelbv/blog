@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { slug } from "github-slugger";
 import { badgeVariants } from "./ui/badge";
 import { Button } from "./ui/button";
 
@@ -15,7 +13,7 @@ export function Tag({ tag, current, count }: TagProps) {
         variant: current ? "default" : "secondary",
       })}
     >
-      {tag} {count ? `(${count})` : null}
+      #{tag} {count ? `(${count})` : null}
     </Button>
   );
 }

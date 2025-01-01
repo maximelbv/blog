@@ -20,6 +20,7 @@ const posts = defineCollection({
       date: s.isodate(),
       published: s.boolean().default(true),
       category: s.string(),
+      type: s.string(),
       index: s
         .array(
           s.object({
@@ -46,6 +47,7 @@ const projects = defineCollection({
       date: s.isodate(),
       published: s.boolean().default(true),
       category: s.string(),
+      type: s.string(),
       index: s
         .array(
           s.object({

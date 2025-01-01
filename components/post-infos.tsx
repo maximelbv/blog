@@ -16,6 +16,7 @@ const categoryIcons = {
   nodejs: Icons.nodejs,
   unreal: Icons.unreal,
   tools: Icons.tools,
+  computerGraphics: Icons.computerGraphics,
   figma: Icons.figma,
   react: Icons.react,
 };
@@ -55,9 +56,13 @@ function PostInfos({
   date,
   ...props
 }: PostInfosProps) {
-  const lowerCat = category.toLowerCase();
-  const CategoryIcon = isCategory(lowerCat) ? categoryIcons[lowerCat] : null;
-
+  const formatedCategoryString = category
+    .toLowerCase()
+    .replace(/ (\w)/g, (_, c) => c.toUpperCase());
+  const CategoryIcon = isCategory(formatedCategoryString)
+    ? categoryIcons[formatedCategoryString]
+    : null;
+  console.log(isCategory(formatedCategoryString));
   return (
     <div
       className={cn(postInfosVariants({ variant }), className, "gap-2")}
@@ -66,7 +71,7 @@ function PostInfos({
       <div className="flex items-center justify-center gap-2">
         {CategoryIcon && <CategoryIcon />}
         <span className="uppercase text-foregroundAlt font-semibold tracking-[1px]">
-          {lowerCat}
+          {category}
         </span>
       </div>
       {date && (

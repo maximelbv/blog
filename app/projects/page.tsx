@@ -18,8 +18,8 @@ export default async function ProjectsPage() {
   return (
     <div className="default-layout px-5 grid gap-[32px] mb-[60px]">
       <PageHeader
-        title="Projects"
-        subtitle="A showcase of my work in web development, design, and 3D (🚧 This part of the website is still under construction)"
+        title="My latest Projects"
+        subtitle="🚧 This part of the website is still under construction"
       />
       <div className="grid grid-cols-1 gap-14">
         {publishedProjects.map((project, index) => (

@@ -1,12 +1,13 @@
 ---
 title: "The Procedural Generation: From Randomness to Realism"
+type: "article"
 description: "Learn how procedural generation uses algorithms to craft unique landscapes, textures, and environments through hands-on examples"
 date: 2024-11-05
 image: /images/procedural-generation.jpg
-tags: ["procedural generation", "algorithms"]
+tags: ["procedural generation", "beginner friendly"]
 category: Computer graphics
 index: []
-published: false
+published: true
 ---
 
 Have you ever wondered, “How does games like Minecraft create unique and infinite worlds ? Do the developers painstakingly 
@@ -108,23 +109,18 @@ When you alter the seed, the generated noise shifts entirely. This happens becau
 seed acts as the starting point for the random number generator that powers the procedural 
 generation algorithm.
 
-<SpacerS />
 
-The seed **42** will always generate the same result from the algorithm. Think of it as **the DNA of your noise**,
-the seed ensures that random patterns can be reproduced. 
-
-<SpacerS />
+<Callout> The seed **42** will always generate the same result from the algorithm. Think of it as **the DNA of your noise**,
+the seed ensures that random patterns can be reproduced. </Callout>
 
 You may be familiar with this concept if you ever played Minecraft. Using the same seed 
 as your friend generates identical worlds, allowing you to explore the same terrain.
 
-
-<Callout>
-<span>Although seed is a key parameter, other settings also influence procedural noise generation. 
-**Scale, frequency, persistence and octave** let you fine-tune the complexity and detail of the generated pattern.
-However, our aim here is to understand the fundamental concepts so let’s keep things simple and stick to 
-the essentials for now.</span>
-</Callout>
+# Other parameters (changer le nom)
+- Scale
+- frequency
+- persistence
+- Octave
 
 # Practical example: Building a terrain
 

@@ -6,13 +6,15 @@ const CustomLink = ({
   href,
   children,
   isExternal,
+  className,
 }: {
   href: string;
   children: React.ReactNode;
-  isExternal: boolean;
+  isExternal?: boolean;
+  className?: string;
 }) => {
   return (
-    <span className="mx-0.5 inline-flex items-center gap-0.5">
+    <span className={`${className} mx-0.5 inline-flex items-center gap-0.5`}>
       <Link
         target={isExternal ? "_blank" : ""}
         href={href}
