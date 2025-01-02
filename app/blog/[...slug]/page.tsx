@@ -11,6 +11,7 @@ import PostInfos from "@/components/post-infos";
 import PostCardAlternative from "@/components/post-card-alternative";
 import TableOfContents from "@/components/table-of-contents";
 import BlurImage from "@/components/blur-image";
+import { ARTICLE_TYPE_CONSTANTS } from "@/constants/article-type-constants";
 
 interface PostPageProps {
   params: {
@@ -74,7 +75,12 @@ export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
 
   const otherPosts = posts
-    .filter((p) => p.slug !== post?.slug && p.published === true)
+    .filter(
+      (p) =>
+        p.slug !== post?.slug &&
+        p.published === true &&
+        p.type === ARTICLE_TYPE_CONSTANTS.article
+    )
     .sort((a, b) => {
       if (a.category === post?.category && b.category !== post?.category) {
         return -1;

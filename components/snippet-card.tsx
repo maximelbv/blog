@@ -24,7 +24,7 @@ const SnippetCard = ({
             // date={post.date}
           />
           <h3 className="text-[18px] font-bold m-0">{post.title}</h3>
-          <div className="flex gap-[10px]">
+          {/* <div className="flex gap-[10px]">
             {post.tags &&
               post.tags.map((tag) => (
                 <span
@@ -35,7 +35,7 @@ const SnippetCard = ({
                   {tag}
                 </span>
               ))}
-          </div>
+          </div> */}
         </div>
       </DialogTrigger>
 
