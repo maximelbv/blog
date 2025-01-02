@@ -15,7 +15,8 @@ const SnippetCard = ({
     <Dialog>
       <DialogTrigger>
         <div
-          className={`${className} w-fit flex flex-col gap-1 no-underline p-3 bg-secondary rounded-lg border-2 border-transparent text-start`}
+          // className={`${className} w-fit flex flex-col gap-1 no-underline p-3 bg-secondary rounded-lg border-2 border-transparent text-start`}
+          className={`${className} text-start flex flex-col gap-2 no-underline p-5 bg-secondary rounded-lg border-2 border-transparent hover:border-pigment-purple`}
         >
           <PostInfos
             className=""
@@ -24,18 +25,9 @@ const SnippetCard = ({
             // date={post.date}
           />
           <h3 className="text-[18px] font-bold m-0">{post.title}</h3>
-          {/* <div className="flex gap-[10px]">
-            {post.tags &&
-              post.tags.map((tag) => (
-                <span
-                  className="lowercase inline-flex text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 no-underline border-transparent text-muted-foreground"
-                  key={tag}
-                >
-                  <span className="font-mono mr-[1.5px]">#</span>
-                  {tag}
-                </span>
-              ))}
-          </div> */}
+          <span className="text-muted-foreground text-[15px]">
+            {post.description}
+          </span>
         </div>
       </DialogTrigger>
 
