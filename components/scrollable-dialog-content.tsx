@@ -21,15 +21,15 @@ export default function ScrollableDialogContent({
   return (
     <DialogContent
       // style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      className={`${className} h-[70svh] md:max-h-[80svh] min-w-[100svw] md:min-w-[650px] mx-auto overflow-y-auto pointer-events-auto !p-0 gap-0`}
+      className={`${className} absolute h-[90svh] left-[50%] top-[30%] md:top-[50%] md:fixed md:h-[80svh] md:max-h-[80svh] min-w-[100svw] md:min-w-[750px] mx-auto overflow-y-auto pointer-events-auto !p-0 gap-0`}
     >
       <style>
         {`
       ::-webkit-scrollbar {
-        width: 3px;
+        width: 4px;
       }
       ::-webkit-scrollbar-thumb {
-        background-color: #888;
+        background-color: #3f3f3f;
         border-radius: 10px;
       }
       ::-webkit-scrollbar-thumb:hover {
@@ -45,7 +45,7 @@ export default function ScrollableDialogContent({
     `}
       </style>
       <DialogHeader className="!text-start relative">
-        <DialogTitle className="!m-0 bg-background p-[50px] pb-[15px]">
+        <DialogTitle className="!m-0 bg-background p-[20px] md:p-[50px] !pb-[15px]">
           <div className="flex flex-col gap-[15px]">
             <PostInfos
               className="mb-[-5px]"
@@ -69,7 +69,7 @@ export default function ScrollableDialogContent({
         </DialogTitle>
       </DialogHeader>
       <div
-        className="max-h-[80vh] p-[50px] pt-0 !mt-0"
+        className="max-h-[80vh] p-[20px] md:p-[50px] !pt-0 !mt-0"
         onWheel={(e) => e.stopPropagation()}
       >
         <div className="h-[1px] w-full bg-border article-layout my-[15px]" />

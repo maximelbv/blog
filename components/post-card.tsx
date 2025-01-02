@@ -45,7 +45,7 @@ const PostCard = ({
             {post.tags &&
               post.tags.map((tag) => (
                 <span
-                  className="inline-flex items-center rounded-full border px-2.5 py-1 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 no-underline border-transparent bg-secondary text-muted-foreground"
+                  className="inline-flex items-center justify-center text-center rounded-full border px-2.5 py-1 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 no-underline border-transparent bg-secondary text-muted-foreground"
                   key={tag}
                 >
                   {tag}
