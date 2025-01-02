@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { ReactNode } from "react";
 import PostInfos from "./post-infos";
+import { cn } from "@/lib/utils";
 
 export default function ScrollableDialogContent({
   post,
@@ -21,7 +22,15 @@ export default function ScrollableDialogContent({
   return (
     <DialogContent
       // style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      className={`${className} absolute h-[90svh] left-[50%] top-[30%] md:top-[50%] md:fixed md:h-[80svh] md:max-h-[80svh] min-w-[100svw] md:min-w-[750px] mx-auto overflow-y-auto pointer-events-auto !p-0 gap-0`}
+      className={cn(
+        "!fixed !top-1/2 !left-1/2 !translate-x-[-50%] !translate-y-[-50%] !w-auto !max-w-none",
+        "!w-[90%] !max-w-[750px]",
+        "!h-[90svh] md:!h-[80svh] md:!max-h-[80svh]",
+        "!p-0",
+        "!block",
+        "overflow-y-auto pointer-events-auto gap-0",
+        className
+      )}
     >
       <style>
         {`
@@ -69,7 +78,7 @@ export default function ScrollableDialogContent({
         </DialogTitle>
       </DialogHeader>
       <div
-        className="max-h-[80vh] p-[20px] md:p-[50px] !pt-0 !mt-0"
+        className="max-h-[80vh] p-[20px] md:p-[50px] !pt-0 !mt-0 "
         onWheel={(e) => e.stopPropagation()}
       >
         <div className="h-[1px] w-full bg-border article-layout my-[15px]" />
