@@ -127,7 +127,6 @@ const BarChartProcedural: React.FC<BarChartProps> = ({ barCount = 25 }) => {
   const handleReload = () => {
     permutation = generateNewPermutation();
     const newValues = generatePerlinValues(barCount);
-    console.log("Generated Perlin Values:", newValues);
     setBarValues([...newValues]);
   };
 

@@ -62,7 +62,6 @@ function PostInfos({
   const CategoryIcon = isCategory(formatedCategoryString)
     ? categoryIcons[formatedCategoryString]
     : null;
-  console.log(isCategory(formatedCategoryString));
   return (
     <div
       className={cn(postInfosVariants({ variant }), className, "gap-2")}

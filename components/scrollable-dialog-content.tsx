@@ -25,17 +25,18 @@ export default function ScrollableDialogContent({
       className={cn(
         "!fixed !top-1/2 !left-1/2 !translate-x-[-50%] !translate-y-[-50%] !w-auto !max-w-none",
         "!w-[90%] !max-w-[750px]",
-        "!h-[90svh] md:!h-[80svh] md:!max-h-[80svh]",
+        "!h-[85svh] md:!h-[80svh] md:!max-h-[80svh]",
         "!p-0",
         "!block",
         "overflow-y-auto pointer-events-auto gap-0",
+        "!rounded-lg",
         className
       )}
     >
       <style>
         {`
       ::-webkit-scrollbar {
-        width: 4px;
+        width: 6px;
       }
       ::-webkit-scrollbar-thumb {
         background-color: #3f3f3f;
