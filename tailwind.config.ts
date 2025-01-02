@@ -22,7 +22,13 @@ const config = {
       height: {
         "fill-available": "-webkit-fill-available",
       },
+      minHeight: {
+        "fill-available": "-webkit-fill-available",
+      },
       width: {
+        "fill-available": "-webkit-fill-available",
+      },
+      minWidth: {
         "fill-available": "-webkit-fill-available",
       },
       fontFamily: {

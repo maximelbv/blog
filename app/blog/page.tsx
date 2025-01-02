@@ -1,4 +1,4 @@
-import { Post, posts } from "#site/content";
+import { posts } from "#site/content";
 import CustomLink from "@/components/custom-link";
 import FadeIn from "@/components/fade-in";
 import PageHeader from "@/components/page-header";
