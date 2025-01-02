@@ -42,13 +42,32 @@ export default async function BlogPage() {
             Snippets
           </span>
         </div>
-        <div className="grid grid-cols-3 gap-[15px]">
-          {publishedSnippets.map((snippet, index) => (
-            <FadeIn key={index} delay={(index + 1) * 0.2}>
-              <SnippetCard key={snippet.slug} post={snippet} />
-            </FadeIn>
-          ))}
+        <div className="max-w-[1100px] overflow-x-auto no-scrollbar">
+          <style>
+            {`
+              ::-webkit-scrollbar {
+                height: 0px;
+              }
+              ::-webkit-scrollbar-thumb {
+                background-color: #0000000;
+              }
+              ::-webkit-scrollbar-thumb:hover {
+                background-color: #0000000;
+              }
+              ::-webkit-scrollbar-track {
+                background: transparent;
+              }
+            `}
+          </style>
+          <div className="flex gap-[15px]">
+            {publishedSnippets.map((snippet, index) => (
+              <FadeIn key={index} delay={(index + 1) * 0.2}>
+                <SnippetCard key={snippet.slug} post={snippet} />
+              </FadeIn>
+            ))}
+          </div>
         </div>
+
         <div className="flex justify-end items-center">
           <CustomLink href="#" className="text-[18px]">
             See all snippets →
