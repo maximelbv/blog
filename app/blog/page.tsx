@@ -61,7 +61,11 @@ export default async function BlogPage() {
           <div className="flex gap-[15px]">
             {publishedSnippets.map((snippet, index) => (
               <FadeIn key={index} delay={(index + 1) * 0.2}>
-                <SnippetCard key={snippet.slug} post={snippet} />
+                <SnippetCard
+                  key={snippet.slug}
+                  post={snippet}
+                  className="min-w-[300px]"
+                />
               </FadeIn>
             ))}
           </div>
