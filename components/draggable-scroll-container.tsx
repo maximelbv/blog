@@ -13,7 +13,11 @@ export default function DraggableScrollContainer({
   className = "",
 }: DraggableScrollContainerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Type de périphérique (mouse, touch, unknown)
   const [deviceType, setDeviceType] = useState<DeviceType | null>(null);
+
+  // État pour la logique de drag à la souris
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -26,21 +30,21 @@ export default function DraggableScrollContainer({
     setDeviceType(type);
   }, []);
 
-  const mouseDownHandler = useCallback(
-    (e: React.MouseEvent) => {
-      if (!containerRef.current || deviceType === "touch") return; // Évite le drag sur les devices tactiles
-      setIsDragging(true);
-      setStartX(e.pageX - containerRef.current.offsetLeft);
-      setScrollLeft(containerRef.current.scrollLeft);
-      setDistance(0);
-    },
-    [deviceType]
-  );
+  // --------------------------------------------------
+  // Logique de drag à la souris (réservée au "mouse")
+  // --------------------------------------------------
+  const mouseDownHandler = useCallback((e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+    setDistance(0);
+  }, []);
 
   const mouseMoveHandler = useCallback(
     (e: React.MouseEvent) => {
       if (!isDragging || !containerRef.current) return;
-      e.preventDefault();
+      e.preventDefault(); // Empêche la sélection de texte
       const x = e.pageX - containerRef.current.offsetLeft;
       const walk = (x - startX) * 1.5;
       containerRef.current.scrollLeft = scrollLeft - walk;
@@ -61,31 +65,9 @@ export default function DraggableScrollContainer({
     endDrag();
   }, [endDrag]);
 
-  const touchStartHandler = useCallback((e: React.TouchEvent) => {
-    if (!containerRef.current) return;
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-    setDistance(0);
-  }, []);
-
-  const touchMoveHandler = useCallback(
-    (e: React.TouchEvent) => {
-      if (!isDragging || !containerRef.current) return;
-      const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      containerRef.current.scrollLeft = scrollLeft - walk;
-      setDistance(Math.abs(walk));
-    },
-    [isDragging, startX, scrollLeft]
-  );
-
-  const touchEndHandler = useCallback(() => {
-    endDrag();
-  }, [endDrag]);
-
   const onClickCapture = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
+      // Si on a "vraiment" drag, on empêche le clic
       if (distance > DRAG_THRESHOLD) {
         e.preventDefault();
         e.stopPropagation();
@@ -94,18 +76,39 @@ export default function DraggableScrollContainer({
     [distance]
   );
 
+  // --------------------------------------------------
+  // Si le type de périphérique est "mouse",
+  // on utilise nos handlers. Sinon, on rend juste
+  // un conteneur scrollable natif.
+  // --------------------------------------------------
+  if (deviceType === "mouse") {
+    return (
+      <div
+        ref={containerRef}
+        onMouseDown={mouseDownHandler}
+        onMouseMove={mouseMoveHandler}
+        onMouseUp={mouseUpHandler}
+        onMouseLeave={mouseLeaveHandler}
+        onClickCapture={onClickCapture}
+        className={`cursor-grab active:cursor-grabbing overflow-x-auto no-scrollbar ${className}`}
+        style={{
+          scrollBehavior: "auto",
+        }}
+      >
+        {deviceType}
+        {children}
+      </div>
+    );
+  }
+
+  // --------------------------------------------------
+  // Sur mobile/tactile (touch) ou en attendant
+  // la détection (null), on laisse un scroll natif
+  // --------------------------------------------------
   return (
     <div
       ref={containerRef}
-      onMouseDown={mouseDownHandler}
-      onMouseMove={mouseMoveHandler}
-      onMouseUp={mouseUpHandler}
-      onMouseLeave={mouseLeaveHandler}
-      onTouchStart={touchStartHandler}
-      onTouchMove={touchMoveHandler}
-      onTouchEnd={touchEndHandler}
-      onClickCapture={onClickCapture}
-      className={`cursor-grab active:cursor-grabbing overflow-x-auto no-scrollbar ${className}`}
+      className={`overflow-x-auto no-scrollbar ${className}`}
       style={{
         scrollBehavior: "auto",
       }}
