@@ -34,7 +34,11 @@ export default async function SnippetsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px]">
           {publishedSnippets.map((snippet, index) => (
             <FadeIn key={index} delay={(index + 1) * 0.2}>
-              <SnippetCard key={snippet.slug} post={snippet} />
+              <SnippetCard
+                key={snippet.slug}
+                post={snippet}
+                className="min-h-fill-available"
+              />
             </FadeIn>
           ))}
         </div>
