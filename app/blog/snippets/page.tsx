@@ -1,8 +1,6 @@
 import { posts } from "#site/content";
-import CustomLink from "@/components/custom-link";
 import FadeIn from "@/components/fade-in";
 import PageHeader from "@/components/page-header";
-import PostCard from "@/components/post-card";
 import SnippetCard from "@/components/snippet-card";
 import { ARTICLE_TYPE_CONSTANTS } from "@/constants/article-type-constants";
 import { getAllTags, sortPosts, sortTagsByCount } from "@/lib/utils";
