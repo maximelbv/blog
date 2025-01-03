@@ -43,7 +43,7 @@ export default async function BlogPage() {
           </span>
         </div>
         <DraggableScrollContainer>
-          <div className="flex gap-[15px]">
+          <div className="flex gap-[15px]  h-fit">
             {publishedSnippets.map((snippet, index) => (
               <FadeIn key={index} delay={(index + 1) * 0.2}>
                 <SnippetCard
@@ -58,7 +58,7 @@ export default async function BlogPage() {
 
         <div className="flex justify-end items-center">
           <CustomLink href="/blog/snippets" className="text-[18px]">
-            See all snippets →
+            View all snippets →
           </CustomLink>
         </div>
       </div>

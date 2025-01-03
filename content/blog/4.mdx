@@ -1,11 +1,11 @@
 ---
-title: "How to create custom VS Code snippets"
+title: "The HOC pattern"
 type: "snippet"
-description: "Speed up your workflow with custom code patterns in Visual Studio Code"
+description: "Decorators in NestJs are a way to validate your entities"
 date: 2024-07-30
 image: /images/vscode-custom-snippets.jpg
 tags: ["vscode", "config"]
-category: Tools
+category: React
 index: []
 published: true
 ---
@@ -33,33 +33,3 @@ custom snippets to fit your needs :
   "description": "Log output to console"
 }
 ```
-<div className="article-layout">
-  <ColorLegend color={"purple"}>
-    The `scope` defines where this snippet is applicable
-  </ColorLegend>
-
-  <ColorLegend color={"green"}>
-    The `prefix` is the acronym that you will type to invoke the snippet
-  </ColorLegend>
-
-  <ColorLegend color={"blue"}>
-    The `body` contains the code that will be displayed
-  </ColorLegend>
-
-  <ColorLegend color={"red"}>
-    The `description` will show up in the autocomplete suggestions
-  </ColorLegend>
-</div>
-
-## Tab stops
-
-- `$1`, `$2` : cursor positions (press <KeyboardKey value='TAB' /> to switch)
-- `$0` : final cursor stop
-
-## Default values for tab stops
-- `${1:default value}` : Pre-fills with a value, ready to overwrite
-
-## Multiple options for default values
-- `${2|log,error,table|}` : Choose between `log`, `error`, `table`
-
-<SpacerS />
