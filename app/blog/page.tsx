@@ -42,7 +42,8 @@ export default async function BlogPage() {
             Latest Snippets
           </span>
         </div>
-        <DraggableScrollContainer className="">
+        {/* TODO: ici le draggable scroll container ou div classique */}
+        <div className="cursor-grab active:cursor-grabbing overflow-x-auto no-scrollbar">
           <div className="flex gap-[15px]">
             {publishedSnippets.map((snippet, index) => (
               <FadeIn key={index} delay={(index + 1) * 0.2}>
@@ -54,7 +55,7 @@ export default async function BlogPage() {
               </FadeIn>
             ))}
           </div>
-        </DraggableScrollContainer>
+        </div>
 
         <div className="flex justify-end items-center">
           <CustomLink href="/blog/snippets" className="text-[18px]">
