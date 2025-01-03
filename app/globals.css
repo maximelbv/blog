@@ -139,3 +139,21 @@
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.responsive-carousel {
+  max-width: calc(100svw - 40px);
+}
+
+@media (min-width: 1180px) {
+  .responsive-carousel {
+    max-width: 1100px;
+  }
+}

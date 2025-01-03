@@ -1,5 +1,6 @@
 import { posts } from "#site/content";
 import CustomLink from "@/components/custom-link";
+import DraggableScrollContainer from "@/components/draggable-scroll-container";
 import FadeIn from "@/components/fade-in";
 import PageHeader from "@/components/page-header";
 import PostCard from "@/components/post-card";
@@ -35,29 +36,13 @@ export default async function BlogPage() {
         className="mb-[-5px]"
         subtitle="Hands-on tutorials and snippets to explore coding and graphic design through interactive experiences"
       />
-      <div className="flex flex-col gap-[15px]">
+      <div className="flex flex-col gap-[15px] responsive-carousel">
         <div className="flex justify-between items-end">
           <span className="text-[20px] px-[10px] py-[5px] bg-secondary w-fit rounded-lg">
             Latest Snippets
           </span>
         </div>
-        <div className="max-w-[1100px] overflow-x-auto no-scrollbar">
-          <style>
-            {`
-              ::-webkit-scrollbar {
-                height: 0px;
-              }
-              ::-webkit-scrollbar-thumb {
-                background-color: #0000000;
-              }
-              ::-webkit-scrollbar-thumb:hover {
-                background-color: #0000000;
-              }
-              ::-webkit-scrollbar-track {
-                background: transparent;
-              }
-            `}
-          </style>
+        <DraggableScrollContainer className="">
           <div className="flex gap-[15px]">
             {publishedSnippets.map((snippet, index) => (
               <FadeIn key={index} delay={(index + 1) * 0.2}>
@@ -69,7 +54,7 @@ export default async function BlogPage() {
               </FadeIn>
             ))}
           </div>
-        </div>
+        </DraggableScrollContainer>
 
         <div className="flex justify-end items-center">
           <CustomLink href="/blog/snippets" className="text-[18px]">
