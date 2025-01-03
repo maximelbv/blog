@@ -15,7 +15,7 @@ const SnippetCard = ({
     <Dialog>
       <DialogTrigger className="h-full w-full">
         <div
-          className={`${className} w-full text-start flex flex-col gap-2 no-underline p-4 bg-secondary rounded-lg border-2 border-transparent`}
+          className={`${className} w-full text-start flex flex-col gap-2 no-underline p-4 bg-secondary rounded-lg border-2 border-transparent min-h-fill-available md:min-h-none`}
         >
           <PostInfos
             className=""
