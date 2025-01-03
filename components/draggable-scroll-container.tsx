@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useRef, useState, useCallback } from "react";
+import { detectDeviceType, DeviceType } from "@/lib/detect-device-type";
+import React, { useRef, useState, useCallback, useEffect } from "react";
 
 type DraggableScrollContainerProps = {
   children: React.ReactNode;
@@ -12,7 +13,7 @@ export default function DraggableScrollContainer({
   className = "",
 }: DraggableScrollContainerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-
+  const [deviceType, setDeviceType] = useState<DeviceType | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -20,21 +21,26 @@ export default function DraggableScrollContainer({
 
   const DRAG_THRESHOLD = 5;
 
-  const mouseDownHandler = useCallback((e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    setIsDragging(true);
-
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-
-    setDistance(0);
+  useEffect(() => {
+    const type = detectDeviceType();
+    setDeviceType(type);
   }, []);
+
+  const mouseDownHandler = useCallback(
+    (e: React.MouseEvent) => {
+      if (!containerRef.current || deviceType === "touch") return; // Évite le drag sur les devices tactiles
+      setIsDragging(true);
+      setStartX(e.pageX - containerRef.current.offsetLeft);
+      setScrollLeft(containerRef.current.scrollLeft);
+      setDistance(0);
+    },
+    [deviceType]
+  );
 
   const mouseMoveHandler = useCallback(
     (e: React.MouseEvent) => {
       if (!isDragging || !containerRef.current) return;
       e.preventDefault();
-
       const x = e.pageX - containerRef.current.offsetLeft;
       const walk = (x - startX) * 1.5;
       containerRef.current.scrollLeft = scrollLeft - walk;
@@ -58,10 +64,8 @@ export default function DraggableScrollContainer({
   const touchStartHandler = useCallback((e: React.TouchEvent) => {
     if (!containerRef.current) return;
     setIsDragging(true);
-
     setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
     setScrollLeft(containerRef.current.scrollLeft);
-
     setDistance(0);
   }, []);
 
