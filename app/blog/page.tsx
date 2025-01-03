@@ -43,9 +43,13 @@ export default async function BlogPage() {
           </span>
         </div>
         <DraggableScrollContainer>
-          <div className="flex gap-[15px]  h-fit">
+          <div className="flex gap-[15px] items-stretch">
             {publishedSnippets.map((snippet, index) => (
-              <FadeIn key={index} delay={(index + 1) * 0.2}>
+              <FadeIn
+                key={index}
+                delay={(index + 1) * 0.2}
+                className="flex items-stretch"
+              >
                 <SnippetCard
                   key={snippet.slug}
                   post={snippet}
