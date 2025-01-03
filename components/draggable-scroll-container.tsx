@@ -110,6 +110,7 @@ export default function DraggableScrollContainer({
         scrollBehavior: "auto",
       }}
     >
+      {deviceType}
       {children}
     </div>
   );
