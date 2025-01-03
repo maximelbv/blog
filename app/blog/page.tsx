@@ -11,7 +11,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog - Maxime Lefebvre",
   description:
-    "Collection of tutorials / snippets focused on coding and graphic design",
+    "Hands-on tutorials and snippets to explore coding and graphic design through interactive experiences.",
 };
 
 export default async function BlogPage() {
@@ -33,13 +33,12 @@ export default async function BlogPage() {
       <PageHeader
         title="Blog"
         className="mb-[-5px]"
-        // subtitle="Collection of tutorials / snippets focused on coding, graphic
-        //   design and 3D"
+        subtitle="Hands-on tutorials and snippets to explore coding and graphic design through interactive experiences"
       />
       <div className="flex flex-col gap-[15px]">
         <div className="flex justify-between items-end">
           <span className="text-[20px] px-[10px] py-[5px] bg-secondary w-fit rounded-lg">
-            Snippets
+            Latest Snippets
           </span>
         </div>
         <div className="max-w-[1100px] overflow-x-auto no-scrollbar">
@@ -69,7 +68,7 @@ export default async function BlogPage() {
         </div>
 
         <div className="flex justify-end items-center">
-          <CustomLink href="#" className="text-[18px]">
+          <CustomLink href="/blog/snippets" className="text-[18px]">
             See all snippets →
           </CustomLink>
         </div>
