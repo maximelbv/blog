@@ -14,10 +14,8 @@ export default function DraggableScrollContainer({
 }: DraggableScrollContainerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Type de périphérique (mouse, touch, unknown)
   const [deviceType, setDeviceType] = useState<DeviceType | null>(null);
 
-  // État pour la logique de drag à la souris
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -30,9 +28,6 @@ export default function DraggableScrollContainer({
     setDeviceType(type);
   }, []);
 
-  // --------------------------------------------------
-  // Logique de drag à la souris (réservée au "mouse")
-  // --------------------------------------------------
   const mouseDownHandler = useCallback((e: React.MouseEvent) => {
     if (!containerRef.current) return;
     setIsDragging(true);
@@ -44,7 +39,7 @@ export default function DraggableScrollContainer({
   const mouseMoveHandler = useCallback(
     (e: React.MouseEvent) => {
       if (!isDragging || !containerRef.current) return;
-      e.preventDefault(); // Empêche la sélection de texte
+      e.preventDefault();
       const x = e.pageX - containerRef.current.offsetLeft;
       const walk = (x - startX) * 1.5;
       containerRef.current.scrollLeft = scrollLeft - walk;
@@ -67,7 +62,6 @@ export default function DraggableScrollContainer({
 
   const onClickCapture = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      // Si on a "vraiment" drag, on empêche le clic
       if (distance > DRAG_THRESHOLD) {
         e.preventDefault();
         e.stopPropagation();
@@ -76,11 +70,6 @@ export default function DraggableScrollContainer({
     [distance]
   );
 
-  // --------------------------------------------------
-  // Si le type de périphérique est "mouse",
-  // on utilise nos handlers. Sinon, on rend juste
-  // un conteneur scrollable natif.
-  // --------------------------------------------------
   if (deviceType === "mouse") {
     return (
       <div
@@ -95,16 +84,10 @@ export default function DraggableScrollContainer({
           scrollBehavior: "auto",
         }}
       >
-        {deviceType}
         {children}
       </div>
     );
   }
-
-  // --------------------------------------------------
-  // Sur mobile/tactile (touch) ou en attendant
-  // la détection (null), on laisse un scroll natif
-  // --------------------------------------------------
   return (
     <div
       ref={containerRef}
@@ -113,7 +96,6 @@ export default function DraggableScrollContainer({
         scrollBehavior: "auto",
       }}
     >
-      {deviceType}
       {children}
     </div>
   );
