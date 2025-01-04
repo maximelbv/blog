@@ -14,7 +14,7 @@ export default async function ProjectsPage() {
     projects.filter((project) => project.published)
   );
   const tags = getAllTags(projects);
-
+  console.log(projects);
   return (
     <div className="default-layout px-5 grid gap-[32px] mb-[60px]">
       <PageHeader

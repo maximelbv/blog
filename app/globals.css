@@ -4,11 +4,9 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 234, 50%, 96%;
     --foreground: 0, 0%, 21%;
-    /* --foreground: 229, 19%, 22%; */
     --foreground-alt: 217, 20%, 35%;
-    /* --foreground-alt: 44, 0%, 12%; */
 
     --card: 0 0% 100%;
     --card-foreground: 0, 0%, 20%;
@@ -30,14 +28,15 @@
     --primary: 226, 44%, 73%;
     --primary-foreground: 230, 100%, 65%;
 
-    /* --secondary: 231 47% 97%; */
-    --secondary: 210, 100%, 98%;
+    --secondary: 235, 35%, 93%;
+    --secondary: 235, 42%, 94%;
     --secondary-foreground: 0, 0%, 20%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 228 10% 53%;
 
     --accent: 210 40% 96.1%;
+    --accent: var(--secondary);
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -53,6 +52,15 @@
 
     --logo: 0, 0%, 20%;
     --logo-foreground: 225, 97%, 71%;
+
+    /* logos unhovered de l'illu about: 228°, 10%, 53% */
+    /* --background: 0 0% 100%; */
+    /* --foreground: 231, 8%, 32%; */
+    /* --foreground: 231, 8%, 25%; */
+    /* --foreground: 229, 19%, 22%; */
+    /* --foreground-alt: 44, 0%, 12%; */
+    /* --secondary: 231 47% 97%; */
+    /* --secondary: 210, 100%, 98%; */
   }
 
   .dark {

@@ -1,0 +1,172 @@
+.threejsBox:hover ~ .threejsIcon,
+.threejsIcon:hover {
+  transform: translateY(-2px);
+}
+
+.threejsBox:hover ~ .threejsIcon path,
+.threejsIcon:hover path {
+  stroke: theme("colors.stack.threejs");
+}
+
+.unrealBox:hover ~ .unrealIcon,
+.unrealIcon:hover {
+  transform: translateY(-2px);
+  fill: theme("colors.stack.unreal");
+}
+
+.javascriptBox:hover ~ .javascriptIcon,
+.javascriptIcon:hover {
+  transform: translateY(-2px);
+  fill: theme("colors.stack.javascript");
+  stroke: theme("colors.stack.javascriptStroke");
+}
+
+.figmaBox:hover ~ .figmaIcon,
+.figmaIcon:hover {
+  transform: translateY(-2px);
+}
+
+.figmaBox:hover ~ .figmaIcon .figmaIcon1,
+.figmaIcon:hover .figmaIcon1 {
+  fill: theme("colors.stack.figma1");
+}
+
+.figmaBox:hover ~ .figmaIcon .figmaIcon2,
+.figmaIcon:hover .figmaIcon2 {
+  fill: theme("colors.stack.figma2");
+}
+
+.figmaBox:hover ~ .figmaIcon .figmaIcon3,
+.figmaIcon:hover .figmaIcon3 {
+  fill: theme("colors.stack.figma3");
+}
+
+.figmaBox:hover ~ .figmaIcon .figmaIcon4,
+.figmaIcon:hover .figmaIcon4 {
+  fill: theme("colors.stack.figma4");
+}
+
+.figmaBox:hover ~ .figmaIcon .figmaIcon5,
+.figmaIcon:hover .figmaIcon5 {
+  fill: theme("colors.stack.figma5");
+}
+
+.illustratorBox:hover ~ .illustratorIcon,
+.illustratorIcon:hover {
+  transform: translateY(-2px);
+}
+
+.illustratorBox:hover ~ .illustratorIcon path,
+.illustratorIcon:hover path {
+  fill: theme("colors.stack.illustrator");
+}
+
+.pythonBox:hover ~ .pythonIcon,
+.pythonIcon:hover {
+  transform: translateY(-2px);
+}
+
+.pythonBox:hover ~ .pythonIcon .pythonIcon1,
+.pythonIcon:hover .pythonIcon1 {
+  fill: theme("colors.stack.python1");
+}
+
+.pythonBox:hover ~ .pythonIcon .pythonIcon2,
+.pythonIcon:hover .pythonIcon2 {
+  fill: theme("colors.stack.python2");
+}
+
+.nodejsBox:hover ~ .nodejsIcon,
+.nodejsIcon:hover {
+  transform: translateY(-2px);
+}
+
+.nodejsBox:hover ~ .nodejsIcon .nodejsIcon1,
+.nodejsIcon:hover .nodejsIcon1 {
+  fill: theme("colors.stack.nodejs1");
+}
+
+.nodejsBox:hover ~ .nodejsIcon .nodejsIcon2,
+.nodejsIcon:hover .nodejsIcon2 {
+  fill: theme("colors.stack.nodejs2");
+}
+
+.photoshopBox:hover ~ .photoshopIcon,
+.photoshopIcon:hover {
+  transform: translateY(-2px);
+}
+
+.photoshopBox:hover ~ .photoshopIcon path,
+.photoshopIcon:hover path {
+  fill: theme("colors.stack.photoshop");
+}
+
+.afterEffectBox:hover ~ .afterEffectIcon,
+.afterEffectIcon:hover {
+  transform: translateY(-2px);
+}
+
+.afterEffectBox:hover ~ .afterEffectIcon path,
+.afterEffectIcon:hover path {
+  fill: theme("colors.stack.afterEffect");
+}
+
+.reactBox:hover ~ .reactIcon,
+.reactIcon:hover {
+  transform: translateY(-2px);
+}
+
+.reactBox:hover ~ .reactIcon path,
+.reactIcon:hover path {
+  fill: theme("colors.stack.react");
+}
+
+.typescriptBox:hover ~ .typescriptIcon,
+.typescriptIcon:hover {
+  transform: translateY(-2px);
+  fill: theme("colors.stack.typescript");
+}
+
+.nextjsBox:hover ~ .nextjsIcon,
+.nextjsIcon:hover {
+  transform: translateY(-2px);
+}
+
+.nextjsBox:hover ~ .nextjsIcon path,
+.nextjsIcon:hover path {
+  fill: theme("colors.stack.nextjs");
+}
+
+.djangoBox:hover ~ .djangoIcon,
+.djangoIcon:hover {
+  transform: translateY(-2px);
+  fill: theme("colors.stack.django");
+}
+
+.tensorflowBox:hover ~ .tensorflowIcon,
+.tensorflowIcon:hover {
+  transform: translateY(-2px);
+  fill: theme("colors.stack.tensorflow");
+}
+
+.webflowBox:hover ~ .webflowIcon,
+.webflowIcon:hover {
+  transform: translateY(-2px);
+  fill: theme("colors.stack.webflow");
+}
+
+.blenderBox:hover ~ .blenderIcon,
+.blenderIcon:hover {
+  transform: translateY(-2px);
+  fill: theme("colors.stack.blender");
+}
+
+.gsapBox:hover ~ .gsapIcon,
+.gsapIcon:hover {
+  transform: translateY(-2px);
+}
+
+.gsapBox:hover ~ .gsapIcon path,
+.gsapIcon:hover path {
+  fill: theme("colors.stack.gsap");
+}

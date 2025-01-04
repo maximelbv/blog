@@ -1,6 +1,7 @@
 import AnimatedButon from "@/components/animated-buton";
 import AnimatedText from "@/components/animated-text";
 import PopAnimWraper from "@/components/pop-anim-wraper";
+import AboutIllustration from "@/components/stack-illustration";
 
 export default function Home() {
   return (
