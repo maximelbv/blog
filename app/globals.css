@@ -23,7 +23,7 @@
     --code: 233, 13%, 14%;
     --link: 213, 91%, 45%;
 
-    --highlighted: 210, 80%, 94%;
+    --highlighted: 232, 40%, 91%;
 
     --primary: 226, 44%, 73%;
     --primary-foreground: 230, 100%, 65%;
@@ -32,7 +32,7 @@
     --secondary: 235, 42%, 94%;
     --secondary-foreground: 0, 0%, 20%;
 
-    --muted: 210 40% 96.1%;
+    --muted: var(--secondary);
     --muted-foreground: 228 10% 53%;
 
     --accent: 210 40% 96.1%;

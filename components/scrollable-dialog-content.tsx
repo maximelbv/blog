@@ -33,27 +33,6 @@ export default function ScrollableDialogContent({
         className
       )}
     >
-      <style>
-        {`
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background-color: #3f3f3f;
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: #555;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      .scroll-container {
-        padding-right: 14px;
-        box-sizing: content-box;
-      }
-    `}
-      </style>
       <DialogHeader className="!text-start relative">
         <DialogTitle className="!m-0 bg-background p-[20px] md:p-[50px] !pb-[15px]">
           <div className="flex flex-col gap-[15px]">
