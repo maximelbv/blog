@@ -73,7 +73,10 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   ProjectPageProps["params"][]
 > {
-  return projects.map((project) => ({ slug: project.slugAsParams.split("/") }));
+  return projects.map((project, index) => ({
+    slug: project.slugAsParams.split("/"),
+    key: `project-${index}`,
+  }));
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {

@@ -68,7 +68,10 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  return posts.map((post) => ({ slug: post.slugAsParams.split("/") }));
+  return posts.map((post, index) => ({
+    slug: post.slugAsParams.split("/"),
+    key: `post-${index}`,
+  }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
