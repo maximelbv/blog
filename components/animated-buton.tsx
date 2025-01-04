@@ -14,6 +14,7 @@ interface AnimatedButonProps {
   duration?: number;
   stagger?: number;
   ease?: number[] | string;
+  icon?: React.ReactElement;
 }
 
 const AnimatedButon = ({
@@ -22,6 +23,7 @@ const AnimatedButon = ({
   duration = 0.55,
   stagger = 0.019,
   ease = [0.73, -0.01, 0.01, 1],
+  icon,
 }: AnimatedButonProps) => {
   return (
     <Link href={nav.route}>
@@ -33,6 +35,7 @@ const AnimatedButon = ({
             "font-semibold text-background hover:text-background bg-foreground rounded-full hover:bg-foreground"
           }`}
         >
+          {icon && icon}
           <div className="block relative overflow-hidden whitespace-nowrap">
             <span className="block w-fit">
               {nav.name.split("").map((l, i) => {

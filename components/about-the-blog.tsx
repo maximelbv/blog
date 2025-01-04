@@ -13,9 +13,12 @@ const AboutTheBlog = () => {
         <span className="text-[40px] font-dahliaBold">Blog</span>
         <span className="text-foregroundAlt">
           On my blog i share quick-read snippets and interactive articles about
-          <strong> coding, 3D and motion design</strong>. Don't hesitate to take
-          a look around and let me know if you've learned anything from this
-          blog !
+          <strong className="text-pigment-orange">
+            {" "}
+            coding, 3D and motion design
+          </strong>
+          . Don't hesitate to take a look around and let me know if you've
+          learned anything from this blog !
         </span>
         <AnimatedButon
           nav={{ route: "/blog", name: "Go to the blog" }}

@@ -89,6 +89,8 @@ const config = {
           purple: "hsl(var(--pigment-purple))",
           blue: "hsl(var(--pigment-blue))",
           blueLighter: "hsl(var(--pigment-blue-lighter))",
+          orange: "hsl(var(--pigment-orange))",
+          orangeLighter: "hsl(var(--pigment-orange-lighter))",
           pinker: "hsl(var(--pigment-pinker))",
         },
         primary: {
