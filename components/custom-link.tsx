@@ -6,23 +6,28 @@ const CustomLink = ({
   href,
   children,
   isExternal,
+  isDefaultColor,
   className,
 }: {
   href: string;
   children: React.ReactNode;
   isExternal?: boolean;
   className?: string;
+  isDefaultColor?: boolean;
 }) => {
   return (
     <span className={`${className} mx-0.5 inline-flex items-center gap-0.5`}>
       <Link
         target={isExternal ? "_blank" : ""}
         href={href}
-        className="underline-offset-10 hover:underline no-underline text-link"
+        className={`${
+          isDefaultColor && "!text-foreground"
+        } underline-offset-10 hover:underline no-underline text-link`}
       >
         {children}
       </Link>
-      {isExternal && <Icons.arrowExternalLink />}
+      {isExternal && isDefaultColor && <Icons.arrowExternalLinkDefault />}
+      {isExternal && !isDefaultColor && <Icons.arrowExternalLink />}
     </span>
   );
 };

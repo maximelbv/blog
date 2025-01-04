@@ -23,13 +23,13 @@ export default function Home() {
         <AnimatedText
           text="web developer · motion designer · 3d artist"
           delay={0.5}
-          className="text-foregroundAlt uppercase text-[16px]"
+          className="text-foregroundAlt lowercase text-[17px] mt-[-5px]"
         />
       </div>
 
       <PopAnimWraper
         delay={0.8}
-        className="flex gap-2 items-center justify-center"
+        className="flex gap-1 items-center justify-center"
       >
         <AnimatedButon
           className="mt-4 bg-gradient-to-tr from-pigment-blue to-pigment-blueLighter rounded-full hover:bg-gradient-to-tr hover:from-blue hover:to-pigment-blueLighter text-[#fff] hover:text-[#fff]"
@@ -37,7 +37,7 @@ export default function Home() {
         />
         <AnimatedButon
           className="mt-4 rounded-full"
-          nav={{ route: "/projects", name: "Projects" }}
+          nav={{ route: "/about", name: "About" }}
         />
       </PopAnimWraper>
     </div>

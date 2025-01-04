@@ -1,5 +1,9 @@
 const TechnicalPortrait = () => {
-  return <div>TechnicalPortrait</div>;
+  return (
+    <div className="border-2 border-green-500 default-layout px-[20px]">
+      TechnicalPortrait
+    </div>
+  );
 };
 
 export default TechnicalPortrait;
