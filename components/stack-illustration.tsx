@@ -2152,9 +2152,9 @@ const mid = (
 
 const small = (
   <svg
-    className="small svg"
+    className="small svg max-w-full"
     width="448"
-    height="899"
+    // height="899"
     viewBox="0 0 448 899"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -2958,7 +2958,7 @@ const AboutIllustration: React.FC = () => {
 
   return (
     <>
-      {window.width && window.width >= 1280
+      {window.width && window.width >= 1380
         ? large
         : window.width && window.width >= 900
         ? mid

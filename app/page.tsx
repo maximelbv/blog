@@ -1,7 +1,6 @@
 import AnimatedButon from "@/components/animated-buton";
 import AnimatedText from "@/components/animated-text";
 import PopAnimWraper from "@/components/pop-anim-wraper";
-import AboutIllustration from "@/components/stack-illustration";
 
 export default function Home() {
   return (
@@ -34,11 +33,11 @@ export default function Home() {
       >
         <AnimatedButon
           className="mt-4 bg-gradient-to-tr from-pigment-blue to-pigment-blueLighter rounded-full hover:bg-gradient-to-tr hover:from-blue hover:to-pigment-blueLighter text-[#fff] hover:text-[#fff]"
-          nav={{ route: "/projects", name: "Projects" }}
+          nav={{ route: "/blog", name: "Blog" }}
         />
         <AnimatedButon
           className="mt-4 rounded-full"
-          nav={{ route: "/blog", name: "Blog" }}
+          nav={{ route: "/projects", name: "Projects" }}
         />
       </PopAnimWraper>
     </div>
