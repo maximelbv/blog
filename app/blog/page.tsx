@@ -1,5 +1,4 @@
 import { posts } from "#site/content";
-import AnimatedText from "@/components/animated-text";
 import CustomLink from "@/components/custom-link";
 import DraggableScrollContainer from "@/components/draggable-scroll-container";
 import FadeIn from "@/components/fade-in";

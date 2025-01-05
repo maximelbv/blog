@@ -4,6 +4,7 @@ import { cn, formatDate } from "@/lib/utils";
 import { Icons } from "./icons";
 
 const categoryIcons = {
+  html: Icons.html,
   javascript: Icons.javascript,
   typescript: Icons.typescript,
   threejs: Icons.threejs,

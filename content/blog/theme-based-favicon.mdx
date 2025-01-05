@@ -1,0 +1,26 @@
+---
+title: "Dynamic Favicons Based on Theme"
+type: "snippet"
+description: "How to switch favicons automatically based on light or dark mode."
+date: 2025-01-05
+tags: ["theme", "favicon"]
+category: html
+index: []
+published: true
+---
+
+Did you know you can update your favicon dynamically depending on the user's theme preference? 
+This small trick enhances UX and keeps your branding consistent across light and dark modes.
+
+## How it works
+
+Add these two `<link>{:html}` tags in your HTML `<head>{:html}` section:
+
+```html
+<link href="favicon.png" rel="icon" media="(prefers-color-scheme: light)">
+<link href="favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)">
+```
+
+`media="(prefers-color-scheme: light)"` Uses the light favicon when the user’s device is set to light mode.
+
+`media="(prefers-color-scheme: dark)"` Switches to the dark favicon for dark mode.

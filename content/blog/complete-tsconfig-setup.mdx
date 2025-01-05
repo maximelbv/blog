@@ -1,0 +1,43 @@
+---
+title: "TSconfig essentials"
+type: "snippet"
+description: "A simple and robust TS config to kickstart modern projects"
+date: 2025-01-05
+tags: ["config"]
+category: Typescript
+index: []
+published: true
+---
+
+```json
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* Transpiling with TypeScript: */
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true,
+
+    /* DOM: */
+    "lib": ["es2022", "dom", "dom.iterable"],
+  }
+}
+```
+
+Usefull link : <CustomLink isExternal href='https://www.typescriptlang.org/docs/handbook/tsconfig-json.html'>What is a tsconfig.json</CustomLink>
+
+<SpacerM />
