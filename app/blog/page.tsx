@@ -38,7 +38,7 @@ export default async function BlogPage() {
         className="mb-[-5px]"
         subtitle="Hands-on tutorials and snippets to explore coding and graphic design through interactive experiences"
       />
-      <div className="flex flex-col gap-[15px] responsive-carousel">
+      <div className="relative flex flex-col gap-[15px] responsive-carousel">
         <FadeIn>
           <div className="flex justify-between items-end">
             <span className="text-[20px] px-[10px] py-[5px] bg-secondary w-fit rounded-lg">
@@ -46,24 +46,28 @@ export default async function BlogPage() {
             </span>
           </div>
         </FadeIn>
-
-        <DraggableScrollContainer>
-          <div className="flex gap-[15px] items-stretch">
-            {publishedLatestSnippets.map((snippet, index) => (
-              <FadeIn
-                key={index}
-                delay={(index + 1) * 0.2}
-                className="flex items-stretch"
-              >
-                <SnippetCard
-                  key={snippet.slug}
-                  post={snippet}
-                  className="min-w-[300px]"
-                />
-              </FadeIn>
-            ))}
-          </div>
-        </DraggableScrollContainer>
+        <div className="relative">
+          <FadeIn>
+            <div className="absolute z-50 right-0 top-1/2 h-[100%] w-[5px] bg-border transform -translate-y-1/2 rounded-full" />
+          </FadeIn>
+          <DraggableScrollContainer>
+            <div className="flex gap-[15px] items-stretch">
+              {publishedLatestSnippets.map((snippet, index) => (
+                <FadeIn
+                  key={index}
+                  delay={(index + 1) * 0.2}
+                  className="flex items-stretch"
+                >
+                  <SnippetCard
+                    key={snippet.slug}
+                    post={snippet}
+                    className="min-w-[300px]"
+                  />
+                </FadeIn>
+              ))}
+            </div>
+          </DraggableScrollContainer>
+        </div>
 
         <div className="flex justify-end items-center">
           <FadeIn>
