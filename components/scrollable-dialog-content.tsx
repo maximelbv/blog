@@ -34,7 +34,7 @@ export default function ScrollableDialogContent({
       )}
     >
       <DialogHeader className="!text-start relative">
-        <DialogTitle className="!m-0 bg-background p-[20px] md:p-[75px] !pb-[15px]">
+        <DialogTitle className="!m-0 bg-background p-[20px] md:p-[75px] !pb-[0px] leading-[1.3]">
           <div className="flex flex-col gap-[15px]">
             <PostInfos
               className="mb-[-5px]"

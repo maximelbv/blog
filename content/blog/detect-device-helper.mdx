@@ -1,0 +1,53 @@
+---
+title: "TypeScript helper to detect device type"
+type: "snippet"
+description: "A simple copy-paste typescript helper to detect the device type."
+date: 2025-01-05
+tags: ["helper", "device"]
+category: Typescript
+published: true
+---
+This TypeScript helper provides a simple way to distinguish between mouse and touch-based devices.
+Works client-side with a fallback for server-side rendering.
+
+
+```ts
+const DEVICE_MOUSE = "mouse";
+const DEVICE_TOUCH = "touch";
+
+type DeviceType = typeof DEVICE_MOUSE | typeof DEVICE_TOUCH;
+
+function isClient(): boolean {
+  return typeof window !== "undefined";
+}
+
+export function getDeviceType(): DeviceType {
+  if (!isClient()) {
+    return DEVICE_MOUSE;
+  }
+
+  const isMouse = window.matchMedia("(pointer: fine)").matches;
+
+  return isMouse ? DEVICE_MOUSE : DEVICE_TOUCH;
+}
+```
+
+## How to use (example with React)
+
+```tsx
+import { getDeviceType } from "./deviceHelper";
+
+export const DeviceMessage = () => {
+    const device = getDeviceType();
+
+    return (
+      <p>
+        {device === "mouse"
+          ? "You are on a desktop or laptop."
+          : "You are on a touch device."}
+      </p>
+    );
+  };
+```
+
+<SpacerM />
