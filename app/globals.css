@@ -125,7 +125,7 @@
 
   .article-layout {
     /* @apply max-w-[675px] mx-auto; */
-    @apply max-w-[750px] mx-auto;
+    @apply max-w-[700px] mx-auto;
   }
 
   .project-layout {

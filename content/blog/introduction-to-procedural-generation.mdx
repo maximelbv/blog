@@ -14,23 +14,23 @@ Have you ever wondered, “How does games like Minecraft create unique and infin
 design every detail by hand for each ?” <br /> 
 The answer is no, thankfully.
 
-<SpacerS />
+<SpacerM />
 
 They use a technique called **procedural generation**. Simply put, it’s a method that uses 
 algorithms to automatically generate complex and varied content. 
 
-<SpacerS />
+<SpacerM />
 
 In video games, procedural generation is used for a wide range of tasks: creating realistic 
 textures, generating landscapes, designing NPC behavior, populating dungeons, simulating dynamic 
 weather systems, etc ...
 
-<SpacerS />
+<SpacerM />
 
 This technology enables developers to build vast and immersive worlds that feel alive and varied 
 with minimal manual effort.
 
-<SpacerS />
+<SpacerM />
 
 So, how does it work ? 
 
@@ -45,11 +45,11 @@ not just any kind of randomness. For many applications, pure
 randomness is too chaotic and disconnected. What we often need is **randomness with 
 structure**, a type of controlled variation that feels smooth and natural.
 
-<SpacerS />
+<SpacerM />
 
 <BarChartRandom />
 
-<SpacerS />
+<SpacerM />
 
 Take the example above, the chart illustrates pure random values. 
 These values are entirely **independent of each other**, resulting in 
@@ -57,18 +57,18 @@ abrupt changes. While this type of randomness can
 be useful in certain scenarios, it often falls short when it comes to 
 simulating natural or organic patterns.
 
-<SpacerS />
+<SpacerM />
 
 <BarChartProcedural />
 
-<SpacerS />
+<SpacerM />
 
 This chart showcases a more structured approach known as **Perlin noise**, 
 a technique among others that introduces a sense of continuity. By ensuring 
 **neighboring values are similar**, it produces smoother transitions that are ideal 
 for generating lifelike textures, flowing landscapes, and organic forms.
 
-<SpacerS />
+<SpacerM />
 
 ## The Perlin Noise
 
@@ -76,7 +76,7 @@ The Perlin noise is one of the most popular algorithms for procedural generation
 Its ability to produce smooth and continuous variations 
 has made it a solution for many applications, let’s take a closer look at how it works:
 
-<SpacerS />
+<SpacerM />
 
 
 On a digital canvas, each pixel is assigned a brightness value **between 0 and 100**, 
@@ -84,16 +84,16 @@ with 0 representing pure black and 100 pure white. However, as we’ve seen, it�
 not just about assigning random values to each pixel. There’s a gradual transition 
 between neighboring values, creating smooth changes across the canvas :
 
-<SpacerS />
+<SpacerM />
 
 <PerlinNoiseGenerator />
 
-<SpacerS />
+<SpacerM />
 
 If you want to dive deeper into Perlin noise and understand how it's generated, 
 I recommend reading <CustomLink isExternal href="https://rtouti.github.io/graphics/perlin-noise-algorithm">this article</CustomLink>from Raouf Touti.
 
-<SpacerS />
+<SpacerM />
 
 We will use this algorithm for the next steps, but be aware that many others exist for various purposes.
 
@@ -103,7 +103,7 @@ We will use this algorithm for the next steps, but be aware that many others exi
 Have you noticed the _"seed"_ field with a value of 42 in the component above? <br />
 Try changing it and see what happens.
 
-<SpacerS />
+<SpacerM />
 
 When you alter the seed, the generated noise shifts entirely. This happens because the 
 seed acts as the starting point for the random number generator that powers the procedural 
@@ -136,7 +136,7 @@ recommande vivement d'aller plus loin dans votre apprentissage et de tenter de f
 procédurale par vous même, vous trouverez une infinité de ressources sur internet pour tout 
 les niveaux et toutes les applications !
 
-<SpacerS />
+<SpacerM />
 
 En attendant, si vous voulez tester vos conaissances acquises sur cet article, vous pouvez
 tenter de faire un perfect sur ce quizz :

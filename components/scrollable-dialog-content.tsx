@@ -24,7 +24,7 @@ export default function ScrollableDialogContent({
       // style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       className={cn(
         "!fixed !top-1/2 !left-1/2 !translate-x-[-50%] !translate-y-[-50%] !w-auto !max-w-none",
-        "!w-[90%] !max-w-[750px]",
+        "!w-[90%] !max-w-[700px]",
         "!h-[85svh] md:!h-[80svh] md:!max-h-[80svh]",
         "!p-0",
         "!block",

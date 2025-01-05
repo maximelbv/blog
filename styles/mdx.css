@@ -1,5 +1,5 @@
 [data-rehype-pretty-code-figure] {
-  @apply my-6 max-w-[750px] mx-auto;
+  @apply my-6 max-w-[700px] mx-auto;
 }
 
 [data-rehype-pretty-code-figure] pre {
@@ -114,11 +114,11 @@ ol code {
 }
 
 h1 {
-  @apply mt-[4rem] mb-2 max-w-[750px] mx-auto !important;
+  @apply mt-[4rem] mb-2 max-w-[700px] mx-auto !important;
 }
 
 h2 {
-  @apply mt-[1.5rem] mb-1 max-w-[750px] mx-auto !important;
+  @apply mt-[1.5rem] mb-1 max-w-[700px] mx-auto !important;
 }
 
 h1 a {
@@ -134,12 +134,12 @@ h3 a {
 }
 
 p {
-  @apply !text-[19px] !font-gelica !font-medium !leading-[1.8rem] !m-auto text-foregroundAlt max-w-[750px] mx-auto;
+  @apply !text-[19px] !font-gelica !font-medium !leading-[2rem] !m-auto text-foregroundAlt max-w-[700px] mx-auto;
 }
 
 ul,
 ol {
-  @apply pl-5 my-4 text-[18px] max-w-[750px] mx-auto !important;
+  @apply pl-5 my-4 text-[18px] max-w-[700px] mx-auto !important;
 }
 
 ul p {
