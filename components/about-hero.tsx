@@ -14,7 +14,7 @@ const AboutHero = () => {
            with a passion for Data, 3D and Motion design
         </span>
         <div className="flex flex-col gap-[3px]">
-          <span className="text-[17px] text-foregroundAlt">
+          <span className="text-[17px] text-muted-foreground">
             Formerly at{" "}
             <CustomLink
               isExternal={true}
@@ -25,7 +25,7 @@ const AboutHero = () => {
               Welbees
             </CustomLink>
           </span>
-          <span className="text-[17px] leading-[1.8] text-foregroundAlt">
+          <span className="text-[17px] leading-[1.8] text-muted-foreground">
             Graduated from{" "}
             <CustomLink
               isExternal={true}

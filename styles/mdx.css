@@ -134,7 +134,7 @@ h3 a {
 }
 
 p {
-  @apply !text-[19px] !font-gelica !font-medium !leading-[2rem] !m-auto text-foregroundAlt max-w-[700px] mx-auto;
+  @apply !text-[20px] !font-gelica !font-medium !leading-[2rem] !m-auto text-foregroundAlt max-w-[700px] mx-auto;
 }
 
 ul,
