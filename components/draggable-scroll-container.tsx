@@ -77,7 +77,6 @@ export default function DraggableScrollContainer({
           scrollBehavior: "auto",
         }}
       >
-        {deviceType}
         {children}
       </div>
     );
@@ -90,7 +89,6 @@ export default function DraggableScrollContainer({
         scrollBehavior: "auto",
       }}
     >
-      {deviceType}
       {children}
     </div>
   );
