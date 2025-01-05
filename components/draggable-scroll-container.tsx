@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeviceType } from "@/lib/detect-device-type";
+import { getDeviceType } from "@/lib/detect-device-type";
 import React, { useRef, useState, useCallback, useEffect } from "react";
 
 type DraggableScrollContainerProps = {
@@ -17,7 +17,7 @@ export default function DraggableScrollContainer({
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [distance, setDistance] = useState(0);
-  const { deviceType, isMouseDevice } = useDeviceType();
+  const deviceType = getDeviceType();
 
   const DRAG_THRESHOLD = 5;
 
@@ -63,7 +63,7 @@ export default function DraggableScrollContainer({
     [distance]
   );
 
-  if (isMouseDevice) {
+  if (deviceType === "mouse") {
     return (
       <div
         ref={containerRef}
