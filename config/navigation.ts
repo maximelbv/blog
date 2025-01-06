@@ -11,11 +11,11 @@ export const navigation = [
     name: "About",
     route: "/about",
   },
-  {
-    name: "Motion Lab ↗",
-    route: "https://labs.maximelbv.com",
-    isExternal: true,
-  },
+  // {
+  //   name: "Motion Lab ↗",
+  //   route: "https://labs.maximelbv.com",
+  //   isExternal: true,
+  // },
   {
     name: "Contact",
     route: "mailto:contact@maximelbv.com",

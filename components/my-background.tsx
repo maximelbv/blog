@@ -1,9 +1,5 @@
 const MyBackground = () => {
-  return (
-    <div className="border-2 border-orange-500 default-layout px-[20px]">
-      MyBackground
-    </div>
-  );
+  return <div className="default-layout px-[20px] mt-[50px]">MyBackground</div>;
 };
 
 export default MyBackground;

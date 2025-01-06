@@ -1,8 +1,6 @@
 const PersonalPortrait = () => {
   return (
-    <div className="border-2 border-blue-500 default-layout px-[20px]">
-      PersonalPortrait
-    </div>
+    <div className="default-layout px-[20px] mt-[50px]">PersonalPortrait</div>
   );
 };
 
