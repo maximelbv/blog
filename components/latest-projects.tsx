@@ -22,7 +22,7 @@ export default async function LatestProjects() {
         </span>
       </FadeIn>
 
-      <div className="grid row-gap w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid row-gap w-full grid-cols-1 md:grid-cols-3 gap-6">
         {publishedPosts.map((post, index) => (
           <FadeIn key={index} delay={(index + 1) * 0.2}>
             <PostCard key={post.slug} post={post} />

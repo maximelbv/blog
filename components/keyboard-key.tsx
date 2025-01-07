@@ -26,12 +26,12 @@ const KeyboardKey = ({ value }: { value: string }) => {
   return (
     <span
       className="h-6 text-foregroundAlt inline-flex items-center justify-center bg-muted border-[1px] 
-      border-border rounded-md leading-none py-0.5 px-1 text-[14px] font-semibold"
+      border-border rounded-md leading-none py-0.5 px-1 text-[14px] font-medium shadow-[2.5px_3px_0px_0px] shadow-border"
     >
       <span className="flex items-center min-h-[1.5rem]">
         {specialChar ? (
           <>
-            <span className="mr-2 flex items-center">{specialChar.icon}</span>
+            <span className="mr-1 flex items-center">{specialChar.icon}</span>
             <span className="align-middle">{value}</span>
           </>
         ) : (
