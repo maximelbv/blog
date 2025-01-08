@@ -80,7 +80,7 @@ const LeetcodeStats = () => {
           ) : (
             <Icons.loading />
           )}
-          <p className="text-[14px] text-muted-foreground">solved</p>
+          <p className="!text-[14px] text-muted-foreground">solved</p>
         </div>
       </div>
       <div className="mt-[-10%] text-[18px] text-foreground">
