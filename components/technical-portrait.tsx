@@ -1,5 +1,4 @@
 import Image from "next/image";
-import CustomImage from "./custom-image";
 import { Icons } from "./icons";
 import LeetcodeStats from "./leetcode-stats";
 
@@ -18,7 +17,7 @@ const TechnicalPortrait = async () => {
           />
         </div>
         <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center "></div>
-        <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center hover:bg-muted-foreground">
+        <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center hover:bg-muted-foreground/10">
           <LeetcodeStats />
         </div>
       </div>
