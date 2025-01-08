@@ -1,58 +1,56 @@
-import { LeetCode } from "leetcode-query";
+"use client";
+import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import Link from "next/link";
 
-interface ISubmissionsCounts {
-  easy: number | null;
-  medium: number | null;
-  hard: number | null;
-  all: number | null;
-}
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-const fetchLeetcodeStats = async () => {
-  const leetcode = new LeetCode();
-  const user = await leetcode.user("maximelbv");
-  if (user.matchedUser) {
-    const stats = user.matchedUser.submitStats.acSubmissionNum;
-    return {
-      all: stats.find((item) => item.difficulty === "All")?.count || 0,
-      easy: stats.find((item) => item.difficulty === "Easy")?.count || 0,
-      medium: stats.find((item) => item.difficulty === "Medium")?.count || 0,
-      hard: stats.find((item) => item.difficulty === "Hard")?.count || 0,
-    };
-  }
-  return { all: null, easy: null, medium: null, hard: null };
-};
+const LeetcodeStats = ({ solved = 18, total = 50 }) => {
+  const data = {
+    datasets: [
+      {
+        data: [18, 10, 8],
+        backgroundColor: ["#4caf50", "#FFB700", "#F53837"],
+        borderRadius: 8,
+        borderWidth: 0,
+        spacing: 5,
+        cutout: "75%",
+      },
+    ],
+  };
 
-const LeetcodeStats = async () => {
-  const submissionsCounts: ISubmissionsCounts = await fetchLeetcodeStats();
+  const options = {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    maintainAspectRatio: false,
+    rotation: -135,
+    circumference: 270,
+  };
 
   return (
-    <div className="h-full p-[15px] flex flex-col">
-      <span className="h-full flex flex-col text-muted-foreground text-[18px]">
+    <Link
+      target="_blank"
+      href="https://leetcode.com/u/maximelbv/"
+      className="w-full flex flex-col items-center justify-center"
+    >
+      <div className="relative flex flex-col w-[85%] h-[85%] aspect-square items-center justify-center">
+        <Doughnut
+          className="w-full h-full mb-[10%]"
+          data={data}
+          options={options}
+        />
+        <div className="absolute text-center">
+          <span className="text-[40px] leading-[1] font-bold">{solved}</span>
+          <p className="text-[14px] text-muted-foreground">solved</p>
+        </div>
+      </div>
+      <div className="mt-[-10%] text-[18px] text-foregroundAlt">
         Leetcode Stats
-      </span>
-      <div className="text-[24px]">
-        <span className="text-foreground">
-          {submissionsCounts.all ?? "NaN"}
-        </span>
-        <span className="text-muted-foreground"> problems solved</span>
       </div>
-      <div className="grid grid-cols-3 gap-[10px] justify-self-end">
-        <div className="py-[2px] flex flex-col items-center justify-center rounded-md text-green-500">
-          <span className="text-[20px]">{submissionsCounts.easy ?? "NaN"}</span>
-          <span> Easy</span>
-        </div>
-        <div className="py-[2px] flex flex-col items-center justify-center rounded-md text-amber-500">
-          <span className="text-[20px]">
-            {submissionsCounts.medium ?? "NaN"}
-          </span>
-          <span> Medium</span>
-        </div>
-        <div className="py-[2px] flex flex-col items-center justify-center rounded-md text-red-500">
-          <span className="text-[20px]">{submissionsCounts.hard ?? "NaN"}</span>
-          <span> Hard</span>
-        </div>
-      </div>
-    </div>
+    </Link>
   );
 };
 

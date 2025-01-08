@@ -7,7 +7,6 @@ import TechnicalPortrait from "@/components/technical-portrait";
 const AboutPage = () => {
   return (
     <>
-      {/* <AboutHero /> */}
       <div className="flex flex-col items-center justify-center mt-[50px]">
         <h1 className="flex !m-0">
           <AnimatedText
