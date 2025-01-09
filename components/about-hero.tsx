@@ -7,7 +7,7 @@ import AnimatedElement from "./animated-element";
 
 const AboutHero = () => {
   return (
-    <div className="default-layout px-[20px] flex flex-col-reverse lg:flex-row items-center justify-center mt-[50px]">
+    <div className="default-layout px-[20px] flex flex-col-reverse lg:flex-row items-center justify-center">
       <div className="flex flex-col gap-[10px] max-w-[600px]">
         <AnimatedElement>
           <span className="text-[24px] md:text-[28px]">
