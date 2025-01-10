@@ -1680,6 +1680,7 @@ export const Icons = {
       viewBox="0 0 250 316"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-[100%] h-auto"
     >
       <rect
         x="0.0117188"
@@ -1789,6 +1790,7 @@ export const Icons = {
       viewBox="0 0 249 315"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-[100%] h-auto"
     >
       <rect
         width="249"
