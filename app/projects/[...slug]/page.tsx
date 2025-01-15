@@ -17,6 +17,8 @@ import SlideIn from "@/components/slide-in";
 import AnimatedText from "@/components/animated-text";
 import FadeIn from "@/components/fade-in";
 import Image from "next/image";
+import { getIconFromString } from "@/lib/icon-helper";
+import CustomLink from "@/components/custom-link";
 
 interface ProjectPageProps {
   params: {
@@ -112,7 +114,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </div>
 
       <div className="grid gap-20 p-0 py-0 my-[40px]">
-        <div className="grid items-center justify-center">
+        <div className="grid items-center justify-center max-w-[100svw]">
           {project.logo && (
             <FadeIn>
               <div className="flex items-center justify-center">
@@ -138,8 +140,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               text={project.description}
             ></AnimatedText>
           )}
-          <FadeIn>
-            <div className="mt-20 flex justify-between gap-6">
+          <FadeIn className="max-w-[90svw]">
+            <div className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:flex flex-wrap items-center justify-between gap-6 w-[80svw]">
               {project.category && (
                 <div className="grid gap-3">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
@@ -158,6 +160,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   </span>
                 </div>
               )}
+              {project.stack && (
+                <div className="grid gap-3">
+                  <span className="text-foregroundAlt text-[18px] opacity-65">
+                    stack
+                  </span>
+                  <div className="text-[18px] flex gap-[5px]">
+                    {project.stack.map((techno: string) =>
+                      getIconFromString(techno)
+                    )}
+                  </div>
+                </div>
+              )}
               {project.date && (
                 <div className="grid gap-3">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
@@ -166,6 +180,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <span className="text-[18px]">
                     {formatDateToMonthYear(project.date)}
                   </span>
+                </div>
+              )}
+              {project.link && (
+                <div className="grid gap-3">
+                  <span className="text-foregroundAlt text-[18px] opacity-65">
+                    link
+                  </span>
+                  <CustomLink
+                    href={project.link}
+                    isExternal={true}
+                    className="text-[18px]"
+                  >
+                    {project.title}
+                  </CustomLink>
                 </div>
               )}
             </div>

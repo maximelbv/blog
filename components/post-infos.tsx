@@ -1,32 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn, formatDate } from "@/lib/utils";
-import { Icons } from "./icons";
-
-const categoryIcons = {
-  html: Icons.html,
-  javascript: Icons.javascript,
-  typescript: Icons.typescript,
-  threejs: Icons.threejs,
-  git: Icons.git,
-  nestjs: Icons.nestjs,
-  nextjs: Icons.nextjs,
-  docker: Icons.docker,
-  python: Icons.python,
-  blender: Icons.blender,
-  nodejs: Icons.nodejs,
-  unreal: Icons.unreal,
-  tools: Icons.tools,
-  computerGraphics: Icons.computerGraphics,
-  figma: Icons.figma,
-  react: Icons.react,
-};
-
-type Category = keyof typeof categoryIcons;
-
-function isCategory(category: string): category is Category {
-  return category in categoryIcons;
-}
+import { getIconFromString } from "@/lib/icon-helper";
 
 const postInfosVariants = cva(
   "flex items-center justify-start gap-4 mb-[-18px]",
@@ -57,19 +32,13 @@ function PostInfos({
   date,
   ...props
 }: PostInfosProps) {
-  const formatedCategoryString = category
-    .toLowerCase()
-    .replace(/ (\w)/g, (_, c) => c.toUpperCase());
-  const CategoryIcon = isCategory(formatedCategoryString)
-    ? categoryIcons[formatedCategoryString]
-    : null;
   return (
     <div
       className={cn(postInfosVariants({ variant }), className, "gap-2")}
       {...props}
     >
       <div className="flex items-center justify-center gap-2">
-        {CategoryIcon && <CategoryIcon />}
+        <div>{getIconFromString(category)}</div>
         <span className="uppercase text-foregroundAlt font-semibold tracking-[1px]">
           {category}
         </span>

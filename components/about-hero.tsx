@@ -4,10 +4,11 @@ import Link from "next/link";
 import FadeIn from "./fade-in";
 import AnimatedText from "./animated-text";
 import AnimatedElement from "./animated-element";
+import Image from "next/image";
 
 const AboutHero = () => {
   return (
-    <div className="default-layout px-[20px] flex flex-col-reverse lg:flex-row items-center justify-center">
+    <div className="default-layout px-[20px] grid grid-cols-2 flex-col-reverse lg:flex-row items-center justify-between">
       <div className="flex flex-col gap-[10px] max-w-[600px]">
         <AnimatedElement>
           <span className="text-[24px] md:text-[28px]">
@@ -67,7 +68,15 @@ const AboutHero = () => {
           </div>
         </AnimatedElement>
       </div>
-      <div className="w-full max-w-full aspect-square bg-secondary"></div>
+      <div className="w-full max-w-full aspect-square p-[75px]">
+        <FadeIn className="relative w-full h-full">
+          <Image
+            alt="profile-picture"
+            layout="fill"
+            src="/images/profile-pic.svg"
+          />
+        </FadeIn>
+      </div>
     </div>
   );
 };

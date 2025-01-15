@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import ImagePlaceholder from "./image-placeholder";
 import BlurImage from "./blur-image";
-import PostInfos from "./post-infos";
 import FadeIn from "./fade-in";
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -13,6 +12,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
     date,
     published,
     category,
+    stack,
+    link,
     body,
     description,
     index,

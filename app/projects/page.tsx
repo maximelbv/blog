@@ -1,7 +1,7 @@
 import { projects } from "#site/content";
 import PageHeader from "@/components/page-header";
 import ProjectCard from "@/components/project-card";
-import { getAllTags, sortPosts } from "@/lib/utils";
+import { sortPosts } from "@/lib/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +13,6 @@ export default async function ProjectsPage() {
   const publishedProjects = sortPosts(
     projects.filter((project) => project.published)
   );
-  const tags = getAllTags(projects);
   return (
     <div className="default-layout px-5 grid gap-[32px] mb-[60px]">
       <PageHeader

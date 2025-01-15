@@ -47,6 +47,8 @@ const projects = defineCollection({
       date: s.isodate(),
       published: s.boolean().default(true),
       category: s.string(),
+      stack: s.array(s.string()).optional(),
+      link: s.string().optional(),
       type: s.string(),
       index: s
         .array(
