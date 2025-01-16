@@ -2,7 +2,7 @@ const MyBackground = () => {
   return (
     <div className="default-layout px-[20px] flex flex-col gap-[15px]">
       <span className="text-[20px] bg-secondary px-[10px] py-[5px] w-fit rounded-lg">
-        Background
+        Educational & Professional Background
       </span>
       <div className="-my-6">
         <div className="relative pl-8 sm:pl-32 py-6 group">
@@ -21,7 +21,7 @@ const MyBackground = () => {
             In 2013, I began general secondary school with the aim of pursuing a
             technological baccalaureate in STI2D (Science and Technologies of
             Industry and Sustainable Development). However, the following year,
-            I chose to explore a different direction.
+            i chose to explore a different direction.
           </div>
         </div>
 
@@ -40,7 +40,7 @@ const MyBackground = () => {
           <div className="text-foregroundAlt">
             I started a vocational program in the culinary arts and earned my
             BEP in 2016. While this experience was valuable and enriching, it
-            helped me discover that this was not the career path I wanted to
+            helped me discover that this was not the career path i wanted to
             follow.
           </div>
         </div>
@@ -56,7 +56,7 @@ const MyBackground = () => {
             <div className="text-xl font-bold">📦 Order picking at Celio</div>
           </div>
           <div className="text-foregroundAlt">
-            From 2016 to 2021, I worked as an order picker at a Celio warehouse
+            From 2016 to 2021, i worked as an order picker at a Celio warehouse
             near my parents' home. While it wasn’t the most glamorous job, it
             instilled in me a strong work ethic and an appreciation for the
             value of hard work.
@@ -76,7 +76,7 @@ const MyBackground = () => {
             </div>
           </div>
           <div className="text-foregroundAlt">
-            After over three years working in a factory, I decided to take
+            After over three years working in a factory, i decided to take
             charge of my future by enrolling in an online training program on
             the OpenClassrooms platform to learn programming. Earning my
             certifications confirmed my passion for this field and solidified my
@@ -96,7 +96,7 @@ const MyBackground = () => {
             </div>
           </div>
           <div className="text-foregroundAlt">
-            At the end of 2022, I was admitted to l'École Multimédia to pursue a
+            At the end of 2022, i was admitted to l'École Multimédia to pursue a
             combined Bachelor's and Master's program in a work-study format.
             Welbees, a start-up specializing in occupational health and safety
             in the aviation industry, welcomed me into their team for a two-year

@@ -30,6 +30,9 @@ const AboutPage = () => {
         <Divider />
       </div>
       <MyBackground />
+      <div className="default-layout px-[20px]">
+        <Divider />
+      </div>
       <PersonalPortrait />
     </>
   );
