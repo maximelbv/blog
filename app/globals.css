@@ -27,6 +27,8 @@
     --link: 213, 91%, 45%;
 
     --highlighted: 232, 40%, 91%;
+    --highlighted-foreground: 235, 9%, 57%;
+    --highlighted-foregroundLight: 235, 18%, 72%;
     --highlighted-dark: 235, 20%, 83%;
 
     --primary: 226, 44%, 73%;
@@ -88,6 +90,8 @@
     --code: 220, 24%, 10%;
 
     --highlighted: 227, 20%, 18%;
+    --highlighted-foreground: 233, 15%, 77%;
+    --highlighted-foregroundLight: 235, 8%, 52%;
     --highlighted-dark: 224, 21%, 22%;
 
     --primary: 216, 47%, 32%;

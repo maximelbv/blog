@@ -1850,7 +1850,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M38.5556 3L7.44444 3C4.98985 3 3 4.98985 3 7.44444L3 38.5556C3 41.0102 4.98985 43 7.44444 43L38.5556 43C41.0102 43 43 41.0102 43 38.5556L43 7.44444C43 4.98985 41.0102 3 38.5556 3Z"
         stroke="#BBBDCD"
         stroke-width="4.80413"
@@ -1858,7 +1858,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M20.7793 16.3333H29.6682C30.8469 16.3333 31.9774 15.8651 32.8109 15.0316C33.6444 14.1981 34.1126 13.0676 34.1126 11.8889V3"
         stroke="#BBBDCD"
         stroke-width="4.80413"
@@ -1866,7 +1866,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M16.3312 20.7756C18.7858 20.7756 20.7756 18.7858 20.7756 16.3312C20.7756 13.8766 18.7858 11.8867 16.3312 11.8867C13.8766 11.8867 11.8867 13.8766 11.8867 16.3312C11.8867 18.7858 13.8766 20.7756 16.3312 20.7756Z"
         stroke="#BBBDCD"
         stroke-width="4.80413"
@@ -1874,7 +1874,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M11.8867 42.9993L11.8867 34.1105C11.8867 32.9317 12.355 31.8013 13.1885 30.9678C14.022 30.1343 15.1524 29.666 16.3312 29.666H25.2201"
         stroke="#BBBDCD"
         stroke-width="4.80413"
@@ -1882,7 +1882,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M29.6651 34.1135C32.1197 34.1135 34.1096 32.1237 34.1096 29.6691C34.1096 27.2145 32.1197 25.2246 29.6651 25.2246C27.2105 25.2246 25.2207 27.2145 25.2207 29.6691C25.2207 32.1237 27.2105 34.1135 29.6651 34.1135Z"
         stroke="#BBBDCD"
         stroke-width="4.80413"
@@ -1905,7 +1905,7 @@ export const Icons = {
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
       />
       <path
         d="M27.0827 20.8327L8.33268 20.8327C7.22761 20.8327 6.16781 20.3937 5.3864 19.6123C4.605 18.8309 4.16602 17.7711 4.16602 16.666L4.16602 8.33268C4.16602 7.22761 4.605 6.16781 5.3864 5.3864C6.16781 4.605 7.22761 4.16602 8.33268 4.16602L27.0827 4.16602C27.6352 4.16602 28.1651 4.38551 28.5558 4.77621C28.9465 5.16691 29.166 5.69681 29.166 6.24935V18.7493C29.166 19.3019 28.9465 19.8318 28.5558 20.2225C28.1651 20.6132 27.6352 20.8327 27.0827 20.8327ZM27.0827 20.8327L25.3952 27.5868C25.2827 28.0377 25.0227 28.4381 24.6566 28.7242C24.2904 29.0104 23.8391 29.1659 23.3743 29.166L16.666 29.166"
@@ -1913,7 +1913,7 @@ export const Icons = {
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
       />
       <path
         d="M29.168 8.33398H35.418C35.9705 8.33398 36.5004 8.55348 36.8911 8.94418C37.2818 9.33488 37.5013 9.86478 37.5013 10.4173V14.584C37.5013 15.1365 37.2818 15.6664 36.8911 16.0571C36.5004 16.4478 35.9705 16.6673 35.418 16.6673H29.168"
@@ -1921,7 +1921,7 @@ export const Icons = {
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
       />
       <path
         d="M37.502 12.5L45.8353 12.5"
@@ -1929,7 +1929,7 @@ export const Icons = {
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
       />
       <path
         d="M10.4186 20.834L6.25195 37.5007"
@@ -1937,7 +1937,7 @@ export const Icons = {
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
       />
       <path
         d="M14.584 37.5007L18.7507 20.834"
@@ -1945,7 +1945,7 @@ export const Icons = {
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
       />
     </svg>
   ),
@@ -1958,28 +1958,28 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M43.75 16.6657C43.7492 15.935 43.5564 15.2173 43.1907 14.5847C42.825 13.9521 42.2995 13.4268 41.6667 13.0615L27.0833 4.72815C26.4499 4.36245 25.7314 4.16992 25 4.16992C24.2686 4.16992 23.5501 4.36245 22.9167 4.72815L8.33333 13.0615C7.70055 13.4268 7.17496 13.9521 6.80929 14.5847C6.44363 15.2173 6.25075 15.935 6.25 16.6657L6.25 33.3323C6.25075 34.063 6.44363 34.7806 6.80929 35.4132C7.17496 36.0458 7.70055 36.5711 8.33333 36.9365L22.9167 45.2698C23.5501 45.6355 24.2686 45.828 25 45.828C25.7314 45.828 26.4499 45.6355 27.0833 45.2698L41.6667 36.9365C42.2995 36.5711 42.825 36.0458 43.1907 35.4132C43.5564 34.7806 43.7492 34.063 43.75 33.3323V16.6657Z"
         stroke="#BBBDCD"
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M6.87695 14.582L25.002 24.9987L43.127 14.582"
         stroke="#BBBDCD"
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M25 45.8333V25"
         stroke="#BBBDCD"
         stroke-width="4.16667"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
     </svg>
   ),
@@ -1992,52 +1992,52 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M25.0013 16.6673V8.33398H16.668"
         stroke="#BBBDCD"
         stroke-width="3.90576"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M37.5007 16.668H12.5007C10.1995 16.668 8.33398 18.5334 8.33398 20.8346L8.33398 37.5013C8.33398 39.8025 10.1995 41.668 12.5007 41.668H37.5007C39.8018 41.668 41.6673 39.8025 41.6673 37.5013V20.8346C41.6673 18.5334 39.8018 16.668 37.5007 16.668Z"
         stroke="#BBBDCD"
         stroke-width="3.90576"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M4.16797 29.168H8.33464"
         stroke="#BBBDCD"
         stroke-width="3.90576"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M41.668 29.168H45.8346"
         stroke="#BBBDCD"
         stroke-width="3.90576"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M31.252 27.084V31.2507"
         stroke="#BBBDCD"
         stroke-width="3.90576"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M18.752 27.084V31.2507"
         stroke="#BBBDCD"
         stroke-width="3.90576"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="group-hover:stroke-foregroundAlt"
       />
     </svg>
   ),
@@ -2051,6 +2051,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M40 8H8C5.79086 8 4 9.79086 4 12V36C4 38.2091 5.79086 40 8 40H40C42.2091 40 44 38.2091 44 36V12C44 9.79086 42.2091 8 40 8Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2058,6 +2059,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M12 16H12.02"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2065,6 +2067,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M20 16H20.02"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2072,6 +2075,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M28 16H28.02"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2089,6 +2093,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M6 6V38C6 39.0609 6.42143 40.0783 7.17157 40.8284C7.92172 41.5786 8.93913 42 10 42H42"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2096,6 +2101,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M14 32C15 28 17 18 22 18C26 18 26 24 30 24C35 24 39 14 40 10"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2113,6 +2119,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M8 44H36C37.0609 44 38.0783 43.5786 38.8284 42.8284C39.5786 42.0783 40 41.0609 40 40V14L30 4H12C10.9391 4 9.92172 4.42143 9.17157 5.17157C8.42143 5.92172 8 6.93913 8 8V16"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2120,6 +2127,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M28 4V12C28 13.0609 28.4214 14.0783 29.1716 14.8284C29.9217 15.5786 30.9391 16 32 16H40"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2127,6 +2135,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M10 24L4 30L10 36"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2134,6 +2143,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M18 36L24 30L18 24"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2151,6 +2161,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M31.0739 22.5857C30.6989 22.9607 30.4883 23.4693 30.4883 23.9997C30.4883 24.53 30.6989 25.0386 31.0739 25.4137L35.8259 30.1677C36.2009 30.5426 36.7095 30.7532 37.2399 30.7532C37.7702 30.7532 38.2788 30.5426 38.6539 30.1677L43.4079 25.4137C43.7828 25.0386 43.9934 24.53 43.9934 23.9997C43.9934 23.4693 43.7828 22.9607 43.4079 22.5857L38.6539 17.8317C38.2788 17.4567 37.7702 17.2461 37.2399 17.2461C36.7095 17.2461 36.2009 17.4567 35.8259 17.8317L31.0739 22.5857Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2158,6 +2169,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M4.59339 22.5857C4.21844 22.9607 4.00781 23.4693 4.00781 23.9997C4.00781 24.53 4.21844 25.0386 4.59339 25.4137L9.34738 30.1677C9.72244 30.5426 10.2311 30.7532 10.7614 30.7532C11.2917 30.7532 11.8003 30.5426 12.1754 30.1677L16.9294 25.4137C17.3043 25.0386 17.515 24.53 17.515 23.9997C17.515 23.4693 17.3043 22.9607 16.9294 22.5857L12.1754 17.8317C11.8003 17.4567 11.2917 17.2461 10.7614 17.2461C10.2311 17.2461 9.72244 17.4567 9.34738 17.8317L4.59339 22.5857Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2165,6 +2177,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M17.8327 35.8259C17.6467 36.0116 17.4992 36.2322 17.3985 36.475C17.2979 36.7178 17.2461 36.978 17.2461 37.2409C17.2461 37.5037 17.2979 37.7639 17.3985 38.0067C17.4992 38.2495 17.6467 38.4701 17.8327 38.6559L22.5867 43.4079C22.9617 43.7828 23.4703 43.9934 24.0007 43.9934C24.531 43.9934 25.0396 43.7828 25.4147 43.4079L30.1687 38.6559C30.3546 38.4701 30.5021 38.2495 30.6028 38.0067C30.7034 37.7639 30.7552 37.5037 30.7552 37.2409C30.7552 36.978 30.7034 36.7178 30.6028 36.475C30.5021 36.2322 30.3546 36.0116 30.1687 35.8259L25.4147 31.0739C25.0396 30.6989 24.531 30.4883 24.0007 30.4883C23.4703 30.4883 22.9617 30.6989 22.5867 31.0739L17.8327 35.8259Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2172,6 +2185,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M17.8317 9.34738C17.4567 9.72244 17.2461 10.2311 17.2461 10.7614C17.2461 11.2917 17.4567 11.8003 17.8317 12.1754L22.5857 16.9274C22.9607 17.3023 23.4693 17.513 23.9997 17.513C24.53 17.513 25.0386 17.3023 25.4137 16.9274L30.1677 12.1754C30.5426 11.8003 30.7532 11.2917 30.7532 10.7614C30.7532 10.2311 30.5426 9.72244 30.1677 9.34738L25.4137 4.59339C25.0386 4.21844 24.53 4.00781 23.9997 4.00781C23.4693 4.00781 22.9607 4.21844 22.5857 4.59339L17.8317 9.34738Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2190,6 +2204,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M15.9984 38C14.2824 38.0038 12.6106 37.4558 11.2299 36.4368C9.84922 35.4178 8.83276 33.9819 8.33063 32.341C7.8285 30.7001 7.8673 28.9412 8.4413 27.324C9.01531 25.7069 10.0941 24.3171 11.5184 23.36C10.6403 22.2628 10.1127 20.9266 10.0044 19.5255C9.89613 18.1243 10.2121 16.723 10.9112 15.5038C11.6103 14.2847 12.6602 13.3042 13.9242 12.69C15.1882 12.0758 16.6079 11.8563 17.9984 12.06V12C17.9984 10.4087 18.6305 8.88258 19.7558 7.75736C20.881 6.63214 22.4071 6 23.9984 6C25.5897 6 27.1158 6.63214 28.241 7.75736C29.3663 8.88258 29.9984 10.4087 29.9984 12V12.08C31.3889 11.8763 32.8085 12.0958 34.0726 12.71C35.3366 13.3242 36.3865 14.3047 37.0856 15.5238C37.7847 16.743 38.1007 18.1443 37.9924 19.5455C37.8841 20.9466 37.3565 22.2828 36.4784 23.38C37.8938 24.3403 38.9641 25.729 39.5323 27.3423C40.1005 28.9556 40.1367 30.7085 39.6356 32.3439C39.1345 33.9792 38.1224 35.4109 36.7479 36.4289C35.3734 37.4469 33.7088 37.9975 31.9984 38H15.9984Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2197,6 +2212,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M24 38V44"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2214,6 +2230,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M24 41.8782C27 41.8782 29.5 43.9982 32 43.9982C38 43.9982 44 27.9982 44 19.5582C43.9318 16.9676 42.8424 14.509 40.9693 12.7183C39.0961 10.9275 36.591 9.9498 34 9.9982C29.56 9.9982 26 12.8782 24 13.9982C22 12.8782 18.44 9.9982 14 9.9982C11.4075 9.94451 8.8994 10.9205 7.02506 12.7124C5.15072 14.5042 4.06295 16.9659 4 19.5582C4 27.9982 10 43.9982 16 43.9982C18.5 43.9982 21 41.8782 24 41.8782Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2221,6 +2238,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M20 4C22 5 24 8 24 14"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2239,10 +2257,12 @@ export const Icons = {
     >
       <g clip-path="url(#clip0_945_470)">
         <path
+          className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
           d="M6.51443 16.4062C6.18627 17.2266 6.58531 18.1578 7.40576 18.486C8.22624 18.8142 9.15738 18.4151 9.48557 17.5946L6.51443 16.4062ZM38.5146 17.5946C38.8426 18.4151 39.7738 18.8142 40.5942 18.486C41.4147 18.1578 41.8138 17.2266 41.4854 16.4062L38.5146 17.5946ZM44.8 19.7688V30.4729H48V19.7688H44.8ZM35.8726 39.4004H34.1376V42.6004H35.8726V39.4004ZM13.8623 39.4004H12.1275V42.6004H13.8623V39.4004ZM3.2 30.4729V19.7688H0V30.4729H3.2ZM3.16298 19.8179C16.7818 15.9268 31.2181 15.9268 44.8371 19.8179L45.7162 16.741C31.5227 12.6857 16.4773 12.6857 2.28387 16.741L3.16298 19.8179ZM12.1275 39.4004C7.19696 39.4004 3.2 35.4033 3.2 30.4729H0C0 37.1706 5.42966 42.6004 12.1275 42.6004V39.4004ZM13.2528 39.7623C13.3745 39.5393 13.6083 39.4004 13.8623 39.4004V42.6004C14.7793 42.6004 15.623 42.0996 16.0621 41.2945L13.2528 39.7623ZM16.0621 41.2945C19.4892 35.0116 28.5108 35.0116 31.9379 41.2945L34.7472 39.7623C30.1073 31.2557 17.8927 31.2557 13.2528 39.7623L16.0621 41.2945ZM34.1376 39.4004C34.3917 39.4004 34.6256 39.5393 34.7472 39.7623L31.9379 41.2945C32.377 42.0996 33.2208 42.6004 34.1376 42.6004V39.4004ZM44.8 30.4729C44.8 35.4033 40.8029 39.4004 35.8726 39.4004V42.6004C42.5702 42.6004 48 37.1706 48 30.4729H44.8ZM48 19.7688C48 18.3628 47.0678 17.1272 45.7162 16.741L44.8371 19.8179C44.815 19.8116 44.8 19.7916 44.8 19.7688H48ZM3.2 19.7688C3.2 19.7916 3.18489 19.8116 3.16298 19.8179L2.28387 16.741C0.932019 17.1272 0 18.3628 0 19.7688H3.2ZM8.10518 12.4293L6.51443 16.4062L9.48557 17.5946L11.0763 13.6177L8.10518 12.4293ZM36.9235 13.6177L38.5146 17.5946L41.4854 16.4062L39.8947 12.4293L36.9235 13.6177ZM15.533 10.6004H32.4669V7.40039H15.533V10.6004ZM39.8947 12.4293C38.68 9.39201 35.7382 7.40039 32.4669 7.40039V10.6004C34.4298 10.6004 36.1949 11.7954 36.9235 13.6177L39.8947 12.4293ZM11.0763 13.6177C11.8053 11.7954 13.5703 10.6004 15.533 10.6004V7.40039C12.2618 7.40039 9.3201 9.39201 8.10518 12.4293L11.0763 13.6177Z"
           fill="#BBBDCD"
         />
         <path
+          className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
           d="M2.72343 18.2794L3.16298 19.8179M3.16298 19.8179C16.7818 15.9268 31.2181 15.9268 44.8371 19.8179M3.16298 19.8179L2.28387 16.741M3.16298 19.8179C3.18489 19.8116 3.2 19.7916 3.2 19.7688M45.2765 18.2794L45.7162 16.741M45.7162 16.741L44.8371 19.8179M45.7162 16.741C31.5227 12.6857 16.4773 12.6857 2.28387 16.741M45.7162 16.741C47.0678 17.1272 48 18.3628 48 19.7688M14.6575 40.5284L16.0621 41.2945M16.0621 41.2945C15.623 42.0996 14.7793 42.6004 13.8623 42.6004M16.0621 41.2945L13.2528 39.7623M16.0621 41.2945C19.4892 35.0116 28.5108 35.0116 31.9379 41.2945M33.3424 40.5284L34.7472 39.7623M34.7472 39.7623L31.9379 41.2945M34.7472 39.7623C30.1073 31.2557 17.8927 31.2557 13.2528 39.7623M34.7472 39.7623C34.6256 39.5393 34.3917 39.4004 34.1376 39.4004M9.59075 13.0235L8.10518 12.4293M8.10518 12.4293L6.51443 16.4062M8.10518 12.4293L11.0763 13.6177M8.10518 12.4293C9.3201 9.39201 12.2618 7.40039 15.533 7.40039M6.51443 16.4062C6.18627 17.2266 6.58531 18.1578 7.40576 18.486C8.22624 18.8142 9.15738 18.4151 9.48557 17.5946M6.51443 16.4062L9.48557 17.5946M9.48557 17.5946L11.0763 13.6177M38.4093 13.0235L39.8947 12.4293M39.8947 12.4293L41.4854 16.4062M39.8947 12.4293L36.9235 13.6177M39.8947 12.4293C38.68 9.39201 35.7382 7.40039 32.4669 7.40039M38.5146 17.5946C38.8426 18.4151 39.7738 18.8142 40.5942 18.486C41.4147 18.1578 41.8138 17.2266 41.4854 16.4062M38.5146 17.5946L41.4854 16.4062M38.5146 17.5946L36.9235 13.6177M44.8 19.7688V30.4729M44.8 19.7688H48M44.8 19.7688C44.8 19.7916 44.815 19.8116 44.8371 19.8179M44.8 30.4729H48M44.8 30.4729C44.8 35.4033 40.8029 39.4004 35.8726 39.4004M48 30.4729V19.7688M48 30.4729C48 37.1706 42.5702 42.6004 35.8726 42.6004M35.8726 39.4004H34.1376M35.8726 39.4004V42.6004M34.1376 39.4004V42.6004M34.1376 42.6004H35.8726M34.1376 42.6004C33.2208 42.6004 32.377 42.0996 31.9379 41.2945M13.8623 39.4004H12.1275M13.8623 39.4004V42.6004M13.8623 39.4004C13.6083 39.4004 13.3745 39.5393 13.2528 39.7623M12.1275 39.4004V42.6004M12.1275 39.4004C7.19696 39.4004 3.2 35.4033 3.2 30.4729M12.1275 42.6004H13.8623M12.1275 42.6004C5.42966 42.6004 0 37.1706 0 30.4729M3.2 30.4729V19.7688M3.2 30.4729H0M3.2 19.7688H0M0 19.7688V30.4729M0 19.7688C0 18.3628 0.932019 17.1272 2.28387 16.741M11.0763 13.6177C11.8053 11.7954 13.5703 10.6004 15.533 10.6004M36.9235 13.6177C36.1949 11.7954 34.4298 10.6004 32.4669 10.6004M15.533 10.6004H32.4669M15.533 10.6004V7.40039M32.4669 10.6004V7.40039M32.4669 7.40039H15.533"
           stroke="#BBBDCD"
         />
@@ -2263,6 +2283,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M17 29C18.3261 29 19.5979 28.4732 20.5355 27.5355C21.4732 26.5979 22 25.3261 22 24C22 21.24 21 20 20 18C17.856 13.714 19.552 9.892 24 6C25 11 28 15.8 32 19C36 22.2 38 26 38 30C38 31.8385 37.6379 33.659 36.9343 35.3576C36.2307 37.0561 35.1995 38.5995 33.8995 39.8995C32.5995 41.1995 31.0561 42.2307 29.3576 42.9343C27.659 43.6379 25.8385 44 24 44C22.1615 44 20.341 43.6379 18.6424 42.9343C16.9439 42.2307 15.4005 41.1995 14.1005 39.8995C12.8005 38.5995 11.7693 37.0561 11.0657 35.3576C10.3621 33.659 10 31.8385 10 30C10 27.694 10.866 25.412 12 24C12 25.3261 12.5268 26.5979 13.4645 27.5355C14.4021 28.4732 15.6739 29 17 29Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2281,6 +2302,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M28.7992 28.7992L19.1992 19.1992"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2288,6 +2310,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M37.3148 42.9708C36.5647 43.7211 35.5474 44.1427 34.4865 44.1429C33.4256 44.1431 32.4081 43.7218 31.6578 42.9718C30.9075 42.2217 30.4859 41.2044 30.4857 40.1435C30.4855 39.0826 30.9067 38.0651 31.6568 37.3148L28.1228 40.8508C27.3725 41.6011 26.3549 42.0226 25.2938 42.0226C24.2327 42.0226 23.2151 41.6011 22.4648 40.8508C21.7145 40.1005 21.293 39.0829 21.293 38.0218C21.293 36.9607 21.7145 35.9431 22.4648 35.1928L35.1928 22.4648C35.9431 21.7145 36.9607 21.293 38.0218 21.293C39.0829 21.293 40.1005 21.7145 40.8508 22.4648C41.6011 23.2151 42.0226 24.2327 42.0226 25.2938C42.0226 26.3549 41.6011 27.3725 40.8508 28.1228L37.3148 31.6568C38.0651 30.9067 39.0826 30.4855 40.1435 30.4857C41.2044 30.4859 42.2217 30.9075 42.9718 31.6578C43.7218 32.4081 44.1431 33.4256 44.1429 34.4865C44.1427 35.5474 43.7211 36.5647 42.9708 37.3148L37.3148 42.9708Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2295,6 +2318,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M42.9992 42.9992L40.1992 40.1992"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2302,6 +2326,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M7.8 7.8L5 5"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2309,6 +2334,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M12.8095 25.5375C12.0592 26.2878 11.0416 26.7093 9.98048 26.7093C8.9194 26.7093 7.90178 26.2878 7.15148 25.5375C6.40118 24.7872 5.97967 23.7696 5.97967 22.7085C5.97967 21.6474 6.40118 20.6298 7.15148 19.8795L10.6875 16.3455C10.316 16.7169 9.87495 17.0114 9.3896 17.2124C8.90425 17.4133 8.38407 17.5167 7.85877 17.5166C6.79788 17.5164 5.78051 17.0948 5.03048 16.3445C4.6591 15.973 4.36453 15.5319 4.16359 15.0466C3.96266 14.5612 3.85928 14.0411 3.85938 13.5158C3.85956 12.4549 4.28118 11.4375 5.03148 10.6875L10.6875 5.03148C11.4375 4.28118 12.4549 3.85956 13.5158 3.85938C14.0411 3.85928 14.5612 3.96266 15.0466 4.16359C15.5319 4.36453 15.973 4.6591 16.3445 5.03048C16.716 5.40186 17.0107 5.84277 17.2118 6.32805C17.4129 6.81333 17.5165 7.33347 17.5166 7.85877C17.5167 8.38407 17.4133 8.90425 17.2124 9.3896C17.0114 9.87495 16.7169 10.316 16.3455 10.6875L19.8795 7.15148C20.6298 6.40118 21.6474 5.97967 22.7085 5.97967C23.7696 5.97967 24.7872 6.40118 25.5375 7.15148C26.2878 7.90178 26.7093 8.9194 26.7093 9.98048C26.7093 11.0416 26.2878 12.0592 25.5375 12.8095L12.8095 25.5375Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2326,6 +2352,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M22.4921 33.3126C22.6799 33.5281 22.9116 33.7009 23.1717 33.8193C23.4319 33.9376 23.7143 33.9989 24.0001 33.9989C24.2859 33.9989 24.5684 33.9376 24.8285 33.8193C25.0887 33.7009 25.3204 33.5281 25.5081 33.3126L32.6481 25.1106C33.1363 24.5475 33.505 23.8911 33.7317 23.1812C33.9585 22.4713 34.0386 21.7227 33.9672 20.9809C33.8957 20.239 33.6743 19.5195 33.3163 18.8658C32.9584 18.2122 32.4713 17.6381 31.8846 17.1785C31.298 16.7188 30.6241 16.3832 29.9038 16.192C29.1835 16.0007 28.4319 15.9579 27.6945 16.066C26.9571 16.1741 26.2494 16.431 25.6144 16.821C24.9793 17.2109 24.4301 17.7259 24.0001 18.3346C23.5702 17.7259 23.021 17.2109 22.3859 16.821C21.7508 16.431 21.0431 16.1741 20.3058 16.066C19.5684 15.9579 18.8168 16.0007 18.0965 16.192C17.3762 16.3832 16.7023 16.7188 16.1156 17.1785C15.529 17.6381 15.0419 18.2122 14.6839 18.8658C14.3259 19.5195 14.1045 20.239 14.0331 20.9809C13.9617 21.7227 14.0418 22.4713 14.2686 23.1812C14.4953 23.8911 14.864 24.5475 15.3521 25.1106L22.4921 33.3126Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2333,6 +2360,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M34 6H38C39.0609 6 40.0783 6.42143 40.8284 7.17157C41.5786 7.92172 42 8.93913 42 10V14"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2340,6 +2368,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M42 34V38C42 39.0609 41.5786 40.0783 40.8284 40.8284C40.0783 41.5786 39.0609 42 38 42H34"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2347,6 +2376,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M6 14V10C6 8.93913 6.42143 7.92172 7.17157 7.17157C7.92172 6.42143 8.93913 6 10 6H14"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2354,6 +2384,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M14 42H10C8.93913 42 7.92172 41.5786 7.17157 40.8284C6.42143 40.0783 6 39.0609 6 38V34"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2371,6 +2402,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M34.0003 42.0003C34.5307 42.0003 35.0394 41.7896 35.4145 41.4145C35.7896 41.0394 36.0003 40.5307 36.0003 40.0003V29.3003C36.0003 28.3863 36.6323 27.6123 37.4543 27.2183C39.1562 26.4064 40.5167 25.0194 41.2955 23.3021C42.0744 21.5848 42.2216 19.6475 41.7111 17.8322C41.2007 16.0169 40.0654 14.4403 38.5057 13.3806C36.9459 12.3209 35.062 11.8462 33.1863 12.0403C32.4138 10.2447 31.132 8.71489 29.4994 7.63998C27.8668 6.56506 25.955 5.99219 24.0003 5.99219C22.0456 5.99219 20.1337 6.56506 18.5011 7.63998C16.8685 8.71489 15.5868 10.2447 14.8143 12.0403C12.9395 11.8475 11.0568 12.3229 9.49815 13.3826C7.93955 14.4422 6.80511 16.0182 6.29486 17.8325C5.78461 19.6468 5.93131 21.5831 6.7091 23.2998C7.48688 25.0165 8.84581 26.4036 10.5463 27.2163C11.3683 27.6123 12.0003 28.3863 12.0003 29.2983V40.0003C12.0003 40.5307 12.211 41.0394 12.5861 41.4145C12.9611 41.7896 13.4699 42.0003 14.0003 42.0003H34.0003Z"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2378,6 +2410,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M12 34H36"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2395,6 +2428,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M43.08 30H34C32.9391 30 31.9217 30.4214 31.1716 31.1716C30.4214 31.9217 30 32.9391 30 34V43.08"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2402,6 +2436,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M14 6.67969V9.99969C14 11.591 14.6321 13.1171 15.7574 14.2423C16.8826 15.3675 18.4087 15.9997 20 15.9997C21.0609 15.9997 22.0783 16.4211 22.8284 17.1713C23.5786 17.9214 24 18.9388 24 19.9997C24 22.1997 25.8 23.9997 28 23.9997C29.0609 23.9997 30.0783 23.5783 30.8284 22.8281C31.5786 22.078 32 21.0606 32 19.9997C32 17.7997 33.8 15.9997 36 15.9997H42.34"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2409,6 +2444,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M22.0016 43.9V36C22.0016 34.9391 21.5801 33.9217 20.83 33.1716C20.0798 32.4214 19.0624 32 18.0016 32C16.9407 32 15.9233 31.5786 15.1731 30.8284C14.423 30.0783 14.0016 29.0609 14.0016 28V26C14.0016 24.9391 13.5801 23.9217 12.83 23.1716C12.0798 22.4214 11.0624 22 10.0016 22H4.10156"
         stroke="#BBBDCD"
         stroke-width="4"
@@ -2416,6 +2452,7 @@ export const Icons = {
         stroke-linejoin="round"
       />
       <path
+        className="ease-in-out duration-300 stroke-highlighted-foregroundLight group-hover:stroke-highlighted-foreground"
         d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
         stroke="#BBBDCD"
         stroke-width="4"

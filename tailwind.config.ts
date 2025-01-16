@@ -103,6 +103,8 @@ const config = {
         },
         highlighted: {
           DEFAULT: "hsl(var(--highlighted))",
+          foreground: "hsl(var(--highlighted-foreground))",
+          foregroundLight: "hsl(var(--highlighted-foregroundLight))",
           dark: "hsl(var(--highlighted-dark))",
         },
         destructive: {

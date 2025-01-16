@@ -53,12 +53,15 @@ const PersonalPortrait = () => {
       </span>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px]">
         <div className="flex flex-col gap-[10px]">
-          <div className="flex items-center gap-2">
-            <AnimatedText text={making} />
+          <div className="flex items-center">
+            <AnimatedText
+              text={making}
+              className="text-[20px] sm:text-[24px] lg:text-[16px]"
+            />
             {makingHover && (
               <AnimatedText
                 text={`/ ${makingHover}`}
-                className="text-foregroundAlt"
+                className="text-highlighted-foreground text-[20px] sm:text-[24px] lg:text-[16px]"
                 delay={0}
               />
             )}
@@ -77,15 +80,17 @@ const PersonalPortrait = () => {
           </div>
         </div>
 
-        {/* Software Section */}
         <div className="flex flex-col gap-[10px]">
-          <div className="flex items-center gap-2">
-            <AnimatedText text={software} />
+          <div className="flex items-center ">
+            <AnimatedText
+              text={software}
+              className="text-[20px] sm:text-[24px] lg:text-[16px]"
+            />
             {softwareHover && (
               <AnimatedText
                 text={`/ ${softwareHover}`}
-                className="text-gray-500"
-                delay={0} // Optionnel
+                className="text-highlighted-foreground text-[20px] sm:text-[24px] lg:text-[16px]"
+                delay={0}
               />
             )}
           </div>
@@ -95,7 +100,7 @@ const PersonalPortrait = () => {
                 key={elem.name}
                 onMouseEnter={() => setSoftwareHover(elem.name)}
                 onMouseLeave={() => setSoftwareHover(null)}
-                className="rounded-md flex items-center justify-center bg-highlighted"
+                className="rounded-md flex items-center justify-center bg-highlighted group"
               >
                 {elem.icon}
               </div>
@@ -103,15 +108,17 @@ const PersonalPortrait = () => {
           </div>
         </div>
 
-        {/* Video Game Section */}
         <div className="flex flex-col gap-[10px]">
-          <div className="flex items-center gap-2">
-            <AnimatedText text={videoGame} />
+          <div className="flex items-center">
+            <AnimatedText
+              text={videoGame}
+              className="text-[20px] sm:text-[24px] lg:text-[16px]"
+            />
             {videoGameHover && (
               <AnimatedText
                 text={`/ ${videoGameHover}`}
-                className="text-gray-500"
-                delay={0} // Optionnel
+                className="text-highlighted-foreground text-[20px] sm:text-[24px] lg:text-[16px]"
+                delay={0}
               />
             )}
           </div>
@@ -121,7 +128,7 @@ const PersonalPortrait = () => {
                 key={elem.name}
                 onMouseEnter={() => setVideoGameHover(elem.name)}
                 onMouseLeave={() => setVideoGameHover(null)}
-                className="rounded-md flex items-center justify-center bg-highlighted"
+                className="rounded-md flex items-center justify-center bg-highlighted group"
               >
                 {elem.icon}
               </div>
@@ -129,15 +136,17 @@ const PersonalPortrait = () => {
           </div>
         </div>
 
-        {/* Lifestyle Section */}
         <div className="flex flex-col gap-[10px]">
-          <div className="flex items-center gap-2">
-            <AnimatedText text={lifestyle} />
+          <div className="flex items-center">
+            <AnimatedText
+              text={lifestyle}
+              className="text-[20px] sm:text-[24px] lg:text-[16px]"
+            />
             {lifestyleHover && (
               <AnimatedText
                 text={`/ ${lifestyleHover}`}
-                className="text-gray-500"
-                delay={0} // Optionnel
+                className="text-highlighted-foreground text-[20px] sm:text-[24px] lg:text-[16px]"
+                delay={0}
               />
             )}
           </div>
@@ -147,7 +156,7 @@ const PersonalPortrait = () => {
                 key={elem.name}
                 onMouseEnter={() => setLifestyleHover(elem.name)}
                 onMouseLeave={() => setLifestyleHover(null)}
-                className="rounded-md flex items-center justify-center bg-highlighted"
+                className="rounded-md flex items-center justify-center bg-highlighted group"
               >
                 {elem.icon}
               </div>

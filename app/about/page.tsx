@@ -3,6 +3,7 @@ import Divider from "@/components/divider";
 import MyBackground from "@/components/my-background";
 import PersonalPortrait from "@/components/personal-portrait";
 import TechnicalPortrait from "@/components/technical-portrait";
+import ThemeColorsList from "@/components/theme-colors-list";
 
 const AboutPage = () => {
   return (
