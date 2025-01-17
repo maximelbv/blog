@@ -4,6 +4,7 @@ import PostCard from "@/components/post-card";
 import { ARTICLE_TYPE_CONSTANTS } from "@/constants/article-type-constants";
 import { sortPosts } from "@/lib/utils";
 import CustomLink from "./custom-link";
+import ProjectCard from "./project-card";
 
 export default async function LatestProjects() {
   const publishedPosts = sortPosts(
@@ -25,7 +26,7 @@ export default async function LatestProjects() {
       <div className="grid row-gap w-full grid-cols-1 md:grid-cols-3 gap-6">
         {publishedPosts.map((post, index) => (
           <FadeIn key={index} delay={(index + 1) * 0.2}>
-            <PostCard key={post.slug} post={post} />
+            <ProjectCard key={post.slug} project={post} />
           </FadeIn>
         ))}
       </div>
