@@ -15,11 +15,8 @@ export default async function ProjectsPage() {
   );
   return (
     <div className="default-layout px-5 grid gap-[32px] mb-[60px]">
-      <PageHeader
-        title="My latest Projects"
-        subtitle="🚧 This part of the website is still under construction"
-      />
-      <div className="grid grid-cols-1 gap-14">
+      <PageHeader title="Latest Projects" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[15px] gap-y-[20px]">
         {publishedProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

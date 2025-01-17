@@ -9,10 +9,10 @@ const PersonalPortrait = () => {
   const [making, setMaking] = useState("Making");
   const [makingHover, setMakingHover] = useState<string | null>(null);
 
-  const [software, setSoftware] = useState("Web & Software");
+  const [software, setSoftware] = useState("Software");
   const [softwareHover, setSoftwareHover] = useState<string | null>(null);
 
-  const [videoGame, setVideoGame] = useState("Video Game & 3D");
+  const [videoGame, setVideoGame] = useState("Game & 3D");
   const [videoGameHover, setVideoGameHover] = useState<string | null>(null);
 
   const [lifestyle, setLifestyle] = useState("Lifestyle");
@@ -21,21 +21,21 @@ const PersonalPortrait = () => {
   const makingArray = [
     { name: "Electronics", icon: <Icons.electronics /> },
     { name: "D.I.Y", icon: <Icons.diy /> },
-    { name: "3D Modelling", icon: <Icons.modelisation /> },
+    { name: "3D Modelling & Print", icon: <Icons.modelisation /> },
     { name: "Mechanics", icon: <Icons.mechanics /> },
   ];
 
   const softwareArray = [
-    { name: "App dev", icon: <Icons.web /> },
+    { name: "App development", icon: <Icons.web /> },
     { name: "Data viz", icon: <Icons.data /> },
+    { name: "AI & Computer Vision", icon: <Icons.computerVision /> },
     { name: "Tools & scripts", icon: <Icons.devTools /> },
-    { name: "UI design", icon: <Icons.ui /> },
   ];
 
   const videoGameArray = [
     { name: "Level design", icon: <Icons.environmentArt /> },
     { name: "Prop art", icon: <Icons.propArt /> },
-    { name: "XR", icon: <Icons.xr /> },
+    { name: "Extended Reality", icon: <Icons.xr /> },
     { name: "VFX", icon: <Icons.vfx /> },
   ];
 
