@@ -9,14 +9,14 @@ import Image from "next/image";
 const AboutHero = () => {
   return (
     <div className="default-layout px-[20px] grid grid-cols-2 flex-col-reverse lg:flex-row items-center justify-between">
-      <div className="flex flex-col gap-[10px] max-w-[600px]">
+      <div className="flex flex-col gap-[10px] max-w-[475px]">
         <AnimatedElement>
           <span className="text-[24px] md:text-[28px]">
             Hi, i’m Maxime, a 
             <span className="bg-gradient-to-r from-pigment-blue to-pigment-blueLighter bg-clip-text text-transparent">
               web developer
             </span>
-             with a passion for Data, 3D and Motion design
+             with a passion for Data, 3D and Design
           </span>
         </AnimatedElement>
         <div className="flex flex-col gap-[3px]">

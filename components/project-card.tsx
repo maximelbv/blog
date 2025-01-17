@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             {image ? (
               <BlurImage
                 src={image}
-                className="rounded-[6px]"
+                className="rounded-[6px] bg-secondary"
                 style={{
                   objectFit: "cover",
                   margin: "0",

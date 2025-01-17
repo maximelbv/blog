@@ -20,6 +20,7 @@ const icons = {
   website: Icons.website,
   tailwind: Icons.tailwind,
   framerMotion: Icons.framerMotion,
+  webflow: Icons.webflow,
 };
 
 type Icon = keyof typeof icons;
