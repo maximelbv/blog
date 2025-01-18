@@ -15,18 +15,14 @@ const TechnicalPortrait = async () => {
         </div>
         <div className="relative bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center p-[20px]">
           <div className="relative w-full h-full">
-            <Image
-              alt="profile-picture"
-              layout="fill"
-              src="/images/profile-pic.svg"
-            />
+            <Image alt="profile-picture" fill src="/images/profile-pic.svg" />
           </div>
         </div>
         <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center ">
           <div className="grid grid-cols-2 gap-8 flex-wrap p-[20px]">
             {socials &&
               socials.map((social) => (
-                <Link target="_blank" href={social.route}>
+                <Link key={social.name} target="_blank" href={social.route}>
                   <social.icon />
                 </Link>
               ))}

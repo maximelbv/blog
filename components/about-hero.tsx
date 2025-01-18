@@ -60,7 +60,7 @@ const AboutHero = () => {
             <div className="flex gap-6">
               {socials &&
                 socials.map((social) => (
-                  <Link target="_blank" href={social.route}>
+                  <Link key={social.name} target="_blank" href={social.route}>
                     <social.icon />
                   </Link>
                 ))}
@@ -70,11 +70,7 @@ const AboutHero = () => {
       </div>
       <div className="w-full max-w-full aspect-square p-[75px]">
         <FadeIn className="relative w-full h-full">
-          <Image
-            alt="profile-picture"
-            layout="fill"
-            src="/images/profile-pic.svg"
-          />
+          <Image alt="profile-picture" fill src="/images/profile-pic.svg" />
         </FadeIn>
       </div>
     </div>

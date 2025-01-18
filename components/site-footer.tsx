@@ -19,7 +19,7 @@ export function SiteFooter() {
         <div className="flex gap-6">
           {socials &&
             socials.map((social) => (
-              <Link target="_blank" href={social.route}>
+              <Link key={social.name} target="_blank" href={social.route}>
                 <social.icon />
               </Link>
             ))}

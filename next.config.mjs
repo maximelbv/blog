@@ -3,7 +3,13 @@ import { build } from "velite";
 /** @type {import('next').NextConfig} */
 export default {
   images: {
-    domains: ["picsum.photos"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+        pathname: "/**",
+      },
+    ],
   },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());

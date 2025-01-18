@@ -19,6 +19,9 @@ const ImagesGrid = ({ columns, images }: ImageGridProps) => {
         <div key={index} className="flex flex-col items-stretch">
           <div className="relative aspect-square">
             <BlurImage
+              style={{
+                objectFit: "cover",
+              }}
               alt={image.alt}
               src={image.src}
               className="rounded-lg w-full h-full object-cover m-0"

@@ -60,7 +60,7 @@ export default function TableOfContents({ index }: TableOfContentsProps) {
       {index.map((item) => (
         <a
           href={item.link}
-          key={item.name}
+          key={item.link}
           className="no-underline hover:text-link text-foregroundAlt text-[14px]"
           onClick={handleSmoothScroll}
         >

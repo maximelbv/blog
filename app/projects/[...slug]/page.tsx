@@ -4,21 +4,16 @@ import { notFound } from "next/navigation";
 import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { Tag } from "@/components/tag";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
-import PostInfos from "@/components/post-infos";
 import PostCardAlternative from "@/components/post-card-alternative";
-import TableOfContents from "@/components/table-of-contents";
-import BlurImage from "@/components/blur-image";
 import { formatDateToMonthYear } from "@/lib/utils";
-import AnimatedTitle from "@/components/animated-title";
-import SlideIn from "@/components/slide-in";
 import AnimatedText from "@/components/animated-text";
 import FadeIn from "@/components/fade-in";
 import Image from "next/image";
 import { getIconFromString } from "@/lib/icon-helper";
 import CustomLink from "@/components/custom-link";
+import ProjectCard from "@/components/project-card";
 
 interface ProjectPageProps {
   params: {
@@ -166,9 +161,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     stack
                   </span>
                   <div className="text-[18px] flex gap-[5px]">
-                    {project.stack.map((techno: string) =>
-                      getIconFromString(techno)
-                    )}
+                    {project.stack.map((techno: string) => (
+                      <div key={techno}>{getIconFromString(techno)}</div>
+                    ))}
                   </div>
                 </div>
               )}
@@ -212,7 +207,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <span className="text-[28px]">More projects</span>
           <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {otherProjects.map((post) => (
-              <PostCardAlternative key={post.slug} post={post} />
+              <ProjectCard
+                key={post.slug}
+                project={{ ...post, slug: post.slug.replace("projects/", "") }}
+              />
             ))}
           </div>
         </div>

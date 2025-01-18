@@ -23,7 +23,6 @@ const BlurImage = async ({ src, className, style, alt }: BlurImageProps) => {
       alt={alt ? alt : "image"}
       placeholder="blur"
       blurDataURL={base64}
-      objectFit="cover" // Empêche la déformation
     />
   );
 };

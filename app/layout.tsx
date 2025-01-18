@@ -6,7 +6,7 @@ import { Providers } from "@/components/providers";
 import { siteConfig } from "@/config/site";
 import { SiteFooter } from "@/components/site-footer";
 import { Header } from "@/components/header";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
 
 const jakarta = Plus_Jakarta_Sans({
