@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const AboutHero = () => {
   return (
-    <div className="default-layout px-[20px] grid grid-cols-2 flex-col-reverse lg:flex-row items-center justify-between">
+    <div className="default-layout px-[20px] md:grid md:grid-cols-2 items-center justify-between flex flex-col-reverse md:flex-row">
       <div className="flex flex-col gap-[10px] max-w-[475px]">
         <AnimatedElement>
           <span className="text-[24px] md:text-[28px]">

@@ -46,6 +46,7 @@ const config = {
       },
       aspectRatio: {
         "21/9": "21 / 9",
+        phone: "9 / 16",
       },
       colors: {
         stack: {

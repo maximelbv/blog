@@ -17,6 +17,7 @@ import PerlinNoiseGenerator from "./perlin-generator";
 import ImagesGrid from "./images-grid";
 import BarChartRandom from "./bar-chart-random-values";
 import BarChartProcedural from "./bar-chart-procedural";
+import ShowcaseWebsiteSection from "./showcase-website-section";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -42,6 +43,7 @@ const components = {
   ImagesGrid,
   BarChartRandom,
   BarChartProcedural,
+  ShowcaseWebsiteSection,
 };
 
 interface MdxProps {

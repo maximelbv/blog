@@ -14,6 +14,7 @@ import Image from "next/image";
 import { getIconFromString } from "@/lib/icon-helper";
 import CustomLink from "@/components/custom-link";
 import ProjectCard from "@/components/project-card";
+import { Icons } from "@/components/icons";
 
 interface ProjectPageProps {
   params: {
@@ -108,37 +109,39 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <BackButton href="/projects" label="Projects" />
       </div>
 
-      <div className="grid gap-20 p-0 py-0 my-[40px]">
-        <div className="grid items-center justify-center max-w-[100svw]">
-          {project.logo && (
-            <FadeIn>
-              <div className="flex items-center justify-center">
-                <Image
-                  priority
-                  src={project.logo}
-                  alt="logo"
-                  width={100}
-                  height={100}
-                  className="!relative !h-fit"
-                />
-              </div>
-            </FadeIn>
-          )}
-          <AnimatedText
-            text={project.title}
-            className="text-center font-dahliaBold lg:text-[120px] lg:mb-0 mb-2 text-[50px] m-0"
-          />
-          {project.description && (
+      <div className="grid gap-[50px] p-0 py-0 my-[40px]">
+        <div className="grid items-center justify-center max-w-[100svw] pb-[20px]">
+          <div>
+            {project.logo && (
+              <FadeIn>
+                <div className="flex items-center justify-center">
+                  <Image
+                    priority
+                    src={project.logo}
+                    alt="logo"
+                    width={100}
+                    height={100}
+                    className="!relative !h-fit"
+                  />
+                </div>
+              </FadeIn>
+            )}
             <AnimatedText
-              delay={0.5}
-              className="text-[18px] text-center !mt-[-10px] text-foregroundAlt"
-              text={project.description}
-            ></AnimatedText>
-          )}
-          <FadeIn className="max-w-[90svw]">
-            <div className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:flex flex-wrap items-center justify-between gap-6 w-[80svw]">
+              text={project.title}
+              className="text-center font-dahliaBold lg:text-[120px] lg:mb-0 mb-2 text-[50px] m-0"
+            />
+            {project.description && (
+              <AnimatedText
+                delay={0.5}
+                className="text-[18px] text-center !mt-[-10px] text-foregroundAlt"
+                text={project.description}
+              ></AnimatedText>
+            )}
+          </div>
+          <FadeIn className="default-layout">
+            <div className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:flex flex-wrap items-center justify-between gap-[5px] sm:gap-[5svw]">
               {project.category && (
-                <div className="grid gap-3">
+                <div className="min-h-full grid gap-2 sm:gap-3 p-[10px] sm:p-0 rounded-md bg-highlighted sm:bg-transparent text-start items-start sm:text-center sm:items-center lg:text-start lg:items-start">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
                     category
                   </span>
@@ -146,7 +149,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               )}
               {project.roles && (
-                <div className="grid gap-3">
+                <div className="min-h-full grid gap-2 sm:gap-3 p-[10px] sm:p-0 rounded-md bg-highlighted sm:bg-transparent text-start items-start sm:text-center sm:items-center lg:text-start lg:items-start">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
                     {project.roles.length > 1 ? "roles" : "role"}
                   </span>
@@ -156,7 +159,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               )}
               {project.stack && (
-                <div className="grid gap-3">
+                <div className="min-h-full grid gap-2 sm:gap-3 h-full p-[10px] sm:p-0 rounded-md bg-highlighted sm:bg-transparent text-start justify-start sm:text-center sm:justify-center lg:text-start lg:justify-start">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
                     stack
                   </span>
@@ -168,7 +171,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               )}
               {project.date && (
-                <div className="grid gap-3">
+                <div className="min-h-full grid gap-2 sm:gap-3 p-[10px] sm:p-0 rounded-md bg-highlighted sm:bg-transparent text-start items-start sm:text-center sm:items-center lg:text-start lg:items-start">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
                     completed
                   </span>
@@ -178,7 +181,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               )}
               {project.link && (
-                <div className="grid gap-3">
+                <div className="min-h-full grid gap-2 sm:gap-3 p-[10px] sm:p-0 rounded-md bg-highlighted sm:bg-transparent text-start justify-start sm:text-center sm:justify-center lg:text-start lg:justify-start">
                   <span className="text-foregroundAlt text-[18px] opacity-65">
                     link
                   </span>
@@ -193,6 +196,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               )}
             </div>
           </FadeIn>
+          {/* <FadeIn className="animate-bounce w-full flex items-center justify-center">
+            <Icons.arrowDown />
+          </FadeIn> */}
         </div>
 
         <div className="project-layout !w-full m-auto">

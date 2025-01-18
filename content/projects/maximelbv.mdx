@@ -8,90 +8,121 @@ stack: ['typescript', 'nextjs', 'tailwind', 'framer motion', 'Figma']
 link: 'https://www.maximelbv.com'
 image: /images/personal-brand-design-thumbnail.png
 logo: /images/logos/maximelbv.svg
-index: []
 roles: ["Designer", "Developer"]
 published: true
 type: 'article'
 ---
 
-{/* Ce projet était initialement seulement un blog et est né de mon envie de partager les choses que j'apprends, mais de manière ludique et interactive.
-Je suis parti du principe qu'une image vaut mille mots et que l'humain comprends mieux à travers des exemples visuels
-et interractifs. Je suis donc parti sur cette idée de construire des tutoriels et articles interactifs
-avec des éléments visuels pour comprendre des concepts techniques.
-
-Au fur et à mesure du temps, j'y ai ajouté le concept de 'snippets' des sortes de 'mini-tutos' rapides accessibles
-facilement, puis mes projets professionnels, et une page 'à propos' et au final ce blog est devenu mon site
-personnel où (presque) tout mon travail est regroupé.
-
-Ce projet n'est pas très technique, 
-
-Le vrai challenge a été au niveau du design d'interface, j'ai passé beaucoup de temps à designer et implémenter
-des idées qui, pour la plupart ont été enlevées, et j'ai recommencé le travail de 0 à 5 reprises, mais aujourd'hui
-j'en suis satisfait, et dans un sens, c'est le projet qui m'a appris une bonne partie des bases que j'ai
-en design d'interface et en design graphique. */}
-
-<FadeIn>
+<div className="relative default-layout aspect-video sm:rounded-lg overflow-hidden">
   <Image
     src="/images/projects/maximelbv/1.png"
-    alt="Image 1"
-    layout="responsive"
-    width={1000}
-    height={600}
+    alt="Homepage Design"
+    fill
   />
-  <Image
-    src="/images/projects/maximelbv/2.png"
-    alt="Image 2"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-  <Image
-    src="/images/projects/maximelbv/3.png"
-    alt="Image 3"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-  <Image
-    src="/images/projects/maximelbv/4.png"
-    alt="Image 4"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-  <Image
-    src="/images/projects/maximelbv/5.png"
-    alt="Image 5"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-  <Image
-    src="/images/projects/maximelbv/6.png"
-    alt="Image 6"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-  <Image
-    src="/images/projects/maximelbv/7.png"
-    alt="Image 7"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-  <Image
-    src="/images/projects/maximelbv/8.png"
-    alt="Image 8"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-  <Image
-    src="/images/projects/maximelbv/9.png"
-    alt="Image 9"
-    layout="responsive"
-    width={1000}
-    height={600}
-  />
-</FadeIn>
+</div>
+
+<div className="px-[20px] pb-0">
+
+# About this project
+
+This project showcases the development of my personal website, 
+which combines my portfolio and blog in a single cohesive platform.
+The website was designed and implemented based on a 
+comprehensive design system, ensuring consistency and cohesion throughout.
+
+<SpacerS />
+
+The goal was to create 
+a digital presence that reflects my skills as both a **designer** and a **developer**, with 
+a focus on clean aesthetics, intuitive navigation, and interactive elements.
+</div>
+
+<SpacerS />
+
+<div className="px-[20px]">
+  <span className='!underline bg-highlighted p-[7px] rounded-sm'>_Key Highlights :_</span><br />
+  &rarr; Fully responsive design built with Next.js and styled using Tailwind CSS.<br />
+  &rarr; Dynamic MDX content support <br />
+  &rarr; A collection of reusable interactive components for learning purposes<br />
+  &rarr; Designed in Figma, ensuring a seamless handoff between design and code.<br />
+</div>
+
+<div className="px-[20px]">
+# Website overview
+</div>
+
+<div className="px-[20px]">
+## Homepage
+The homepage is designed for clarity and simplicity. It is divided into three main sections :
+<SpacerS />
+A hero section that serves as an introduction to the website, highlighting key information 
+about me in a concise and engaging way &darr;
+</div>
+
+<ShowcaseWebsiteSection media={[
+  {
+    type: 'image',
+    src: "/images/projects/maximelbv/home-hero.png",
+    alt: 'home hero section'
+  }, 
+  {
+    type: 'image',
+    src: "/images/projects/maximelbv/home-hero-mobile.png",
+    alt: 'home hero section mobile version'
+  }, 
+]} />
+
+<div className='px-[20px]'>
+  A content section to showcases my latest projects, snippets and blog posts &darr;
+</div>
+
+<ShowcaseWebsiteSection media={[
+  {
+    type: 'image',
+    src: "/images/projects/maximelbv/home-content.png",
+    alt: 'home content section'
+  }, 
+  {
+    type: 'video',
+    src: "/images/projects/maximelbv/home-content-mobile.mov",
+    alt: 'home content section mobile version'
+  }, 
+]} />
+
+
+
+<ShowcaseWebsiteSection media={[
+  {
+    type: 'image',
+    src: "/images/projects/maximelbv/home-content.png",
+    alt: 'home content section'
+  }, 
+  {
+    type: 'video',
+    src: "/images/projects/maximelbv/home-content-mobile.mov",
+    alt: 'home content section mobile version'
+  }, 
+]} />
+
+An 'about me' section to showcase the about page
+
+<div className="bg-highlighted default-layout flex gap-4">
+  <div className="relative w-1/2" style={{ aspectRatio: '16 / 9' }}>
+    <Image
+      src="/images/projects/maximelbv/home-hero.png"
+      alt="Homepage Design Desktop"
+      fill
+      style={{ objectFit: 'cover' }}
+    />
+  </div>
+  <div className="relative w-1/2" style={{ aspectRatio: '16 / 9' }}>
+    <Image
+      src="/images/projects/maximelbv/home-hero-mobile.png"
+      alt="Homepage Design Mobile"
+      fill
+      style={{ objectFit: 'cover' }}
+    />
+  </div>
+</div>
+
+
