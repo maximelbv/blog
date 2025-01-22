@@ -13,7 +13,7 @@ interface ImageProps {
 const ImagesGrid = ({ columns, images }: ImageGridProps) => {
   return (
     <div
-      className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-${columns} gap-4`}
+      className={`grid grid-cols-2 lg:grid-cols-${columns} gap-2 sm:gap-4 py-2 article-layout`}
     >
       {images.map((image, index) => (
         <div key={index} className="flex flex-col items-stretch">

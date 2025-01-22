@@ -21,6 +21,7 @@ const config = {
     extend: {
       height: {
         "fill-available": "-webkit-fill-available",
+        "line-after-h": "calc(100% - 32px)",
       },
       minHeight: {
         "fill-available": "-webkit-fill-available",

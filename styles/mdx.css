@@ -147,7 +147,7 @@ ul p {
 }
 
 ul li {
-  @apply my-0 !important;
+  @apply my-0 relative after:top-[2px] after:left-[-12px] after:content-[''] after:absolute after:w-[1px] after:my-[30px] after:h-line-after-h after:bg-highlighted !important;
 }
 
 br {

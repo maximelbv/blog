@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <div
-      className={`sticky top-0 bg-background z-50 ${
+      className={`bg-background z-50 ${
         isVisible && "border-b-[1px] border-border"
       }`}
     >

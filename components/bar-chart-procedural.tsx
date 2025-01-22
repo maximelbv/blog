@@ -131,13 +131,13 @@ const BarChartProcedural: React.FC<BarChartProps> = ({ barCount = 25 }) => {
   };
 
   return (
-    <div className="flex flex-col w-full max-w-3xl mx-auto mt-4">
-      <div className="w-full p-4">
+    <div className="flex flex-col w-full !article-layout mx-auto mt-4">
+      <div className="w-full p-0 pb-4">
         <Bar data={data} options={options} height={100} />
       </div>
       <button
         onClick={handleReload}
-        className="mx-[20px] px-3 py-1 bg-[#8263FD] text-white rounded shadow hover:bg-[#7458e4]"
+        className="px-3 py-1 bg-[#8263FD] text-white rounded shadow hover:bg-[#7458e4]"
       >
         Regenerate Values
       </button>
