@@ -114,7 +114,7 @@ ol code {
 }
 
 h1 {
-  @apply mt-[4rem] mb-2 max-w-[700px] mx-auto !important;
+  @apply mt-10 mb-2 max-w-[700px] mx-auto !important;
 }
 
 h2 {
@@ -147,7 +147,7 @@ ul p {
 }
 
 ul li {
-  @apply my-0 relative after:top-[2px] after:left-[-12px] after:content-[''] after:absolute after:w-[1px] after:my-[30px] after:h-line-after-h after:bg-highlighted !important;
+  @apply my-0 relative after:top-[2px] after:left-[-12.5px] after:content-[''] after:absolute after:w-[2px] after:my-[30px] after:h-line-after-h after:bg-highlighted !important;
 }
 
 br {

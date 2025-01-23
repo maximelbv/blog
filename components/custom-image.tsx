@@ -1,23 +1,25 @@
-import BlurImage from "./blur-image";
+import Image from "next/image";
 import ImagePlaceholder from "./image-placeholder";
-
 import React from "react";
 
-const CustomImage = ({ href }: { href: string }) => {
+interface CustomImageProps {
+  href: string;
+  alt?: string;
+}
+
+const CustomImage = ({ href, alt = "" }: CustomImageProps) => {
+  if (!href) return <ImagePlaceholder />;
+
   return (
-    <div className="w-full aspect-video relative m-0">
-      {href ? (
-        <BlurImage
-          src={href}
-          className="rounded-[6px]"
-          style={{
-            objectFit: "cover",
-            margin: "0",
-          }}
-        />
-      ) : (
-        <ImagePlaceholder />
-      )}
+    <div className="article-layout m-auto">
+      <Image
+        src={href}
+        alt={alt}
+        width={0}
+        height={0}
+        sizes="(max-width: 700px) 100vw, 700px"
+        className="w-full h-auto rounded-[6px]"
+      />
     </div>
   );
 };

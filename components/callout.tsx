@@ -4,17 +4,19 @@ import { ReactNode } from "react";
 interface CalloutProps {
   children?: ReactNode;
   type?: "default" | "success" | "warning" | "danger";
+  className: string;
 }
 
 export function Callout({
   children,
   type = "default",
+  className,
   ...props
 }: CalloutProps) {
   return (
     <div
       className={cn(
-        "my-6 items-start rounded-md p-3 w-full bg-blue-400/10 dark:bg-blue-500/20 font-medium text-blue-500 max-w-[700px] mx-auto text-[19px] leading-[1.8rem]",
+        `${className} my-6 items-start rounded-md p-3 w-full bg-blue-400/10 dark:bg-blue-500/20 font-medium text-blue-500 max-w-[700px] mx-auto text-[19px] leading-[1.8rem]`,
         {
           " bg-green-400/10 dark:bg-green-300/10 text-green-500":
             type === "success",

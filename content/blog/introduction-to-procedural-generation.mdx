@@ -9,18 +9,25 @@ category: Computer graphics
 index: []
 published: true
 ---
+<Callout className={'!mt-0'}>☝️ This article is designed for newcomers and tech-savvy pros alike, with no prerequisites required to get started.</Callout>
+
+In this article, we explore what procedural generation is and how it’s applied to create virtual worlds.
+This is not a step-by-step tutorial but rather an opportunity to demystify the concept and 
+inspire curiosity about its possibilities.
+
+<SpacerM />
 
 Procedural generation is a technique used in game development to create content algorithmically 
 instead of manually. It allows developers to produce environments, objects, and experiences that 
 feel organic without designing every element by hand. This approach has transformed how games are 
 built, balancing creativity with automation.
 
-# Examples
+# Use cases
 
 - ## World generation <br />
   <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/2.webp"}, {src:"/images/blog/procedural-generation/1.png"}]} />
   The most known use of procedural generation is terrain, biomes, and ecosystems dynamic creation.
-  _Minecraft_ is a good example of that. Each world created is extremely vast and unique.
+  _Minecraft_ is a good example of that. Each world created is unique.
 
 - ## Dynamic Level Design <br />
   <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/3.webp"}, {src:"/images/blog/procedural-generation/4.gif"}]} />
@@ -35,6 +42,7 @@ built, balancing creativity with automation.
   to a world’s uniqueness. This approach adds richness without requiring endless manual work.
 
 - ## NPC Behavior and Quests <br />
+  <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/7.avif"}, {src:"/images/blog/procedural-generation/8.png"}]} />
   NPC's can modulate their dialogues, movements, routines, and behavior towards the player, 
   to make them seem more realistic. good examples are Skyrim or RDR2.
   
@@ -44,7 +52,7 @@ as you've seen, procedural generation is involved in almost every aspect of vide
 Hovewer, in this article, we're going to understand how it works through the example of a **world creation**.
 So where do we start ?
 
-# Random !
+# Step 1 : Random !
 
 The first step is of course to create randomness, but not just any kind of randomness.
 
@@ -79,9 +87,14 @@ for generating lifelike textures, flowing landscapes, and organic forms.
 
 <SpacerM />
 
-## The Perlin Noise
+## Understand what is a noise
 
-The Perlin noise is one of the most popular algorithms for procedural generation. 
+In the context of procedural generation, a noise is a type of **mathematical function**
+that generates values distributed across a space, with a certain continuity and coherence.
+
+<SpacerM />
+
+The **Perlin noise** that we used is one of them. 
 Its ability to produce smooth and continuous variations 
 has made it a solution for many applications, let’s take a closer look at how it works:
 
@@ -104,38 +117,48 @@ I recommend reading <CustomLink isExternal href="https://rtouti.github.io/graphi
 
 <SpacerM />
 
-We will use this algorithm for the next steps, but be aware that many others exist for various purposes.
+We will use this algorithm for the next steps, but be aware that many others exist for various purposes:
 
+<ImagesGrid columns={2} images={[
+  {src:"/images/blog/procedural-generation/fractal-noise.jpg", alt: "Fractal noise"},
+  {src:"/images/blog/procedural-generation/worley-noise.jpg", alt: "Worley noise"},
+  {src:"/images/blog/procedural-generation/white-noise.avif", alt: "White noise (yes the one from the TV's !)"},
+  {src:"/images/blog/procedural-generation/simplex-noise.jpg", alt: "Simplex noise"},
+]}/>
 
-# 🌱 The Seed
+## 🌱 The Seed
 
 Have you noticed the _"seed"_ field with a value of 42 in the component above? <br />
 Try changing it and see what happens.
 
-<SpacerM />
+<SpacerS />
 
-When you alter the seed, the generated noise shifts entirely. This happens because the 
-seed acts as the starting point for the random number generator that powers the procedural 
-generation algorithm.
+When you change the seed, you change the entire noise pattern because the seed is the initial 
+input that drives the generator. 
 
+<SpacerS />
 
-<Callout> The seed 42 will always generate the same result from the algorithm. Think of it as the DNA of your noise,
-the seed ensures that random patterns can be reproduced. </Callout>
+If you keep the same seed, like "42" you’ll always 
+get the same result, similar to how DNA defines consistent traits. This reproducibility is crucial 
+to recreate identical patterns later on.
+
+<SpacerS />
 
 You may be familiar with this concept if you ever played Minecraft. Using the same seed 
 as your friend generates identical worlds, allowing you to explore the same terrain.
 
-# Other parameters (changer le nom)
-- Scale
-- frequency
-- persistence
-- Octave
+<CustomImage href="/images/blog/procedural-generation/minecraft-seed-menu.png" />
 
-# Practical example: Building a terrain
+# Step 2 : Turning noise into relief
 
-# Practical example: ...
+Now that we have the noise, we can move on to the exciting part: transforming 
+it into a realistic terrain. By mapping the grayscale values of noise to heights, 
+we can create mountains, valleys, and plateaus, giving structure and depth to our virtual 
+worlds. Let’s dive into the essentials of how this works.
 
-# Practical example: ...
+In general, these tools come with ready-to-use terrain generators, but if you want 
+to try it out for yourself, you can follow this very quick tutorial from CGMatter : <CustomLink isExternal href='https://www.youtube.com/watch?v=P-j6X4HDuT8'>Blender Terrain in 2 CLICKS!</CustomLink> 
+
 
 # Conclusion
 
