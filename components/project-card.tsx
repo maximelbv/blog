@@ -4,6 +4,7 @@ import React from "react";
 import ImagePlaceholder from "./image-placeholder";
 import BlurImage from "./blur-image";
 import FadeIn from "./fade-in";
+import { getIconFromString } from "@/lib/icon-helper";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const {
@@ -41,7 +42,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <ImagePlaceholder />
             )}
           </div>
-          <div className="grid ">
+          <div className="grid items-start">
+            {project.stack && (
+              <div className="w-fit text-[14px] flex items-center justify-center gap-2 mt-[2px]">
+                <div>{getIconFromString(project.stack[0])}</div>
+                <span className="uppercase text-foregroundAlt font-semibold tracking-[1px]">
+                  {project.stack[0]}
+                </span>
+              </div>
+            )}
             <h3 className="text-[22px] font-bold">{title}</h3>
             <span className="text-foregroundAlt font-normal">
               {description}
