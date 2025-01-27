@@ -3,7 +3,7 @@ title: "The Procedural Generation: From Randomness to Realism"
 type: "article"
 description: "Learn how procedural generation uses algorithms to craft unique landscapes, textures, and environments through hands-on examples"
 date: 2024-11-05
-image: /images/procedural-generation.jpg
+image: /static/images/blog/procedural-generation/thumbnail.jpg
 tags: ["procedural generation", "beginner friendly"]
 category: Computer graphics
 index: []
@@ -25,24 +25,24 @@ built, balancing creativity with automation.
 # Use cases
 
 - ## World generation <br />
-  <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/2.webp"}, {src:"/images/blog/procedural-generation/1.png"}]} />
+  <ImagesGrid columns={2} images={[{src:"/static/images/blog/procedural-generation/2.webp"}, {src:"/static/images/blog/procedural-generation/1.png"}]} />
   The most known use of procedural generation is terrain, biomes, and ecosystems dynamic creation.
   _Minecraft_ is a good example of that. Each world created is unique.
 
 - ## Dynamic Level Design <br />
-  <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/3.webp"}, {src:"/images/blog/procedural-generation/4.gif"}]} />
+  <ImagesGrid columns={2} images={[{src:"/static/images/blog/procedural-generation/3.webp"}, {src:"/static/images/blog/procedural-generation/4.gif"}]} />
   Especially in roguelite games, procedural generation is used to create the dynamic level designs. 
   In _The binding of Isaac_, for example, rooms are designed by hand, but their layout is dynamically generated, 
   making each run unique.
 
 - ## Texture and Asset Creation <br />
-  <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/5.jpg"}, {src:"/images/blog/procedural-generation/6.jpg"}]} />
+  <ImagesGrid columns={2} images={[{src:"/static/images/blog/procedural-generation/5.jpg"}, {src:"/static/images/blog/procedural-generation/6.jpg"}]} />
   Creating visual details on a massive scale can be overwhelming, but procedural generation makes it manageable. 
   Surfaces, patterns, and objects can be generated dynamically, ensuring that even the smallest details contribute 
   to a world’s uniqueness. This approach adds richness without requiring endless manual work.
 
 - ## NPC Behavior and Quests <br />
-  <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/7.avif"}, {src:"/images/blog/procedural-generation/8.png"}]} />
+  <ImagesGrid columns={2} images={[{src:"/static/images/blog/procedural-generation/7.avif"}, {src:"/static/images/blog/procedural-generation/8.png"}]} />
   NPC's can modulate their dialogues, movements, routines, and behavior towards the player, 
   to make them seem more realistic. good examples are Skyrim or RDR2.
   
@@ -120,10 +120,10 @@ I recommend reading <CustomLink isExternal href="https://rtouti.github.io/graphi
 We will use this algorithm for the next steps, but be aware that many others exist for various purposes:
 
 <ImagesGrid columns={2} images={[
-  {src:"/images/blog/procedural-generation/fractal-noise.jpg", alt: "Fractal noise"},
-  {src:"/images/blog/procedural-generation/worley-noise.jpg", alt: "Worley noise"},
-  {src:"/images/blog/procedural-generation/white-noise.avif", alt: "White noise (yes the one from the TV's !)"},
-  {src:"/images/blog/procedural-generation/simplex-noise.jpg", alt: "Simplex noise"},
+  {src:"/static/images/blog/procedural-generation/fractal-noise.jpg", alt: "Fractal noise"},
+  {src:"/static/images/blog/procedural-generation/worley-noise.jpg", alt: "Worley noise"},
+  {src:"/static/images/blog/procedural-generation/white-noise.avif", alt: "White noise (yes the one from the TV's !)"},
+  {src:"/static/images/blog/procedural-generation/simplex-noise.jpg", alt: "Simplex noise"},
 ]}/>
 
 ## 🌱 The Seed
@@ -147,7 +147,7 @@ to recreate identical patterns later on.
 You may be familiar with this concept if you ever played Minecraft. Using the same seed 
 as your friend generates identical worlds, allowing you to explore the same terrain.
 
-<CustomImage href="/images/blog/procedural-generation/minecraft-seed-menu.png" />
+<CustomImage href="/static/images/blog/procedural-generation/minecraft-seed-menu.png" />
 
 # Step 2 : Turning noise into relief
 

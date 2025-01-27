@@ -70,7 +70,11 @@ const AboutHero = () => {
       </div>
       <div className="w-full max-w-full aspect-square p-[75px]">
         <FadeIn className="relative w-full h-full">
-          <Image alt="profile-picture" fill src="/images/profile-pic.svg" />
+          <Image
+            alt="emoji victory sign"
+            fill
+            src="/static/images/site/emoji-victory-sign.svg"
+          />
         </FadeIn>
       </div>
     </div>

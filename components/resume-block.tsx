@@ -5,7 +5,7 @@ import { Icons } from "./icons";
 
 const ResumeBlock = () => {
   const openResumePDF = () => {
-    window.open("/docs/resume.pdf", "_blank");
+    window.open("/static/docs/resume.pdf", "_blank");
   };
 
   return (

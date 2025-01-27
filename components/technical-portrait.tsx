@@ -15,7 +15,11 @@ const TechnicalPortrait = async () => {
         </div>
         <div className="relative bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center p-[20px]">
           <div className="relative w-full h-full">
-            <Image alt="profile-picture" fill src="/images/profile-pic.svg" />
+            <Image
+              alt="emoji victory sign"
+              fill
+              src="/static/images/site/emoji-victory-sign.svg"
+            />
           </div>
         </div>
         <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center ">
