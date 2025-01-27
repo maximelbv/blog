@@ -9,7 +9,7 @@ type MediaType = {
 
 const ShowcaseWebsiteSection = ({ media }: { media: MediaType[] }) => {
   return (
-    <div className="default-layout my-[24px] p-[15px] bg-highlighted md:rounded-xl grid grid-cols-1 md:grid-cols-[14.5fr_4.59fr] gap-[15px] items-start">
+    <div className="default-layout md:my-[24px] p-[15px] bg-highlighted md:rounded-xl grid grid-cols-1 md:grid-cols-[14.5fr_4.59fr] gap-[15px] items-start">
       <div className="relative aspect-video rounded-lg">
         <div className="relative w-full h-full rounded-lg overflow-hidden">
           {media[0] &&
