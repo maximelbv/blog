@@ -73,7 +73,7 @@ const AboutHero = () => {
           <Image
             alt="emoji victory sign"
             fill
-            src="/static/images/site/emoji-victory-sign.svg"
+            src="/images/site/emoji-victory-sign.svg"
           />
         </FadeIn>
       </div>
