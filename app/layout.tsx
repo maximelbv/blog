@@ -15,27 +15,27 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 const dahliaLight = localFont({
-  src: "../public/static/fonts/dahlia/dahlia-regular.otf",
+  src: "../public/fonts/dahlia/dahlia-regular.otf",
   variable: "--font-dahlia-light",
 });
 
 const dahlia = localFont({
-  src: "../public/static/fonts/dahlia/dahlia-medium.otf",
+  src: "../public/fonts/dahlia/dahlia-medium.otf",
   variable: "--font-dahlia",
 });
 
 const dahliaBold = localFont({
-  src: "../public/static/fonts/dahlia/dahlia-bold.otf",
+  src: "../public/fonts/dahlia/dahlia-bold.otf",
   variable: "--font-dahlia-bold",
 });
 
 const gelica = localFont({
-  src: "../public/static/fonts/gelica/regular.otf",
+  src: "../public/fonts/gelica/regular.otf",
   variable: "--font-gelica",
 });
 
 const monoLisa = localFont({
-  src: "../public/static/fonts/monoLisa/MonoLisaRegular.ttf",
+  src: "../public/fonts/monoLisa/MonoLisaRegular.ttf",
   variable: "--font-monolisa",
 });
 
