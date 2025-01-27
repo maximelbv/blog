@@ -24,18 +24,19 @@ export default function ScrollableDialogContent({
       // style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       className={cn(
         "!fixed !top-1/2 !left-1/2 !translate-x-[-50%] !translate-y-[-50%] !w-auto !max-w-none",
-        "!w-[90%] !max-w-[850px]",
-        "!h-[85svh] md:!h-[80svh] md:!max-h-[80svh]",
+        "!w-[90%] !max-w-[700px]",
+        "!h-[90svh] md:!h-[80svh] md:!max-h-[80svh]",
         "!p-0",
         "!block",
         "overflow-y-auto pointer-events-auto gap-0",
         "!rounded-lg",
+        // "!bg-secondary",
         className
       )}
     >
-      <DialogHeader className="!text-start relative">
-        <DialogTitle className="!m-0 bg-background p-[20px] md:p-[75px] !pb-[0px] leading-[1.3]">
-          <div className="flex flex-col gap-[15px]">
+      <DialogHeader className="!text-start relative w-full">
+        <DialogTitle className="!m-0 p-[20px] md:p-[50px] !pb-[0px] leading-[1.3] w-full">
+          <div className="flex flex-col gap-[15px] bg-secondary w-full p-[20px] rounded-md">
             <PostInfos
               className="mb-[-5px]"
               variant="small"
@@ -58,7 +59,7 @@ export default function ScrollableDialogContent({
         </DialogTitle>
       </DialogHeader>
       <div
-        className="max-h-[80vh] p-[20px] md:p-[75px] !pt-0 !mt-0 "
+        className="max-h-[80vh] p-[20px] md:p-[50px] !pt-0 !mt-0 "
         onWheel={(e) => e.stopPropagation()}
       >
         <div className="h-[1px] w-full bg-border article-layout my-[15px]" />
