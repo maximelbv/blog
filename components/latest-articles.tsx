@@ -15,27 +15,31 @@ export default async function LatestArticles() {
   );
 
   return (
-    <div className="flex flex-col gap-[15px]">
-      <FadeIn>
-        <span className="text-[20px] px-[10px] py-[5px] bg-secondary w-fit rounded-lg">
-          Latest Articles
-        </span>
-      </FadeIn>
-
-      <div className="grid row-gap w-full grid-cols-1 md:grid-cols-3 gap-6">
-        {publishedPosts.map((post, index) => (
-          <FadeIn key={index} delay={(index + 1) * 0.2}>
-            <PostCard key={post.slug} post={post} />
+    <>
+      {publishedPosts.length > 0 && (
+        <div className="flex flex-col gap-[15px]">
+          <FadeIn>
+            <span className="text-[20px] px-[10px] py-[5px] bg-secondary w-fit rounded-lg">
+              Latest Articles
+            </span>
           </FadeIn>
-        ))}
-      </div>
-      <div className="flex justify-end items-center">
-        <FadeIn>
-          <CustomLink href="/blog" className="text-[18px]">
-            View all articles →
-          </CustomLink>
-        </FadeIn>
-      </div>
-    </div>
+
+          <div className="grid row-gap w-full grid-cols-1 md:grid-cols-3 gap-6">
+            {publishedPosts.map((post, index) => (
+              <FadeIn key={index} delay={(index + 1) * 0.2}>
+                <PostCard key={post.slug} post={post} />
+              </FadeIn>
+            ))}
+          </div>
+          <div className="flex justify-end items-center">
+            <FadeIn>
+              <CustomLink href="/blog" className="text-[18px]">
+                View all articles →
+              </CustomLink>
+            </FadeIn>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

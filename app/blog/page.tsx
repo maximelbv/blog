@@ -32,21 +32,23 @@ export default async function BlogPage() {
       />
       <LatestSnippets />
 
-      <div className="flex flex-col gap-[15px]">
-        <FadeIn>
-          <span className="text-[20px] px-[10px] py-[5px] bg-secondary w-fit rounded-lg">
-            Articles
-          </span>
-        </FadeIn>
+      {publishedPosts.length > 0 && (
+        <div className="flex flex-col gap-[15px]">
+          <FadeIn>
+            <span className="text-[20px] px-[10px] py-[5px] bg-secondary w-fit rounded-lg">
+              Articles
+            </span>
+          </FadeIn>
 
-        <div className="grid row-gap w-full grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {publishedPosts.map((post, index) => (
-            <FadeIn key={post.slug} delay={(index + 1) * 0.2}>
-              <PostCard key={post.slug} post={post} />
-            </FadeIn>
-          ))}
+          <div className="grid row-gap w-full grid-cols-1 mb-20 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {publishedPosts.map((post, index) => (
+              <FadeIn key={post.slug} delay={(index + 1) * 0.2}>
+                <PostCard key={post.slug} post={post} />
+              </FadeIn>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
