@@ -36,7 +36,7 @@ const PostCard = ({
             date={post.date}
           />
           <h3 className="text-[22px] font-bold">{post.title}</h3>
-          <span className="text-foregroundAlt font-normal">
+          <span className="text-muted-foreground font-normal">
             {post.description}
           </span>
         </div>

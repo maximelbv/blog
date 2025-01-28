@@ -52,7 +52,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
             )}
             <h3 className="text-[22px] font-bold">{title}</h3>
-            <span className="text-foregroundAlt font-normal">
+            <span className="text-muted-foreground font-normal">
               {description}
             </span>
           </div>
