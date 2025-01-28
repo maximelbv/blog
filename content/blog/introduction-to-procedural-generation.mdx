@@ -19,15 +19,14 @@ inspire curiosity about its possibilities.
 
 Procedural generation is a technique used in game development to create content algorithmically 
 instead of manually. It allows developers to produce environments, objects, and experiences that 
-feel organic without designing every element by hand. This approach has transformed how games are 
-built, balancing creativity with automation.
+feel organic without designing every element by hand.
 
 # Use cases
 
 - ## World generation <br />
   <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/2.webp"}, {src:"/images/blog/procedural-generation/1.png"}]} />
-  The most known use of procedural generation is terrain, biomes, and ecosystems dynamic creation.
-  _Minecraft_ is a good example of that. Each world created is unique.
+  The most known use of this process is terrain, biomes, and ecosystems dynamic creation.
+  _Minecraft_ is a good example of that. Each new world is unique, thanks to the procedural generation.
 
 - ## Dynamic Level Design <br />
   <ImagesGrid columns={2} images={[{src:"/images/blog/procedural-generation/3.webp"}, {src:"/images/blog/procedural-generation/4.gif"}]} />
@@ -58,9 +57,10 @@ The first step is of course to create randomness, but not just any kind of rando
 
 <SpacerS />
 
-For many applications, pure 
-randomness is too chaotic and disconnected. What we often need is **randomness with 
-structure**, a type of controlled variation that feels smooth and natural.
+For many applications, pure randomness is too chaotic and disconnected. Take the example below,
+the chart illustrates pure random values. 
+These values are entirely **independent of each other**, resulting in 
+abrupt changes.
 
 <SpacerM />
 
@@ -68,11 +68,10 @@ structure**, a type of controlled variation that feels smooth and natural.
 
 <SpacerM />
 
-Take the example above, the chart illustrates pure random values. 
-These values are entirely **independent of each other**, resulting in 
-abrupt changes. While this type of randomness can 
+While this type of randomness can 
 be useful in certain scenarios, it often falls short when it comes to 
-simulating natural or organic patterns.
+simulating natural or organic patterns. What we often need is **randomness with 
+structure**, a type of controlled variation that feels smooth and natural :
 
 <SpacerM />
 
@@ -91,6 +90,7 @@ for generating lifelike textures, flowing landscapes, and organic forms.
 
 In the context of procedural generation, a noise is a type of **mathematical function**
 that generates values distributed across a space, with a certain continuity and coherence.
+You don’t need to understand how it’s made, just how it works and how it can be applied.
 
 <SpacerM />
 
@@ -104,7 +104,12 @@ has made it a solution for many applications, let’s take a closer look at how 
 On a digital canvas, each pixel is assigned a brightness value **between 0 and 100**, 
 with 0 representing pure black and 100 pure white. However, as we’ve seen, it’s 
 not just about assigning random values to each pixel. There’s a gradual transition 
-between neighboring values, creating smooth changes across the canvas :
+between neighboring values, creating smooth changes across the canvas.
+
+<SpacerM />
+
+Hover your mouse over the image to zoom in and see its details. You'll notice each pixel's 
+brightness value and the smooth transitions between them :
 
 <SpacerM />
 
@@ -112,12 +117,13 @@ between neighboring values, creating smooth changes across the canvas :
 
 <SpacerM />
 
-If you want to dive deeper into Perlin noise and understand how it's generated, 
+That is basically the concept of Perlin noise. However, if you’re curious about how it’s made, 
 I recommend reading <CustomLink isExternal href="https://rtouti.github.io/graphics/perlin-noise-algorithm">this article</CustomLink>from Raouf Touti.
 
 <SpacerM />
 
-We will use this algorithm for the next steps, but be aware that many others exist for various purposes:
+We will rely on this algorithm for the next steps, but keep in mind that 
+there are many others designed for different purposes, some examples are :
 
 <ImagesGrid columns={2} images={[
   {src:"/images/blog/procedural-generation/fractal-noise.jpg", alt: "Fractal noise"},
@@ -128,20 +134,29 @@ We will use this algorithm for the next steps, but be aware that many others exi
 
 ## 🌱 The Seed
 
-Have you noticed the _"seed"_ field with a value of 42 in the component above? <br />
-Try changing it and see what happens.
+We won’t dive too deep into the details, but before moving on, I want to introduce an 
+important concept in noise generation: **the seed**.
 
 <SpacerS />
 
-When you change the seed, you change the entire noise pattern because the seed is the initial 
-input that drives the generator. 
+You may have noticed the "seed" field with the value 42 in the perlin noise generator component,
+but what is this ? and why does the noise change when i change the seed value ?
+
+<AutoplayVideo src="/images/blog/procedural-generation/seed-change.mov" />
+
+When you change the seed, you change the entire noise pattern because the seed is the **initial 
+input that drives the generator**. 
 
 <SpacerS />
 
-If you keep the same seed, like "42" you’ll always 
-get the same result, similar to how DNA defines consistent traits. This reproducibility is crucial 
-to recreate identical patterns later on.
+Think of it like planting a tomato seed in a garden : it will always grow into a tomato plant. 
+If you plant a sunflower seed instead, you’ll get a completely different result. 
 
+<SpacerS />
+
+In procedural generation, the seed works the same way. It’s the starting point that determines 
+the entire outcome. Keep the seed the same, and you’ll always recreate the same result; change it, 
+and you’ll get something entirely new.
 <SpacerS />
 
 You may be familiar with this concept if you ever played Minecraft. Using the same seed 
@@ -151,24 +166,18 @@ as your friend generates identical worlds, allowing you to explore the same terr
 
 # Step 2 : Turning noise into relief
 
-Now that we have the noise, we can move on to the exciting part: transforming 
-it into a realistic terrain. By mapping the grayscale values of noise to heights, 
-we can create mountains, valleys, and plateaus, giving structure and depth to our virtual 
-worlds. Let’s dive into the essentials of how this works.
-
-In general, these tools come with ready-to-use terrain generators, but if you want 
-to try it out for yourself, you can follow this very quick tutorial from CGMatter : <CustomLink isExternal href='https://www.youtube.com/watch?v=P-j6X4HDuT8'>Blender Terrain in 2 CLICKS!</CustomLink> 
-
-
 # Conclusion
 
-Cet article a été pensé comme une porte d'entrée dans le monde de la génération procédurale, nous avons
-vu les fondamentaux de son fonctionnement. Si le coeur vous en dit, je vous
-recommande vivement d'aller plus loin dans votre apprentissage et de tenter de faire de la génération 
-procédurale par vous même, vous trouverez une infinité de ressources sur internet pour tout 
-les niveaux et toutes les applications !
+In this article, we demystified what procedural generation is through the example of 
+one of its applications, but as you'd expect, procedural generation goes far beyond that.
 
-<SpacerM />
+<SpacerS />
 
-En attendant, si vous voulez tester vos conaissances acquises sur cet article, vous pouvez
-tenter de faire un perfect sur ce quizz :
+If this introduction has caught your attention, i highly encourage you to dive in and experiment 
+procedural generation for yourself. You'll find a wealth of content online for all levels and 
+applications.
+
+<SpacerS />
+
+In the meantime, if you'd like to test your knowledge of this article, you can give this 
+quizz a try : 
