@@ -108,7 +108,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <article className="container py-6 prose dark:prose-invert w-full m-0 p-0 max-w-full">
           <div className="gap-0 mb-8 flex flex-col article-layout">
             <BackButton href="/blog" label="blog" />
-            {/* {post.image && (
+            {post.image && (
               <div className="w-full aspect-video md:aspect-21/9 relative rounded-md my-4">
                 <BlurImage
                   src={post.image}
@@ -119,7 +119,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   }}
                 />
               </div>
-            )} */}
+            )}
             <div className="flex flex-col gap-[1.2rem] w-full mt-4">
               <PostInfos
                 className="scale-90 w-max ml-[-10px]"

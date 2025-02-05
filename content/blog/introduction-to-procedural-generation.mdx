@@ -80,7 +80,11 @@ structure**, a type of controlled variation that feels smooth and natural :
 <SpacerM />
 
 This chart showcases a more structured approach known as **Perlin noise**, 
-a technique among others that introduces a sense of continuity. By ensuring 
+a technique among others that introduces a sense of continuity. 
+
+<SpacerS />
+
+By ensuring 
 **neighboring values are similar**, it produces smoother transitions that are ideal 
 for generating lifelike textures, flowing landscapes, and organic forms.
 
@@ -165,6 +169,34 @@ as your friend generates identical worlds, allowing you to explore the same terr
 <CustomImage href="/images/blog/procedural-generation/minecraft-seed-menu.png" />
 
 # Step 2 : Turning noise into relief
+
+Remember our Perlin noise grid with values between 0 and 100 ? We can 
+reinterpret these values as **elevation levels**. For instance, a value of 0 in your 
+noise could correspond to the bottom of a cavern, while a value of 100 might be a mountain peak.
+
+<SpacerS />
+
+[image d'un bout de perlin noise avec les values, une fleche puis un composant 3d d'un perlin noise qui représente]
+
+<SpacerS />
+
+You can also apply thresholds to categorize these values. For example:
+<div className="article-layout my-4 !text-[19px]">
+  <ColorLegend color={"blue"}>**0–20** : Water (oceans or lakes)</ColorLegend>
+  <ColorLegend color={"yellow"}>**20–40** : Beaches or low-lying areas</ColorLegend>
+  <ColorLegend color={"green"}>**40–60** : Grasslands</ColorLegend>
+  <ColorLegend color={"darkGreen"}>**60–80** : Hills</ColorLegend>
+  <ColorLegend color={"white"}>**80–100** : Mountain peaks</ColorLegend>
+</div>
+
+
+
+
+
+
+
+[Image du noise en grayscale avec ses valeurs, une fleche et une image du meme noise, coloré avec le code couleur]
+
 
 # Conclusion
 
