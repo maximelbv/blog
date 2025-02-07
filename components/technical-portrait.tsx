@@ -13,7 +13,7 @@ const TechnicalPortrait = async () => {
         <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center p-[10px] group">
           <Icons.location />
         </div>
-        <div className="relative bg-secondary !aspect-square rounded-lg flex flex-col !items-center !justify-center !p-[20px]">
+        <div className="relative bg-secondary !aspect-square rounded-lg flex flex-col !items-center !justify-center !p-[20px] !h-full">
           <div className="relative w-full h-full">
             <Image
               alt="emoji victory sign"
