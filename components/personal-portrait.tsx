@@ -66,7 +66,7 @@ const PersonalPortrait = () => {
               />
             )}
           </div>
-          <div className="grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
+          <div className="h-full grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
             {makingArray.map((elem) => (
               <div
                 key={elem.name}
@@ -94,7 +94,7 @@ const PersonalPortrait = () => {
               />
             )}
           </div>
-          <div className="grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
+          <div className="h-full grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
             {softwareArray.map((elem) => (
               <div
                 key={elem.name}
@@ -122,7 +122,7 @@ const PersonalPortrait = () => {
               />
             )}
           </div>
-          <div className="grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
+          <div className="h-full grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
             {videoGameArray.map((elem) => (
               <div
                 key={elem.name}
@@ -150,7 +150,7 @@ const PersonalPortrait = () => {
               />
             )}
           </div>
-          <div className="grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
+          <div className="h-full grid grid-cols-2 gap-[10px] rounded-lg bg-secondary aspect-square p-[10px]">
             {lifestyleArray.map((elem) => (
               <div
                 key={elem.name}
