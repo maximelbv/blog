@@ -69,7 +69,7 @@ const AboutHero = () => {
         </AnimatedElement>
       </div>
       <div className="w-full max-w-full aspect-square p-[75px]">
-        <FadeIn className="relative w-full h-full">
+        <FadeIn className="relative w-full h-full mah-h-full">
           <Image
             alt="emoji victory sign"
             fill
