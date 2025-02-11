@@ -25,7 +25,7 @@ export default function ScrollableDialogContent({
       className={cn(
         "!fixed !top-1/2 !left-1/2 !translate-x-[-50%] !translate-y-[-50%] !w-auto !max-w-none",
         "!w-[90%] !max-w-[700px]",
-        "!h-[90svh] md:!h-[80svh] md:!max-h-[80svh]",
+        "!h-[90svh] md:!h-[90svh] md:!max-h-[90svh]",
         "!p-0",
         "!block",
         "overflow-y-auto pointer-events-auto gap-0",
