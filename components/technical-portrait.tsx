@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { Icons } from "./icons";
-import LeetcodeStats from "./leetcode-stats";
+// import LeetcodeStats from "./leetcode-stats";
 import { socials } from "@/config/socials";
 import Link from "next/link";
 import ResumeBlock from "./resume-block";
 import StackBlock from "./stack-block";
+import { Button } from "./ui/button";
+import CustomLink from "./custom-link";
 
 const TechnicalPortrait = async () => {
   return (
@@ -32,8 +34,16 @@ const TechnicalPortrait = async () => {
               ))}
           </div>
         </div>
-        <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center hover:bg-muted-foreground/10">
-          <LeetcodeStats />
+        <div className="bg-secondary aspect-square rounded-lg flex flex-col items-center justify-center gap-2 p-2">
+          {/* <LeetcodeStats /> */}
+          <span>Current project</span>
+          <a
+            href="https://github.com/maximelbv/popkit"
+            target="blank_"
+            className="hover:bg-muted-foreground/10 p-2 rounded-md w-full flex items-center justify-center"
+          >
+            <Icons.popkit />
+          </a>
         </div>
       </div>
       <ResumeBlock />
