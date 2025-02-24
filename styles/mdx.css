@@ -118,7 +118,7 @@ h1 {
 }
 
 h2 {
-  @apply mt-[1.5rem] mb-1 max-w-[700px] mx-auto !important;
+  @apply mt-[1.5rem] mb-2 max-w-[700px] mx-auto !important;
 }
 
 h1 a {

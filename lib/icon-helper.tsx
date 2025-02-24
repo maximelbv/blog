@@ -21,6 +21,7 @@ const icons = {
   tailwind: Icons.tailwind,
   framerMotion: Icons.framerMotion,
   webflow: Icons.webflow,
+  productivity: Icons.productivity,
 };
 
 type Icon = keyof typeof icons;

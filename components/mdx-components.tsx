@@ -18,6 +18,7 @@ import ImagesGrid from "./images-grid";
 import BarChartRandom from "./bar-chart-random-values";
 import BarChartProcedural from "./bar-chart-procedural";
 import ShowcaseWebsiteSection from "./showcase-website-section";
+import ForgettingCurve from "./forgetting-curve";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -44,6 +45,7 @@ const components = {
   BarChartRandom,
   BarChartProcedural,
   ShowcaseWebsiteSection,
+  ForgettingCurve,
 };
 
 interface MdxProps {
