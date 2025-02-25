@@ -12,7 +12,7 @@ export function SiteFooter() {
           </div>
           <div className="!text-center">
             <span className="text-foregroundAlt text-[15px] font-medium">
-              © Copyright Maxime Lefebvre 2024
+              © Copyright Maxime Lefebvre {new Date().getFullYear()}
             </span>
           </div>
         </div>

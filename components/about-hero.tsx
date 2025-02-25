@@ -2,13 +2,12 @@ import { socials } from "@/config/socials";
 import CustomLink from "./custom-link";
 import Link from "next/link";
 import FadeIn from "./fade-in";
-import AnimatedText from "./animated-text";
 import AnimatedElement from "./animated-element";
 import Image from "next/image";
 
 const AboutHero = () => {
   return (
-    <div className="default-layout px-[20px] md:grid md:grid-cols-2 items-center justify-between flex flex-col-reverse md:flex-row">
+    <div className="default-layout px-[20px] md:grid md:grid-cols-2 items-center justify-between flex flex-col-reverse md:flex-row mb-8 md:mb-0">
       <div className="flex flex-col gap-[10px] max-w-[475px]">
         <AnimatedElement>
           <span className="text-[24px] md:text-[28px]">

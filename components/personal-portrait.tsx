@@ -49,7 +49,7 @@ const PersonalPortrait = () => {
   return (
     <div className="default-layout px-[20px] flex flex-col gap-[15px]">
       <span className="text-[20px] bg-secondary px-[10px] py-[5px] w-fit rounded-lg">
-        Interests
+        My Interests
       </span>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[10px]">
         <div className="flex flex-col gap-[10px]">
