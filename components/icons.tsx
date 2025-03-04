@@ -1838,16 +1838,16 @@ export const Icons = {
       <path
         d="M16.5 5.25L10.125 11.625L6.375 7.875L1.5 12.75"
         stroke="#4A8BE6"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12 5.25H16.5V9.75"
         stroke="#4A8BE6"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
@@ -2558,8 +2558,8 @@ export const Icons = {
       <path
         d="M24.8721 52.6363C22.425 50.6959 18.6798 45.7176 23.2759 41.3277"
         stroke="#11E442"
-        stroke-width="5.28"
-        stroke-linecap="round"
+        strokeWidth="5.28"
+        strokeLinecap="round"
       />
       <path
         d="M80.8734 2.64922C80.8734 2.20739 80.5153 1.84922 80.0734 1.84922H72.8734C72.4316 1.84922 72.0734 2.20739 72.0734 2.64922C72.0734 3.09105 72.4316 3.44922 72.8734 3.44922H79.2734V9.84922C79.2734 10.291 79.6316 10.6492 80.0734 10.6492C80.5153 10.6492 80.8734 10.291 80.8734 9.84922V2.64922ZM71.8391 12.0149L80.6391 3.2149L79.5078 2.08353L70.7078 10.8835L71.8391 12.0149Z"
@@ -2574,8 +2574,8 @@ export const Icons = {
           y2="25.0044"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_0_1"
@@ -2585,8 +2585,8 @@ export const Icons = {
           y2="27.0812"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_0_1"
@@ -2596,8 +2596,8 @@ export const Icons = {
           y2="20.899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_0_1"
@@ -2607,8 +2607,8 @@ export const Icons = {
           y2="18.8182"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_0_1"
@@ -2618,8 +2618,8 @@ export const Icons = {
           y2="26.5571"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_0_1"
@@ -2629,8 +2629,8 @@ export const Icons = {
           y2="19.8658"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_0_1"
@@ -2640,8 +2640,8 @@ export const Icons = {
           y2="13.249"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_0_1"
@@ -2651,8 +2651,8 @@ export const Icons = {
           y2="33.1739"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#74AEFF" />
-          <stop offset="1" stop-color="#61A3FF" />
+          <stop stopColor="#74AEFF" />
+          <stop offset="1" stopColor="#61A3FF" />
         </linearGradient>
       </defs>
     </svg>
