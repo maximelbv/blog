@@ -23,20 +23,14 @@ export default function Home() {
         </h1>
 
         <AnimatedText
-          text="creative web developer"
+          text="creative developer"
           delay={0.5}
           className="text-foregroundAlt lowercase text-[14px] sm:text-[17px] mt-[-5px]"
         />
       </div>
       <TechnicalPortrait />
-      <div className="default-layout px-[20px]">
-        <Divider />
-      </div>
-      <div className="default-layout px-5 mt-[60px] md:mt-[30px]">
+      <div className="default-layout px-5 py-10 mt-[60px] md:mt-[30px] ">
         <LatestProjects />
-      </div>
-      <div className="default-layout px-[20px]">
-        <Divider />
       </div>
       <div className="default-layout px-5 mt-[30px]">
         <LatestSnippets />

@@ -15,6 +15,7 @@ import { getIconFromString } from "@/lib/icon-helper";
 import CustomLink from "@/components/custom-link";
 import ProjectCard from "@/components/project-card";
 import { Icons } from "@/components/icons";
+import ShowcaseMenu from "@/components/ShowcaseMenu";
 
 interface ProjectPageProps {
   params: {
@@ -98,6 +99,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       }
     })
     .slice(0, 3);
+
+  const mappedOtherProjectsToShowcaseMenuProps = otherProjects.map(
+    (project) => {
+      return {
+        link: project.slug,
+        text: project.title,
+        subtitle: project.description,
+        image: project.image,
+        logo: project.logo,
+      };
+    }
+  );
 
   if (!project || !project.published) {
     notFound();
@@ -211,14 +224,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {otherProjects.length > 0 && (
         <div className="my-5 grid gap-2 default-layout p-5 mt-0">
           <span className="text-[28px]">More projects</span>
-          <div className="my-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {otherProjects.map((post) => (
-              <ProjectCard
-                key={post.slug}
-                project={{ ...post, slug: post.slug.replace("projects/", "") }}
-              />
-            ))}
-          </div>
+          <FadeIn>
+            <ShowcaseMenu
+              items={mappedOtherProjectsToShowcaseMenuProps}
+              backgroundAnimation={false}
+              className="mb-4"
+              itemClassName="!text-6xl"
+              size="lg"
+            />
+          </FadeIn>
         </div>
       )}
     </div>

@@ -21,6 +21,8 @@ type Easing =
 interface ItemData {
   readonly link: string;
   readonly text: string;
+  readonly subtitle?: string;
+  readonly logo?: string;
   readonly image?: string | null;
 }
 
@@ -53,17 +55,19 @@ interface MenuItemProps extends ItemData {
 }
 
 const sizeConfig = {
-  xxs: { fontSize: "text-md", padding: "p-2", imgWidth: "w-40" },
-  xs: { fontSize: "text-xl", padding: "p-2", imgWidth: "w-60" },
-  sm: { fontSize: "text-3xl", padding: "p-4", imgWidth: "w-80" },
-  md: { fontSize: "text-5xl", padding: "p-8", imgWidth: "w-100" },
-  lg: { fontSize: "text-7xl", padding: "p-10", imgWidth: "w-120" },
-  xl: { fontSize: "text-8xl", padding: "p-12", imgWidth: "w-140" },
+  xxs: { fontSize: "16px", padding: "8px", imgWidth: "120px" },
+  xs: { fontSize: "24px", padding: "12px", imgWidth: "180px" },
+  sm: { fontSize: "30px", padding: "16px", imgWidth: "240px" },
+  md: { fontSize: "48px", padding: "18px", imgWidth: "300px" },
+  lg: { fontSize: "72px", padding: "20px", imgWidth: "380px" },
+  xl: { fontSize: "96px", padding: "20px", imgWidth: "500px" },
 };
 
 const MenuItem = ({
   link,
   text,
+  subtitle,
+  logo,
   image,
   onHover,
   textColor,
@@ -80,7 +84,7 @@ const MenuItem = ({
   const textRef = useRef<HTMLSpanElement>(null);
 
   const { fontSize, padding } = sizeConfig[size];
-  const separatorClass = displaySeparators ? "border-b" : "";
+  const separatorClass = displaySeparators ? "!border-b" : "";
 
   const findClosestEdge = useCallback(
     (
@@ -167,21 +171,41 @@ const MenuItem = ({
     <a
       ref={itemRef}
       href={link}
-      className={`relative block group overflow-hidden font-bold border-border ${fontSize} ${padding} ${separatorClass} ${className}`}
+      className={`group relative block group overflow-hidden !px-0 !py-6 !bg-background !text-foreground !border-foreground !font-medium ${separatorClass} ${className}`}
       style={{
-        color: textColor,
-        background: bgColor,
-        // borderColor: textColor,
+        fontWeight: "bold",
+        // color: textColor,
+        // background: bgColor,
+        borderColor: textColor,
+        fontSize: fontSize,
+        padding: padding,
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <span
-        ref={textRef}
-        className="relative z-10 transition-colors duration-600"
-      >
-        {text}
-      </span>
+      <div className="flex gap-5">
+        {/* {logo && (
+          <div className="h-[100px] aspect-square rounded-lg bg-secondary flex items-center justify-center p-6">
+            <img src={logo} />
+          </div>
+        )} */}
+        <div className="flex flex-col gap-1">
+          <span
+            ref={textRef}
+            className={`group-hover:translate-x-2 transition-all ease-in-out relative z-10 duration-1200 leading-[1]`}
+          >
+            {text}
+          </span>
+          {subtitle && (
+            <span
+              className={`group-hover:translate-x-2 transition-all ease-in-out !text-muted-foreground text-lg relative z-10 duration-1200`}
+            >
+              {subtitle}
+            </span>
+          )}
+        </div>
+      </div>
+
       <span
         ref={bgRef}
         className="absolute inset-0 z-0 pointer-events-none transition-transform duration-500 ease-in-out group-hover:translate-y-0"
@@ -282,10 +306,11 @@ const ShowcaseMenu = ({
             item.image && (
               <div
                 key={idx}
-                className={`fixed ${imgWidth} aspect-video bg-cover bg-center rounded-[10px] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-300 z-50 ${
+                className={`fixed ${imgWidth} border-2 border-foreground aspect-video bg-cover bg-center rounded-[10px] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-opacity duration-300 z-50 ${
                   hoveredImage === item.image ? "opacity-100" : "opacity-0"
                 }`}
                 style={{
+                  width: imgWidth,
                   top: `${position.y + 10}px`,
                   left: `${position.x + 10}px`,
                   backgroundImage: `url(${item.image})`,
