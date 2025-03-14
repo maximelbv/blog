@@ -7,7 +7,7 @@ image: /images/blog/procedural-generation/thumbnail.jpg
 tags: ["procedural generation", "beginner friendly"]
 category: Computer graphics
 index: []
-published: false
+published: true
 ---
 <Callout className={'!mt-0'}>☝️ This article is designed for newcomers and tech-savvy pros alike, with no prerequisites required to get started.</Callout>
 
@@ -180,7 +180,28 @@ noise could correspond to the bottom of a cavern, while a value of 100 might be 
 
 <SpacerS />
 
-You can also apply thresholds to categorize these values. For example:
+## Adding Granularity with Octaves
+
+Octaves let us add more detail to a terrain by layering multiple 
+versions of the same noise with different levels of detail.
+
+[représentation visuelle d'une octave]
+
+The first layer defines the broad shapes, and each additional layer adds smaller variations on top. 
+The more layers we add, the more complex and natural the terrain looks, avoiding repetitive or artificial patterns.
+
+[Interactive octave adjuster ?]
+
+
+# Step 3: Adding details
+
+At this stage, we have a basic terrain, but it still looks flat and lifeless. 
+To make it more visually interesting and realistic, we need to add details like textures, 
+biomes, and environmental variations.
+
+## Texture Mapping
+
+We can map different textures onto the terrain based on elevation thresholds. For example:
 <div className="article-layout my-4 !text-[19px]">
   <ColorLegend color={"blue"}>**0–20** : Water (oceans or lakes)</ColorLegend>
   <ColorLegend color={"yellow"}>**20–40** : Beaches or low-lying areas</ColorLegend>
@@ -189,14 +210,66 @@ You can also apply thresholds to categorize these values. For example:
   <ColorLegend color={"white"}>**80–100** : Mountain peaks</ColorLegend>
 </div>
 
+[Image du noise en grayscale avec ses valeurs, une fleche et une image du meme noise, coloré avec le code couleur
+vue isometrique avec les legendes qui pointent sur les layers (voir l'exemple de mc?)]
 
+## Environmental Factors
 
+Textures alone aren’t enough to define a biome. Two regions at the same altitude 
+can have completely different environments, a desert and a jungle, for example. 
 
+<SpacerS />
 
+To refine our terrain, we introduce additional noise layers to control key factors:
 
+Humidity → Determines if an area is wet (jungle, swamp) or dry (desert, steppe).
+Temperature → Influences biome types (cold tundra, warm savanna).
+Proximity to Water → Affects vegetation, enabling forests near rivers and barren land in isolated areas.
+Soil Type → Impacts plant growth (fertile land, rocky surfaces, sandy terrain).
+Slope and Erosion → Steep areas may be rocky cliffs, while flatter zones allow vegetation to spread.
 
-[Image du noise en grayscale avec ses valeurs, une fleche et une image du meme noise, coloré avec le code couleur]
+Just like the elevation map, some of these factors are generated using separate noise maps 
+with their own scale and frequency.
 
+[exemple visuel d'une noise map adaptée a l'humidité]
+[exemple visuel d'une noise map adaptée a la temperature]
+
+Other factors, like proximity to water and slope, are derived directly from the elevation map. 
+Instead of generating new noise, we analyze the terrain’s shape, calculating distances to water 
+bodies or detecting steep areas, to determine how these factors influence the environment.
+
+[exemple visuel ?]
+
+By layering these data maps together, we create a strong foundation for biome generation.
+
+[Exemple visuel d'un noise qui illustre le taux d'humidité en fonction du number]
+
+## Biome Generation
+
+Now that we have elevation, textures, and environmental factors, we can combine these layers to define biomes. 
+We now consider multiple conditions together:
+
+Temperature and Humidity → Determine the overall biome type (desert, forest, tundra, etc.).
+Proximity to Water → Affects vegetation density—forests grow near rivers, while drylands stay barren.
+Elevation and Slope → Influence terrain variation—flat areas become plains or swamps, steep zones form 
+mountains or cliffs.
+
+By layering these factors, we assign a biome to each region and apply the right elements: trees, grass, snow, ...
+to bring the world to life.
+
+[visualisation de plusieurs chunks en 3d avec chacun leur hauteur et leur valeur sur le face avant,
+et l'element sur le dessus, défini selon sa regle (mettre une foret sur le bloc de valeur 23 par ex)]
+
+## Going Further
+
+I won’t go into every possible application of procedural generation in terrain creation, 
+this article is already quite long. What matters is that you understand the core concept. 
+After all, the goal here isn’t to provide concrete implementations but rather an overall understanding.
+
+<SpacerS />
+
+There are countless ways to enrich a world through procedural techniques: erosion simulation, 
+vegetation growth, wildlife generation, NPC placement, dynamic weather systems, and much more.
 
 # Conclusion
 

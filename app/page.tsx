@@ -23,9 +23,9 @@ export default function Home() {
         </h1>
 
         <AnimatedText
-          text="creative developer"
+          text="UI Engineer"
           delay={0.5}
-          className="text-foregroundAlt lowercase text-[14px] sm:text-[17px] mt-[-5px]"
+          className="text-foregroundAlt text-[14px] sm:text-[17px] mt-[-5px]"
         />
       </div>
       <TechnicalPortrait />
@@ -33,12 +33,11 @@ export default function Home() {
         <LatestProjects />
       </div>
       <div className="default-layout px-5 mt-[30px]">
-        <LatestSnippets />
-      </div>
-      <div className="default-layout px-5 mt-[30px]">
         <LatestArticles />
       </div>
-
+      <div className="default-layout px-5 mt-[30px]">
+        <LatestSnippets />
+      </div>
       <div className="mt-[100px]">
         <AboutMeCTASection />
       </div>

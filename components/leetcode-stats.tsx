@@ -74,13 +74,15 @@ const LeetcodeStats = () => {
         />
         <div className="absolute text-center">
           {stats.total ? (
-            <span className="text-[40px] leading-[1] font-bold">
+            <span className="text-[36px] leading-[1] font-bold">
               {stats.total}
             </span>
           ) : (
             <Icons.loading />
           )}
-          <p className="!text-[14px] text-muted-foreground">solved</p>
+          <p className="!text-[14px] !leading-[1] text-muted-foreground">
+            solved
+          </p>
         </div>
       </div>
       <div className="mt-[-10%] text-[18px] text-foreground">

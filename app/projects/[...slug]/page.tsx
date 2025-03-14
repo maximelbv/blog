@@ -6,15 +6,12 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { BackButton } from "@/components/go-back-button";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
-import PostCardAlternative from "@/components/post-card-alternative";
 import { formatDateToMonthYear } from "@/lib/utils";
 import AnimatedText from "@/components/animated-text";
 import FadeIn from "@/components/fade-in";
 import Image from "next/image";
 import { getIconFromString } from "@/lib/icon-helper";
 import CustomLink from "@/components/custom-link";
-import ProjectCard from "@/components/project-card";
-import { Icons } from "@/components/icons";
 import ShowcaseMenu from "@/components/ShowcaseMenu";
 
 interface ProjectPageProps {
@@ -102,8 +99,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const mappedOtherProjectsToShowcaseMenuProps = otherProjects.map(
     (project) => {
+      const link = project.slug.replace("projects/", "");
+
       return {
-        link: project.slug,
+        link: link,
         text: project.title,
         subtitle: project.description,
         image: project.image,
@@ -115,6 +114,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project || !project.published) {
     notFound();
   }
+  console.log(mappedOtherProjectsToShowcaseMenuProps);
 
   return (
     <div>
